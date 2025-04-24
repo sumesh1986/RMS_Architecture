@@ -1,0 +1,267 @@
+﻿@model IEnumerable<RMS_Models.Models.Screenmenu>
+
+@{
+	ViewData["Title"] = "ScreenMenu";
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+
+
+<!-- ============================================================== -->
+<!-- Start Content here -->
+<!-- ============================================================== -->
+
+
+
+<div class="page-content">
+
+	<div class="row">
+		<div class="col-lg-12">
+
+
+			<!--begin::Container-->
+			<div class="container-fluid">
+				<!--begin::Row-->
+				<div class="row">
+					<!--begin::Col-->
+					<div class="col-12">
+						<!--begin::Card-->
+						<div class="card">
+
+							<!--begin::Card Header-->
+							<div class="card-header">
+								<!--begin::Card Title-->
+								<div class="card-header header-background text-white text-center">
+									<h4>Screen Menu</h4>
+								</div>
+
+
+							</div>
+
+
+							<!--begin::Card Body-->
+							<div class="card-body">
+
+								<form asp-action="Create" method="post">
+									<!--begin::Row-->
+									<!-- Form -->
+
+									<div class="row  g-3">
+
+
+
+										<!-- Left Side - Form -->
+										<div class="col-md-6 border-end">
+											<form asp-action="Save" method="post">
+												<div class="mb-4">
+													<div class="form-check form-switch">
+														<input type="checkbox" class="form-check-input" id="activeSwitch">
+														<label class="form-check-label" for="activeSwitch">Active</label>
+													</div>
+												</div>
+
+												<div class="mb-4">
+													<label class="form-label" for="conceptSelect">Choose Concept</label>
+													<select name="Concept" id="conceptSelect" class="form-select">
+														<option value="Default">Default</option>
+														<option value="Custom">Custom</option>
+														<option value="Special">Special</option>
+													</select>
+												</div>
+
+												<div class="mb-4">
+													<label class="form-label">Enter the Name of the New Menu</label>
+													<input type="text" class="form-control" placeholder="Enter menu name...">
+												</div>
+
+												<div class="mb-4">
+													<label class="form-label">ID</label>
+													<div class="id-container">
+														<span class="id-label">ID</span>
+														<input type="text" value="1" class="form-control id-input" readonly>
+													</div>
+												</div>
+
+
+
+
+
+
+											</form>
+										</div>
+
+										<!-- Right Side - Menu List -->
+										<div class="col-md-6">
+											<div class="menu-list-container">
+												<h6 class="text-muted mb-3">List of the screen menu</h6>
+												<div class="list-group">
+													<a href="#" class="list-group-item list-group-item-action">Screen Menu</a>
+													<a href="#" class="list-group-item list-group-item-action active">Our Own Menu</a>
+													<a href="#" class="list-group-item list-group-item-action">Special Menu</a>
+												</div>
+											</div>
+											&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+
+
+
+
+										</div>
+									</div>
+
+									<!-- BUTTONS -->
+									<div class="text-center mt-4">
+										<hr>
+										<div class="d-grid gap-2 d-md-flex justify-content-md-end">
+											<button type="submit" class="btn btn-primary button-background waves-effect">
+												<i class="bi bi-save"></i> Save
+											</button>
+											<button type="button" class="btn btn-outline-secondary waves-effect" id="clearBtn">
+												<i class="bi bi-x-circle"></i> Clear
+											</button>
+										</div>
+									</div>
+
+									<!--end::Row-->
+								</form>
+							</div>
+							<!--end::Card Body-->
+
+						</div>
+						<!--end::Card-->
+
+					</div>
+					<!--end::Col-->
+				</div>
+				<!--end::Row-->
+			</div>
+			<!--end::Container-->
+
+
+		</div>
+	</div>
+</div>
+
+@section Styles {
+
+	<style>
+		.screen-menu-card {
+			box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+			border: none;
+			border-radius: 8px;
+		}
+
+		.card-header {
+			border-radius: 8px 8px 0 0;
+		}
+
+
+
+		.id-container {
+			display: flex;
+			align-items: center;
+			gap: 10px;
+			max-width: 150px;
+		}
+
+		.id-label {
+			background: #343a40;
+			color: white;
+			padding: 6px 12px;
+			border-radius: 4px;
+			font-size: 0.9rem;
+		}
+
+		.id-input {
+			background-color: #f8f9fa;
+			border: 1px solid #dee2e6;
+			text-align: center;
+			font-weight: bold;
+		}
+
+		.button-group {
+			display: flex;
+			gap: 10px;
+			flex-wrap: wrap;
+		}
+
+			.button-group .btn {
+				display: flex;
+				align-items: center;
+				gap: 5px;
+				padding: 8px 16px;
+				transition: all 0.3s ease;
+			}
+
+				.button-group .btn:hover {
+					transform: translateY(-2px);
+					box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+				}
+
+		.menu-list-container {
+			background: #f8f9fa;
+			border-radius: 8px;
+			padding: 20px;
+		}
+
+		.list-group-item {
+			border: 1px solid #dee2e6;
+			margin-bottom: 5px;
+			border-radius: 4px !important;
+			transition: all 0.2s ease;
+		}
+
+			.list-group-item:hover {
+				background-color: #e9ecef;
+				transform: translateX(5px);
+			}
+
+		/*   .list-group-item.active {
+						background-color: #fd7e14;
+						border-color: #fd7e14;
+					} */
+
+		.form-control, .form-select {
+			border: 1px solid #dee2e6;
+			border-radius: 4px;
+			padding: 8px 12px;
+			transition: all 0.2s ease;
+		}
+
+			.form-control:focus, .form-select:focus {
+				border-color: #80bdff;
+				box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+			}
+
+		/* Responsive adjustments */
+
+
+		.button-group {
+			justify-content: center;
+		}
+
+	</style>
+}
+
+@section Scripts {
+	<script>
+		$(document).ready(function() {
+			// Initialize tooltips
+			$('[title]').tooltip();
+
+			// Handle list item clicks
+			$('.list-group-item').click(function(e) {
+				e.preventDefault();
+				$('.list-group-item').removeClass('active');
+				$(this).addClass('active');
+			});
+
+			// Add animation to buttons
+			$('.button-group .btn').hover(
+				function() { $(this).addClass('shadow-sm'); },
+				function() { $(this).removeClass('shadow-sm'); }
+			);
+		});
+	</script>
+}

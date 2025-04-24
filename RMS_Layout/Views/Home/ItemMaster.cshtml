@@ -1,0 +1,625 @@
+﻿@{
+	ViewData["Title"] = "Item Master";
+}
+
+
+<!-- ============================================================== -->
+<!-- Start Content here -->
+<!-- ============================================================== -->
+
+
+
+<div class="page-content">
+
+	<div class="row">
+		<div class="col-lg-12">
+
+
+			<!--begin::Container-->
+			<div class="container-fluid">
+				<!--begin::Row-->
+				<div class="row">
+					<!--begin::Col-->
+					<div class="col-12">
+						<!--begin::Card-->
+						<div class="card">
+
+							<!--begin::Card Header-->
+							<div class="card-header">
+								<!--begin::Card Title-->
+								<div class="card-header header-background text-white text-center">
+									<h4>Item Master</h4>
+								</div>
+
+							</div>
+
+
+							<!--begin::Card Body-->
+							<div class="card-body">
+
+								<form asp-action="Create" method="post">
+									<!--begin::Row-->
+									<!-- Form -->
+
+									<div class="container-fluid py-3">
+
+
+
+										<ul class="nav nav-tabs">
+											<li class="nav-item">
+												<a class="nav-link active" data-bs-toggle="tab" href="#tab1">Main</a>
+											</li>
+											<li class="nav-item">
+												<a class="nav-link" data-bs-toggle="tab" href="#tab2">More</a>
+											</li>
+											<li class="nav-item">
+												<a class="nav-link" data-bs-toggle="tab" href="#tab3">Transaction List</a>
+											</li>
+										</ul>
+
+
+
+
+										<div class="tab-content mt-3">
+											<div class="tab-pane fade show active" id="tab1">
+												<h3>Main Content</h3>
+												<div class="row g-3">
+													<div class="col-lg-12 section-border">
+														<div class="row mb-4">
+															<div class="col-md-6">
+																<label for="itemName" class="form-label">Item Name:</label>
+																<input type="text" id="itemName" class="form-control" />
+
+																<label for="menuDescription" class="form-label mt-3">Menu Description:</label>
+																<input type="text" id="menuDescription" class="form-control" />
+
+																<label for="kitchenDescription" class="form-label mt-3">Kitchen Description:</label>
+																<input type="text" id="kitchenDescription" class="form-control" />
+
+																<label for="itemLanguage" class="form-label mt-3">Item in Different Language:</label>
+																<input type="text" id="itemLanguage" class="form-control" />
+															</div>
+
+															<div class="col-md-6">
+																<label for="printer" class="form-label">Printer:</label>
+																<select id="printer" class="form-select" multiple style="height: 250px;">
+																	<!-- Add printer options here -->
+																</select>
+															</div>
+														</div>
+
+														<div class="row g-3 mb-3">
+															<div class="col-md-3">
+																<label for="price" class="form-label">Price:</label>
+																<input type="text" id="price" class="form-control" />
+															</div>
+															<div class="col-md-3">
+																<label for="function" class="form-label">Function:</label>
+																<select id="function" class="form-select">
+																	<option value="0" selected>--Select--</option>
+																</select>
+															</div>
+															<div class="col-md-3">
+																<label for="preMins" class="form-label">Pre-Mins:</label>
+																<select id="preMins" class="form-select">
+																	<option value="0" selected>--Select--</option>
+																</select>
+															</div>
+															<div class="col-md-3 d-flex align-items-center">
+																<div class="form-check form-switch">
+																	<input type="checkbox" id="kdsCount" class="form-check-input">
+																	<label class="form-check-label text-uppercase" for="kdsCount">KDS Count</label>
+																</div>
+															</div>
+
+														</div>
+
+														<div class="row g-3 mb-3">
+															<div class="col-md-3">
+																<label for="defaultBarcode" class="form-label">Default Barcode:</label>
+																<input type="text" id="defaultBarcode" class="form-control" />
+															</div>
+															<div class="col-md-3">
+																<label for="localBarcode" class="form-label">Local Barcode:</label>
+																<input type="text" id="localBarcode" class="form-control" />
+															</div>
+															<div class="col-md-3">
+																<label for="spBarcode" class="form-label">Sp.Barcode:</label>
+																<input type="text" id="spBarcode" class="form-control" />
+															</div>
+															<div class="col-md-3 d-flex align-items-end">
+																<button class="btn btn-primary">
+																	<i class="bi bi-plus"></i>
+																</button>
+															</div>
+
+														</div>
+
+														<div class="row g-3 mb-3">
+															<div class="col-md-3 p-2">
+																<label class="form-label">Choose the Group:</label>
+															</div>
+															<div class="col-md-6">
+																<select id="groupSelect" class="form-select">
+																	<option value="0" selected>--Select--</option>
+																</select>
+															</div>
+															<div class="col-md-3 d-flex align-items-end">
+																<button class="btn btn-primary">
+																	<i class="bi bi-plus"></i>
+																</button>
+															</div>
+
+														</div>
+
+														<div class="row g-3 mb-3">
+															<div class="col-md-3 p-2">
+																<label class="form-label">Course Type:</label>
+															</div>
+															<div class="col-md-6">
+																<select id="courseTypeSelect" class="form-select">
+																	<option value="0" selected>--Select--</option>
+																</select>
+															</div>
+															<div class="col-md-3 d-flex align-items-end">
+																<button class="btn btn-primary">
+																	<i class="bi bi-plus"></i>
+																</button>
+															</div>
+
+														</div>
+
+														<div class="row g-3 mb-3">
+															<div class="col-md-3 p-2">
+																<label class="form-label">Choose Modifier:</label>
+															</div>
+															<div class="col-md-9">
+																<select id="modifierSelect" class="form-select">
+																	<option value="0" selected>--Select--</option>
+																</select>
+															</div>
+														</div>
+
+
+														<div class="row g-3">
+															<div class="col-md-3">
+																<div class="form-check form-switch">
+																	<input type="checkbox" id="soldByTime" class="form-check-input">
+																	<label class="form-check-label" for="soldByTime">THIS ITEM IS SOLD BY TIME</label>
+																</div>
+																<div class="form-check form-switch">
+																	<input type="checkbox" id="printOnInvoice" class="form-check-input">
+																	<label class="form-check-label" for="printOnInvoice">PRINT ON INVOICE</label>
+																</div>
+																<div class="form-check form-switch">
+																	<input type="checkbox" id="prohibitRemark" class="form-check-input">
+																	<label class="form-check-label" for="prohibitRemark">PROHIBIT ITEM REMARK ON THIS ITEM</label>
+																</div>
+																<div class="form-check form-switch">
+																	<input type="checkbox" id="hideQuotation" class="form-check-input">
+																	<label class="form-check-label" for="hideQuotation">HIDE IN QUOTATION</label>
+																</div>
+															</div>
+
+															<div class="col-md-9">
+																<div class="form-check form-switch text-danger">
+																	<input type="checkbox" id="discontinued" class="form-check-input">
+																	<label class="form-check-label" for="discontinued">DISCONTINUED</label>
+																</div>
+																<div class="form-check form-switch text-success">
+																	<input type="checkbox" id="comboItem" class="form-check-input">
+																	<label class="form-check-label" for="comboItem">COMBO ITEM</label>
+																</div>
+																<div class="form-check form-switch" style="color: #FF7F50;">
+																	<input type="checkbox" id="formulaItem" class="form-check-input">
+																	<label class="form-check-label" for="formulaItem">FORMULA ITEM</label>
+																</div>
+																<div class="form-check form-switch" style="color: #6495ED;">
+																	<input type="checkbox" id="hideIfPriceZero" class="form-check-input">
+																	<label class="form-check-label" for="hideIfPriceZero">HIDE IF PRICE=0</label>
+																</div>
+															</div>
+														</div>
+
+													</div>
+												</div>
+
+
+												<div class="row g-3">
+													<div class="col-md-12">
+														<div class="card shadow-sm border-0">
+															<div class="card-body">
+																<h5 class="card-title text-primary">Item Selection</h5>
+
+																<div class="row g-3">
+																	<!-- Category Dropdown -->
+																	<div class="col-md-4">
+																		<div class="mb-3">
+																			<label class="form-label">Choose the Category:</label>
+																			<select class="form-select">
+																				<option value="0" selected>--Select--</option>
+																				<option value="1">Category 1</option>
+																				<option value="2">Category 2</option>
+																			</select>
+																		</div>
+																	</div>
+
+																	<!-- Division Dropdown -->
+																	<div class="col-md-4">
+																		<div class="mb-3">
+																			<label class="form-label">Choose the Division:</label>
+																			<select class="form-select">
+																				<option value="0" selected>--Select--</option>
+																				<option value="1">Division 1</option>
+																				<option value="2">Division 2</option>
+																			</select>
+																		</div>
+																	</div>
+
+																	<!-- Group Dropdown -->
+																	<div class="col-md-4">
+																		<div class="mb-3">
+																			<label class="form-label">Choose the Group:</label>
+																			<select class="form-select">
+																				<option value="0" selected>--Select--</option>
+																				<option value="1">Group 1</option>
+																				<option value="2">Group 2</option>
+																			</select>
+																		</div>
+																	</div>
+																</div>
+
+																<!-- Radio Button List as Switch Toggle -->
+																<div class="mb-3">
+																	<label class="form-label text-uppercase fw-bold">Filter By:</label>
+																	<div class="d-flex gap-4 flex-wrap">
+																		<div class="form-check form-switch">
+																			<input type="radio" id="allItems" name="filter" class="form-check-input" checked>
+																			<label class="form-check-label text-uppercase" for="allItems">All Items</label>
+																		</div>
+
+																		<div class="form-check form-switch">
+																			<input type="radio" id="combos" name="filter" class="form-check-input">
+																			<label class="form-check-label text-uppercase" for="combos">Combo(s)</label>
+																		</div>
+
+																		<div class="form-check form-switch">
+																			<input type="radio" id="formulas" name="filter" class="form-check-input">
+																			<label class="form-check-label text-uppercase" for="formulas">Formula(s)</label>
+																		</div>
+
+																		<div class="form-check form-switch">
+																			<input type="radio" id="modifiers" name="filter" class="form-check-input">
+																			<label class="form-check-label text-uppercase" for="modifiers">Modifiers Applied</label>
+																		</div>
+																	</div>
+																</div>
+
+
+															</div> <!-- Card Body -->
+														</div> <!-- Card -->
+													</div> <!-- Column -->
+												</div> <!-- Row -->
+
+
+												<!-- Table -->
+												<div class="card mt-4 shadow-sm">
+													<div class="card-header header-background text-white d-flex justify-content-between align-items-center">
+														<span class="fw-bold">List</span>
+														<!-- Search Box -->
+														<div class="input-group input-group-sm w-auto ms-auto">
+															<input type="text" class="form-control" id="searchInput2" placeholder="Search...">
+															<span class="input-group-text"><i class="bi bi-search"></i></span>
+														</div>
+													</div>
+
+													<div class="card-body">
+														<div class="table-responsive">
+															<table class="table table-striped table-hover align-middle">
+																<thead class="table-success">
+																	<tr>
+																		<th>#</th>
+																		<th>Item Name</th>
+																		<th>Item in Diff. Lang</th>
+																		<th>Group Name</th>
+																		<th>Price</th>
+																		<th>Sys Id</th>
+																		<th>Discontinued</th>
+																		<th>Status</th>
+																		<th>Actions</th>
+																	</tr>
+																</thead>
+																<tbody>
+																	<tr>
+																		<td>2</td>
+																		<td>Item B</td>
+																		<td>Item B - SP</td>
+																		<td>Group 2</td>
+																		<td>$15</td>
+																		<td>1002</td>
+																		<td>Yes</td>
+
+																		<td>
+																			<span class="badge bg-success">Active</span>
+																		</td>
+																		<td>
+																			<button class="btn btn-outline-primary btn-sm"><i class="bi bi-pencil-square"></i></button>
+																			<button class="btn btn-outline-danger btn-sm"><i class="bi bi-trash"></i></button>
+																		</td>
+																	</tr>
+
+																	<tr>
+																		<td>2</td>
+																		<td>UFS</td>
+																		<td>UFS456</td>
+																		<td>54321</td>
+																		<td>UFS Group</td>
+																		<td>USA</td>
+																		<td>New York</td>
+
+																		<td>
+																			<span class="badge bg-danger">Inactive</span>
+																		</td>
+																		<td>
+																			<button class="btn btn-outline-primary btn-sm"><i class="bi bi-pencil-square"></i></button>
+																			<button class="btn btn-outline-danger btn-sm"><i class="bi bi-trash"></i></button>
+																		</td>
+																	</tr>
+																</tbody>
+															</table>
+														</div>
+													</div>
+												</div>
+
+												<div class="text-center mt-4">
+													<hr>
+													<div class="d-grid gap-2 d-md-flex justify-content-md-end">
+														<button type="submit" class="btn btn-primary button-background waves-effect">
+															<i class="bi bi-save"></i> Save
+														</button>
+														<button type="reset" class="btn btn-outline-secondary waves-effect">
+															<i class="bi bi-x-circle"></i> Clear
+														</button>
+													</div>
+												</div>
+											</div>
+
+
+
+
+											<div class="tab-pane fade" id="tab2">
+												<h3>More Content</h3>
+
+												<!-- First Row -->
+												<div class="row">
+													<div class="col-md-6">
+														<div class="border p-3 rounded">
+															<div>
+																<label class="form-label">The Item Available to:</label>
+
+																<div class="form-check form-switch">
+																	<input class="form-check-input" type="checkbox" id="fineDine">
+																	<label class="form-check-label" for="fineDine">Fine Dine-in</label>
+																</div>
+
+																<div class="form-check form-switch">
+																	<input class="form-check-input" type="checkbox" id="takeAway">
+																	<label class="form-check-label" for="takeAway">Take Away</label>
+																</div>
+
+																<div class="form-check form-switch">
+																	<input class="form-check-input" type="checkbox" id="delivery">
+																	<label class="form-check-label" for="delivery">Delivery</label>
+																</div>
+
+																<div class="form-check form-switch">
+																	<input class="form-check-input" type="checkbox" id="driveThrough">
+																	<label class="form-check-label" for="driveThrough">Drive Through</label>
+																</div>
+															</div>
+
+
+															<div class="mt-3">
+																<label class="form-label">Set/Reset Picture for the Item:</label>
+																<div class="text-center">
+																	<img id="imgPreview" src="default.jpg" class="img-fluid rounded border" alt="Item Image" style="max-width: 200px;">
+																</div>
+																<div class="mt-3">
+																	<input type="file" id="fileUpload" class="form-control">
+																</div>
+																<!-- Aligns button to the right -->
+																<div class="mt-2 d-flex justify-content-end">
+																	<button class="btn btn-primary button-background waves-effect">Upload</button>
+																</div>
+															</div>
+														</div>
+													</div>
+
+													<div class="col-md-6">
+														<div class="border p-3 rounded">
+															<label for="itemDescription" class="form-label">Enter Item Description:</label>
+															<textarea id="itemDescription" class="form-control" rows="8" placeholder="Enter description here..."></textarea>
+														</div>
+													</div>
+												</div>
+
+												<!-- Second Row (Branches) -->
+												<div class="row mt-4">
+													<div class="col-md-12 border p-3 rounded">
+														<div class="row align-items-center">
+
+
+															<div class="col-md-2 d-flex align-items-end">
+																<div class="form-check form-switch">
+																	<input class="form-check-input" type="checkbox" id="activeCheck">
+																	<label class="form-check-label" for="activeCheck">Select All</label>
+																</div>
+															</div>
+
+															<div class="col-md-3">
+																<label class="form-label">Branches:</label>
+																<select class="form-select">
+																	<option selected>-- Select --</option>
+																	<option>Single Branch</option>
+																	<option>Default | 123</option>
+																</select>
+															</div>
+															<div class="col-md-4">
+																<label class="form-label">Concept:</label>
+																<select class="form-select">
+																	<option selected>-- Select --</option>
+																	<option>Concept 1</option>
+																	<option>Concept 2</option>
+																	<option>Concept 3</option>
+																</select>
+															</div>
+														</div>
+													</div>
+												</div>
+
+
+											</div>
+
+
+
+
+
+											<div class="tab-pane fade" id="tab3">
+												<h3 class="mb-3">Transaction List</h3>
+
+												<div class="card shadow-sm p-3">
+													<div class="row g-3 align-items-center">
+														<!-- Concept Dropdown -->
+														<div class="col-md-2">
+															<label class="form-label">Concept:</label>
+															<select class="form-select">
+																<option value="0" selected>--Select--</option>
+															</select>
+														</div>
+														<!-- Date From -->
+														<div class="col-md-2">
+															<label class="form-label">Date From:</label>
+															<input type="date" class="form-control">
+														</div>
+														<!-- Date To -->
+														<div class="col-md-2">
+															<label class="form-label">Date To:</label>
+															<input type="date" class="form-control">
+														</div>
+														<!-- Action Buttons -->
+														<div class="col-md-6 text-end">
+															<button class="btn btn-primary"><i class="bi bi-funnel"></i> Load</button>
+															<button class="btn btn-success"><i class="bi bi-file-earmark-excel"></i> Export to Excel</button>
+															<button class="btn btn-danger"><i class="bi bi-file-earmark-pdf"></i> Export to PDF</button>
+														</div>
+													</div>
+												</div>
+
+
+
+												<!-- Table -->
+												<div class="card mt-4 shadow-sm">
+													<div class="card-header header-background text-white d-flex justify-content-between align-items-center">
+														<span class="fw-bold">List</span>
+														<!-- Search Box -->
+														<div class="input-group input-group-sm w-auto ms-auto">
+															<input type="text" class="form-control" id="searchInput2" placeholder="Search...">
+															<span class="input-group-text"><i class="bi bi-search"></i></span>
+														</div>
+													</div>
+
+													<div class="card-body">
+														<div class="table-responsive">
+															<table class="table table-striped table-hover align-middle">
+																<thead class="table-success">
+																	<tr>
+																		<th>#</th>
+																		<th>Description</th>
+																		<th>Date</th>
+																		<th>Time</th>
+																		<th>Quantity</th>
+																		<th>Location</th>
+																		<th>Status</th>
+																		<th>Actions</th>
+																	</tr>
+																</thead>
+																<tbody>
+																	<tr>
+																		<td>1</td>
+																		<td>Sample Discount</td>
+																		<td>10%</td>
+																		<td>12:30 PM</td>
+																		<td>5</td>
+																		<td>New York</td>
+																		<td>
+																			<span class="badge bg-success">Active</span>
+																		</td>
+																		<td>
+																			<button class="btn btn-outline-primary btn-sm"><i class="bi bi-pencil-square"></i></button>
+																			<button class="btn btn-outline-danger btn-sm"><i class="bi bi-trash"></i></button>
+																		</td>
+																	</tr>
+
+																	<tr>
+																		<td>2</td>
+																		<td>Sample Discount</td>
+																		<td>15%</td>
+																		<td>03:45 PM</td>
+																		<td>2</td>
+																		<td>Los Angeles</td>
+																		<td>
+																			<span class="badge bg-danger">Inactive</span>
+																		</td>
+																		<td>
+																			<button class="btn btn-outline-primary btn-sm"><i class="bi bi-pencil-square"></i></button>
+																			<button class="btn btn-outline-danger btn-sm"><i class="bi bi-trash"></i></button>
+																		</td>
+																	</tr>
+																</tbody>
+															</table>
+														</div>
+													</div>
+												</div>
+											</div>
+
+										</div>
+
+
+
+									</div>
+
+
+
+									<!--end::Row-->
+								</form>
+							</div>
+							<!--end::Card Body-->
+
+						</div>
+						<!--end::Card-->
+
+					</div>
+					<!--end::Col-->
+				</div>
+				<!--end::Row-->
+			</div>
+			<!--end::Container-->
+
+		</div>
+	</div>
+</div>
+
+
+@section Scripts {
+	<script>
+		$(document).ready(function () {
+			// Search functionality
+			$("#searchInput").on("keyup", function () {
+				var value = $(this).val().toLowerCase();
+				$("tbody tr").filter(function () {
+					$(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
+				});
+			});
+		});
+	</script>
+}

@@ -1,0 +1,210 @@
+﻿@{
+	ViewData["Title"] = "Invoice";
+}
+
+
+<style>
+
+	.section-border {
+		border: 1px solid #ddd;
+		border-radius: 10px;
+		padding: 20px;
+		background: #f9f9f9;
+		margin-bottom: 20px;
+	}
+
+	.custom-print-btn {
+		width: 100%;
+		border: 2px solid grey;
+		background: lightgrey;
+		padding: 8px;
+	}
+</style>
+
+
+<!-- ============================================================== -->
+<!-- Start Content here -->
+<!-- ============================================================== -->
+
+
+
+<div class="page-content">
+
+	<div class="row">
+		<div class="col-lg-12">
+
+
+			<!--begin::Container-->
+			<div class="container-fluid">
+				<!--begin::Row-->
+				<div class="row">
+					<!--begin::Col-->
+					<div class="col-12">
+						<!--begin::Card-->
+						<div class="card">
+
+							<!--begin::Card Header-->
+							<div class="card-header">
+								<!--begin::Card Title-->
+								<div class="card-header header-background text-white text-center">
+									<h4>Invoice</h4>
+								</div>
+
+							</div>
+
+
+							<!--begin::Card Body-->
+							<div class="card-body">
+
+								<form asp-action="Create" method="post">
+									<!--begin::Row-->
+									<!-- Form -->
+									<div class="row g-3">
+										<!-- Invoice Header -->
+										<div class="section-border">
+											<h5 class="mb-3"><u>Header</u></h5>
+
+											<div class="mb-3">
+												<label for="companyName" class="form-label">Company Name:</label>
+												<input type="text" id="companyName" class="form-control" placeholder="Enter Company Name">
+											</div>
+
+											<div class="mb-3">
+												<label for="section1" class="form-label">Section 1:</label>
+												<select id="section1" class="form-select" multiple size="4">
+													<option></option>
+													<option></option>
+													<option></option>
+												</select>
+											</div>
+
+											<div class="mb-3">
+												<label for="section2" class="form-label">Section 2:</label>
+												<select id="section2" class="form-select" multiple size="4">
+													<option></option>
+													<option></option>
+													<option></option>
+												</select>
+											</div>
+										</div>
+
+										<!-- Alignment Buttons -->
+										<div class="text-center my-3">
+											<button type="button" class="btn btn-outline-primary me-2">
+												<i class="bi bi-text-left"></i> Left
+											</button>
+											<button type="button" class="btn btn-outline-primary me-2">
+												<i class="bi bi-text-center"></i> Center
+											</button>
+											<button type="button" class="btn btn-outline-primary">
+												<i class="bi bi-text-right"></i> Right
+											</button>
+										</div>
+
+										<!-- Invoice Footer -->
+										<div class="section-border">
+											<h5 class="mb-3"><u>Footer</u></h5>
+
+											<div class="mb-3">
+												<label for="footerSection1" class="form-label">Section 1:</label>
+												<select id="footerSection1" class="form-select" multiple size="4">
+													<option></option>
+													<option></option>
+													<option></option>
+												</select>
+											</div>
+
+											<div class="mb-3">
+												<label for="footerSection2" class="form-label">Section 2:</label>
+												<select id="footerSection2" class="form-select" multiple size="4">
+													<option></option>
+													<option></option>
+													<option></option>
+												</select>
+											</div>
+										</div>
+
+										<!-- Invoice Type & Formatting -->
+										<div class="section-border">
+											<h5 class="mb-3">Invoice Settings</h5>
+
+											<div class="mb-3">
+												<label for="invoiceType" class="form-label">Invoice Type:</label>
+												<select id="invoiceType" class="form-select">
+													<option selected>-- Select --</option>
+													<option>Pre-Settlement Invoice</option>
+													<option>Invoice</option>
+												</select>
+											</div>
+
+											<div class="row">
+												<div class="col-md-6">
+													<label for="fontSelection" class="form-label">Font Selection:</label>
+													<button type="button" class="btn btn-outline-primary w-100">
+														<i class="bi bi-fonts"></i> Select Font
+													</button>
+												</div>
+
+												<div class="col-md-6">
+													<label for="lineStyles" class="form-label">Lines:</label>
+													<select id="lineStyles" class="form-select">
+														<option selected>-- Select Lines --</option>
+														<option>--------------</option>
+														<option>==============</option>
+														<option>++++++++++++++</option>
+													</select>
+												</div>
+											</div>
+										</div>
+
+										<!-- Print & Save Buttons -->
+										<div class="text-center mt-4">
+											<hr>
+											<div class="d-grid gap-2 d-md-flex justify-content-md-end">
+												<button type="button" class="btn btn-outline-primary me-2">
+													<i class="bi bi-printer"></i> Print
+												</button>
+
+												<button type="submit" class="btn btn-outline-primary">
+													<i class="bi bi-save"></i> Save
+												</button>
+											</div>
+										</div>
+									</div>
+
+
+
+
+									<!--end::Row-->
+								</form>
+							</div>
+							<!--end::Card Body-->
+
+						</div>
+						<!--end::Card-->
+
+					</div>
+					<!--end::Col-->
+				</div>
+				<!--end::Row-->
+			</div>
+			<!--end::Container-->
+
+		</div>
+	</div>
+</div>
+
+
+@section Scripts {
+	<script>
+		$(document).ready(function () {
+			// Search functionality
+			$("#searchInput").on("keyup", function () {
+				var value = $(this).val().toLowerCase();
+				$("tbody tr").filter(function () {
+					$(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
+				});
+			});
+		});
+	</script>
+}

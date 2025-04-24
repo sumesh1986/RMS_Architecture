@@ -1,0 +1,694 @@
+﻿@model Admin_Lte.Models.UserSetup
+
+@{
+	ViewData["Title"] = "Index";
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!-- ============================================================== -->
+<!-- Start Content here -->
+<!-- ============================================================== -->
+
+
+
+<div class="page-content">
+
+	<div class="row">
+		<div class="col-lg-12">
+
+
+			<!--begin::Container-->
+			<!--begin::Row-->
+			<div class="row g-3">
+				<!--begin::Col-->
+				<div class="col-12">
+					<!--begin::Card-->
+					<div class="card">
+
+						<!--begin::Card Header-->
+						<div class="card-header">
+							<!--begin::Card Title-->
+							<div class="card-header header-background text-white text-center">
+
+								<h4>User Setup</h4>
+								<div class="biometric-icons d-flex justify-content-end gap-2 mt-2">
+									<button type="button" class="btn btn-light biometric-btn shadow-sm" data-bs-toggle="tooltip" title="Face Recognition">
+										<i class="fas fa-user-circle"></i>
+									</button>
+
+									<button type="button" class="btn btn-light biometric-btn shadow-sm" data-bs-toggle="tooltip" title="Fingerprint">
+										<i class="fas fa-fingerprint"></i>
+									</button>
+
+									<button type="button" class="btn btn-light biometric-btn shadow-sm" data-bs-toggle="tooltip" title="Voice Recognition">
+										<i class="fas fa-microphone"></i>
+									</button>
+								</div>
+
+							</div>
+
+						</div>
+
+
+						<!-- Left side - User Form -->
+						<div class="card-body">
+							<form asp-action="Save" method="post" class="user-setup-form">
+
+
+
+
+								<div class="row g-3 align-items-end">
+									<div class="col-md-12">
+										<div class="form-group">
+											<label class="form-label">For the branch</label>
+											<select class="form-select" asp-for="Branch">
+												<option value="Default">Default</option>
+											</select>
+										</div>
+									</div>
+
+									<!-- Button Section Aligned to Right -->
+									<div class="col-md-4 ms-auto text-end">
+										<div class="form-group">
+											<label class="form-label">&nbsp;</label>
+											<button type="button" class="btn btn-secondary w-100">Access to ></button>
+										</div>
+									</div>
+								</div>
+
+
+								<div class="row mt-3">
+									<div class="col-md-4">
+										<div class="form-group">
+											<label class="form-label">User Code *</label>
+											<input asp-for="UserCode" class="form-control" />
+										</div>
+									</div>
+									<div class="col-md-8">
+										<div class="form-group">
+											<label class="form-label">User Name *</label>
+											<input asp-for="UserName" class="form-control" />
+										</div>
+									</div>
+								</div>
+
+								<div class="row mt-3">
+									<div class="col-md-6">
+										<div class="form-group">
+											<label class="form-label">Position/Role *</label>
+											<select class="form-select" asp-for="PositionRole">
+												<option value="Administrator">Administrator</option>
+												<option value="Accountant">Accountant</option>
+												<option value="Short Order Cook">Short Order Cook</option>
+												<option value="Runner">Runner</option>
+												<option value="Kitchen Manager">Kitchen Manager</option>
+												<option value="Dishwasher">Dishwasher</option>
+												<option value="Purchaser">Purchaser</option>
+												<option value="Supervisor">Supervisor</option>
+												<option value="Receptionist">Receptionist</option>
+												<option value="Cashier">Cashier</option>
+												<option value="Waiter">Waiter</option>
+											</select>
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="form-group">
+											<label class="form-label">Language</label>
+											<select class="form-select" asp-for="Language">
+												<option value="English">English</option>
+											</select>
+										</div>
+									</div>
+								</div>
+
+
+
+								<div class="row g-3 mt-3">
+
+									<!-- Commission Checkbox -->
+									<div class="col-md-4">
+										<div class="form-check">
+											<input asp-for="Commission" type="checkbox" class="form-check-input" id="commissionCheck" />
+											<label class="form-check-label" for="commissionCheck">Commission</label>
+										</div>
+									</div>
+
+									<!-- Punch IN/OUT Checkbox -->
+									<div class="col-md-4">
+										<div class="form-check">
+											<input asp-for="PunchInOut" type="checkbox" class="form-check-input" id="punchInOutCheck" />
+											<label class="form-check-label" for="punchInOutCheck">Punch IN/OUT</label>
+										</div>
+									</div>
+
+									<!-- Delivery Driver Checkbox -->
+									<div class="col-md-4">
+										<div class="form-check">
+											<input asp-for="DeliveryDriver" type="checkbox" class="form-check-input" id="deliveryDriverCheck" />
+											<label class="form-check-label" for="deliveryDriverCheck">Delivery Driver</label>
+										</div>
+									</div>
+
+									<!-- Training Mode Checkbox -->
+									<div class="col-md-4">
+										<div class="form-check">
+											<input asp-for="TrainingMode" type="checkbox" class="form-check-input" id="trainingModeCheck" />
+											<label class="form-check-label" for="trainingModeCheck">Training Mode?</label>
+										</div>
+									</div>
+
+									<!-- Active Switch -->
+									<div class="col-md-4">
+										<div class="form-check form-switch d-flex align-items-center gap-2">
+											<input type="checkbox" class="form-check-input" style="margin-left: -1.5em !important;" id="activeSwitch" onchange="toggleSwitch(this)" />
+											<label class="form-check-label" for="activeSwitch">Active</label>
+										</div>
+									</div>
+
+
+
+
+
+									<!-- Log Button -->
+									<div class="col-md-4 d-flex justify-content-start">
+										<button type="button" class="btn btn-outline-secondary btn-sm log-btn">
+											<i class="fas fa-clipboard-list"></i> Log
+										</button>
+									</div>
+
+								</div>
+
+
+
+
+
+								<div class="row align-items-center g-3 mt-3">
+									<!-- Default Map -->
+									<div class="col-md-4">
+										<label class="form-label">Default Map</label>
+										<select asp-for="DefaultMap" class="form-select me-2">
+											<option value="Default">Default</option>
+										</select>
+									</div>
+
+									<!-- Buttons Aligned Responsively -->
+									<div class="col-md-4 text-start pt-4">
+										<button type="button" class="btn btn-outline-primary btn-sm shadow-sm restricted-btn me-1" title="Restricted Floor/Section">
+											<i class="bi bi-door-closed-fill me-1"></i>
+										</button>
+
+										<button type="button" class="btn btn-outline-danger btn-sm shadow-sm restricted-btn" title="Restricted Order Type">
+											<i class="bi bi-lock-fill me-1"></i>
+										</button>
+									</div>
+								</div>
+
+
+
+								<!-- Details Section -->
+								<div class="details-section mt-4">
+									<!-- Adjusted top margin -->
+									<h5 class="mb-3">Details:</h5> <!-- Added margin bottom for spacing -->
+
+									<div class="row g-3">
+										<!-- Added "g-3" for consistent spacing -->
+										<div class="col-md-6">
+											<div class="form-group">
+												<label class="form-label">Last Name</label>
+												<input asp-for="LastName" class="form-control" />
+											</div>
+										</div>
+										<div class="col-md-6">
+											<div class="form-group">
+												<label class="form-label">Mobile No.</label>
+												<input asp-for="MobileNo" class="form-control" />
+											</div>
+										</div>
+									</div>
+
+									<div class="row g-3 mt-1">
+										<!-- Consistent gap -->
+										<div class="col-md-12">
+											<div class="form-group">
+												<label class="form-label">Email</label>
+												<input asp-for="Email" type="email" class="form-control" />
+											</div>
+										</div>
+									</div>
+
+									<div class="row g-3 mt-1">
+										<!-- Consistent gap -->
+										<div class="col-md-4">
+											<div class="form-group">
+												<label class="form-label">Wage</label>
+												<input asp-for="Wage" type="number" class="form-control" />
+											</div>
+										</div>
+										<div class="col-md-4">
+											<div class="form-group">
+												<label class="form-label">Over Time</label>
+												<input asp-for="OverTime" type="number" class="form-control" />
+											</div>
+										</div>
+										<div class="col-md-4">
+											<div class="form-group">
+												<label class="form-label">Target Amount</label>
+												<input asp-for="TargetAmount" type="number" class="form-control" />
+											</div>
+										</div>
+									</div>
+								</div>
+
+
+
+
+								<!-- BUTTONS -->
+								<div class="text-center mt-4">
+									<hr>
+									<div class="d-grid gap-2 d-md-flex justify-content-md-end">
+										<button type="submit" class="btn btn-primary header-background">
+											<i class="bi bi-save"></i> Save
+										</button>
+										<button type="button" class="btn btn-outline-secondary" id="clearBtn">
+											<i class="bi bi-x-circle"></i> Clear
+										</button>
+									</div>
+								</div>
+
+
+
+								<!-- Table -->
+								<div class="card mt-4 shadow-sm">
+									<div class="card-header header-background text-white d-flex justify-content-between align-items-center">
+										<span class="fw-bold">User List</span>
+										<div class="input-group input-group-sm w-auto ms-auto">
+											<input type="text" class="form-control" id="searchInput" placeholder="Search...">
+											<span class="input-group-text"><i class="bi bi-search"></i></span>
+										</div>
+									</div>
+
+									<div class="card-body">
+										<div class="table-responsive">
+											<table class="table table-striped table-hover align-middle">
+												<thead class="table-success">
+													<tr>
+														<th>#</th>
+														<th>User Code</th>
+														<th>User Name</th>
+														<th>Last Name</th>
+														<th>Position</th>
+														<th>Status</th>
+														<th>Actions</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>1</td>
+														<td>ABC</td>
+														<td>ABC123</td>
+														<td>12345</td>
+														<td>ABC Group</td>
+
+														<td>
+															<span class="badge bg-success">Active</span>
+														</td>
+														<td>
+															<button class="btn btn-outline-primary btn-sm"><i class="bi bi-pencil-square"></i></button>
+															<button class="btn btn-outline-danger btn-sm"><i class="bi bi-trash"></i></button>
+														</td>
+													</tr>
+
+													<tr>
+														<td>2</td>
+														<td>UFS</td>
+														<td>UFS456</td>
+														<td>54321</td>
+														<td>UFS Group</td>
+
+														<td>
+															<span class="badge bg-danger">Inactive</span>
+														</td>
+														<td>
+															<button class="btn btn-outline-primary btn-sm"><i class="bi bi-pencil-square"></i></button>
+															<button class="btn btn-outline-danger btn-sm"><i class="bi bi-trash"></i></button>
+														</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</div>
+								</div>
+
+
+							</form>
+						</div>
+
+
+					</div>
+
+				</div>
+				@*    </div> *@
+
+
+
+			</div>
+
+			<!--end::Card Body-->
+
+		</div>
+	</div>
+
+</div>
+<!--end::Card-->
+<!--end::Col-->
+@section Styles {
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+	@*   <div class="filter-buttons">
+        <style>
+            .filter-buttons {
+                background: rgba(255, 255, 255, 0.15);
+                padding: 2px;
+                border-radius: 4px;
+            }
+
+            .filter-btn {
+                padding: 4px 12px;
+                font-size: 13px;
+                border: none;
+                background: transparent;
+                color: white;
+                border-radius: 3px;
+                transition: all 0.2s ease;
+                margin: 0;
+            }
+
+                .filter-btn:not(:last-child) {
+                    margin-right: 1px;
+                }
+
+                .filter-btn:hover:not(.active) {
+                    background: rgba(255, 255, 255, 0.1);
+                }
+
+                .filter-btn.active {
+                    background: white;
+                    color: #0d6efd;
+                    font-weight: 500;
+                }
+
+    </style></div> *@
+
+	<style>
+
+
+
+
+		/* .container-fluid {
+							background-color: #f8f9fa;
+							min-height: 100vh;
+						} */
+		/*
+						.card {
+							box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+							border: none;
+							margin-bottom: 20px;
+						}
+
+						.user-setup-form .card {
+							box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+							border: none;
+						} */
+
+		.biometric-icons {
+			display: flex;
+			gap: 10px;
+		}
+
+		.biometric-btn {
+			width: 40px;
+			height: 40px;
+			border-radius: 50%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			background: rgba(255,255,255,0.9);
+			border: none;
+			transition: all 0.3s ease;
+			margin-left: 10px;
+		}
+
+			.biometric-btn:hover {
+				transform: scale(1.1);
+				background: white;
+			}
+
+		.table {
+			font-size: 0.9rem;
+		}
+
+			.table thead th {
+				background-color: #f8f9fa;
+				border-bottom: 2px solid #dee2e6;
+			}
+
+			.table tbody tr {
+				cursor: pointer;
+				transition: background-color 0.2s;
+			}
+
+				.table tbody tr:hover {
+					background-color: rgba(0,123,255,0.05);
+				}
+
+				.table tbody tr.selected {
+					background-color: rgba(0,123,255,0.1);
+				}
+
+		.input-group {
+			box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+		}
+
+		#userSearch {
+			border-right: none;
+		}
+
+		/*   .btn-outline-secondary {
+					border-left: none;
+					background-color: white;
+				}
+
+					.btn-outline-secondary:hover {
+						background-color: #f8f9fa;
+					} */
+
+		.restricted-btn {
+			width: 32px;
+			height: 32px;
+			padding: 0;
+			/*  display: flex; */
+			align-items: center;
+			justify-content: center;
+			background-color: #e9ecef;
+			border: 1px solid #ced4da;
+		}
+
+			.restricted-btn:hover {
+				background-color: #dee2e6;
+			}
+
+		.commission-icon {
+			width: 28px;
+			height: 28px;
+			padding: 0;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+
+		.log-btn {
+			padding: 4px 12px;
+			font-size: 0.875rem;
+			display: flex;
+			align-items: center;
+			gap: 5px;
+			background-color: #f8f9fa;
+			border: 1px solid #ced4da;
+		}
+
+			.log-btn:hover {
+				background-color: #e9ecef;
+			}
+
+		.form-check {
+			background-color: #f8f9fa;
+			padding: 10px 15px;
+			border-radius: 4px;
+			border: 1px solid #dee2e6;
+			margin: 0;
+		}
+
+			.form-check:hover {
+				background-color: #e9ecef;
+			}
+
+		.form-check-input {
+			cursor: pointer;
+		}
+
+		.form-check-label {
+			cursor: pointer;
+			user-select: none;
+		}
+
+		/* Custom checkbox styling */
+		.form-check-input {
+			width: 1.2em;
+			height: 1.2em;
+			margin-top: 0.15em;
+			border: 2px solid #6c757d;
+		}
+
+			.form-check-input:checked {
+				background-color: #0d6efd;
+				border-color: #0d6efd;
+			}
+
+		/* Hover effect for buttons */
+		.btn:hover {
+			transform: translateY(-1px);
+			box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+		}
+
+		/* Active checkbox highlight */
+		#isActiveCheck:checked + .form-check-label {
+			color: #198754;
+			font-weight: 500;
+		}
+
+		/* Default Map dropdown styling */
+		select[asp-for="DefaultMap"] {
+			min-width: 150px;
+			background-color: #fff;
+		}
+
+		/* Add animation for checkbox toggle */
+		.form-check-input {
+			transition: all 0.2s ease-in-out;
+		}
+
+			.form-check-input:checked {
+				transform: scale(1.1);
+			}
+
+	</style>
+}
+
+@section Scripts {
+	<script>
+		$(document).ready(function() {
+			// Initialize tooltips
+			var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+			var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+				return new bootstrap.Tooltip(tooltipTriggerEl)
+			});
+
+			// Sample user data - replace with actual data from your backend
+			const users = [
+				{ userCode: '1', userName: 'Admin', lastName: 'Admin-Shop', position: 'Administrator' },
+				{ userCode: '2', userName: 'Owner', lastName: '', position: 'Administrator' },
+				{ userCode: '123', userName: 'CASHIER', lastName: 'kiran', position: 'Cashier' }
+			];
+
+			// Populate user table
+			function populateUserTable(users) {
+				const tbody = $('#userTable tbody');
+				tbody.empty();
+
+				users.forEach(user => {
+					tbody.append(`
+						<tr data-user-code="${user.userCode}">
+							<td>${user.userCode}</td>
+							<td>${user.userName}</td>
+							<td>${user.lastName}</td>
+							<td>${user.position}</td>
+						</tr>
+					`);
+				});
+			}
+
+			// Initial population
+			populateUserTable(users);
+
+			// Handle user search
+			$('#userSearch').on('keyup', function() {
+				const searchTerm = $(this).val().toLowerCase();
+				const filteredUsers = users.filter(user =>
+					user.userCode.toLowerCase().includes(searchTerm) ||
+					user.userName.toLowerCase().includes(searchTerm) ||
+					user.lastName.toLowerCase().includes(searchTerm) ||
+					user.position.toLowerCase().includes(searchTerm)
+				);
+				populateUserTable(filteredUsers);
+			});
+
+			// Handle user selection
+			$('#userTable').on('click', 'tbody tr', function() {
+				const userCode = $(this).data('user-code');
+				// Remove previous selection
+				$('#userTable tbody tr').removeClass('selected');
+				// Add selection to clicked row
+				$(this).addClass('selected');
+
+				// Find user data
+				const selectedUser = users.find(u => u.userCode === userCode);
+				if (selectedUser) {
+					// Update form fields
+					$('#UserCode').val(selectedUser.userCode);
+					$('#UserName').val(selectedUser.userName);
+					$('#LastName').val(selectedUser.lastName);
+					$('#PositionRole').val(selectedUser.position);
+					// Add more field updates as needed
+				}
+			});
+
+			// Handle biometric button clicks
+			$('.biometric-btn').click(function() {
+				const type = $(this).find('i').attr('class');
+				// Add your biometric authentication logic here
+				console.log('Biometric authentication:', type);
+			});
+		});
+
+		   $(document).ready(function() {
+			// Handle restricted buttons click
+			$('.restricted-btn').click(function() {
+				$(this).toggleClass('active');
+				if ($(this).hasClass('active')) {
+					$(this).css('background-color', '#0d6efd').css('color', 'white');
+				} else {
+					$(this).css('background-color', '#e9ecef').css('color', 'inherit');
+				}
+			});
+
+			// Handle log button click
+			$('.log-btn').click(function() {
+				// Add your log viewing logic here
+				console.log('Opening log...');
+			});
+
+			// Add tooltip initialization if not already present
+			$('[title]').tooltip();
+		});
+
+					   function toggleSwitch(element) {
+			if (element.checked) {
+				console.log("Switched ON (Active)");
+			} else {
+				console.log("Switched OFF (Inactive)");
+			}
+		}
+
+	</script>
+}
+

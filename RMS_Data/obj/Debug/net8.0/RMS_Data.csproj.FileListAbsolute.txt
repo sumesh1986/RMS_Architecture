@@ -1,0 +1,15 @@
+D:\Jayaram\Working projects\RMS_Layout\RMS_Data\bin\Debug\net8.0\RMS_Data.deps.json
+D:\Jayaram\Working projects\RMS_Layout\RMS_Data\bin\Debug\net8.0\RMS_Data.dll
+D:\Jayaram\Working projects\RMS_Layout\RMS_Data\bin\Debug\net8.0\RMS_Data.pdb
+D:\Jayaram\Working projects\RMS_Layout\RMS_Data\bin\Debug\net8.0\RMS_Models.dll
+D:\Jayaram\Working projects\RMS_Layout\RMS_Data\bin\Debug\net8.0\RMS_Models.pdb
+D:\Jayaram\Working projects\RMS_Layout\RMS_Data\obj\Debug\net8.0\RMS_Data.csproj.AssemblyReference.cache
+D:\Jayaram\Working projects\RMS_Layout\RMS_Data\obj\Debug\net8.0\RMS_Data.GeneratedMSBuildEditorConfig.editorconfig
+D:\Jayaram\Working projects\RMS_Layout\RMS_Data\obj\Debug\net8.0\RMS_Data.AssemblyInfoInputs.cache
+D:\Jayaram\Working projects\RMS_Layout\RMS_Data\obj\Debug\net8.0\RMS_Data.AssemblyInfo.cs
+D:\Jayaram\Working projects\RMS_Layout\RMS_Data\obj\Debug\net8.0\RMS_Data.csproj.CoreCompileInputs.cache
+D:\Jayaram\Working projects\RMS_Layout\RMS_Data\obj\Debug\net8.0\RMS_Data.csproj.Up2Date
+D:\Jayaram\Working projects\RMS_Layout\RMS_Data\obj\Debug\net8.0\RMS_Data.dll
+D:\Jayaram\Working projects\RMS_Layout\RMS_Data\obj\Debug\net8.0\refint\RMS_Data.dll
+D:\Jayaram\Working projects\RMS_Layout\RMS_Data\obj\Debug\net8.0\RMS_Data.pdb
+D:\Jayaram\Working projects\RMS_Layout\RMS_Data\obj\Debug\net8.0\ref\RMS_Data.dll

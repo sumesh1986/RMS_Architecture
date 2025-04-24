@@ -1,0 +1,653 @@
+﻿@* @model ConceptViewModel *@
+
+
+@* @model RMS_Layout.Models.ConceptViewModel *@
+
+
+@{
+	ViewData["Title"] = "Concept";
+}
+
+@* <style>
+	th.sortable {
+		cursor: pointer;
+		position: relative;
+	}
+
+		th.sortable::after {
+			content: '';
+			position: absolute;
+			right: 8px;
+			font-size: 0.8rem;
+		}
+
+		th.sortable.asc::after {
+			content: ' ▲';
+		}
+
+		th.sortable.desc::after {
+			content: ' ▼';
+		}
+</style> *@
+
+@* <style>
+	.table-responsive::-webkit-scrollbar {
+		width: 4px;
+	}
+
+	.table-responsive::-webkit-scrollbar-thumb {
+		background-color: #ced4da;
+		border-radius: 10px;
+	}
+
+	.table-responsive::-webkit-scrollbar-track {
+		background-color: #f8f9fa;
+	}
+</style> *@
+
+@* <style>
+	.table-responsive {
+		max-height: 400px;
+		overflow-y: auto;
+		overflow-x: auto;
+		scrollbar-width: thin; /* Firefox */
+		scrollbar-color: #ced4da #f8f9fa; /* Firefox */
+	}
+
+		/* Chrome, Edge, Safari */
+		.table-responsive::-webkit-scrollbar {
+			width: 4px;
+			height: 4px;
+			background-color: transparent;
+			transition: background-color 0.3s ease;
+		}
+
+		.table-responsive::-webkit-scrollbar-thumb {
+			background-color: transparent;
+			border-radius: 10px;
+			transition: background-color 0.3s ease;
+		}
+
+		.table-responsive:hover::-webkit-scrollbar-thumb {
+			background-color: #adb5bd;
+		}
+
+		.table-responsive::-webkit-scrollbar-track {
+			background-color: transparent;
+		}
+
+		.table-responsive:hover::-webkit-scrollbar-track {
+			background-color: #f8f9fa;
+		}
+
+</style> *@
+
+
+
+@* <style>
+	/* Base scrollbar - hidden by default */
+	.table-responsive::-webkit-scrollbar {
+		width: 6px;
+		height: 6px;
+		background: transparent;
+	}
+
+	/* Show scrollbar on hover */
+	.table-responsive:hover::-webkit-scrollbar-thumb {
+		background: rgba(108, 117, 125, 0.4); /* soft transparent gray */
+		border-radius: 10px;
+		transition: background 0.3s ease;
+	}
+
+		/* Glossy effect with subtle gradient and shadow */
+		.table-responsive:hover::-webkit-scrollbar-thumb:hover {
+			background: linear-gradient(to bottom, rgba(108,117,125,0.6), rgba(33,37,41,0.4));
+			box-shadow: inset 0 0 2px rgba(255, 255, 255, 0.5);
+		}
+
+	.table-responsive:hover::-webkit-scrollbar-track {
+		background: transparent;
+	}
+
+</style> *@
+
+
+<!-- ============================================================== -->
+<!-- Start Content here -->
+<!-- ============================================================== -->
+
+
+
+<div class="page-content">
+
+	<div class="row">
+		<div class="col-lg-12">
+
+
+			<!--begin::Container-->
+			<div class="container-fluid">
+				<!--begin::Row-->
+				<div class="row">
+					<!--begin::Col-->
+					<div class="col-12">
+						<!--begin::Card-->
+						<div class="card">
+
+							<!--begin::Card Header-->
+							<div class="card-header">
+								<!--begin::Card Title-->
+								<div class="card-header header-background text-white text-center">
+									<h4>Concept</h4>
+								</div>
+							</div>
+
+
+							<!--begin::Card Body-->
+							<div class="card-body">
+								@* <form asp-action="ConceptFormView" method="post"> *@
+								@* 	<form method="post" action="Add"> *@
+								<!--begin::Row-->
+								<!-- Form -->
+
+								<form id="ConceptFormView">
+									<div class="row g-3">
+										<div class="col-md-6">
+											<label for="txtName" class="form-label">Name:</label>
+											<input type="text" id="txtName" class="form-control" />
+										</div>
+										<div class="col-md-6">
+											<label for="txtListofConcept" class="form-label">List of Concept:</label>
+											<textarea id="txtListofConcept" class="form-control" rows="4"></textarea>
+										</div>
+									</div>
+
+									<div class="row g-3 mt-2">
+										<div class="col-lg-6">
+											<strong class="d-block mb-2">List of Branches in the Selected Concept</strong>
+											<label for="ddlSortBy" class="form-label">Sort By:</label>
+											<select id="ddlSortBy" class="form-select">
+												<option value="0" selected>--Select--</option>
+												<option value="Branch Name">Branch Name</option>
+												<option value="Group">Group</option>
+												<option value="Country">Country</option>
+												<option value="City">City</option>
+												<option value="Region">Region</option>
+											</select>
+										</div>
+
+										<div class="col-lg-6 pt-5 d-flex align-items-center gap-3">
+											@* <div class="form-check form-switch">
+												<input class="form-check-input" type="radio" name="sortOrder" id="RadioButton1" value="Ascending" checked>
+												<label class="form-check-label" for="RadioButton1">Ascending</label>
+
+											</div>
+											<div class="form-check form-switch">
+												<input class="form-check-input" type="radio" name="sortOrder" id="RadioButton2" value="Descending">
+												<label class="form-check-label" for="RadioButton2">Descending</label>												
+											</div> *@
+
+
+											<label class="form-label">Status</label>
+											<div class="form-check form-switch">
+												<input class="form-check-input" type="checkbox" id="statusToggle" />
+												<label class="form-check-label" id="statusLabel" for="statusToggle">Active</label>
+											</div>
+											<span class="invalid-feedback">Please select a status</span>
+
+										</div>
+
+
+
+									</div>
+								</form>
+
+								<!-- BUTTONS -->
+								<div class="text-center mt-4">
+									<hr>
+									<div class="d-grid gap-2 d-md-flex justify-content-md-end">
+										<button id="saveBtn" type="submit" class="btn btn-primary button-background waves-effect">
+											<i class="bi bi-save"></i> Save
+										</button>
+										<button type="button" onclick="clearControls();" class="btn btn-outline-secondary waves-effect" id="clearBtn">
+											<i class="bi bi-x-circle"></i> Clear
+										</button>
+									</div>
+								</div>
+
+								<form id="conceptTable">
+									<!-- Table -->
+									<div class="card mt-4 shadow-sm">
+										<div class="card-header bg-primary text-white d-flex justify-content-between align-items-center">
+											<span class="fw-bold">List</span>
+											<div class="input-group input-group-sm w-auto ms-auto">
+												<input type="text" class="form-control" id="searchInput" placeholder="Search...">
+												<span class="input-group-text"><i class="bi bi-search"></i></span>
+											</div>
+										</div>
+
+										<div class="card-body">
+											@* 	<div class="table-responsive"> *@
+
+											<div class="table-responsive" style="max-height: 615px; overflow-y: auto;">
+												@* <table id="conceptTable" class="table table-striped table-hover align-middle ">
+													<thead class="table-success">
+														<tr>
+															<th>#</th>
+															<th>SysID</th>
+															<th>Name</th>
+															<th>List of concept</th>
+															<th>Created At</th>
+															<th>Status</th>
+															<th>Actions</th>
+														</tr>
+													</thead>
+													<tbody>
+													</tbody>
+
+
+												</table> *@
+
+												<table id="conceptTable" class="table table-striped table-hover align-middle">
+													<thead class="table-success grid-header-bg">
+														<tr>
+															<th class="sortable" onclick="sortTable(0)">#</th>
+															@* <th class="sortable" onclick="sortTable(1)">SysID</th> *@
+															<th class="sortable" onclick="sortTable(2)">Name</th>
+															<th class="sortable" onclick="sortTable(3)">List of concept</th>
+															<th class="sortable" onclick="sortTable(4)">Created At</th>
+															<th class="sortable" onclick="sortTable(5)">Status</th>
+
+															<th>Actions</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr><td colspan="6" class="text-center">Loading...</td></tr>
+													</tbody>
+												</table>
+
+												<div class="d-flex justify-content-between align-items-center">
+													<span id="pageInfo" class="text-muted"></span>
+													<div>
+														<button id="prevPage" class="btn btn-sm btn-outline-primary me-2">Previous</button>
+														<button id="nextPage" class="btn btn-sm btn-outline-primary">Next</button>
+													</div>
+												</div>
+
+
+											</div>
+										</div>
+									</div>
+								</form>
+
+
+
+
+
+								<!--end::Row-->
+								@* </form> *@
+							</div>
+							<!--end::Card Body-->
+
+						</div>
+						<!--end::Card-->
+
+					</div>
+					<!--end::Col-->
+				</div>
+				<!--end::Row-->
+			</div>
+			<!--end::Container-->
+
+
+		</div>
+	</div>
+
+</div>
+
+
+
+@section Scripts {
+@* <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> *@
+
+
+	<!-- ============================================================== -->
+	<!-- Start Sorting here -->
+	<!-- ============================================================== -->
+	<script>
+		let currentSortColumn = null;
+		let currentSortOrder = 'asc';
+
+		function sortTable(columnIndex) {
+			const table = document.getElementById("conceptTable");
+			const tbody = table.querySelector("tbody");
+			const rows = Array.from(tbody.querySelectorAll("tr"));
+
+			const isSameColumn = columnIndex === currentSortColumn;
+			currentSortOrder = isSameColumn && currentSortOrder === 'asc' ? 'desc' : 'asc';
+			currentSortColumn = columnIndex;
+
+			// Sort rows
+			rows.sort((a, b) => {
+				const aText = a.children[columnIndex].innerText.trim();
+				const bText = b.children[columnIndex].innerText.trim();
+
+				const aVal = isNaN(aText) ? aText.toLowerCase() : parseFloat(aText);
+				const bVal = isNaN(bText) ? bText.toLowerCase() : parseFloat(bText);
+
+				if (aVal < bVal) return currentSortOrder === 'asc' ? -1 : 1;
+				if (aVal > bVal) return currentSortOrder === 'asc' ? 1 : -1;
+				return 0;
+			});
+
+			// Re-render sorted rows
+			tbody.innerHTML = '';
+			rows.forEach(row => tbody.appendChild(row));
+
+			// Update arrow indicators
+			document.querySelectorAll("th.sortable").forEach(th => th.classList.remove('asc', 'desc'));
+			const th = table.querySelector(`th:nth-child(${columnIndex + 1})`);
+			th.classList.add(currentSortOrder);
+		}
+	</script>
+
+
+	<!-- ============================================================== -->
+	<!-- Start Pagination here -->
+	<!-- ============================================================== -->
+	<script>
+		let currentPage = 1;
+		const rowsPerPage = grid_Limit();
+		let totalRecords = 0;
+
+
+		$(document).ready(function () {
+
+
+		$('#prevPage').off('click').on('click', function (e) {
+		e.preventDefault(); // prevent default form/button behavior
+			if (currentPage > 1) {
+				currentPage--;
+				loadConcepts();
+			}
+		});
+
+
+		$('#nextPage').off('click').on('click', function (e) {
+			e.preventDefault(); // ⛔ Stops default behavior
+			const totalPages = Math.ceil(totalRecords / rowsPerPage);
+
+			if (currentPage < totalPages) {
+				currentPage++;
+				loadConcepts();
+			}
+		});
+
+			 //alert("loading...");
+			loadConcepts();
+		});
+
+		function loadConcepts() {
+			//console.log("Fetching page:", currentPage);
+			//alert("currentPage: " + currentPage);
+			$.ajax({
+				url: `/api/CompanyConceptAPI/GetAll?page=${currentPage}&pageSize=${rowsPerPage}`,
+				method: 'GET',
+				success: function (response) {
+					totalRecords = response.totalRecords;
+					renderTable(response.data);
+				},
+				error: function () {
+					toastr.error("Failed to load data.");
+				}
+			});
+		}
+
+		function renderTable(data) {
+			const tbody = $('#conceptTable tbody');
+			tbody.empty();
+
+			if (!data || data.length === 0) {
+				tbody.append('<tr><td colspan="6" class="text-center">No Data Found</td></tr>');
+				return;
+			}
+
+			data.forEach((item, index) => {
+					// "Active" or "Inactive" badge
+						let statusBadge = item.Status === "Active"
+		? '<span class="badge bg-success">Active</span>'
+		: '<span class="badge bg-danger">Inactive</span>';
+
+
+				const row = `
+					<tr data-id="${item.Id}">
+						<td>${(currentPage - 1) * rowsPerPage + index + 1}</td>
+					<td style="display:none;">${item.Id}</td>
+			<td class="name">${item.Name}</td>
+			<td class="listofconcept">${item.ListofConcept}</td>
+						<td>${new Date(item.CreatedAt).toLocaleDateString()}</td>
+
+
+						<td>${statusBadge}</td>
+
+						<td>
+			<button class="btn btn-outline-primary btn-sm edit-btn"><i class="bi bi-pencil"></i></button>
+			<button class="btn btn-outline-success btn-sm update-btn d-none"><i class="bi bi-check"></i></button>
+			<button class="btn btn-outline-secondary btn-sm cancel-btn d-none"><i class="bi bi-x"></i></button>
+			<button class="btn btn-outline-danger btn-sm delete-btn"><i class="bi bi-trash"></i></button>
+		</td>
+					</tr>`;
+				tbody.append(row);
+			});
+
+			// const totalPages = Math.ceil(totalRecords / rowsPerPage);
+			// $('#pageInfo').text(`Page ${currentPage} of ${totalPages}`);
+
+		const totalPages = Math.ceil(totalRecords / rowsPerPage);
+		const start = (currentPage - 1) * rowsPerPage + 1;
+		const end = Math.min(currentPage * rowsPerPage, totalRecords);
+
+		$('#pageInfo').text(`Showing ${start} to ${end} of ${totalRecords} entries`);
+
+		}
+	</script>
+
+	<!-- ============================================================== -->
+	<!-- Start Save here -->
+	<!-- ============================================================== -->
+	<script>
+
+
+		$(document).ready(function () {
+			$('#saveBtn').click(function () {
+				// alert("code inside");
+				// let conceptData = {
+				// 	ConceptList: [
+				// 		{
+				// 			Name: $('#txtName').val(),
+				// 			ListofConcept: $('#txtListofConcept').val(),
+				// 			Status: $('input[name="sortOrder"]:checked').val() // Gets Ascending or Descending
+
+				// 		}
+				// 	]
+				// };
+
+				 let conceptData = {
+				Name: $('#txtName').val(),
+				ListofConcept: $('#txtListofConcept').val(),
+				// Status: $('input[name="sortOrder"]:checked').val()
+				Status: $('#statusToggle').is(':checked') ? "Active" : "InActive"
+
+			};
+				//alert("Save Datas" + JSON.stringify(conceptData));
+
+					$.ajax({
+			url: '/api/CompanyConceptAPI/Save',
+			type: 'POST',
+			contentType: 'application/json',
+				data: JSON.stringify(conceptData),
+			// data: JSON.stringify({
+			// 	NewConcept: [{
+			// 		Name: $("#txtName").val().trim(),
+			// 		ListofConcept: $("#txtListofConcept").val().trim()
+			// 	}]
+			// }),
+			beforeSend: function () {
+				$('#saveBtn').prop('disabled', true).text('Saving...');
+			},
+			success: function (response) {
+				// alert(response.message || "Concept saved successfully!");
+				toastr.success(response.message || "✅ Saved successfully!");
+				clearFormControls('#ConceptFormView');
+				loadConcepts();
+				// setTimeout(() => location.reload(), 800);
+
+			},
+			error: function (xhr) {
+				if (xhr.status === 409) {
+					toastr.warning("❗ Concept already exists.");
+				} else {
+					toastr.error("🚨 An error occurred while saving the concept.");
+				}
+				//console.log(xhr.responseText);
+			},
+			complete: function () {
+				$('#saveBtn').prop('disabled', false).text('Save');
+			}
+		});
+
+
+
+			});
+		});
+	</script>
+
+
+	<!-- ============================================================== -->
+	<!-- Start Gridview Edit & Delete here -->
+	<!-- ============================================================== -->
+
+	<script>
+					$(document).ready(function () {
+			// Handle Edit Button Click
+				$(document).on("click", ".edit-btn", function (e) {
+			e.preventDefault(); // Prevent form submission or refresh
+
+			const row = $(this).closest("tr");
+
+			// Hide Edit/Delete, Show Update/Cancel
+			row.find(".edit-btn, .delete-btn").addClass("d-none");
+			row.find(".update-btn, .cancel-btn").removeClass("d-none");
+
+			// Grab and store current text
+			const name = row.find(".name").text().trim();
+			const listofconcept = row.find(".listofconcept").text().trim();
+
+			// Store originals for cancel use
+			row.find(".name").attr("data-original", name);
+			row.find(".listofconcept").attr("data-original", listofconcept);
+
+			// Replace text with input fields
+			row.find(".name").html(`<input type="text" class="form-control name-edit" value="${name}">`);
+			row.find(".listofconcept").html(`<input type="text" class="form-control listofconcept-edit" value="${listofconcept}">`);
+		});
+
+			// Handle Cancel Button Click
+			$(document).on("click", ".cancel-btn", function () {
+				e.preventDefault(); // Prevent form submission or refresh
+				var row = $(this).closest("tr");
+
+				var originalName = row.find(".name").attr("data-original");
+				var originalListOfConcept = row.find(".listofconcept").attr("data-original");
+
+				row.find(".name").html(originalName);
+				row.find(".listofconcept").html(originalListOfConcept);
+
+				row.find(".edit-btn, .delete-btn").removeClass("d-none");
+				row.find(".update-btn, .cancel-btn").addClass("d-none");
+			});
+
+			// Handle Update Button Click
+			$(document).on("click", ".update-btn", function () {
+				var row = $(this).closest("tr");
+				var id = row.data("id");
+				console.log("Updating ID:", id);
+
+				var updatedName = row.find(".name-edit").val();
+				var updatedListOfConcept = row.find(".listofconcept-edit").val();
+
+				$.ajax({
+					url: `/api/CompanyConceptAPI/${id}`,
+					type: "PUT",
+					contentType: "application/json",
+					data: JSON.stringify({
+						Id: id,
+						Name: updatedName,
+						ListofConcept: updatedListOfConcept
+					}),
+					success: function (response) {
+						if (response.success) {
+							row.find(".name").text(updatedName);
+							row.find(".listofconcept").text(updatedListOfConcept);
+							row.find(".edit-btn, .delete-btn").removeClass("d-none");
+							row.find(".update-btn, .cancel-btn").addClass("d-none");
+							toastr.success(response.message);
+							loadConcepts();
+
+						} else {
+							toastr.error("Update failed! " + response.message);
+						}
+					},
+					error: function () {
+						toastr.error("Error updating data.");
+					}
+				});
+			});
+
+			// Handle Delete Button Click
+			$(document).on("click", ".delete-btn", function () {
+				var row = $(this).closest("tr");
+				var id = row.data("id");
+
+				if (confirm("Are you sure you want to delete this record?")) {
+					$.ajax({
+						url: `/api/CompanyConceptAPI/${id}`,
+						type: "DELETE",
+						success: function (response) {
+							console.log(response); // 🔍 See full response in browser console
+
+							if (response.success) {
+								toastr.success("Deleted successfully");
+								row.remove();
+								toastr.success(response.message);
+								loadConcepts();
+							} else {
+								toastr.error("Delete failed! " + response.message);
+							}
+						},
+						error: function () {
+							toastr.error("Error deleting data.");
+						}
+					});
+				}
+			});
+		});
+
+
+	</script>
+
+	<!-- ============================================================== -->
+	<!-- Start Gridview Search functionality here -->
+	<!-- ============================================================== -->
+	<script>
+			$(document).ready(function () {
+			// Search functionality
+			$("#searchInput").on("keyup", function () {
+				var value = $(this).val().toLowerCase();
+				$("tbody tr").filter(function () {
+					$(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
+				});
+			});
+		});
+	</script>
+}
+

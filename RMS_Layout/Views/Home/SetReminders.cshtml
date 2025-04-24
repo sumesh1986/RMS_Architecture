@@ -1,0 +1,130 @@
+﻿@{
+	ViewData["Title"] = "Set Reminders";
+}
+
+
+<!-- ============================================================== -->
+<!-- Start Content here -->
+<!-- ============================================================== -->
+
+
+
+<div class="page-content">
+
+	<div class="row">
+		<div class="col-lg-12">
+
+
+			<!--begin::Container-->
+			<div class="container-fluid">
+				<!--begin::Row-->
+				<div class="row">
+					<!--begin::Col-->
+					<div class="col-12">
+						<!--begin::Card-->
+						<div class="card">
+
+							<!--begin::Card Header-->
+							<div class="card-header">
+								<!--begin::Card Title-->
+								<div class="card-header header-background text-white text-center">
+									<h4>Set Reminders</h4>
+								</div>
+
+							</div>
+
+
+							<!--begin::Card Body-->
+							<div class="card-body">
+
+								<form id="reminderForm" asp-action="Create" method="post">
+									<!--begin::Row-->
+									<!-- Form -->
+									<div class="row g-3">
+										<div class="col-md-6">
+											<div class="mb-3">
+												<label for="reminderCount" class="form-label">
+													<i class="bi bi-bell shake"></i> Number of Reminders:
+												</label>
+												<select id="reminderCount" class="form-select">
+													<option selected value="1">1</option>
+													<option value="2">2</option>
+													<option value="3">3</option>
+													<option value="4">4</option>
+													<option value="5">5</option>
+												</select>
+											</div>
+
+											<div class="mb-3">
+												<label for="interval" class="form-label">
+													<i class="bi bi-clock rotate"></i> Interval in Minutes:
+												</label>
+												<select id="interval" class="form-select">
+													<option selected value="1">1</option>
+													<option value="2">2</option>
+													<option value="3">3</option>
+													<option value="4">4</option>
+													<option value="5">5</option>
+													<option value="6">6</option>
+													<option value="7">7</option>
+													<option value="8">8</option>
+													<option value="9">9</option>
+													<option value="10">10</option>
+												</select>
+											</div>
+										</div>
+									</div>
+
+
+
+									<div class="col-md-6 d-flex pt-4">
+										<div class="form-check form-switch">
+											<input class="form-check-input" type="checkbox" id="activeCheck">
+											<label class="form-check-label" for="activeCheck">Active</label>
+										</div>
+									</div>
+
+
+									<!-- BUTTONS -->
+									<div class="text-center mt-4">
+										<hr>
+										<div class="d-grid gap-2 d-md-flex justify-content-md-end">
+											<button type="submit" class="btn btn-primary button-background waves-effect">
+												<i class="bi bi-save"></i> Update
+											</button>
+											<button type="reset" class="btn btn-outline-secondary waves-effect">
+												<i class="bi bi-x-circle"></i> Clear
+											</button>
+										</div>
+									</div>
+
+
+
+									<!--end::Row-->
+								</form>
+							</div>
+							<!--end::Card Body-->
+
+						</div>
+						<!--end::Card-->
+
+					</div>
+					<!--end::Col-->
+				</div>
+				<!--end::Row-->
+			</div>
+			<!--end::Container-->
+
+		</div>
+	</div>
+
+</div>
+
+
+<script>
+	document.getElementById('reminderForm').addEventListener('submit', function(event) {
+		event.preventDefault();
+		// Handle form submission logic here
+		alert('Form submitted!');
+	});
+</script>

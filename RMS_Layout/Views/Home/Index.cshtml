@@ -1,0 +1,1707 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+    }
+
+    
+
+
+
+<!-- ============================================================== -->
+<!-- Start right Content here -->
+<!-- ============================================================== -->
+<div class="page-content">
+  
+
+        <!-- start page title -->
+        <div class="row">
+            <div class="col-12">
+                <div class="page-title-box d-sm-flex align-items-center justify-content-between">
+                    <h4 class="mb-sm-0 font-size-18">Dashboard</h4>
+
+                    <div class="page-title-right">
+                        <ol class="breadcrumb m-0">
+                            <li class="breadcrumb-item"><a href="javascript: void(0);">Dashboards</a></li>
+                            <li class="breadcrumb-item active">Dashboard</li>
+                        </ol>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- end page title -->
+
+        <div class="row">
+            <div class="col-xl-4">
+                <div class="card overflow-hidden">
+                    <div class="bg-primary-subtle">
+                        <div class="row">
+                            <div class="col-7">
+                                <div class="text-primary p-3">
+                                    <h5 class="text-primary">Welcome Back !</h5>
+                                    <p>Dashboard</p>
+                                </div>
+						</div>
+                            <div class="col-5 align-self-end">
+                            <img src="~/images/profile-img.png" alt="" class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body pt-0">
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <div class="avatar-md profile-user-wid mb-4">
+                                <img src="~/images/user.jpg" alt="" class="img-thumbnail rounded-circle">
+                                </div>
+                                <h5 class="font-size-15 text-truncate">Henry</h5>
+                                <p class="text-muted mb-0 text-truncate">UI/UX Designer</p>
+                            </div>
+
+                            <div class="col-sm-8">
+                                <div class="pt-4">
+
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <h5 class="font-size-15">125</h5>
+                                            <p class="text-muted mb-0">Projects</p>
+                                        </div>
+                                        <div class="col-6">
+                                            <h5 class="font-size-15">Rs.1245</h5>
+                                            <p class="text-muted mb-0">Revenue</p>
+                                        </div>
+                                    </div>
+                                    <div class="mt-4">
+                                    <a href="javascript: void(0);" class="btn btn-primary waves-effect waves-light btn-sm">View Profile <i class="bi bi-arrow-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+              @*   <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title mb-4">Monthly Earning</h4>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <p class="text-muted">This month</p>
+                                <h3>Rs.34,252</h3>
+                            <p class="text-muted"><span class="text-success me-2"> 12% <i class="bi bi-arrow-up"></i> </span> From previous period</p>
+
+                                <div class="mt-4">
+                                <a href="javascript: void(0);" class="btn btn-primary waves-effect waves-light btn-sm"> View More <i class="bi bi-arrow-right ms-1"></i></a>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="mt-4 mt-sm-0">
+                                    <div id="radialBar-chart" data-colors='["--bs-primary"]' class="apex-charts"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-muted mb-0">We craft digital, graphic and dimensional thinking.</p>
+                    </div>
+                </div> *@
+            </div>
+            <div class="col-xl-8">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card mini-stats-wid">
+                            <div class="card-body">
+                                <div class="d-flex">
+                                    <div class="flex-grow-1">
+                                        <p class="text-muted fw-medium">Orders</p>
+                                        <h4 class="mb-0">1,235</h4>
+                                    </div>
+
+                                    <div class="flex-shrink-0 align-self-center">
+                                        <div class="mini-stat-icon avatar-sm rounded-circle bg-primary">
+                                            <span class="avatar-title">
+                                            <i class="bi bi-clipboard font-size-4"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card mini-stats-wid">
+                            <div class="card-body">
+                                <div class="d-flex">
+                                    <div class="flex-grow-1">
+                                        <p class="text-muted fw-medium">Revenue</p>
+                                        <h4 class="mb-0">Rs.35, 723</h4>
+                                    </div>
+
+                                    <div class="flex-shrink-0 align-self-center ">
+                                        <div class="avatar-sm rounded-circle bg-primary mini-stat-icon">
+                                            <span class="avatar-title rounded-circle bg-primary">
+                                            <i class="bi bi-archive"></i>
+
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card mini-stats-wid">
+                            <div class="card-body">
+                                <div class="d-flex">
+                                    <div class="flex-grow-1">
+                                        <p class="text-muted fw-medium">Average Price</p>
+                                        <h4 class="mb-0">Rs.16.2</h4>
+                                    </div>
+
+                                    <div class="flex-shrink-0 align-self-center">
+                                        <div class="avatar-sm rounded-circle bg-primary mini-stat-icon">
+                                            <span class="avatar-title rounded-circle bg-primary">
+                                            <i class="bi bi-tag fs-4"></i>
+
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- end row -->
+            <!-- Bootstrap Card Layout -->
+            <div class="card shadow-sm border-0 rounded-4">
+                <div class="card-body">
+                    <h4 class="card-title fw-semibold">Earning</h4>
+                    <div class="row align-items-center">
+                        <!-- Left Content -->
+                        <div class="col-md-4">
+                            <p class="text-muted mb-1">This month</p>
+                            <h2 class="fw-bold">Rs.2453.35</h2>
+                            <p>
+                                <span class="badge bg-success text-white">+0.2%</span>
+                                <span class="text-muted"> From previous period</span>
+                            </p>
+                            <a href="#" class="btn btn-primary btn-sm">View Details →</a>
+
+                            <p class="text-muted mt-3">Last month</p>
+                            <h5 class="fw-bold text-muted">Rs.2281.04</h5>
+                        </div>
+
+                        <!-- Right Chart -->
+                        <div class="col-md-8">
+                            <div id="earnings-chart"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+              @*   <div class="card">
+                    <div class="card-body">
+                        <div class="d-sm-flex flex-wrap">
+                            <h4 class="card-title mb-4">Email Sent</h4>
+                            <div class="ms-auto">
+                                <ul class="nav nav-pills">
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Week</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Month</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link active" href="#">Year</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div id="stacked-column-chart" class="apex-charts" data-colors='["--bs-primary", "--bs-warning", "--bs-success"]' dir="ltr"></div>
+                    </div>
+                </div> *@
+            </div>
+        </div>
+        <!-- end row -->
+
+    <div class="row">
+        <div class="col-xl-4">
+
+            <!-- Visitors Card -->
+            <div class="card shadow-sm border-0 rounded-4">
+                <div class="card-body">
+                    <div class="d-flex flex-wrap align-items-start">
+                        <h5 class="card-title me-2 fw-bold">Visitors</h5>
+                        <div class="ms-auto">
+                            <div class="toolbar d-flex flex-wrap gap-2">
+                                <button type="button" class="btn btn-light btn-sm filter-btn" data-period="ALL">ALL</button>
+                                <button type="button" class="btn btn-light btn-sm filter-btn" data-period="1M">1M</button>
+                                <button type="button" class="btn btn-light btn-sm filter-btn" data-period="6M">6M</button>
+                                <button type="button" class="btn btn-light btn-sm filter-btn active" data-period="1Y">1Y</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Visitor Stats -->
+                    <div class="row text-center">
+                        <div class="col-lg-4">
+                            <div class="mt-4">
+                                <p class="text-muted mb-1">Today</p>
+                                <h5 id="todayVisitors">1024</h5>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4">
+                            <div class="mt-4">
+                                <p class="text-muted mb-1">This Month</p>
+                                <h5 id="monthVisitors">12356 <span class="text-success">0.2% <i class="bi bi-arrow-up"></i></span></h5>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4">
+                            <div class="mt-4">
+                                <p class="text-muted mb-1">This Year</p>
+                                <h5 id="yearVisitors">102354 <span class="text-success">0.1% <i class="bi bi-arrow-up"></i></span></h5>
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr class="mb-4">
+
+                    <!-- Visitors Chart -->
+                    <div id="visitors-chart" class="apex-charts"></div>
+                </div>
+            </div>
+        </div>
+       
+
+        <div class="col-xl-4">
+            <!-- Top Selling Products Card -->
+            <div class="card shadow-sm border-0 rounded-4">
+                <div class="card-body">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h4 class="fw-bold">Top Selling Product</h4>
+                        <div class="input-group input-group-sm w-auto">
+                            <select class="form-select">
+                                <option selected>Jan</option>
+                                <option>Dec</option>
+                                <option>Nov</option>
+                                <option>Oct</option>
+                            </select>
+                            <label class="input-group-text">Month</label>
+                        </div>
+                    </div>
+
+                    <!-- Product Overview -->
+                    <div class="text-center my-3">
+                        <p class="mb-1 text-muted">Product A</p>
+                        <h2 class="fw-bold">Rs.6,385</h2>
+                        <p class="mt-2">
+                            <span class="badge bg-success text-white">+0.6% <i class="bi bi-arrow-up"></i></span>
+                            <span class="text-muted"> From previous period</span>
+                        </p>
+                    </div>
+
+                    <!-- Sales Table -->
+                    <div class="table-responsive mt-3">
+                        <table class="table align-middle mb-0">
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <h5 class="fw-semibold">Product A</h5>
+                                        <p class="text-muted">Food (product A)</p>
+                                    </td>
+                                    <td>
+                                        <div id="radialchart-1"></div>
+                                    </td>
+                                    <td>
+                                        <p class="text-muted mb-1">Sales</p>
+                                        <h5 class="fw-bold">37%</h5>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <h5 class="fw-semibold">Product B</h5>
+                                        <p class="text-muted">Food (product B)</p>
+                                    </td>
+                                    <td>
+                                        <div id="radialchart-2"></div>
+                                    </td>
+                                    <td>
+                                        <p class="text-muted mb-1">Sales</p>
+                                        <h5 class="fw-bold">72%</h5>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <h5 class="fw-semibold">Product C</h5>
+                                        <p class="text-muted">Food (product C)</p>
+                                    </td>
+                                    <td>
+                                        <div id="radialchart-3"></div>
+                                    </td>
+                                    <td>
+                                        <p class="text-muted mb-1">Sales</p>
+                                        <h5 class="fw-bold">54%</h5>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-4">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title mb-4">Sales Analytics</h4>
+
+                    <div>
+                        <div id="donut-chart" class="apex-charts"></div>
+                    </div>
+
+                    <div class="text-center text-muted">
+                        <div class="row">
+                            <div class="col-4">
+                                <div class="mt-4">
+                                    <p class="mb-2 text-truncate">
+                                        <i class="bi bi-circle-fill text-primary me-1"></i> Product A
+                                    </p>
+                                    <h5>Rs. 2,132</h5>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="mt-4">
+                                    <p class="mb-2 text-truncate">
+                                        <i class="bi bi-circle-fill text-success me-1"></i> Product B
+                                    </p>
+                                    <h5>Rs. 1,763</h5>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="mt-4">
+                                    <p class="mb-2 text-truncate">
+                                        <i class="bi bi-circle-fill text-danger me-1"></i> Product C
+                                    </p>
+                                    <h5>Rs. 973</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+           @*  <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title mb-4">Sales Analytics</h4>
+
+                    <div>
+                        <div id="donut-chart" data-colors='["--bs-primary", "--bs-success", "--bs-danger"]' class="apex-charts"></div>
+                    </div>
+
+                    <div class="text-center text-muted">
+                        <div class="row">
+                            <div class="col-4">
+                                <div class="mt-4">
+                                    <p class="mb-2 text-truncate">
+                                        <i class="bi bi-circle-fill text-primary me-1"></i> Product A
+                                    </p>
+                                    <h5>Rs. 2,132</h5>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="mt-4">
+                                    <p class="mb-2 text-truncate">
+                                        <i class="bi bi-circle-fill text-success me-1"></i> Product B
+                                    </p>
+                                    <h5>Rs. 1,763</h5>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="mt-4">
+                                    <p class="mb-2 text-truncate">
+                                        <i class="bi bi-circle-fill text-danger me-1"></i> Product C
+                                    </p>
+                                    <h5>Rs. 973</h5>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div> *@
+        </div>
+    </div>
+
+        <div class="row">
+          @*   <div class="col-xl-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title mb-4">Social Source</h4>
+                        <div class="text-center">
+                            <div class="avatar-sm mx-auto mb-4">
+                                <span class="avatar-title rounded-circle bg-primary-subtle font-size-24">
+                                    <i class="mdi mdi-facebook text-primary"></i>
+                                </span>
+                            </div>
+                            <p class="font-16 text-muted mb-2"></p>
+                            <h5><a href="javascript: void(0);" class="text-dark">Facebook - <span class="text-muted font-16">125 sales</span> </a></h5>
+                            <p class="text-muted">Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus tincidunt.</p>
+                            <a href="javascript: void(0);" class="text-primary font-16">Learn more <i class="mdi mdi-chevron-right"></i></a>
+                        </div>
+                        <div class="row mt-4">
+                            <div class="col-4">
+                                <div class="social-source text-center mt-3">
+                                    <div class="avatar-xs mx-auto mb-3">
+                                        <span class="avatar-title rounded-circle bg-primary font-size-16">
+                                            <i class="mdi mdi-facebook text-white"></i>
+                                        </span>
+                                    </div>
+                                    <h5 class="font-size-15">Facebook</h5>
+                                    <p class="text-muted mb-0">125 sales</p>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="social-source text-center mt-3">
+                                    <div class="avatar-xs mx-auto mb-3">
+                                        <span class="avatar-title rounded-circle bg-info font-size-16">
+                                            <i class="mdi mdi-twitter text-white"></i>
+                                        </span>
+                                    </div>
+                                    <h5 class="font-size-15">Twitter</h5>
+                                    <p class="text-muted mb-0">112 sales</p>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="social-source text-center mt-3">
+                                    <div class="avatar-xs mx-auto mb-3">
+                                        <span class="avatar-title rounded-circle bg-pink font-size-16">
+                                            <i class="mdi mdi-instagram text-white"></i>
+                                        </span>
+                                    </div>
+                                    <h5 class="font-size-15">Instagram</h5>
+                                    <p class="text-muted mb-0">104 sales</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div> *@
+        <div class="col-xl-4">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title mb-4">Transactions</h4>
+
+                    <ul class="nav nav-pills bg-light rounded" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" data-bs-toggle="tab" href="#transactions-all-tab" role="tab">All</a>
+                        </li>
+                       @*  <li class="nav-item">
+                            <a class="nav-link" data-bs-toggle="tab" href="#transactions-buy-tab" role="tab">Buy</a>
+                        </li> *@
+                        <li class="nav-item">
+                            <a class="nav-link" data-bs-toggle="tab" href="#transactions-sell-tab" role="tab">Sales</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content mt-4">
+                        <div class="tab-pane active" id="transactions-all-tab" role="tabpanel">
+                            <div class="table-responsive" data-simplebar style="max-height: 330px;">
+                                <table class="table align-middle table-nowrap">
+                                    <tbody>
+                                        <tr>
+                                            <td style="width: 50px;">
+                                                <div class="font-size-22 text-primary">
+                                                    <i class="bi bi-arrow-down-circle-fill"></i>
+                                                </div>
+                                            </td>
+
+                                            <td>
+                                                <div>
+                                                    <h5 class="font-size-14 mb-1">Buy BTC</h5>
+                                                    <p class="text-muted mb-0">14 Mar, 2020</p>
+                                                </div>
+                                            </td>
+
+                                            <td>
+                                                <div class="text-end">
+                                                    <h5 class="font-size-14 mb-0">0.016 BTC</h5>
+                                                </div>
+                                            </td>
+
+                                            <td>
+                                                <div class="text-end">
+                                                    <h5 class="font-size-14 text-muted mb-0">Rs.125.20</h5>
+                                                </div>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>
+                                                <div class="font-size-22 text-danger">
+                                                    <i class="bi bi-arrow-up-circle-fill"></i>
+                                                </div>
+                                            </td>
+
+                                            <td>
+                                                <div>
+                                                    <h5 class="font-size-14 mb-1">Sell ETH</h5>
+                                                    <p class="text-muted mb-0">15 Mar, 2020</p>
+                                                </div>
+                                            </td>
+
+                                            <td>
+                                                <div class="text-end">
+                                                    <h5 class="font-size-14 mb-0">0.56 ETH</h5>
+                                                </div>
+                                            </td>
+
+                                            <td>
+                                                <div class="text-end">
+                                                    <h5 class="font-size-14 text-muted mb-0">Rs.112.34</h5>
+                                                </div>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>
+                                                <div class="font-size-22 text-primary">
+                                                    <i class="bi bi-arrow-down-circle-fill"></i>
+                                                </div>
+                                            </td>
+
+                                            <td>
+                                                <div>
+                                                    <h5 class="font-size-14 mb-1">Buy LTC</h5>
+                                                    <p class="text-muted mb-0">16 Mar, 2020</p>
+                                                </div>
+                                            </td>
+
+                                            <td>
+                                                <div class="text-end">
+                                                    <h5 class="font-size-14 mb-0">1.88 LTC</h5>
+                                                </div>
+                                            </td>
+
+                                            <td>
+                                                <div class="text-end">
+                                                    <h5 class="font-size-14 text-muted mb-0">Rs.94.22</h5>
+                                                </div>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>
+                                                <div class="font-size-22 text-primary">
+                                                    <i class="bi bi-arrow-up-circle-fill"></i>
+                                                </div>
+                                            </td>
+
+                                            <td>
+                                                <div>
+                                                    <h5 class="font-size-14 mb-1">Buy ETH</h5>
+                                                    <p class="text-muted mb-0">17 Mar, 2020</p>
+                                                </div>
+                                            </td>
+
+                                            <td>
+                                                <div class="text-end">
+                                                    <h5 class="font-size-14 mb-0">0.42 ETH</h5>
+                                                </div>
+                                            </td>
+
+                                            <td>
+                                                <div class="text-end">
+                                                    <h5 class="font-size-14 text-muted mb-0">Rs.84.32</h5>
+                                                </div>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>
+                                                <div class="font-size-22 text-danger">
+                                                    <i class="bi bi-arrow-up-circle-fill"></i>
+                                                </div>
+                                            </td>
+
+                                            <td>
+                                                <div>
+                                                    <h5 class="font-size-14 mb-1">Sell BTC</h5>
+                                                    <p class="text-muted mb-0">18 Mar, 2020</p>
+                                                </div>
+                                            </td>
+
+                                            <td>
+                                                <div class="text-end">
+                                                    <h5 class="font-size-14 mb-0">0.018 BTC</h5>
+                                                </div>
+                                            </td>
+
+                                            <td>
+                                                <div class="text-end">
+                                                    <h5 class="font-size-14 text-muted mb-0">Rs.145.80</h5>
+                                                </div>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td style="width: 50px;">
+                                                <div class="font-size-22 text-primary">
+                                                    <i class="bi bi-arrow-down-circle-fill"></i>
+                                                </div>
+                                            </td>
+
+                                            <td>
+                                                <div>
+                                                    <h5 class="font-size-14 mb-1">Buy BTC</h5>
+                                                    <p class="text-muted mb-0">14 Mar, 2020</p>
+                                                </div>
+                                            </td>
+
+                                            <td>
+                                                <div class="text-end">
+                                                    <h5 class="font-size-14 mb-0">0.016 BTC</h5>
+                                                </div>
+                                            </td>
+
+                                            <td>
+                                                <div class="text-end">
+                                                    <h5 class="font-size-14 text-muted mb-0">Rs.125.20</h5>
+                                                </div>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>
+                                                <div class="font-size-22 text-danger">
+                                                    <i class="bi bi-arrow-down-circle-fill"></i>
+                                                </div>
+                                            </td>
+
+                                            <td>
+                                                <div>
+                                                    <h5 class="font-size-14 mb-1">Sell ETH</h5>
+                                                    <p class="text-muted mb-0">15 Mar, 2020</p>
+                                                </div>
+                                            </td>
+
+                                            <td>
+                                                <div class="text-end">
+                                                    <h5 class="font-size-14 mb-0">0.56 ETH</h5>
+                                                </div>
+                                            </td>
+
+                                            <td>
+                                                <div class="text-end">
+                                                    <h5 class="font-size-14 text-muted mb-0">Rs.112.34</h5>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                     @*    <div class="tab-pane" id="transactions-buy-tab" role="tabpanel">
+                            <div class="table-responsive" data-simplebar style="max-height: 330px;">
+                                <table class="table align-middle table-nowrap">
+                                    <tbody>
+                                        <tr>
+                                            <td style="width: 50px;">
+                                                <div class="font-size-22 text-danger">
+                                                    <i class="bx bx-up-arrow-circle"></i>
+                                                </div>
+                                            </td>
+
+                                            <td>
+                                                <div>
+                                                    <h5 class="font-size-14 mb-1">Sell ETH</h5>
+                                                    <p class="text-muted mb-0">15 Mar, 2020</p>
+                                                </div>
+                                            </td>
+
+                                            <td>
+                                                <div class="text-end">
+                                                    <h5 class="font-size-14 mb-0">0.56 ETH</h5>
+                                                </div>
+                                            </td>
+
+                                            <td>
+                                                <div class="text-end">
+                                                    <h5 class="font-size-14 text-muted mb-0">Rs.112.34</h5>
+                                                </div>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>
+                                                <div class="font-size-22 text-primary">
+                                                    <i class="bx bx-down-arrow-circle"></i>
+                                                </div>
+                                            </td>
+
+                                            <td>
+                                                <div>
+                                                    <h5 class="font-size-14 mb-1">Buy BTC</h5>
+                                                    <p class="text-muted mb-0">14 Mar, 2020</p>
+                                                </div>
+                                            </td>
+
+                                            <td>
+                                                <div class="text-end">
+                                                    <h5 class="font-size-14 mb-0">0.016 BTC</h5>
+                                                </div>
+                                            </td>
+
+                                            <td>
+                                                <div class="text-end">
+                                                    <h5 class="font-size-14 text-muted mb-0">Rs.125.20</h5>
+                                                </div>
+                                            </td>
+                                        </tr>
+
+
+                                        <tr>
+                                            <td>
+                                                <div class="font-size-22 text-primary">
+                                                    <i class="bx bx-down-arrow-circle"></i>
+                                                </div>
+                                            </td>
+
+                                            <td>
+                                                <div>
+                                                    <h5 class="font-size-14 mb-1">Buy ETH</h5>
+                                                    <p class="text-muted mb-0">17 Mar, 2020</p>
+                                                </div>
+                                            </td>
+
+                                            <td>
+                                                <div class="text-end">
+                                                    <h5 class="font-size-14 mb-0">0.42 ETH</h5>
+                                                </div>
+                                            </td>
+
+                                            <td>
+                                                <div class="text-end">
+                                                    <h5 class="font-size-14 text-muted mb-0">Rs.84.32</h5>
+                                                </div>
+                                            </td>
+                                        </tr>
+
+
+
+                                        <tr>
+                                            <td>
+                                                <div class="font-size-22 text-primary">
+                                                    <i class="bx bx-down-arrow-circle"></i>
+                                                </div>
+                                            </td>
+
+                                            <td>
+                                                <div>
+                                                    <h5 class="font-size-14 mb-1">Buy LTC</h5>
+                                                    <p class="text-muted mb-0">16 Mar, 2020</p>
+                                                </div>
+                                            </td>
+
+                                            <td>
+                                                <div class="text-end">
+                                                    <h5 class="font-size-14 mb-0">1.88 LTC</h5>
+                                                </div>
+                                            </td>
+
+                                            <td>
+                                                <div class="text-end">
+                                                    <h5 class="font-size-14 text-muted mb-0">Rs.94.22</h5>
+                                                </div>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td style="width: 50px;">
+                                                <div class="font-size-22 text-primary">
+                                                    <i class="bx bx-down-arrow-circle"></i>
+                                                </div>
+                                            </td>
+
+                                            <td>
+                                                <div>
+                                                    <h5 class="font-size-14 mb-1">Buy BTC</h5>
+                                                    <p class="text-muted mb-0">14 Mar, 2020</p>
+                                                </div>
+                                            </td>
+
+                                            <td>
+                                                <div class="text-end">
+                                                    <h5 class="font-size-14 mb-0">0.016 BTC</h5>
+                                                </div>
+                                            </td>
+
+                                            <td>
+                                                <div class="text-end">
+                                                    <h5 class="font-size-14 text-muted mb-0">Rs.125.20</h5>
+                                                </div>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>
+                                                <div class="font-size-22 text-danger">
+                                                    <i class="bx bx-up-arrow-circle"></i>
+                                                </div>
+                                            </td>
+
+                                            <td>
+                                                <div>
+                                                    <h5 class="font-size-14 mb-1">Sell BTC</h5>
+                                                    <p class="text-muted mb-0">18 Mar, 2020</p>
+                                                </div>
+                                            </td>
+
+                                            <td>
+                                                <div class="text-end">
+                                                    <h5 class="font-size-14 mb-0">0.018 BTC</h5>
+                                                </div>
+                                            </td>
+
+                                            <td>
+                                                <div class="text-end">
+                                                    <h5 class="font-size-14 text-muted mb-0">Rs.145.80</h5>
+                                                </div>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>
+                                                <div class="font-size-22 text-danger">
+                                                    <i class="bx bx-up-arrow-circle"></i>
+                                                </div>
+                                            </td>
+
+                                            <td>
+                                                <div>
+                                                    <h5 class="font-size-14 mb-1">Sell ETH</h5>
+                                                    <p class="text-muted mb-0">15 Mar, 2020</p>
+                                                </div>
+                                            </td>
+
+                                            <td>
+                                                <div class="text-end">
+                                                    <h5 class="font-size-14 mb-0">0.56 ETH</h5>
+                                                </div>
+                                            </td>
+
+                                            <td>
+                                                <div class="text-end">
+                                                    <h5 class="font-size-14 text-muted mb-0">Rs.112.34</h5>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div> *@
+
+                        <div class="tab-pane" id="transactions-sell-tab" role="tabpanel">
+                            <div class="table-responsive" data-simplebar style="max-height: 330px;">
+                                <table class="table align-middle table-nowrap">
+                                    <tbody>
+                                        <tr>
+                                            <td style="width: 50px;">
+                                                <div class="font-size-22 text-primary">
+                                                    <i class="bi bi-arrow-down-circle"></i>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div>
+                                                    <h5 class="font-size-14 mb-1">Buy BTC</h5>
+                                                    <p class="text-muted mb-0">14 Mar, 2020</p>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="text-end">
+                                                    <h5 class="font-size-14 mb-0">0.016 BTC</h5>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="text-end">
+                                                    <h5 class="font-size-14 text-muted mb-0">Rs.125.20</h5>
+                                                </div>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>
+                                                <div class="font-size-22 text-primary">
+                                                    <i class="bi bi-arrow-down-circle"></i>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div>
+                                                    <h5 class="font-size-14 mb-1">Buy LTC</h5>
+                                                    <p class="text-muted mb-0">16 Mar, 2020</p>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="text-end">
+                                                    <h5 class="font-size-14 mb-0">1.88 LTC</h5>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="text-end">
+                                                    <h5 class="font-size-14 text-muted mb-0">Rs.94.22</h5>
+                                                </div>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>
+                                                <div class="font-size-22 text-primary">
+                                                    <i class="bi bi-arrow-down-circle"></i>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div>
+                                                    <h5 class="font-size-14 mb-1">Buy ETH</h5>
+                                                    <p class="text-muted mb-0">17 Mar, 2020</p>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="text-end">
+                                                    <h5 class="font-size-14 mb-0">0.42 ETH</h5>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="text-end">
+                                                    <h5 class="font-size-14 text-muted mb-0">Rs.84.32</h5>
+                                                </div>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>
+                                                <div class="font-size-22 text-danger">
+                                                    <i class="bi bi-arrow-up-circle"></i>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div>
+                                                    <h5 class="font-size-14 mb-1">Sell ETH</h5>
+                                                    <p class="text-muted mb-0">15 Mar, 2020</p>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="text-end">
+                                                    <h5 class="font-size-14 mb-0">0.56 ETH</h5>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="text-end">
+                                                    <h5 class="font-size-14 text-muted mb-0">Rs.112.34</h5>
+                                                </div>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>
+                                                <div class="font-size-22 text-danger">
+                                                    <i class="bi bi-arrow-up-circle"></i>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div>
+                                                    <h5 class="font-size-14 mb-1">Sell BTC</h5>
+                                                    <p class="text-muted mb-0">18 Mar, 2020</p>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="text-end">
+                                                    <h5 class="font-size-14 mb-0">0.018 BTC</h5>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="text-end">
+                                                    <h5 class="font-size-14 text-muted mb-0">Rs.145.80</h5>
+                                                </div>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>
+                                                <div class="font-size-22 text-danger">
+                                                    <i class="bi bi-arrow-up-circle"></i>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div>
+                                                    <h5 class="font-size-14 mb-1">Sell ETH</h5>
+                                                    <p class="text-muted mb-0">15 Mar, 2020</p>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="text-end">
+                                                    <h5 class="font-size-14 mb-0">0.56 ETH</h5>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="text-end">
+                                                    <h5 class="font-size-14 text-muted mb-0">Rs.112.34</h5>
+                                                </div>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>
+                                                <div class="font-size-22 text-primary">
+                                                    <i class="bi bi-arrow-down-circle"></i>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div>
+                                                    <h5 class="font-size-14 mb-1">Buy BTC</h5>
+                                                    <p class="text-muted mb-0">14 Mar, 2020</p>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="text-end">
+                                                    <h5 class="font-size-14 mb-0">0.016 BTC</h5>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="text-end">
+                                                    <h5 class="font-size-14 text-muted mb-0">Rs.125.20</h5>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+
+                                </table>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+         <div class="col-xl-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title mb-5">Activity</h4>
+                        <ul class="verti-timeline list-unstyled">
+                            <li class="event-list">
+                                <div class="event-timeline-dot">
+                                <i class="bi bi-arrow-right-circle font-size-18"></i>
+
+                                </div>
+                                <div class="d-flex">
+                                    <div class="flex-shrink-0 me-3">
+                                    <h5 class="font-size-14">22 Nov <i class="bi bi-arrow-right font-size-16 text-primary align-middle ms-2"></i></h5>
+
+                                    </div>
+                                    <div class="flex-grow-1">
+                                        <div>
+                                            Responded to need “Volunteer Activities
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="event-list">
+                                <div class="event-timeline-dot">
+                                <i class="bi bi-arrow-right-circle font-size-18"></i>
+
+                                </div>
+                                <div class="d-flex">
+                                    <div class="flex-shrink-0 me-3">
+                                    <h5 class="font-size-14">17 Nov<i class="bi bi-arrow-right font-size-16 text-primary align-middle ms-2"></i></h5>
+                                    </div>
+                                    <div class="flex-grow-1">
+                                        <div>
+                                            Everyone realizes why a new common language would be desirable... <a href="javascript: void(0);">Read more</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="event-list active">
+                                <div class="event-timeline-dot">
+                                <i class="bi bi-arrow-right-circle-fill font-size-18 text-primary"></i>
+
+                                </div>
+                                <div class="d-flex">
+                                    <div class="flex-shrink-0 me-3">
+                                    <h5 class="font-size-14">15 Nov <i class="bi bi-arrow-right font-size-16 text-primary align-middle ms-2"></i></h5>
+                                    </div>
+                                    <div class="flex-grow-1">
+                                        <div>
+                                            Joined the group “Boardsmanship Forum”
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="event-list">
+                                <div class="event-timeline-dot">
+                                <i class="bi bi-arrow-right-circle font-size-18"></i>
+
+                                </div>
+                                <div class="d-flex">
+                                    <div class="flex-shrink-0 me-3">
+                                    <h5 class="font-size-14">12 Nov <i class="bi bi-arrow-right font-size-16 text-primary align-middle ms-2"></i></h5>
+                                    </div>
+                                    <div class="flex-grow-1">
+                                        <div>
+                                            Responded to need “In-Kind Opportunity”
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    <div class="text-center mt-4">
+                        <a href="javascript: void(0);" class="btn btn-primary waves-effect waves-light btn-sm">
+                            View More <i class="bi bi-arrow-right ms-1"></i>
+                        </a>
+                    </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xl-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title mb-4">Top Cities Selling Product</h4>
+
+                        <div class="text-center">
+                            <div class="mb-4">
+                            <i class="bi bi-geo-alt-fill text-primary display-4"></i>
+
+                            </div>
+                            <h3>1,456</h3>
+                            <p>India</p>
+                        </div>
+
+                        <div class="table-responsive mt-4">
+                            <table class="table align-middle table-nowrap">
+                                <tbody>
+                                    <tr>
+                                        <td style="width: 30%">
+                                            <p class="mb-0">Dubai</p>
+                                        </td>
+                                        <td style="width: 25%">
+                                            <h5 class="mb-0">1,456</h5>
+                                        </td>
+                                        <td>
+                                            <div class="progress bg-transparent progress-sm">
+                                                <div class="progress-bar bg-primary rounded" role="progressbar" style="width: 94%" aria-valuenow="94" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <p class="mb-0">Saudi</p>
+                                        </td>
+                                        <td>
+                                            <h5 class="mb-0">1,123</h5>
+                                        </td>
+                                        <td>
+                                            <div class="progress bg-transparent progress-sm">
+                                                <div class="progress-bar bg-success rounded" role="progressbar" style="width: 82%" aria-valuenow="82" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <p class="mb-0">Gulf</p>
+                                        </td>
+                                        <td>
+                                            <h5 class="mb-0">1,026</h5>
+                                        </td>
+                                        <td>
+                                            <div class="progress bg-transparent progress-sm">
+                                                <div class="progress-bar bg-warning rounded" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end row -->
+
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title mb-4">Latest Transaction</h4>
+                        <div class="table-responsive">
+                            <table class="table align-middle table-nowrap mb-0">
+                                <thead class="table-light">
+                                    <tr>
+                                        <th style="width: 20px;">
+                                            <div class="form-check font-size-16 align-middle">
+                                                <input class="form-check-input" type="checkbox" id="transactionCheck01">
+                                                <label class="form-check-label" for="transactionCheck01"></label>
+                                            </div>
+                                        </th>
+                                        <th class="align-middle">Order ID</th>
+                                        <th class="align-middle">Billing Name</th>
+                                        <th class="align-middle">Date</th>
+                                        <th class="align-middle">Total</th>
+                                        <th class="align-middle">Payment Status</th>
+                                        <th class="align-middle">Payment Method</th>
+                                        <th class="align-middle">View Details</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <div class="form-check font-size-16">
+                                                <input class="form-check-input" type="checkbox" id="transactionCheck02">
+                                                <label class="form-check-label" for="transactionCheck02"></label>
+                                            </div>
+                                        </td>
+                                        <td><a href="javascript: void(0);" class="text-body fw-bold">#SK2540</a> </td>
+                                        <td>Neal Matthews</td>
+                                        <td>
+                                            07 Oct, 2019
+                                        </td>
+                                        <td>
+                                            Rs.400
+                                        </td>
+                                        <td>
+                                            <span class="badge badge-pill badge-soft-success font-size-11">Paid</span>
+                                        </td>
+                                        <td>
+                                        <i class="bi bi-credit-card-2-front"></i> Mastercard
+                                        </td>
+                                        <td>
+                                            <!-- Button trigger modal -->
+                                            <button type="button" class="btn btn-primary btn-sm btn-rounded waves-effect waves-light" data-bs-toggle="modal" data-bs-target=".transaction-detailModal">
+                                                View Details
+                                            </button>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>
+                                            <div class="form-check font-size-16">
+                                                <input class="form-check-input" type="checkbox" id="transactionCheck03">
+                                                <label class="form-check-label" for="transactionCheck03"></label>
+                                            </div>
+                                        </td>
+                                        <td><a href="javascript: void(0);" class="text-body fw-bold">#SK2541</a> </td>
+                                        <td>Jamal Burnett</td>
+                                        <td>
+                                            07 Oct, 2019
+                                        </td>
+                                        <td>
+                                            Rs.380
+                                        </td>
+                                        <td>
+                                            <span class="badge badge-pill badge-soft-danger font-size-11">Chargeback</span>
+                                        </td>
+                                        <td>
+                                        <i class="bi bi-credit-card-2-front"></i> Visa
+                                        </td>
+                                        <td>
+                                            <!-- Button trigger modal -->
+                                            <button type="button" class="btn btn-primary btn-sm btn-rounded waves-effect waves-light" data-bs-toggle="modal" data-bs-target=".transaction-detailModal">
+                                                View Details
+                                            </button>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>
+                                            <div class="form-check font-size-16">
+                                                <input class="form-check-input" type="checkbox" id="transactionCheck04">
+                                                <label class="form-check-label" for="transactionCheck04"></label>
+                                            </div>
+                                        </td>
+                                        <td><a href="javascript: void(0);" class="text-body fw-bold">#SK2542</a> </td>
+                                        <td>Juan Mitchell</td>
+                                        <td>
+                                            06 Oct, 2019
+                                        </td>
+                                        <td>
+                                            Rs.384
+                                        </td>
+                                        <td>
+                                            <span class="badge badge-pill badge-soft-success font-size-11">Paid</span>
+                                        </td>
+                                        <td>
+                                        <i class="bi bi-wallet2"></i> Paypal
+                                        </td>
+                                        <td>
+                                            <!-- Button trigger modal -->
+                                            <button type="button" class="btn btn-primary btn-sm btn-rounded waves-effect waves-light" data-bs-toggle="modal" data-bs-target=".transaction-detailModal">
+                                                View Details
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="form-check font-size-16">
+                                                <input class="form-check-input" type="checkbox" id="transactionCheck05">
+                                                <label class="form-check-label" for="transactionCheck05"></label>
+                                            </div>
+                                        </td>
+                                        <td><a href="javascript: void(0);" class="text-body fw-bold">#SK2543</a> </td>
+                                        <td>Barry Dick</td>
+                                        <td>
+                                            05 Oct, 2019
+                                        </td>
+                                        <td>
+                                            Rs.412
+                                        </td>
+                                        <td>
+                                            <span class="badge badge-pill badge-soft-success font-size-11">Paid</span>
+                                        </td>
+                                        <td>
+                                        <i class="bi bi-credit-card-2-front"></i> Mastercard
+                                        </td>
+                                        <td>
+                                            <!-- Button trigger modal -->
+                                            <button type="button" class="btn btn-primary btn-sm btn-rounded waves-effect waves-light" data-bs-toggle="modal" data-bs-target=".transaction-detailModal">
+                                                View Details
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="form-check font-size-16">
+                                                <input class="form-check-input" type="checkbox" id="transactionCheck06">
+                                                <label class="form-check-label" for="transactionCheck06"></label>
+                                            </div>
+                                        </td>
+                                        <td><a href="javascript: void(0);" class="text-body fw-bold">#SK2544</a> </td>
+                                        <td>Ronald Taylor</td>
+                                        <td>
+                                            04 Oct, 2019
+                                        </td>
+                                        <td>
+                                            Rs.404
+                                        </td>
+                                        <td>
+                                            <span class="badge badge-pill badge-soft-warning font-size-11">Refund</span>
+                                        </td>
+                                        <td>
+                                        <i class="bi bi-credit-card-2-front"></i> Visa
+                                        </td>
+                                        <td>
+                                            <!-- Button trigger modal -->
+                                            <button type="button" class="btn btn-primary btn-sm btn-rounded waves-effect waves-light" data-bs-toggle="modal" data-bs-target=".transaction-detailModal">
+                                                View Details
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="form-check font-size-16">
+                                                <input class="form-check-input" type="checkbox" id="transactionCheck07">
+                                                <label class="form-check-label" for="transactionCheck07"></label>
+                                            </div>
+                                        </td>
+                                        <td><a href="javascript: void(0);" class="text-body fw-bold">#SK2545</a> </td>
+                                        <td>Jacob Hunter</td>
+                                        <td>
+                                            04 Oct, 2019
+                                        </td>
+                                        <td>
+                                            Rs.392
+                                        </td>
+                                        <td>
+                                            <span class="badge badge-pill badge-soft-success font-size-11">Paid</span>
+                                        </td>
+                                        <td>
+                                        <i class="bi bi-wallet2"></i> Paypal
+                                        </td>
+                                        <td>
+                                            <!-- Button trigger modal -->
+                                            <button type="button" class="btn btn-primary btn-sm btn-rounded waves-effect waves-light" data-bs-toggle="modal" data-bs-target=".transaction-detailModal">
+                                                View Details
+                                            </button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- end table-responsive -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end row -->
+
+    <!-- container-fluid -->
+
+<!-- End Page-content -->
+<!-- Transaction Modal -->
+<div class="modal fade transaction-detailModal" tabindex="-1" role="dialog" aria-labelledby="transaction-detailModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="transaction-detailModalLabel">Order Details</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p class="mb-2">Product id: <span class="text-primary">#SK2540</span></p>
+                <p class="mb-4">Billing Name: <span class="text-primary">Neal Matthews</span></p>
+
+                <div class="table-responsive">
+                    <table class="table align-middle table-nowrap">
+                        <thead>
+                            <tr>
+                                <th scope="col">Product</th>
+                                <th scope="col">Product Name</th>
+                                <th scope="col">Price</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">
+                                    <div>
+                                        <img src="assets/images/product/img-7.png" alt="" class="avatar-sm">
+                                    </div>
+                                </th>
+                                <td>
+                                    <div>
+                                        <h5 class="text-truncate font-size-14">Wireless Headphone (Black)</h5>
+                                        <p class="text-muted mb-0">Rs. 225 x 1</p>
+                                    </div>
+                                </td>
+                                <td>Rs. 255</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">
+                                    <div>
+                                        <img src="assets/images/product/img-4.png" alt="" class="avatar-sm">
+                                    </div>
+                                </th>
+                                <td>
+                                    <div>
+                                        <h5 class="text-truncate font-size-14">Phone patterned cases</h5>
+                                        <p class="text-muted mb-0">Rs. 145 x 1</p>
+                                    </div>
+                                </td>
+                                <td>Rs. 145</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <h6 class="m-0 text-right">Sub Total:</h6>
+                                </td>
+                                <td>
+                                    Rs. 400
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <h6 class="m-0 text-right">Shipping:</h6>
+                                </td>
+                                <td>
+                                    Free
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <h6 class="m-0 text-right">Total:</h6>
+                                </td>
+                                <td>
+                                    Rs. 400
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end modal -->
+<!-- subscribeModal -->
+<div class="modal fade" id="subscribeModal" tabindex="-1" aria-labelledby="subscribeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header border-bottom-0">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="text-center mb-4">
+                    <div class="avatar-md mx-auto mb-4">
+                        <div class="avatar-title bg-light rounded-circle text-primary h1">
+                            <i class="mdi mdi-email-open"></i>
+                        </div>
+                    </div>
+
+                    <div class="row justify-content-center">
+                        <div class="col-xl-10">
+                            <h4 class="text-primary">Subscribe !</h4>
+                            <p class="text-muted font-size-14 mb-4">Subscribe our newletter and get notification to stay update.</p>
+
+                            <div class="input-group bg-light rounded">
+                                <input type="email" class="form-control bg-transparent border-0" placeholder="Enter Email address" aria-label="Recipient's username" aria-describedby="button-addon2">
+
+                                <button class="btn btn-primary" type="button" id="button-addon2">
+                                    <i class="bx bxs-paper-plane"></i>
+                                </button>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end modal -->
+</div>
+<!-- End Page-content -->
+<!-- apexcharts -->
+<script src="assets/libs/apexcharts/apexcharts.min.js"></script>
+
+<!-- dashboard init -->
+<script src="assets/js/pages/dashboard.init.js"></script>
+
+<!-- dashboard sales init -->
+<script src="~/js/dashboardsales.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+
+<script>
+    // Sample data for different time periods
+    let visitorsData = {
+        "ALL": { today: 1024, month: 12356, year: 102354, series: [10, 15, 35, 40, 50, 65, 75, 85, 90, 95, 100, 120] },
+        "1M": { today: 820, month: 11234, year: 98321, series: [5, 10, 20, 30, 50, 65, 75, 85, 95, 110, 120, 130] },
+        "6M": { today: 950, month: 11987, year: 101456, series: [8, 12, 25, 35, 45, 55, 65, 75, 80, 85, 90, 100] },
+        "1Y": { today: 1024, month: 12356, year: 102354, series: [10, 15, 35, 40, 50, 65, 75, 85, 90, 95, 100, 120] }
+    };
+
+    // Initialize chart
+    let chartOptions = {
+        chart: {
+            type: 'area',
+            height: 300,
+            animations: {
+                enabled: true,
+                easing: 'easeinout',
+                speed: 800
+            }
+        },
+        series: [{ name: 'Visitors', data: visitorsData["1Y"].series }],
+        colors: ['#3b82f6'],
+        stroke: { curve: 'smooth', width: 2 },
+        fill: { type: 'gradient', gradient: { shade: 'light', type: "vertical", stops: [0, 100] } },
+        xaxis: { categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'] },
+        yaxis: { labels: { formatter: (val) => val } }
+    };
+
+    let visitorsChart = new ApexCharts(document.querySelector("#visitors-chart"), chartOptions);
+    visitorsChart.render();
+
+    // Update chart and data on button click
+    document.querySelectorAll(".filter-btn").forEach(btn => {
+        btn.addEventListener("click", function () {
+            document.querySelectorAll(".filter-btn").forEach(b => b.classList.remove("active"));
+            this.classList.add("active");
+            let period = this.getAttribute("data-period");
+
+            // Update numbers
+            document.getElementById("todayVisitors").innerText = visitorsData[period].today;
+            document.getElementById("monthVisitors").innerText = visitorsData[period].month;
+            document.getElementById("yearVisitors").innerText = visitorsData[period].year;
+
+            // Update chart
+            visitorsChart.updateSeries([{ data: visitorsData[period].series }]);
+        });
+    });
+</script>
+<script>
+    function createRadialChart(element, value, color) {
+        var options = {
+            chart: {
+                type: 'radialBar',
+                height: 100,
+                animations: {
+                    enabled: true,
+                    easing: 'easeinout',
+                    speed: 1000
+                }
+            },
+            series: [value],
+            colors: [color],
+            plotOptions: {
+                radialBar: {
+                    hollow: {
+                        size: '50%'
+                    },
+                    track: {
+                        background: '#e9ecef'
+                    },
+                    dataLabels: {
+                        show: false
+                    }
+                }
+            }
+        };
+        var chart = new ApexCharts(document.querySelector(element), options);
+        chart.render();
+    }
+
+    // Initialize Charts
+    createRadialChart("#radialchart-1", 37, "#3b82f6"); // Blue
+    createRadialChart("#radialchart-2", 72, "#22c55e"); // Green
+    createRadialChart("#radialchart-3", 54, "#ef4444"); // Red
+</script>
+
+<!-- Chart Script -->
+<script>
+    var options = {
+        chart: {
+            type: 'line',
+            height: 250,
+            animations: {
+                enabled: true,
+                easing: 'easeout',
+                speed: 800
+            }
+        },
+        series: [{
+            name: "Earnings",
+            data: [30, 40, 35, 50, 49, 60, 70, 60, 80, 70, 75, 80] // Update dynamically
+        }],
+        stroke: {
+            curve: 'smooth',
+            width: 3
+        },
+        colors: ['#3b82f6'], // Blue color
+        xaxis: {
+            categories: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12']
+        },
+        tooltip: {
+            theme: 'light'
+        }
+    };
+
+    var chart = new ApexCharts(document.querySelector("#earnings-chart"), options);
+    chart.render();
+</script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        var options = {
+            chart: {
+                type: 'donut',
+                height: 250
+            },
+            series: [2132, 1763, 973],
+            labels: ["Product A", "Product B", "Product C"],
+            colors: ['#0d6efd', '#198754', '#dc3545'], // Bootstrap primary, success, danger
+            legend: {
+                show: false
+            },
+            dataLabels: {
+                enabled: false
+            }
+        };
+
+        var chart = new ApexCharts(document.querySelector("#donut-chart"), options);
+        chart.render();
+    });
+</script>

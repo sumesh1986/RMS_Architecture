@@ -1,0 +1,84 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Jayaram\\Working projects\\RMS_Layout\\RMS_Layout\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{52493F9C-F637-41D2-9D6F-9619D7DAC3B5}|RMS_Layout.csproj|d:\\jayaram\\working projects\\rms_layout\\rms_layout\\views\\customers\\customergroups\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{52493F9C-F637-41D2-9D6F-9619D7DAC3B5}|RMS_Layout.csproj|solutionrelative:views\\customers\\customergroups\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EC32D507-9C4A-4619-A13A-402BF7669EE2}|..\\RMS_BAL\\RMS_BAL.csproj|d:\\jayaram\\working projects\\rms_layout\\rms_bal\\services\\customer\\customergroupservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{66B2A271-90B1-4872-B946-70CA1307D760}|..\\RMS_Data\\RMS_Data.csproj|d:\\jayaram\\working projects\\rms_layout\\rms_data\\repository\\customer\\customergrouprepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{52493F9C-F637-41D2-9D6F-9619D7DAC3B5}|RMS_Layout.csproj|d:\\jayaram\\working projects\\rms_layout\\rms_layout\\controllers\\projectapi\\customers\\customergroupapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{52493F9C-F637-41D2-9D6F-9619D7DAC3B5}|RMS_Layout.csproj|solutionrelative:controllers\\projectapi\\customers\\customergroupapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CustomerGroupRepository.cs",
+              "DocumentMoniker": "D:\\Jayaram\\Working projects\\RMS_Layout\\RMS_Data\\Repository\\Customer\\CustomerGroupRepository.cs",
+              "RelativeDocumentMoniker": "..\\RMS_Data\\Repository\\Customer\\CustomerGroupRepository.cs",
+              "ToolTip": "D:\\Jayaram\\Working projects\\RMS_Layout\\RMS_Data\\Repository\\Customer\\CustomerGroupRepository.cs",
+              "RelativeToolTip": "..\\RMS_Data\\Repository\\Customer\\CustomerGroupRepository.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAowEgAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-23T10:31:29.411Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CustomerGroupService.cs",
+              "DocumentMoniker": "D:\\Jayaram\\Working projects\\RMS_Layout\\RMS_BAL\\Services\\Customer\\CustomerGroupService.cs",
+              "RelativeDocumentMoniker": "..\\RMS_BAL\\Services\\Customer\\CustomerGroupService.cs",
+              "ToolTip": "D:\\Jayaram\\Working projects\\RMS_Layout\\RMS_BAL\\Services\\Customer\\CustomerGroupService.cs",
+              "RelativeToolTip": "..\\RMS_BAL\\Services\\Customer\\CustomerGroupService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-23T10:28:56.189Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CustomerGroupAPIController.cs",
+              "DocumentMoniker": "D:\\Jayaram\\Working projects\\RMS_Layout\\RMS_Layout\\Controllers\\ProjectAPI\\Customers\\CustomerGroupAPIController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ProjectAPI\\Customers\\CustomerGroupAPIController.cs",
+              "ToolTip": "D:\\Jayaram\\Working projects\\RMS_Layout\\RMS_Layout\\Controllers\\ProjectAPI\\Customers\\CustomerGroupAPIController.cs",
+              "RelativeToolTip": "Controllers\\ProjectAPI\\Customers\\CustomerGroupAPIController.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAA5wDwAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-23T04:13:49.258Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\Jayaram\\Working projects\\RMS_Layout\\RMS_Layout\\Views\\Customers\\CustomerGroups\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Customers\\CustomerGroups\\Index.cshtml",
+              "ToolTip": "D:\\Jayaram\\Working projects\\RMS_Layout\\RMS_Layout\\Views\\Customers\\CustomerGroups\\Index.cshtml",
+              "RelativeToolTip": "Views\\Customers\\CustomerGroups\\Index.cshtml",
+              "ViewState": "AgIAANIAAAAAAAAAAAAowPcAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-23T03:46:52.589Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

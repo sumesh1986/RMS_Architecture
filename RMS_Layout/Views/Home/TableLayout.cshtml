@@ -1,0 +1,265 @@
+﻿@{
+	ViewData["Title"] = "Table Layout";
+}
+
+
+<link href="~/css/bootstrap.min.css" rel="stylesheet" />
+
+<!-- jQuery UI CSS (For Drag & Resize Styling) -->
+
+<link href="~/css/jquery-ui.css" rel="stylesheet" />
+
+<style>
+	.table-box {
+		position: absolute;
+		background-color: lightgray;
+		color: #9f8c8c;
+		font-weight: bold;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border: 1px solid #db7c7c;
+		box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+		border-radius: 5px;
+		cursor: move;
+	}
+
+	.ui-resizable-handle {
+		width: 7px;
+		height: 7px;
+		/* background-color: #ffffff;
+						border: 2px solid #0056b3;*/
+		background-color: #d98484;
+		border: 2px solid #a55d2b;
+		position: absolute;
+		z-index: 10;
+	}
+
+	.ui-resizable-nw {
+		top: -6px;
+		left: -6px;
+		cursor: nw-resize;
+	}
+
+	.ui-resizable-ne {
+		top: -6px;
+		right: -6px;
+		cursor: ne-resize;
+	}
+
+	.ui-resizable-sw {
+		bottom: -6px;
+		left: -6px;
+		cursor: sw-resize;
+	}
+
+	.ui-resizable-se {
+		bottom: -6px;
+		right: -6px;
+		cursor: se-resize;
+	}
+</style>
+<style>
+	/*.table-box {
+							position: absolute;
+							border: 1px solid #db7c7c;
+							text-align: center;
+							background-color: lightgray;
+							cursor: move;
+							display: flex;
+							justify-content: center;
+							align-items: center;
+							font-weight: bold;
+							color: #9f8c8c;
+						}*/
+
+	#layout-container {
+		position: relative;
+		width: 100%;
+		height: 500px;
+		border: 2px dashed #d58686;
+		overflow: auto;
+		margin-top: 20px;
+		background-color: #4a6076;
+	}
+
+</style>
+
+
+
+
+<!-- ============================================================== -->
+<!-- Start Content here -->
+<!-- ============================================================== -->
+
+
+
+<div class="page-content">
+
+	<div class="row">
+		<div class="col-lg-12">
+
+
+			<!--begin::Container-->
+			<div class="container-fluid">
+				<!--begin::Row-->
+				<div class="row">
+					<!--begin::Col-->
+					<div class="col-12">
+						<!--begin::Card-->
+						<div class="card">
+
+							<!--begin::Card Header-->
+							<div class="card-header">
+								<!--begin::Card Title-->
+								<div class="card-header header-background text-white text-center">
+									<h4>Table Layout</h4>
+								</div>
+							</div>
+
+
+							<!--begin::Card Body-->
+							<div class="card-body">
+
+								<form action="#" method="post">
+									<!--begin::Row-->
+									<!-- Form -->
+
+									<div class="container-fluid py-4">
+										<div class="card shadow-sm p-4">
+											<div class="row">
+
+												<div class="col-md-12">
+
+													<div id="layout-container" class="border p-3">
+														<!-- Tables will be dynamically generated here -->
+														<asp:Literal ID="ltTables" runat="server"></asp:Literal>
+													</div>
+													<input type="hidden" id="tablePositions" />
+												</div>
+											</div>
+
+											<div class="row">
+												<div class="col-md-12">
+													<div class="border p-3">
+														<label class="form-label">Range:</label>
+														<input type="number" class="form-control" value="1">
+														<input type="number" id="txtRange" class="form-control mt-2" required>
+
+														<label class="form-label mt-3">Width & Height:</label>
+														<input type="number" id="txtWidth" class="form-control mt-2" required>
+														<input type="number" id="txtHeight" class="form-control mt-2" required>
+
+														<div class="d-flex justify-content-end gap-2 mt-3">
+															<button id="btnRun" class="btn btn-outline-secondary"><i class="bi bi-play-fill"></i> Run</button>
+															<button class="btn btn-outline-secondary"><i class="bi bi-save"></i> Save</button>
+															<button class="btn btn-outline-secondary"><i class="bi bi-arrow-clockwise"></i> Reset</button>
+															<button class="btn btn-outline-secondary"><i class="bi bi-folder-symlink"></i> Load</button>
+														</div>
+
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+
+
+
+									<!--end::Row-->
+								</form>
+
+
+							</div>
+							<!--end::Card Body-->
+
+						</div>
+						<!--end::Card-->
+
+					</div>
+					<!--end::Col-->
+				</div>
+				<!--end::Row-->
+			</div>
+			<!--end::Container-->
+
+
+		</div>
+	</div>
+</div>
+
+@* ✅ 4. Use jQuery.noConflict() If Needed
+If multiple libraries are conflicting with $, use: *@
+
+<script>
+		var jq = jQuery.noConflict();
+	jq(document).ready(function () {
+		jq(".table-box").draggable().resizable();
+	});
+</script>
+
+@* In case jQuery UI fails to load, add a fallback: *@
+
+@* <script>
+	if (typeof $.ui == 'undefined') {
+		document.write('<script src="/path/to/jquery-ui.min.js"><\/script>');
+	}
+</script> *@
+
+<!-- jQuery Library (Always First) -->
+<script src="~/js/jquery-3.6.4.min.js"></script>
+
+
+
+<!-- jQuery UI JS (For Draggable & Resizable) -->
+
+
+
+
+
+<script>
+	$(document).ready(function () {
+		$("#btnRun").click(function (event) {
+			event.preventDefault(); // Prevent page refresh // Prevent form submission
+
+			let numTables = parseInt($("#txtRange").val()) || 0;
+			let width = parseInt($("#txtWidth").val()) || 100;
+
+			let height = parseInt($("#txtHeight").val()) || 100;
+			let container = $("#layout-container");
+
+			container.empty(); // Clear previous tables
+
+			if (numTables <= 0) {
+				alert("Please enter a valid number of tables.");
+				return;
+			}
+
+			let x = 10, y = 10;
+			let tablesPerRow = 10;
+			let html = "";
+
+			for (let i = 1; i <= numTables; i++) {
+				html += `<div id='table-${i}' class='table-box'
+							style='width:${width}px; height:${height}px; left:${x}px; top:${y}px;'>
+							Table ${i}
+							<div class='ui-resizable-handle ui-resizable-nw'></div>
+							<div class='ui-resizable-handle ui-resizable-ne'></div>
+							<div class='ui-resizable-handle ui-resizable-sw'></div>
+							<div class='ui-resizable-handle ui-resizable-se'></div>
+						 </div>`;
+
+				x += width + 10;
+				if (i % tablesPerRow == 0) {
+					x = 10;
+					y += height + 10;
+				}
+			}
+
+			container.append(html);
+
+			// Make tables draggable & resizable
+			$(".table-box").draggable({ containment: "#layout-container" }).resizable();
+		});
+	});
+</script>
+

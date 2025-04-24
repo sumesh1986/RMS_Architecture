@@ -1,0 +1,146 @@
+﻿@{
+	ViewData["Title"] = "Discount Exception";
+}
+
+
+<!-- ============================================================== -->
+<!-- Start Content here -->
+<!-- ============================================================== -->
+
+
+
+<div class="page-content">
+
+	<div class="row">
+		<div class="col-lg-12">
+
+			<!--begin::Container-->
+			<div class="container-fluid">
+				<!--begin::Row-->
+				<div class="row">
+					<!--begin::Col-->
+					<div class="col-12">
+						<!--begin::Card-->
+						<div class="card">
+
+							<!--begin::Card Header-->
+							<div class="card-header">
+								<!--begin::Card Title-->
+								<div class="card-header header-background text-white text-center">
+									<h4>Discount Exception</h4>
+								</div>
+
+
+							</div>
+
+
+							<!--begin::Card Body-->
+							<div class="card-body">
+
+								<form asp-action="Create" method="post">
+									<!--begin::Row-->
+									<!-- Form -->
+
+									<div class="row g-3">
+										<div class="col-md-12">
+											<div class="mb-3">
+												<label class="form-label" for="concept">Concept:</label>
+												<select id="concept" class="form-select">
+													<option value="0" selected>--Select--</option>
+												</select>
+											</div>
+											<div class="mb-3">
+												<label class="form-label">List of Discount</label>
+												<input type="text" class="form-control" placeholder="Search">
+											</div>
+											<div class="mb-3">
+												<label class="form-label">Description of Discount:</label>
+												<select class="form-select" multiple style="height: 100px;"></select>
+											</div>
+										</div>
+
+									</div>
+
+									<div class="row g-3">
+										<div class="col-md-12">
+											<h5 class="mb-3">Apply to</h5>
+											<hr />
+											<div class="row">
+												<div class="col-md-3 mb-3">
+													<label class="form-label" for="category">Category:</label>
+													<select id="category" class="form-select">
+														<option value="0" selected>--Select--</option>
+													</select>
+												</div>
+												<div class="col-md-3 mb-3">
+													<label class="form-label" for="division">Division:</label>
+													<select id="division" class="form-select">
+														<option value="0" selected>--Select--</option>
+													</select>
+												</div>
+												<div class="col-md-3 mb-3">
+													<label class="form-label" for="group">Group:</label>
+													<select id="group" class="form-select">
+														<option value="0" selected>--Select--</option>
+													</select>
+												</div>
+												<div class="col-md-3 mb-3 d-flex align-items-end">
+													<div class="form-check form-switch">
+														<input type="checkbox" class="form-check-input" id="all">
+														<label class="form-check-label" for="all">
+															All <span class="switch-icon">✔️</span>
+														</label>
+													</div>
+
+												</div>
+											</div>
+											<div class="row mb-3">
+												<div class="col-lg-5 ms-auto">
+													<input type="text" class="form-control" placeholder="Search">
+												</div>
+											</div>
+											<div class="mb-3">
+												<select class="form-select" multiple style="height: 100px;"></select>
+											</div>
+
+										</div>
+									</div>
+
+
+
+
+
+
+									<!-- BUTTONS -->
+									<div class="text-center mt-4">
+										<hr>
+										<div class="d-grid gap-2 d-md-flex justify-content-md-end">
+											<button type="submit" class="btn btn-primary button-background waves-effect">
+												<i class="bi bi-save"></i> Save
+											</button>
+											<button type="button" class="btn btn-outline-secondary waves-effect" id="clearBtn">
+												<i class="bi bi-x-circle"></i> Clear
+											</button>
+										</div>
+									</div>
+
+
+
+									<!--end::Row-->
+								</form>
+							</div>
+							<!--end::Card Body-->
+
+						</div>
+						<!--end::Card-->
+
+					</div>
+					<!--end::Col-->
+				</div>
+				<!--end::Row-->
+			</div>
+			<!--end::Container-->
+
+		</div>
+	</div>
+</div>

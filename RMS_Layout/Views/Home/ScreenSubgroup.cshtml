@@ -1,0 +1,308 @@
+﻿@{
+	ViewData["Title"] = "Screen Subgroup";
+}
+
+
+<!-- ============================================================== -->
+<!-- Start Content here -->
+<!-- ============================================================== -->
+
+
+
+<div class="page-content">
+
+	<div class="row">
+		<div class="col-lg-12">
+
+
+			<!--begin::Container-->
+			<div class="container-fluid">
+				<!--begin::Row-->
+				<div class="row">
+					<!--begin::Col-->
+					<div class="col-12">
+						<!--begin::Card-->
+						<div class="card">
+
+							<!--begin::Card Header-->
+							<div class="card-header">
+								<!--begin::Card Title-->
+								<div class="card-header header-background text-white text-center">
+									<h4>Screen Subgroup</h4>
+								</div>
+						
+							</div>
+
+
+							<!--begin::Card Body-->
+							<div class="card-body">
+
+								<form asp-action="Create" method="post">
+									<!--begin::Row-->
+									<!-- Form -->
+
+
+									<div class="card-body p-0">
+										<div class="row g-0">
+											<!-- Left Side - Form -->
+											<div class="col-md-5 col-12 form-section p-4">
+												<div class="mb-4">
+													<div class="form-check form-switch">
+														<input class="form-check-input" type="checkbox" id="activeSwitch">
+														<label class="form-check-label" for="activeSwitch">Active?</label>
+													</div>
+												</div>
+
+												<div class="mb-4">
+													<label class="form-label">Choose Group</label>
+													<select class="form-select">
+														<option value="Food">Food</option>
+														<option value="Beverages">Beverages</option>
+													</select>
+												</div>
+
+												<div class="mb-4">
+													<label class="form-label">Enter the Screen Sub-group Name</label>
+													<input type="text" class="form-control" placeholder="Enter name...">
+												</div>
+
+												<div class="mb-4">
+													<label class="form-label">ID</label>
+													<input type="text" class="form-control id-input" readonly>
+												</div>
+											</div>
+
+											<!-- Right Side - List -->
+											<div class="col-md-7 list-section">
+												<div class="p-4">
+													<h6 class="text-muted mb-3">The Screen Sub-group List</h6>
+
+													<div class="mb-3">
+														<label class="form-label small">Screen</label>
+														<div class="input-group">
+															<select class="form-select">
+																<option>Food</option>
+															</select>
+														</div>
+													</div>
+
+													<div class="mb-3">
+														<div class="search-container">
+															<input type="text" class="form-control" placeholder="Search...">
+															<i class="fas fa-search search-icon"></i>
+														</div>
+													</div>
+
+													<div class="table-responsive">
+														<table class="table table-hover">
+															<thead>
+																<tr>
+																	<th>Sub Group</th>
+																	<th class="text-end">Active</th>
+																</tr>
+															</thead>
+															<tbody>
+																<tr>
+																	<td>Breakfast</td>
+																	<td class="text-end">
+																		<span class="badge bg-success">Active</span>
+																	</td>
+																</tr>
+																<tr>
+																	<td>Lunch</td>
+																	<td class="text-end">
+																		<span class="badge bg-success">Active</span>
+																	</td>
+																</tr>
+															</tbody>
+														</table>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+
+
+									<!-- BUTTONS -->
+									<div class="text-center mt-4">
+										<hr>
+										<div class="d-grid gap-2 d-md-flex justify-content-md-end">
+											<button type="submit" class="btn btn-primary button-background waves-effect">
+												<i class="bi bi-save"></i> Save
+											</button>
+											<button type="button" class="btn btn-outline-secondary waves-effect" id="clearBtn">
+												<i class="bi bi-x-circle"></i> Clear
+											</button>
+										</div>
+									</div>
+
+
+
+									<!--end::Row-->
+								</form>
+							</div>
+							<!--end::Card Body-->
+
+						</div>
+						<!--end::Card-->
+
+					</div>
+					<!--end::Col-->
+				</div>
+				<!--end::Row-->
+			</div>
+			<!--end::Container-->
+
+		</div>
+	</div>
+</div>
+
+
+@section Styles {
+
+	<style>
+
+
+		.form-section {
+			background-color: #e9ecef;
+			border-right: 1px solid #dee2e6;
+		}
+
+		.list-section {
+			background-color: white;
+		}
+
+		.window-controls .btn {
+			width: 24px;
+			height: 24px;
+			padding: 0;
+			font-size: 14px;
+			line-height: 1;
+		}
+
+		/*   .form-check-input {
+					width: 3rem;
+					height: 1.5rem;
+					cursor: pointer;
+				} */
+
+		.id-container {
+			display: flex;
+			align-items: center;
+			gap: 8px;
+			max-width: 200px;
+		}
+
+		.id-label {
+			background: #343a40;
+			color: white;
+			padding: 4px 8px;
+			border-radius: 4px;
+			font-size: 0.8rem;
+		}
+
+		.id-input {
+			background-color: #fff;
+			text-align: center;
+			font-weight: bold;
+		}
+
+
+		.search-container {
+			position: relative;
+		}
+
+		.search-icon {
+			position: absolute;
+			right: 10px;
+			top: 50%;
+			transform: translateY(-50%);
+			color: #6c757d;
+		}
+
+		.table {
+			margin-bottom: 0;
+		}
+
+			.table th {
+				background-color: #f8f9fa;
+				border-bottom: 2px solid #dee2e6;
+			}
+
+		.badge {
+			font-weight: 500;
+			padding: 0.4em 0.8em;
+		}
+
+		.action-buttons {
+			display: flex;
+			gap: 8px;
+			padding: 1rem;
+			background-color: #f8f9fa;
+			border-top: 1px solid #dee2e6;
+		}
+
+			.action-buttons .btn {
+				width: 36px;
+				height: 36px;
+				padding: 0;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				transition: all 0.2s;
+			}
+
+				.action-buttons .btn:hover {
+					transform: translateY(-2px);
+					box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+				}
+
+		.form-control, .form-select {
+			border: 1px solid #dee2e6;
+			border-radius: 4px;
+			padding: 0.5rem 0.75rem;
+		}
+
+			.form-control:focus, .form-select:focus {
+				border-color: #80bdff;
+				box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+			}
+
+		/* Custom switch styling */
+		.form-switch .form-check-input:checked {
+			background-color: #198754;
+			border-color: #198754;
+		}
+
+
+
+		.action-buttons {
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+
+	</style>
+}
+
+@section Scripts {
+	<script>
+		$(document).ready(function() {
+			// Initialize tooltips
+			$('[title]').tooltip();
+
+			// Handle table row selection
+			$('.table tbody tr').click(function() {
+				$('.table tbody tr').removeClass('selected');
+				$(this).addClass('selected');
+			});
+
+			// Search functionality
+			$('input[placeholder="Search..."]').on('keyup', function() {
+				var value = $(this).val().toLowerCase();
+				$('.table tbody tr').filter(function() {
+					$(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+				});
+			});
+		});
+	</script>
+}

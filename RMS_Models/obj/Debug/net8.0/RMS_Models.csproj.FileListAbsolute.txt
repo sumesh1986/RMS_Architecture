@@ -1,0 +1,11 @@
+D:\Jayaram\Working projects\RMS_Layout\RMS_Models\bin\Debug\net8.0\RMS_Models.deps.json
+D:\Jayaram\Working projects\RMS_Layout\RMS_Models\bin\Debug\net8.0\RMS_Models.dll
+D:\Jayaram\Working projects\RMS_Layout\RMS_Models\bin\Debug\net8.0\RMS_Models.pdb
+D:\Jayaram\Working projects\RMS_Layout\RMS_Models\obj\Debug\net8.0\RMS_Models.GeneratedMSBuildEditorConfig.editorconfig
+D:\Jayaram\Working projects\RMS_Layout\RMS_Models\obj\Debug\net8.0\RMS_Models.AssemblyInfoInputs.cache
+D:\Jayaram\Working projects\RMS_Layout\RMS_Models\obj\Debug\net8.0\RMS_Models.AssemblyInfo.cs
+D:\Jayaram\Working projects\RMS_Layout\RMS_Models\obj\Debug\net8.0\RMS_Models.csproj.CoreCompileInputs.cache
+D:\Jayaram\Working projects\RMS_Layout\RMS_Models\obj\Debug\net8.0\RMS_Models.dll
+D:\Jayaram\Working projects\RMS_Layout\RMS_Models\obj\Debug\net8.0\refint\RMS_Models.dll
+D:\Jayaram\Working projects\RMS_Layout\RMS_Models\obj\Debug\net8.0\RMS_Models.pdb
+D:\Jayaram\Working projects\RMS_Layout\RMS_Models\obj\Debug\net8.0\ref\RMS_Models.dll

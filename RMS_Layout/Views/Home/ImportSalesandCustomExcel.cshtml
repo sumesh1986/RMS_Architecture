@@ -1,0 +1,118 @@
+﻿@{
+	ViewData["Title"] = "Import Sales & Customer from Excel";
+}
+
+
+<!-- ============================================================== -->
+<!-- Start Content here -->
+<!-- ============================================================== -->
+
+
+
+<div class="page-content">
+
+	<div class="row">
+		<div class="col-lg-12">
+
+
+			<!--begin::Container-->
+			<div class="container-fluid">
+				<!--begin::Row-->
+				<div class="row">
+					<!--begin::Col-->
+					<div class="col-12">
+						<!--begin::Card-->
+						<div class="card">
+
+							<!--begin::Card Header-->
+							<div class="card-header">
+								<!--begin::Card Title-->
+								<div class="card-header header-background text-white text-center">
+									<h4>Import Sales and Customer from Excel</h4>
+								</div>
+				
+							</div>
+
+
+							<!--begin::Card Body-->
+							<div class="card-body">
+								@* 	<form action="#" method="post"> *@
+								<form asp-action="Create" method="post">
+									<!--begin::Row-->
+									<!-- Form -->
+
+									<div class="row g-3">
+										<div>
+											@* <h4 class="text-center mb-3">File Upload Form</h4> *@
+
+											<div class="mb-3">
+												<label for="fileUpload" class="form-label">File Upload:</label>
+												<input type="file" class="form-control" id="fileUpload">
+											</div>
+											<div class="mb-3">
+												<label class="form-label">Select Category:</label>
+												<div class="form-check form-switch">
+													<input class="form-check-input" type="radio" name="category" id="sales" value="sales">
+													<label class="form-check-label" for="sales">Sales Items</label>
+												</div>
+												<div class="form-check form-switch">
+													<input class="form-check-input" type="radio" name="category" id="inventory" value="inventory">
+													<label class="form-check-label" for="inventory">Inventory Items</label>
+												</div>
+												<div class="form-check form-switch">
+													<input class="form-check-input" type="radio" name="category" id="customers" value="customers">
+													<label class="form-check-label" for="customers">Customer Items</label>
+												</div>
+												<div class="form-check form-switch">
+													<input class="form-check-input" type="radio" name="category" id="suppliers" value="suppliers">
+													<label class="form-check-label" for="suppliers">Suppliers</label>
+												</div>
+											</div>
+
+											<div class="text-end">
+												<button type="submit" class="btn btn-primary button-background waves-effect">
+													@* <i class="bi bi-cloud-upload"></i> <!-- Cloud Upload -->
+											<i class="bi bi-file-earmark-arrow-up"></i> <!-- File Upload --> *@
+													<i class="bi bi-upload"></i> Import File
+												</button>
+											</div>
+
+
+											<hr>
+											<div class="alert alert-warning d-flex align-items-start p-3 rounded-3 shadow-sm">
+												<i class="bi bi-exclamation-triangle-fill me-2 fs-5 text-warning"></i>
+												<div>
+													<p class="fw-bold mb-1">Notice:</p>
+													<p class="mb-0">
+														All columns in the Excel file must be filled with the required data.
+														If an invalid column is discovered, the entire row will be skipped when inserting into the database.
+													</p>
+												</div>
+											</div>
+
+
+										</div>
+									</div>
+
+
+
+									<!--end::Row-->
+								</form>
+							</div>
+							<!--end::Card Body-->
+
+						</div>
+						<!--end::Card-->
+
+					</div>
+					<!--end::Col-->
+				</div>
+				<!--end::Row-->
+			</div>
+			<!--end::Container-->
+
+
+		</div>
+	</div>
+</div>
+

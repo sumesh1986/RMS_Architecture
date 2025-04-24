@@ -1,0 +1,201 @@
+﻿@{
+	ViewData["Title"] = "Tax";
+}
+
+
+<!-- ============================================================== -->
+<!-- Start Content here -->
+<!-- ============================================================== -->
+
+
+
+<div class="page-content">
+
+	<div class="row">
+		<div class="col-lg-12">
+
+
+			<!--begin::Container-->
+			<div class="container-fluid">
+				<!--begin::Row-->
+				<div class="row">
+					<!--begin::Col-->
+					<div class="col-12">
+						<!--begin::Card-->
+						<div class="card">
+
+							<!--begin::Card Header-->
+							<div class="card-header">
+								<!--begin::Card Title-->
+								<div class="card-header header-background text-white text-center">
+									<h4>Tax Configuration</h4>
+								</div>
+
+							</div>
+
+
+							<!--begin::Card Body-->
+							<div class="card-body">
+
+								<form asp-action="Create" method="post">
+									<!--begin::Row-->
+									<!-- Form -->
+
+
+									<form id="taxForm">
+										@for (int i = 0; i < 4; i++)
+										{
+											<div class="tax-entry mb-4 p-3 border rounded">
+												<div class="d-flex align-items-center mb-3">
+													<div class="tax-description-container flex-grow-1">
+														<label class="form-label mb-0">ENTER THE DESCRIPTION OF TAX @(i + 1)</label>
+														<input type="text" class="form-control tax-description" placeholder="Enter tax description" required />
+													</div>
+													<div class="ms-3 text-end pt-4">
+														<div class="form-check">
+															<input type="checkbox" class="form-check-input tax-active" id="active@(i)" />
+															<label class="form-check-label" for="active@(i)">Active?</label>
+														</div>
+													</div>
+												</div>
+												<div class="row align-items-center">
+													<div class="col-md-4">
+														<div class="d-flex">
+															<div class="form-check me-4">
+																<input type="radio" class="form-check-input tax-inclusive" name="taxType@(i)" value="inclusive" checked />
+																<label class="form-check-label">Inclusive</label>
+															</div>
+															<div class="form-check">
+																<input type="radio" class="form-check-input" name="taxType@(i)" value="exclusive" />
+																<label class="form-check-label">Exclusive</label>
+															</div>
+														</div>
+													</div>
+													<div class="col-md-4">
+														<div class="percentage-container">
+															<label class="form-label mb-0">VALUE IN PERCENTAGE</label>
+															<div class="input-group">
+																<input type="number" class="form-control tax-percentage" min="0" max="100" step="0.01" required />
+																<span class="input-group-text">%</span>
+															</div>
+														</div>
+													</div>
+													<div class="col-md-4">
+														<div class="form-check mt-4">
+															<input type="checkbox" class="form-check-input tax-show-invoice" id="showInvoice@(i)" />
+															<label class="form-check-label" for="showInvoice@(i)">Show on Invoice</label>
+														</div>
+													</div>
+												</div>
+											</div>
+										}
+
+									</form>
+
+
+									<!-- BUTTONS -->
+									<div class="text-center mt-4">
+										<hr>
+										<div class="d-grid gap-2 d-md-flex justify-content-md-end">
+											<button type="submit" class="btn btn-primary button-background waves-effect">
+												<i class="bi bi-save"></i> Save
+											</button>
+											<button type="button" class="btn btn-outline-secondary waves-effect" id="clearBtn">
+												<i class="bi bi-x-circle"></i> Clear
+											</button>
+										</div>
+									</div>
+
+
+
+									<!--end::Row-->
+								</form>
+							</div>
+							<!--end::Card Body-->
+
+						</div>
+						<!--end::Card-->
+
+					</div>
+					<!--end::Col-->
+				</div>
+				<!--end::Row-->
+			</div>
+			<!--end::Container-->
+
+		</div>
+	</div>
+</div>
+
+@section Scripts {
+	<script>
+		$(document).ready(function () {
+			// Initialize tooltips
+			$('[data-bs-toggle="tooltip"]').tooltip();
+
+			// Add visual feedback when changing values
+			$('.form-control').on('input', function() {
+				$(this).closest('.tax-entry').addClass('border-primary');
+				setTimeout(() => {
+					$(this).closest('.tax-entry').removeClass('border-primary');
+				}, 300);
+			});
+
+			$('#saveTaxes').click(function () {
+				var taxes = [];
+				var isValid = true;
+
+				$('.tax-entry').each(function (index) {
+					var description = $(this).find('.tax-description').val();
+					var percentage = $(this).find('.tax-percentage').val();
+
+					if (!description || !percentage) {
+						isValid = false;
+						toastr.error('Please fill in all required fields');
+						return false;
+					}
+
+					var tax = {
+						id: index + 1,
+						description: description,
+						percentage: parseFloat(percentage) || 0,
+						isInclusive: $(this).find('.tax-inclusive').prop('checked'),
+						isActive: $(this).find('.tax-active').prop('checked'),
+						showOnInvoice: $(this).find('.tax-show-invoice').prop('checked')
+					};
+					taxes.push(tax);
+				});
+
+				if (!isValid) return;
+
+				$.ajax({
+					url: '/Tax/SaveTaxes',
+					type: 'POST',
+					contentType: 'application/json',
+					data: JSON.stringify(taxes),
+					success: function (response) {
+						if (response.success) {
+							toastr.success('Taxes saved successfully!');
+						} else {
+							toastr.error(response.errors ? response.errors.join('\n') : 'Error saving taxes. Please check your input.');
+						}
+					},
+					error: function () {
+						toastr.error('An error occurred while saving taxes.');
+					}
+				});
+			});
+
+			// Pre-fill with sample data for testing
+			$('.tax-entry').eq(0).find('.tax-description').val('VAT 5%');
+			$('.tax-entry').eq(1).find('.tax-description').val('Municipality');
+			$('.tax-entry').eq(2).find('.tax-description').val('GST');
+			$('.tax-entry').eq(3).find('.tax-description').val('CGST');
+
+			$('.tax-entry').eq(0).find('.tax-percentage').val('5');
+			$('.tax-entry').eq(1).find('.tax-percentage').val('5');
+			$('.tax-entry').eq(2).find('.tax-percentage').val('5');
+			$('.tax-entry').eq(3).find('.tax-percentage').val('5');
+		});
+	</script>
+}

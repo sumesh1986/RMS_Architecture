@@ -1,0 +1,280 @@
+﻿@model IEnumerable<RMS_Models.Models.Registration>
+
+@{
+	ViewData["Title"] = "Index";
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!-- ============================================================== -->
+<!-- Start Content here -->
+<!-- ============================================================== -->
+
+
+
+<div class="page-content">
+
+	<div class="row">
+		<div class="col-lg-12">
+
+
+			<!--begin::Container-->
+			<div class="container-fluid">
+				<!--begin::row g-2-->
+				<div class="row g-2">
+					<!--begin::Col-->
+					<div class="col-12">
+						<!--begin::Card-->
+						<div class="card">
+
+							<!--begin::Card Header-->
+							<div class="card-header">
+								<!--begin::Card Title-->
+								<div class="card-header header-background text-white text-center">
+									<h4>M-POS SOLUTION (VER-1.0.0.1)</h4>
+								</div>
+								<!--end::Card Title-->
+
+
+							</div>
+							<!--end::Card Header-->
+							<!--begin::Card Body-->
+							<div class="card-body">
+
+								<form asp-action="Register" method="post" class="registration-form">
+									<!--begin::row g-2-->
+									<!-- Branch Setup Form -->
+
+									<div class="row g-2 g-2">
+
+
+										<div class="text-danger" asp-validation-summary="ModelOnly"></div>
+
+										<div class="row g-2">
+											<label class="col-md-1 col-form-label">Company Name</label>
+											<div class="col-md-4">
+												<input type="text" name="CompanyName" class="form-control" />
+												<span class="text-danger"></span>
+											</div>
+											<label class="col-md-1 col-form-label">Owner Name</label>
+											<div class="col-md-4">
+												<input type="text" name="OwnerName" class="form-control" />
+												<span class="text-danger"></span>
+											</div>
+										</div>
+
+
+
+										<div class="row g-2">
+											<label class="col-md-1 col-form-label">Family Name</label>
+											<div class="col-md-4">
+												<input type="text" name="FamilyName" class="form-control" />
+												<span class="text-danger"></span>
+											</div>
+											<label class="col-md-1 col-form-label">Country</label>
+											<div class="col-md-4">
+												<input type="text" name="Country" class="form-control" />
+												<span class="text-danger"></span>
+											</div>
+										</div>
+
+
+
+										<div class="row g-2">
+											<label class="col-md-1 col-form-label">Place</label>
+											<div class="col-md-4">
+												<input type="text" name="Place" class="form-control" />
+												<span class="text-danger"></span>
+											</div>
+											<label class="col-md-1 col-form-label">Address</label>
+											<div class="col-md-4">
+												<input type="text" name="Address" class="form-control" />
+												<span class="text-danger"></span>
+											</div>
+										</div>
+
+
+
+										<div class="row g-2">
+											<label class="col-md-1 col-form-label">Email</label>
+											<div class="col-md-4">
+												<input type="email" name="Email" class="form-control" />
+												<span class="text-danger"></span>
+											</div>
+											<label class="col-md-1 col-form-label">Phone</label>
+											<div class="col-md-4">
+												<input type="text" name="Phone" class="form-control" />
+												<span class="text-danger"></span>
+											</div>
+										</div>
+
+
+
+										<div class="row g-2">
+											<label class="col-md-1 col-form-label">Product ID</label>
+											<div class="col-md-4">
+												<input type="text" name="ProductId" class="form-control" readonly />
+											</div>
+											<label class="col-md-1 col-form-label">Registration Number</label>
+											<div class="col-md-4">
+												<input type="text" name="RegistrationNumber" class="form-control" readonly />
+											</div>
+										</div>
+
+
+
+										@*   <div class="row g-2">
+    <label class="col-md-1 col-form-label">Head Office</label>
+    <div class="col-md-4">
+        <div class="form-check">
+            <input type="radio" name="IsHeadOffice" class="form-check-input" value="true" />
+            <label class="form-check-label">Yes</label>
+        </div>
+        <div class="form-check">
+            <input type="radio" name="IsHeadOffice" class="form-check-input" value="false" />
+            <label class="form-check-label">No</label>
+        </div>
+    </div>
+</div>
+
+ *@
+
+										<div class="row g-2">
+											<label class="col-md-1 col-form-label">Head Office</label>
+											<div class="col-md-4">
+												<div class="form-check form-switch">
+													<input type="checkbox" name="IsHeadOffice" class="form-check-input" />
+													<label class="form-check-label" name="IsHeadOffice">Yes</label>
+												</div>
+											</div>
+										</div>
+
+										@*  <div class="row g-2 mt-4">
+            <div class="col-md-12 text-right">
+                <button type="submit" class="btn btn-primary">
+                    <i class="bi bi-check-circle"></i> Update
+                </button>
+            </div>
+        </div>
+ *@
+
+										<div class="row g-2 mt-4">
+											<div class="col-md-12 d-flex justify-content-end">
+												<button type="submit" class="btn btn-primary button-background waves-effect">
+													<i class="bi bi-check-circle"></i> Update
+												</button>
+											</div>
+										</div>
+
+
+										<div class="registration-info mt-4 p-4 bg-light border rounded-3 shadow-sm">
+											<p class="text-dark mb-0 fw-semibold">
+												<i class="bi bi-info-circle-fill text-primary me-2"></i>
+												To register, you must provide your company name, country, place, and email address.<br />
+												<span class="text-danger">Note:</span> The company name, country, place, and email address <strong>cannot be changed</strong> later.
+											</p>
+										</div>
+
+
+										@*  @foreach (var item in Model)
+        {
+            <div>
+                <label>@item.CompanyName</label>
+            </div>
+        } *@
+									</div>
+								</form>
+							</div>
+
+							<!--end::row g-2-->
+
+						</div>
+						<!--end::Card Body-->
+
+					</div>
+					<!--end::Card-->
+
+				</div>
+				<!--end::Col-->
+			</div>
+			<!--end::row g-2-->
+
+
+		</div>
+	</div>
+</div>
+<!--end::Container-->
+@section Styles {
+	<style>
+		.registration-container {
+			max-width: 800px;
+			margin: 2rem auto;
+			padding: 2rem;
+			background: #fff;
+			border-radius: 8px;
+			box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+		}
+
+		.registration-header {
+			background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+			color: white;
+			margin: -2rem -2rem 2rem -2rem;
+			padding: 1.5rem;
+			border-radius: 8px 8px 0 0;
+			border-bottom: 1px solid #dee2e6;
+		}
+
+			.registration-header h2 {
+				color: #2c3e50;
+				margin: 0;
+				font-size: 1.5rem;
+			}
+
+		. {
+			margin-bottom: 1rem;
+		}
+
+			.col-form-label {
+				background: #024fc3;
+				color: white;
+				padding: 0.5rem 1rem;
+				border-radius: 4px;
+				/*  text-align: right; */
+			}
+
+			.form-control {
+				border: 1px solid #ced4da;
+				border-radius: 4px;
+				padding: 0.5rem;
+			}
+
+				.form-control:focus {
+					border-color: #80bdff;
+					box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+				}
+
+			.btn-primary {
+				background-color: #007bff;
+				border: none;
+				padding: 0.5rem 2rem;
+			}
+
+			.registration-info {
+				background: #f8f9fa;
+				padding: 1rem;
+				border-radius: 4px;
+				font-size: 0.9rem;
+				text-align: center;
+			}
+
+			.text-danger {
+				font-size: 0.8rem;
+				margin-top: 0.25rem;
+			}
+	</style>
+}
+
+@section Scripts {
+	@{
+		await Html.RenderPartialAsync("_ValidationScriptsPartial");
+	}
+}

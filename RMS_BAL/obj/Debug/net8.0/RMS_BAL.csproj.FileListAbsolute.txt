@@ -1,0 +1,17 @@
+D:\Jayaram\Working projects\RMS_Layout\RMS_BAL\bin\Debug\net8.0\RMS_BAL.deps.json
+D:\Jayaram\Working projects\RMS_Layout\RMS_BAL\bin\Debug\net8.0\RMS_BAL.dll
+D:\Jayaram\Working projects\RMS_Layout\RMS_BAL\bin\Debug\net8.0\RMS_BAL.pdb
+D:\Jayaram\Working projects\RMS_Layout\RMS_BAL\bin\Debug\net8.0\RMS_Data.dll
+D:\Jayaram\Working projects\RMS_Layout\RMS_BAL\bin\Debug\net8.0\RMS_Models.dll
+D:\Jayaram\Working projects\RMS_Layout\RMS_BAL\bin\Debug\net8.0\RMS_Data.pdb
+D:\Jayaram\Working projects\RMS_Layout\RMS_BAL\bin\Debug\net8.0\RMS_Models.pdb
+D:\Jayaram\Working projects\RMS_Layout\RMS_BAL\obj\Debug\net8.0\RMS_BAL.csproj.AssemblyReference.cache
+D:\Jayaram\Working projects\RMS_Layout\RMS_BAL\obj\Debug\net8.0\RMS_BAL.GeneratedMSBuildEditorConfig.editorconfig
+D:\Jayaram\Working projects\RMS_Layout\RMS_BAL\obj\Debug\net8.0\RMS_BAL.AssemblyInfoInputs.cache
+D:\Jayaram\Working projects\RMS_Layout\RMS_BAL\obj\Debug\net8.0\RMS_BAL.AssemblyInfo.cs
+D:\Jayaram\Working projects\RMS_Layout\RMS_BAL\obj\Debug\net8.0\RMS_BAL.csproj.CoreCompileInputs.cache
+D:\Jayaram\Working projects\RMS_Layout\RMS_BAL\obj\Debug\net8.0\RMS_BAL.csproj.Up2Date
+D:\Jayaram\Working projects\RMS_Layout\RMS_BAL\obj\Debug\net8.0\RMS_BAL.dll
+D:\Jayaram\Working projects\RMS_Layout\RMS_BAL\obj\Debug\net8.0\refint\RMS_BAL.dll
+D:\Jayaram\Working projects\RMS_Layout\RMS_BAL\obj\Debug\net8.0\RMS_BAL.pdb
+D:\Jayaram\Working projects\RMS_Layout\RMS_BAL\obj\Debug\net8.0\ref\RMS_BAL.dll

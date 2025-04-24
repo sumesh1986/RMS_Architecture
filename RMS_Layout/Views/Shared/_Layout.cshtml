@@ -1,0 +1,1535 @@
+﻿@using Microsoft.AspNetCore.Http
+@inject IHttpContextAccessor HttpContextAccessor
+
+@{
+	var httpContext = HttpContextAccessor.HttpContext;
+
+	if (httpContext != null)
+	{
+		var username = httpContext.Session.GetString("username");
+
+		var currentPath = httpContext.Request.Path.Value?.ToLower() ?? "";
+
+		if (string.IsNullOrEmpty(username) && !currentPath.Contains("/home/login"))
+		{
+			httpContext.Response.Redirect("/Home/Login");
+		}
+	}
+}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>@ViewData["Title"] - RMS_Layout</title>
+	@*     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" /> *@
+	@* <link rel="stylesheet" href="~/RMS_Layout.styles.css" asp-append-version="true" /> *@
+
+	<!-- =============== VENDOR STYLES ===============-->
+	<!-- App favicon -->
+	<link rel="shortcut icon" href="assets/images/favicon.ico">
+
+	<!-- Bootstrap Css -->
+	@* 	<link href="assets/css/bootstrap.min.css" id="bootstrap-style" rel="stylesheet" type="text/css" /> *@
+	<link href="~/css/bootstrap.min.css" rel="stylesheet" />
+	<!-- Icons Css -->
+	@* <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" /> *@
+	<link href="~/css/icon.css" rel="stylesheet" />
+	<!-- App Css-->
+	@* 	<link href="assets/css/app.min.css" id="app-style" rel="stylesheet" type="text/css" /> *@
+	<link href="~/css/app.min.css" id="app-style" rel="stylesheet" />
+	<!-- App js -->
+
+	@* 	<script src="assets/js/plugin.js"></script> *@
+	<script src="~/js/plugin.js"></script>
+	<!-- =============== PAGE VENDOR STYLES =============== -->
+
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+	@* <link href="~/css/bootstrap-icons.css" rel="stylesheet" /> *@
+	<link href="~/css/site.css" rel="stylesheet" />
+	@* 	<link href="https://cdn.jsdelivr.net/npm/metismenujs@1.3.0/dist/metismenu.min.css" rel="stylesheet"> *@
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" />
+
+	<link href="~/css/metismenu.min.css" rel="stylesheet" />
+	<link href="~/css/metismenujs.css" rel="stylesheet" />
+
+	<style>
+		/* Arrow for MetisMenu items */
+		.metismenu .::after {
+			font-family: 'bootstrap-icons';
+			content: "\f285"; /* bi-chevron-right */
+			float: right;
+			font-size: 0.8rem;
+			transition: transform 0.3s ease;
+			line-height: 1;
+		}
+
+		/* Rotate arrow when menu is active/open */
+		.metismenu .mm-active > a.::after {
+			transform: rotate(90deg);
+		}
+
+		body .toast {
+			opacity: 1 !important; /* Enforce opacity */
+			transition: none !important; /* Disable fade effects */
+		}
+
+		.toast-success {
+			/*border: 2px solid rgba(255, 255, 255, 0.65) !important;*/
+			border: none;
+			background-color: #009E61 !important; /* Green */
+		}
+
+		.toast-error {
+			/* border: 2px solid rgba(255, 255, 255, 0.65) !important; */
+			border: none;
+			background-color: #C63100 !important; /* Red */
+		}
+
+		.toast-warning {
+/* 			border: 2px solid rgba(255, 255, 255, 0.65) !important;
+ */			border: none;
+			background-color: #FFC254 !important; /* Yellow */
+		}
+
+		.toast-info {
+			/*border: 2px solid rgba(255, 255, 255, 0.65) !important;*/
+			border: none;
+			background-color: #1673F5 !important; /* Green */
+		}
+
+		.menu-section-highlight {
+			border-top: 1px solid #dee2e6;
+			border-bottom: 1px solid #dee2e6;
+			padding-top: 5px;
+			padding-bottom: 5px;
+			margin-top: 8px;
+			margin-bottom: 8px;
+			background-color: #f8f9fa; /* Optional: subtle background */
+			border-radius: 4px; /* Optional: rounded feel */
+		}
+
+			.menu-section-highlight:hover {
+				background-color: #e9ecef;
+			}
+
+		.menu-highlight-top {
+			border-top: 2px solid #dee2e66b; /* Bootstrap primary color or your preferred highlight color */
+		}
+
+		.menu-highlight-bottom {
+			border-bottom: 2px solid #dee2e66b;
+		}
+	</style>
+
+
+	@RenderSection("Styles", required: false)
+</head>
+<body data-sidebar="dark">
+	@*   <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container-fluid">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">RMS_Layout</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header> *@
+
+
+
+
+	<!-- <body data-layout="horizontal" data-topbar="dark"> -->
+	<!-- Begin page -->
+	<div id="layout-wrapper">
+
+
+		<header id="page-topbar">
+			<div class="navbar-header navheader-background">
+				<div class="d-flex">
+					<!-- LOGO -->
+					<div class="navbar-brand-box">
+						<a href="index.html" class="logo logo-dark">
+							<span class="logo-sm">
+								<img src="~/images/res1.jpg" alt="" height="22">
+							</span>
+							<span class="logo-lg">
+								<img src="~/images/res1.jpg" alt="" height="17">
+							</span>
+						</a>
+
+						<a href="index.html" class="logo logo-light">
+							<span class="logo-sm">
+								<img src="~/images/res1.jpg" alt="" height="22">
+							</span>
+							<span class="logo-lg">
+								<img src="~/images/res1.jpg" style="width: 100%;height: 69px;" alt="" height="19">
+							</span>
+						</a>
+					</div>
+
+					<!-- Hamburger Button -->
+					<button type="button" class="btn btn-sm px-3 font-size-16 header-item waves-effect" id="vertical-menu-btn">
+						<i class="bi bi-list"></i>
+					</button>
+
+
+					<!-- App Search-->
+					<form class="app-search d-none d-lg-block">
+						<div class="position-relative">
+							<input type="text" class="form-control ps-5" placeholder="Search...">
+							<span class="position-absolute top-50 start-0 translate-middle-y ms-3">
+								<i class="bi bi-search"></i>
+							</span>
+						</div>
+
+					</form>
+
+					@* <div class="dropdown dropdown-mega d-none d-lg-block ms-2">
+                            <button type="button" class="btn header-item waves-effect" data-bs-toggle="dropdown" aria-haspopup="false" aria-expanded="false">
+                                <span key="t-megamenu">Mega Menu</span>
+                                <i class="mdi mdi-chevron-down"></i> 
+                            </button>
+                            <div class="dropdown-menu dropdown-megamenu">
+                                <div class="row">
+                                    <div class="col-sm-8">
+
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <h5 class="font-size-14" key="t-ui-components">UI Components</h5>
+                                                <ul class="list-unstyled megamenu-list">
+                                                    <li>
+                                                        <a href="javascript:void(0);" key="t-lightbox">Lightbox</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="javascript:void(0);" key="t-range-slider">Range Slider</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="javascript:void(0);" key="t-sweet-alert">Sweet Alert</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="javascript:void(0);" key="t-rating">Rating</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="javascript:void(0);" key="t-forms">Forms</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="javascript:void(0);" key="t-tables">Tables</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="javascript:void(0);" key="t-charts">Charts</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+
+                                            <div class="col-md-4">
+                                                <h5 class="font-size-14" key="t-applications">Applications</h5>
+                                                <ul class="list-unstyled megamenu-list">
+                                                    <li>
+                                                        <a href="javascript:void(0);" key="t-ecommerce">Ecommerce</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="javascript:void(0);" key="t-calendar">Calendar</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="javascript:void(0);" key="t-email">Email</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="javascript:void(0);" key="t-projects">Projects</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="javascript:void(0);" key="t-tasks">Tasks</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="javascript:void(0);" key="t-contacts">Contacts</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+
+                                            <div class="col-md-4">
+                                                <h5 class="font-size-14" key="t-extra-pages">Extra Pages</h5>
+                                                <ul class="list-unstyled megamenu-list">
+                                                    <li>
+                                                        <a href="javascript:void(0);" key="t-light-sidebar">Light Sidebar</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="javascript:void(0);" key="t-compact-sidebar">Compact Sidebar</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="javascript:void(0);" key="t-horizontal">Horizontal layout</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="javascript:void(0);" key="t-maintenance">Maintenance</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="javascript:void(0);" key="t-coming-soon">Coming Soon</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="javascript:void(0);" key="t-timeline">Timeline</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="javascript:void(0);" key="t-faqs">FAQs</a>
+                                                    </li>
+
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="row">
+                                            <div class="col-sm-6">
+                                                <h5 class="font-size-14" key="t-ui-components">UI Components</h5>
+                                                <ul class="list-unstyled megamenu-list">
+                                                    <li>
+                                                        <a href="javascript:void(0);" key="t-lightbox">Lightbox</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="javascript:void(0);" key="t-range-slider">Range Slider</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="javascript:void(0);" key="t-sweet-alert">Sweet Alert</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="javascript:void(0);" key="t-rating">Rating</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="javascript:void(0);" key="t-forms">Forms</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="javascript:void(0);" key="t-tables">Tables</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="javascript:void(0);" key="t-charts">Charts</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+
+                                            <div class="col-sm-5">
+                                                <div>
+                                                    <img src="assets/images/megamenu-img.png" alt="" class="img-fluid mx-auto d-block">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div> *@
+				</div>
+
+				<div class="d-flex">
+
+					<div class="dropdown d-inline-block d-lg-none ms-2">
+						<button type="button" class="btn header-item noti-icon waves-effect" id="page-header-search-dropdown"
+								data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							<i class="bi bi-search"></i>
+
+						</button>
+						<div class="dropdown-menu dropdown-menu-lg dropdown-menu-end p-0"
+							 aria-labelledby="page-header-search-dropdown">
+
+							<form class="p-3">
+								<div class="form-group m-0">
+									<div class="input-group">
+										<input type="text" class="form-control" placeholder="Search ..." aria-label="Recipient's username">
+										<div class="input-group-append">
+											<button class="btn btn-primary" type="submit">
+												<i class="bi bi-search"></i>
+											</button>
+										</div>
+									</div>
+
+								</div>
+							</form>
+						</div>
+					</div>
+
+					@* 	<div class="dropdown d-inline-block">
+						<button type="button" class="btn header-item waves-effect"
+								data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							<i class="bi bi-wallet2"></i>
+						</button>
+						<div class="dropdown-menu dropdown-menu-end">
+
+							<!-- item-->
+							<a class="dropdown-item" href="#">  <i class="bi bi-wallet2"></i> <span key="t-my-wallet">Concept 1</span></a>
+
+							<!-- item-->
+							<a class="dropdown-item" href="#">  <i class="bi bi-wallet2"></i> <span key="t-my-wallet">Concept 2</span></a>
+
+						</div>
+					</div> *@
+
+					<div class="dropdown d-inline-block">
+						<button type="button" class="btn header-item waves-effect"
+								data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							<i class="bi bi-wallet2"></i>
+						</button>
+
+						<div class="dropdown-menu dropdown-menu-end">
+
+							<!-- Concept 1 -->
+							<div class="dropdown-submenu">
+
+								<a class="dropdown-item dropdown-toggle d-flex justify-content-between align-items-center" href="#">
+									<span><i class="bi bi-wallet2"></i> Concept 1</span>
+									<i class="bi bi-chevron-right ms-2"></i>
+								</a>
+
+								<ul class="dropdown-menu">
+									<li><a class="dropdown-item" href="#">Branch 1</a></li>
+									<li><a class="dropdown-item" href="#">Branch 2</a></li>
+									<li><a class="dropdown-item" href="#">Branch 3</a></li>
+								</ul>
+							</div>
+
+							<!-- Concept 2 -->
+							<div class="dropdown-submenu">
+								<a class="dropdown-item dropdown-toggle d-flex justify-content-between align-items-center" href="#">
+									<span><i class="bi bi-wallet2"></i> Concept 2</span>
+									<i class="bi bi-chevron-right ms-2"></i>
+								</a>
+								<ul class="dropdown-menu">
+									<li><a class="dropdown-item" href="#">Branch A</a></li>
+									<li><a class="dropdown-item" href="#">Branch B</a></li>
+									<li><a class="dropdown-item" href="#">Branch C</a></li>
+								</ul>
+							</div>
+
+						</div>
+					</div>
+
+
+					<div class="dropdown d-inline-block">
+						<button type="button" class="btn header-item waves-effect"
+								data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							<img id="header-lang-img" src="~/images/us.jpg" height="16">
+						</button>
+						<div class="dropdown-menu dropdown-menu-end">
+
+							<!-- item-->
+							<a href="javascript:void(0);" class="dropdown-item notify-item language" data-lang="Du">
+								<img src="~/images/Flag_of_the_United_Arab_Emirates.svg.png" alt="user-image" class="me-1" height="12"> <span class="align-middle">Arabic</span>
+							</a>
+
+							<!-- item-->
+							<a href="javascript:void(0);" class="dropdown-item notify-item language" data-lang="en">
+								<img src="~/images/us.jpg" alt="user-image" class="me-1" height="12"> <span class="align-middle">English</span>
+							</a>
+
+						</div>
+					</div>
+
+
+					<div class="dropdown d-none d-lg-inline-block ms-1">
+						<button type="button" class="btn header-item noti-icon waves-effect" data-bs-toggle="fullscreen">
+							<i class="bi bi-arrows-fullscreen"></i>
+						</button>
+					</div>
+
+					<div class="dropdown d-inline-block">
+						<button type="button" class="btn header-item noti-icon waves-effect" id="page-header-notifications-dropdown"
+								data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							<i class="bi bi-bell-fill shake"></i>
+
+							<span class="badge bg-danger rounded-pill">3</span>
+						</button>
+						<div class="dropdown-menu dropdown-menu-lg dropdown-menu-end p-0"
+							 aria-labelledby="page-header-notifications-dropdown">
+							<div class="p-3">
+								<div class="row align-items-center">
+									<div class="col">
+										<h6 class="m-0" key="t-notifications"> Notifications </h6>
+									</div>
+									<div class="col-auto">
+										<a href="#!" class="small" key="t-view-all"> View All</a>
+									</div>
+								</div>
+							</div>
+							<div data-simplebar style="max-height: 230px;">
+								<a href="javascript: void(0);" class="text-reset notification-item">
+									<div class="d-flex">
+										<div class="avatar-xs me-3">
+											<span class="avatar-title bg-primary rounded-circle font-size-16">
+												<i class="bi bi-cart fs-4"></i>
+
+											</span>
+										</div>
+										<div class="flex-grow-1">
+											<h6 class="mb-1" key="t-your-order">Your order is placed</h6>
+											<div class="font-size-12 text-muted">
+												<p class="mb-1" key="t-grammer">If several languages coalesce the grammar</p>
+												<p class="mb-0"><i class="bi bi-clock"></i> <span key="t-min-ago">3 min ago</span></p>
+											</div>
+										</div>
+									</div>
+								</a>
+								<a href="javascript: void(0);" class="text-reset notification-item">
+									<div class="d-flex">
+										<img src="~/images/user-profile-avatar.png" class="me-3 rounded-circle avatar-xs" alt="user-pic" />
+										<div class="flex-grow-1">
+											<h6 class="mb-1">James </h6>
+											<div class="font-size-12 text-muted">
+												<p class="mb-1" key="t-simplified">It will seem like simplified English.</p>
+												<p class="mb-0"><i class="bi bi-clock"></i> <span key="t-hours-ago">1 hours ago</span></p>
+
+											</div>
+										</div>
+									</div>
+								</a>
+								<a href="javascript: void(0);" class="text-reset notification-item">
+									<div class="d-flex">
+										<div class="avatar-xs me-3">
+											<span class="avatar-title bg-success rounded-circle font-size-16">
+												<i class="bi bi-patch-check-fill"></i>
+											</span>
+										</div>
+										<div class="flex-grow-1">
+											<h6 class="mb-1" key="t-shipped">Your item is shipped</h6>
+											<div class="font-size-12 text-muted">
+												<p class="mb-1" key="t-grammer">If several languages coalesce the grammar</p>
+												<p class="mb-0"><i class="bi bi-clock"></i> <span key="t-min-ago">3 min ago</span></p>
+											</div>
+										</div>
+									</div>
+								</a>
+
+								<a href="javascript: void(0);" class="text-reset notification-item">
+									<div class="d-flex">
+										<img src="assets/images/users/avatar-4.jpg"
+											 class="me-3 rounded-circle avatar-xs" alt="user-pic">
+										<div class="flex-grow-1">
+											<h6 class="mb-1">Salena Layfield</h6>
+											<div class="font-size-12 text-muted">
+												<p class="mb-1" key="t-occidental">As a skeptical Cambridge friend of mine occidental.</p>
+												<p class="mb-0"><i class="mdi mdi-clock-outline"></i> <span key="t-hours-ago">1 hours ago</span></p>
+											</div>
+										</div>
+									</div>
+								</a>
+							</div>
+							<div class="p-2 border-top d-grid">
+								<a class="btn btn-sm btn-link font-size-14 text-center" href="javascript:void(0)">
+									<i class="bi bi-arrow-right-circle"></i> <span key="t-view-more">View More..</span>
+								</a>
+							</div>
+						</div>
+					</div>
+
+					<div class="dropdown d-inline-block">
+						<button type="button" class="btn header-item waves-effect" id="page-header-user-dropdown"
+								data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							<img class="rounded-circle header-profile-user" src="~/images/user-profile-avatar.png" />
+							<span class="d-none d-xl-inline-block ms-1" key="t-henry" style="color:#fff;">Henry</span>
+							<i class="bi bi-chevron-down d-none d-xl-inline-block"></i>
+
+						</button>
+						<div class="dropdown-menu dropdown-menu-end">
+							<!-- item-->
+							<a class="dropdown-item" href="#"> <i class="bi bi-person-fill"></i>  <span key="t-profile">Profile</span></a>
+
+							@* 	<a class="dropdown-item d-block" href="#"><span class="badge bg-success float-end">11</span><i class="bx bx-wrench font-size-16 align-middle me-1"></i> <span key="t-settings">Settings</span></a>
+							<a class="dropdown-item" href="#"><i class="bx bx-lock-open font-size-16 align-middle me-1"></i> <span key="t-lock-screen">Lock screen</span></a> *@
+							<div class="dropdown-divider"></div>
+							<a class="dropdown-item text-danger" href="#"><i class="bi bi-power font-size-16 align-middle me-1 text-danger"></i> <span key="t-logout">Logout</span></a>
+						</div>
+					</div>
+
+					@* 	<div class="dropdown d-inline-block">
+						<button type="button" class="btn header-item noti-icon right-bar-toggle waves-effect">
+							<i class="bi bi-gear fa-spin"></i> <!-- If using FontAwesome spin -->
+						</button>
+					</div> *@
+
+				</div>
+			</div>
+		</header>
+
+		<!-- ========== Left Sidebar Start ========== -->
+		<div class="vertical-menu">
+
+			<div data-simplebar class="h-100">
+
+				<!--- Sidemenu -->
+				<div id="sidebar-menu">
+					<!-- Left Menu Start -->
+					<ul class="metismenu list-unstyled" id="side-menu">
+						@* <li class="title" key="t-menu">
+
+							<a href="@Url.Action("Index", "Home")">
+								<i class="nav-icon bi bi-speedometer"></i> Dashboards
+							</a>
+
+						</li> *@
+
+						<li>
+							<a href="@Url.Action("Index", "Home")" class="waves-effect">
+								<i class="nav-icon bi bi-speedometer"></i>
+								<span key="t-dashboards">Dashboards</span>
+							</a>
+						</li>
+
+						@* 	<li class="menu-title" key="t-menu">  <i class="nav-icon bi bi-house-door"></i> Layouts</li> *@
+
+			@* 			<li>
+							<a href="javascript: void(0);" class=" waves-effect">
+								<i class="bi bi-folder2-open"></i>
+								<span key="t-dashboards">File</span>
+							</a>
+
+							<ul class="sub-menu" aria-expanded="false">
+								<li>
+									<a href="@Url.Action("Performeod", "Home")">
+										<i class="bi bi-clock-history"></i> Perform EOD
+									</a>
+								</li>
+								<li>
+									<a href="@Url.Action("Preview", "Home")">
+										<i class="bi bi-receipt"></i> Preview Order Sales
+									</a>
+								</li>
+
+								<li>
+									<a href="javascript: void(0);" class=" waves-effect">
+										<i class="bi bi-sliders2-vertical"></i>
+										<span key="t-dashboards">Option</span>
+									</a>
+
+									<ul class="sub-menu" aria-expanded="false">
+										<li>
+											<a href="@Url.Action("ImportSalesandCustomExcel", "Home")">  <i class="bi bi-file-earmark-arrow-up"></i> Import Sales & Customers</a>
+										</li>
+
+									</ul>
+
+								</li>
+
+								<li>
+									<a href="javascript: void(0);" class=" waves-effect">
+										<i class="bi bi-sliders2-vertical"></i>
+										<span key="t-dashboards">Tools</span>
+									</a>
+
+									<ul class="sub-menu" aria-expanded="false">
+										<li>
+											<a href="@Url.Action("MTools", "Home")">  <i class="bi bi-file-earmark-arrow-up"></i> M-Tools</a>
+										</li>
+
+									</ul>
+
+								</li>
+							</ul>
+						</li> *@
+
+						<li>
+							<a href="javascript:void(0);" class=" waves-effect">
+								<i class="bi bi-box-seam"></i>
+								<span key="t-dashboards">Product Setup</span>
+							</a>
+
+							<ul class="sub-menu" aria-expanded="false">
+								<!-- Sales Item Hierarchy -->
+								<li>
+									<a href="javascript:void(0);" class=" waves-effect">
+										<i class="bi bi-diagram-3"></i> Sales Hierarchy
+									</a>
+
+									<ul class="sub-menu" aria-expanded="false">
+										<li>
+											<a href="@Url.Action("Category", "Home")">
+												<i class="bi bi-tags"></i> Category
+											</a>
+										</li>
+										<li>
+											<a href="@Url.Action("Division", "Home")">
+												<i class="bi bi-diagram-2"></i> Division
+											</a>
+										</li>
+										<li>
+											<a href="@Url.Action("ItemGroup", "Home")">
+												<i class="bi bi-layers"></i> Item Group
+											</a>
+										</li>
+									</ul>
+								</li>
+
+								<!-- Sales Items -->
+								<li>
+									<a href="javascript:void(0);" class=" waves-effect">
+										<i class="bi bi-receipt-cutoff"></i> Sales Items
+									</a>
+
+									<ul class="sub-menu" aria-expanded="false">
+										<li>
+											<a href="@Url.Action("ItemMaster", "Home")">
+												<i class="bi bi-box"></i> Item Master
+											</a>
+										</li>
+										<li>
+											<a href="@Url.Action("Course", "Home")">
+												<i class="bi bi-journal-code"></i> Course
+											</a>
+										</li>
+										<li>
+											<a href="@Url.Action("Modifiers", "Home")">
+												<i class="bi bi-sliders"></i> Modifiers
+											</a>
+										</li>
+										<li>
+											<a href="@Url.Action("Combo", "Home")">
+												<i class="bi bi-grid-3x3-gap"></i> Combo
+											</a>
+										</li>
+									</ul>
+								</li>
+
+								<!-- Options -->
+								<li>
+									<a href="@Url.Action("ItemCount", "Home")">
+										<i class="bi bi-123"></i> Item Count
+									</a>
+								</li>
+
+								<li>
+									<a href="@Url.Action("UpdatePriceinBulk", "Home")">
+										<i class="bi bi-currency-dollar"></i> Bulk Price
+									</a>
+								</li>
+
+							</ul>
+						</li>
+
+
+						<li>
+							<a href="javascript:void(0);" class=" waves-effect">
+								<i class="bi bi-people"></i>
+								<span key="t-dashboards">Users</span>
+							</a>
+
+							<ul class="sub-menu" aria-expanded="false">
+
+								<li>
+									<a href="@Url.Action("UserRole", "Department")">
+										<i class="bi bi-shield-lock me-1"></i> User Role
+									</a>
+								</li>
+
+								<li>
+									<a href="@Url.Action("Index", "Department")">
+										<i class="bi bi-diagram-3 me-1"></i> Department
+									</a>
+								</li>
+
+								<li>
+									<a href="@Url.Action("Index", "UserSetUp")">
+										<i class="bi bi-person-gear me-1"></i> User Setup
+									</a>
+								</li>
+
+								<li>
+									<a href="@Url.Action("Permission", "Home")">
+										<i class="bi bi-diagram-2 me-1"></i> Authority Matrix
+									</a>
+								</li>
+
+							</ul>
+
+						</li>
+
+						<li>
+							<a href="javascript:void(0);" class=" waves-effect">
+								<i class="bi bi-list-columns-reverse"></i>
+								<span key="t-dashboards">Menu</span>
+							</a>
+
+							<ul class="sub-menu" aria-expanded="false">
+
+								<li>
+									<a href="@Url.Action("ScreenMenu", "Home")">
+										<i class="bi bi-ui-checks-grid me-1"></i> POS Menu
+									</a>
+								</li>
+
+								<li>
+									<a href="@Url.Action("ScreenGroup", "Home")">
+										<i class="bi bi-ui-radios-grid me-1"></i> POS Group
+									</a>
+								</li>
+
+								<li>
+									<a href="@Url.Action("ScreenSubgroup", "Home")">
+										<i class="bi bi-layers me-1"></i> POS SubGroup
+									</a>
+								</li>
+
+								@* 	<li>
+									<a href="@Url.Action("Preview", "Home")">
+										<i class="bi bi-columns-gap me-1"></i> POS Design
+									</a>
+								</li> *@
+
+
+							</ul>
+						</li>
+
+						<li>
+							<a href="javascript:void(0);" class=" waves-effect">
+								<i class="bi bi-person-lines-fill"></i>
+								<span key="t-dashboards">Customers</span>
+							</a>
+
+							<ul class="sub-menu" aria-expanded="false">
+
+								<li>
+									<a href="@Url.Action("CustomerGroups", "Customers")">
+										<i class="bi bi-people-fill me-1"></i> Customer Group
+									</a>
+								</li>
+
+								<li>
+									<a href="@Url.Action("customerlist", "Home")">
+										<i class="bi bi-person-badge me-1"></i> Customer Title
+									</a>
+								</li>
+
+								<li>
+									<a href="@Url.Action("customertype", "Home")">
+										<i class="bi bi-person-vcard me-1"></i> Customer Type
+									</a>
+								</li>
+
+								<li>
+									<a href="@Url.Action("CustomersSetup", "Home")">
+										<i class="bi bi-person-gear me-1"></i> Customer Setup
+									</a>
+								</li>
+
+							</ul>
+						</li>
+
+						<li>
+							<a href="@Url.Action("Preview", "Home")">
+								<i class="bi bi-graph-up-arrow"></i>
+								<span key="t-dashboards">Reports</span>
+							</a>
+						</li>
+
+
+						@* 	<li class="menu-title" key="t-menu">  <i class="nav-icon bi bi-house-door"></i> Menu</li> *@
+
+
+
+
+						<!-- SYSTEM SETUP SECTION -->
+						<li class="menu-highlight-top">
+
+							<a href="javascript:void(0);" class=" waves-effect">
+								<i class="bi bi-gear-wide-connected"></i>
+
+								<span key="t-dashboards">System Setup</span>
+							</a>
+
+							<ul class="sub-menu" aria-expanded="false">
+								<!-- Sales Item Hierarchy -->
+								<li>
+									<a href="@Url.Action("Administrative_Tools", "Home")">
+										<i class="bi bi-tools"></i> Administrative Tools
+									</a>
+								</li>
+
+								<li>
+									<a href="@Url.Action("FloorDraft", "Home")">
+										<i class="bi bi-grid-1x2"></i> Floor Draft
+									</a>
+								</li>
+
+								<li>
+									<a href="@Url.Action("TableLayout", "Home")">
+										<i class="bi bi-layout-wtf"></i> Table Layout
+									</a>
+								</li>
+
+								<li>
+									<a href="@Url.Action("StationSetup", "Home")">
+										<i class="bi bi-diagram-3"></i> Station
+									</a>
+								</li>
+
+								<li>
+									<a href="@Url.Action("InvoiceSetup", "Home")">
+										<i class="bi bi-receipt"></i> Invoice
+									</a>
+								</li>
+
+								<li>
+									<a href="@Url.Action("QR_Code", "Home")">
+										<i class="bi bi-qr-code"></i> QR Code
+									</a>
+								</li>
+
+
+								<!-- Place Setup -->
+								<li>
+									<a href="javascript:void(0);" class=" waves-effect">
+										<i class="bi bi-geo-alt-fill"></i> Place
+									</a>
+
+									<ul class="sub-menu" aria-expanded="false">
+										<li>
+											<a href="@Url.Action("Country", "Home")">
+												<i class="bi bi-globe-americas"></i> Country
+											</a>
+										</li>
+										<li>
+											<a href="@Url.Action("RegionSetup", "Home")">
+												<i class="bi bi-map"></i> State/Region
+											</a>
+										</li>
+										<li>
+											<a href="@Url.Action("CitySetup", "Home")">
+												<i class="bi bi-buildings"></i> City
+											</a>
+										</li>
+										<li>
+											<a href="@Url.Action("ZoneAreaSettings", "Home")">
+												<i class="bi bi-grid-3x3-gap-fill"></i> Zone Area
+											</a>
+										</li>
+										<li>
+											<a href="@Url.Action("PhoneMask", "Home")">
+												<i class="bi bi-phone"></i> Phone Mask
+											</a>
+										</li>
+									</ul>
+								</li>
+
+
+								<!-- Order Setup -->
+								<li>
+									<a href="javascript:void(0);" class=" waves-effect">
+										<i class="bi bi-cart-check"></i> Order
+									</a>
+
+									<ul class="sub-menu" aria-expanded="false">
+										<li>
+											<a href="@Url.Action("OrderTypes", "Home")">
+												<i class="bi bi-list-ul"></i> Order Type
+											</a>
+										</li>
+										<li>
+											<a href="@Url.Action("SetReminders", "Home")">
+												<i class="bi bi-bell"></i> Set Reminders
+											</a>
+										</li>
+									</ul>
+								</li>
+
+
+
+								<!-- Financials -->
+								<li>
+									<a href="javascript:void(0);" class=" waves-effect">
+										<i class="bi bi-cash-coin"></i> Financials
+									</a>
+
+									<ul class="sub-menu" aria-expanded="false">
+										<li>
+											<a href="@Url.Action("PaymentSetup", "Home")">
+												<i class="bi bi-credit-card"></i> Payments
+											</a>
+										</li>
+										<li>
+											<a href="@Url.Action("Discounts", "Home")">
+												<i class="bi bi-percent"></i> Discounts
+											</a>
+										</li>
+										<li>
+											<a href="@Url.Action("DiscountException", "Home")">
+												<i class="bi bi-exclamation-diamond"></i> Discount Exception
+											</a>
+										</li>
+										<li>
+											<a href="@Url.Action("PriceGroup", "Home")">
+												<i class="bi bi-tags"></i> Price Group
+											</a>
+										</li>
+										<li>
+											<a href="@Url.Action("ServiceCharger", "Home")">
+												<i class="bi bi-receipt"></i> Service Charge
+											</a>
+										</li>
+										<li>
+											<a href="@Url.Action("Tax", "Home")">
+												<i class="bi bi-receipt-cutoff"></i> Tax
+											</a>
+										</li>
+									</ul>
+								</li>
+
+
+								<!-- Hardware Settings -->
+								<li>
+									<a href="javascript:void(0);" class=" waves-effect">
+										<i class="bi bi-pc-display-horizontal"></i> Hardware Settings
+									</a>
+
+									<ul class="sub-menu" aria-expanded="false">
+										<li>
+											<a href="@Url.Action("PolyDisplay", "Home")">
+												<i class="bi bi-display"></i> Pole Display
+											</a>
+										</li>
+									</ul>
+								</li>
+
+
+
+							</ul>
+							<div class="custom-divider"></div>
+						</li>
+
+
+						<!-- COMPANY SECTION -->
+						<li>
+							<a href="javascript: void(0);" class=" waves-effect">
+								<i class="bi bi-people"></i>
+								<span key="t-dashboards">Company</span>
+							</a>
+
+							<ul class="sub-menu" aria-expanded="false">
+								<li>
+									<a href="@Url.Action("companyregistration", "company")" key="t-default">
+										<i class="bi bi-person-badge"></i> Registration
+									</a>
+								</li>
+								<li>
+									<a href="@Url.Action("companybranch", "company")">
+										<i class="bi bi-diagram-3"></i> Branch
+									</a>
+								</li>
+								<li>
+									<a href="@Url.Action("companyconcept", "company")"> <i class="bi bi-lightbulb"></i> Concept</a>
+								</li>
+							</ul>
+						</li>
+
+
+						<!-- FILE SECTION -->
+						<li class="menu-highlight-bottom">
+							<div class="custom-divider"></div>
+							<a href="javascript: void(0);" class=" waves-effect">
+								<i class="bi bi-folder2-open"></i>
+								<span key="t-dashboards">File</span>
+							</a>
+
+							<ul class="sub-menu" aria-expanded="false">
+								@* 	<li><a href="index.html" key="t-default"><i class="bi bi-person-badge"></i> Registration</a></li> *@
+								<li>
+									<a href="@Url.Action("Performeod", "Home")">
+										<i class="bi bi-clock-history"></i> Perform EOD
+									</a>
+								</li>
+								<li>
+									<a href="@Url.Action("Preview", "Home")">
+										<i class="bi bi-receipt"></i> Preview Order Sales
+									</a>
+								</li>
+
+								<li>
+									<a href="javascript: void(0);" class=" waves-effect">
+										<i class="bi bi-sliders2-vertical"></i>
+										<span key="t-dashboards">Option</span>
+									</a>
+
+									<ul class="sub-menu" aria-expanded="false">
+										<li>
+											<a href="@Url.Action("ImportSalesandCustomExcel", "Home")">  <i class="bi bi-file-earmark-arrow-up"></i> Import Sales & Customers</a>
+										</li>
+
+									</ul>
+
+								</li>
+
+								<li>
+									<a href="javascript: void(0);" class=" waves-effect">
+										<i class="bi bi-sliders2-vertical"></i>
+										<span key="t-dashboards">Tools</span>
+									</a>
+
+									<ul class="sub-menu" aria-expanded="false">
+										<li>
+											<a href="@Url.Action("MTools", "Home")">  <i class="bi bi-file-earmark-arrow-up"></i> M-Tools</a>
+										</li>
+
+									</ul>
+
+								</li>
+							</ul>
+						</li>
+
+
+						<li>
+							<a href="@Url.Action("Preview", "Home")">
+								<i class="bi bi-question-circle"></i>
+								<span key="t-dashboards">Help</span>
+							</a>
+						</li>
+
+
+						@* 	<li>
+							<a href="javascript:void(0);" class="arrow-auto waves-effect toggle-menu">
+								<i class="bi bi-people"></i>
+								<span key="t-dashboards">Company</span>
+								<i class="bi bi-chevron-down ms-auto toggle-arrow"></i> <!-- Arrow icon -->
+							</a>
+
+							<ul class="sub-menu" aria-expanded="false">
+								<li><a href="index.html" key="t-default"><i class="bi bi-person-badge"></i> Registration</a></li>
+								<li>
+									<a href="@Url.Action("BranchSetup", "Home")">
+										<i class="bi bi-diagram-3"></i> Branch
+									</a>
+								</li>
+								<li>
+									<a href="@Url.Action("BranchSetup", "Home")"> <i class="bi bi-lightbulb"></i> Concept</a>
+								</li>
+
+							</ul>
+						</li>
+
+						<li class="menu-title" key="t-menu">APPS</li>
+						<li>
+							<a href="javascript:void(0);" class="arrow-auto waves-effect">
+								<i class="bi bi-house-door"></i>
+								<span key="t-dashboards">Layouts</span>
+								<i class="bi bi-chevron-down ms-auto"></i> <!-- Add Bootstrap down arrow -->
+							</a>
+							<ul class="sub-menu" aria-expanded="false">
+								<li><a href="index.html" key="t-default">Default</a></li>
+								<li><a href="dashboard-saas.html" key="t-saas">Saas</a></li>
+								<li>
+									<a href="@Url.Action("BranchSetup", "Home")">Branch</a>
+								</li>
+
+								<li>
+									<a href="javascript:void(0);" class="arrow-auto waves-effect">
+										<i class="bi bi-house-door"></i>
+										<span key="t-dashboards">Dashboards 2</span>
+										<i class="bi bi-chevron-down ms-auto"></i> <!-- Add Bootstrap down arrow -->
+									</a>
+									<ul class="sub-menu" aria-expanded="false">
+										<li><a href="index.html" key="t-default">Default</a></li>
+										<li><a href="dashboard-saas.html" key="t-saas">Saas</a></li>
+										<li>
+											<a href="index.html">Category</a>
+										</li>
+
+
+										<li><a href="index.html">Concept</a></li>
+										<li><a href="index.html">Combo</a></li>
+									</ul>
+								</li>
+								<li><a href="index.html">Concept</a></li>
+								<li><a href="@Url.Action("Combo", "Home")">Combo</a></li>
+							</ul>
+						</li>
+					 *@
+
+
+
+
+
+
+
+					</ul>
+				</div>
+				<!-- Sidebar -->
+			</div>
+		</div>
+		<!-- Left Sidebar End -->
+		<!-- ============================================================== -->
+		<!-- Start right Content here -->
+		<!-- ============================================================== -->
+		<div class="main-content">
+
+
+			<div class="container-fluid">
+				<main role="main" class="pb-3">
+
+					@RenderBody()
+
+				</main>
+			</div>
+			@*    <div class="page-content">
+                    <div class="container-fluid">
+
+                        <!-- start page title -->
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="page-title-box d-sm-flex align-items-center justify-content-between">
+                                    <h4 class="mb-sm-0 font-size-18">Form Layouts</h4>
+
+                                    <div class="page-title-right">
+                                        <ol class="breadcrumb m-0">
+                                            <li class="breadcrumb-item"><a href="javascript: void(0);">Forms</a></li>
+                                            <li class="breadcrumb-item active">Form Layouts</li>
+                                        </ol>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end page title -->
+
+                        <div class="row">
+                            <div class="col-xl-6">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h4 class="card-title mb-4">Form Grid Layout</h4>
+
+                                        <form>
+                                            <div class="mb-3">
+                                                <label for="formrow-firstname-input" class="form-label">First Name</label>
+                                                <input type="text" class="form-control" id="formrow-firstname-input" placeholder="Enter Your First Name">
+                                            </div>
+
+                                            <div class="row">
+
+                                                <div class="col-md-6">
+                                                    <div class="mb-3">
+                                                        <label for="formrow-email-input" class="form-label">Email</label>
+                                                        <input type="email" class="form-control" id="formrow-email-input" placeholder="Enter Your Email ID">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="mb-3">
+                                                        <label for="formrow-password-input" class="form-label">Password</label>
+                                                        <input type="password" class="form-control" id="formrow-password-input" placeholder="Enter Your Password">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="col-lg-4">
+                                                    <div class="mb-3">
+                                                        <label for="formrow-inputCity" class="form-label">City</label>
+                                                        <input type="text" class="form-control" id="formrow-inputCity" placeholder="Enter Your Living City">
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-4">
+                                                    <div class="mb-3">
+                                                        <label for="formrow-inputState" class="form-label">State</label>
+                                                        <select id="formrow-inputState" class="form-select">
+                                                            <option selected>Choose...</option>
+                                                            <option>...</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-lg-4">
+                                                    <div class="mb-3">
+                                                        <label for="formrow-inputZip" class="form-label">Zip</label>
+                                                        <input type="text" class="form-control" id="formrow-inputZip" placeholder="Enter Your Zip Code">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="mb-3">
+
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" id="gridCheck">
+                                                    <label class="form-check-label" for="gridCheck">
+                                                      Check me out
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <button type="submit" class="btn btn-primary w-md">Submit</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <!-- end card body -->
+                                </div>
+                                <!-- end card -->
+                            </div>
+                            <!-- end col -->
+
+                            <div class="col-xl-6">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h4 class="card-title mb-4">Horizontal Form Layout</h4>
+
+                                        <form>
+                                            <div class="row mb-4">
+                                                <label for="horizontal-firstname-input" class="col-sm-3 col-form-label">First name</label>
+                                                <div class="col-sm-9">
+                                                  <input type="text" class="form-control" id="horizontal-firstname-input" placeholder="Enter Your ">
+                                                </div>
+                                            </div>
+                                            <div class="row mb-4">
+                                                <label for="horizontal-email-input" class="col-sm-3 col-form-label">Email</label>
+                                                <div class="col-sm-9">
+                                                    <input type="email" class="form-control" id="horizontal-email-input" placeholder="Enter Your Email ID">
+                                                </div>
+                                            </div>
+                                            <div class="row mb-4">
+                                                <label for="horizontal-password-input" class="col-sm-3 col-form-label">Password</label>
+                                                <div class="col-sm-9">
+                                                  <input type="password" class="form-control" id="horizontal-password-input" placeholder="Enter Your Password">
+                                                </div>
+                                            </div>
+
+                                            <div class="row justify-content-end">
+                                                <div class="col-sm-9">
+
+                                                    <div class="form-check mb-4">
+                                                        <input class="form-check-input" type="checkbox" id="horizontalLayout-Check">
+                                                        <label class="form-check-label" for="horizontalLayout-Check">
+                                                            Remember me
+                                                        </label>
+                                                    </div>
+
+                                                    <div>
+                                                        <button type="submit" class="btn btn-primary w-md">Submit</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <!-- end card body -->
+                                </div>
+                                <!-- end card -->
+                            </div>
+                            <!-- end col -->
+                        </div>
+                        <!-- end row -->
+
+
+                        <!-- end row -->
+
+                    </div> <!-- container-fluid -->
+                </div>
+                <!-- End Page-content --> *@
+
+
+			@*      <footer class="footer">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <script>document.write(new Date().getFullYear())</script> © Skote.
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="text-sm-end d-none d-sm-block">
+                                    Design & Develop by Themesbrand
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </footer> *@
+		</div>
+		<!-- end main content-->
+
+	</div>
+	<!-- END layout-wrapper -->
+	<!-- Right Sidebar -->
+	<div class="right-bar">
+		<div data-simplebar class="h-100">
+			<div class="rightbar-title d-flex align-items-center px-3 py-4">
+
+				<h5 class="m-0">Settings</h5>
+
+				<a href="javascript:void(0);" class="right-bar-toggle ms-auto">
+					<i class="bi bi-x"></i>
+				</a>
+			</div>
+
+			<!-- Settings -->
+			<hr class="mt-0" />
+			@* <h6 class="text-center mb-0">Choose Layouts</h6> *@
+
+			<div class="p-4">
+				@* <div class="mb-2">
+					<img src="assets/images/layouts/layout-1.jpg" class="img-thumbnail" alt="layout images">
+				</div> *@
+
+				<div class="form-check form-switch mb-3">
+					<input class="form-check-input theme-choice" type="checkbox" id="light-mode-switch" checked>
+					<label class="form-check-label" for="light-mode-switch">Light Mode</label>
+				</div>
+
+				@* 		<div class="mb-2">
+					<img src="assets/images/layouts/layout-2.jpg" class="img-thumbnail" alt="layout images">
+				</div> *@
+				<div class="form-check form-switch mb-3">
+					<input class="form-check-input theme-choice" type="checkbox" id="dark-mode-switch">
+					<label class="form-check-label" for="dark-mode-switch">Dark Mode</label>
+				</div>
+
+				@* 	<div class="mb-2">
+					<img src="assets/images/layouts/layout-3.jpg" class="img-thumbnail" alt="layout images">
+				</div>
+				<div class="form-check form-switch mb-3">
+					<input class="form-check-input theme-choice" type="checkbox" id="rtl-mode-switch">
+					<label class="form-check-label" for="rtl-mode-switch">RTL Mode</label>
+				</div>
+
+				<div class="mb-2">
+					<img src="assets/images/layouts/layout-4.jpg" class="img-thumbnail" alt="layout images">
+				</div>
+				<div class="form-check form-switch mb-5">
+					<input class="form-check-input theme-choice" type="checkbox" id="dark-rtl-mode-switch">
+					<label class="form-check-label" for="dark-rtl-mode-switch">Dark RTL Mode</label>
+				</div> *@
+
+
+			</div>
+
+		</div> <!-- end slimscroll-menu-->
+	</div>
+	<!-- /Right-bar -->
+	<!-- Right bar overlay-->
+	<div class="rightbar-overlay"></div>
+
+	<!-- JAVASCRIPT -->
+	<script src="~/js/jquery-3.6.4.min.js"></script>
+	@* 	<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script> *@
+	@*     <script src="assets/libs/jquery/jquery.min.js"></script>
+    <!-- Bootstrap (Required for styling) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+	@*         <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script> *@
+	<script src="~/js/metismenu.min.js"></script>
+	@*     <script src="assets/libs/metismenu/metisMenu.min.js"></script> *@
+	@* 	<script src="assets/libs/simplebar/simplebar.min.js"></script> *@
+	<script src="~/js/simplebar.min.js"></script>
+	<script src="~/js/waves.min.js"></script>
+	@*   <script src="assets/libs/node-waves/waves.min.js"></script> *@
+	<script src="~/js/app.js"></script>
+	@*         <script src="assets/js/app.js"></script> *@
+
+
+
+
+
+	@*     <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div> *@
+
+	<footer class="border-top footer text-muted bg-light py-3">
+		<div class="container d-flex justify-content-center align-items-center" style="min-height: 60px;">
+			<div class="text-center">
+				<strong>
+					&copy; @DateTime.Now.Year -
+					<a href="#" class="text-decoration-none">Restaurant Management System</a>.
+				</strong>
+				All rights reserved.
+			</div>
+		</div>
+	</footer>
+
+
+	<!--end::Script-->
+	<!-- jQuery (Always Load First) -->
+	<!-- jQuery Script (Common for All Pages) -->
+	<script src="~/js/jquery-3.6.4.min.js" asp-append-version="true"></script>
+	<!-- jQuery UI JS (For Draggable & Resizable) -->
+	<script src="~/js/jquery-ui.min.js"></script>
+	<script src="~/js/common.js"></script>
+
+	<!-- Bootstrap JS (Optional) -->
+	<script src="~/js/bootstrap.bundle.min.js"></script>
+
+	@* <script src="https://cdn.jsdelivr.net/npm/metismenujs@1.3.0/dist/metismenu.min.js"></script> *@
+	<script>
+		document.addEventListener("DOMContentLoaded", function () {
+			new MetisMenu("#side-menu");
+		});
+	</script>
+
+	<script>
+
+
+		// $(".arrow-auto").click(function () {
+		// 	// Toggle arrow direction when clicking menu items
+		// 	$(this).find(".bi-chevron-down").toggleClass("bi-chevron-up");
+		// });
+
+	</script>
+
+	@*     <script>
+                $(document).ready(function () {
+            $(".arrow-auto").click(function () {
+                // Toggle arrow icon on click
+                $(this).find(".bi-chevron-down").toggleClass("bi-chevron-up");
+            });
+        });
+
+        </script> *@
+	@* 
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script> *@
+
+	@* <script>
+		console.log($(".nav-link").length);
+		console.log(typeof jQuery !== "undefined" ? "jQuery Loaded" : "jQuery NOT Loaded!");
+	</script> *@
+
+	@RenderSection("Scripts", required: false)
+	@*     @await RenderSectionAsync("Scripts", required: false) *@
+
+
+	<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+
+	<script>
+		// toastr.options: {
+		//    "debug": false,
+		//    "positionClass": "toast-top-right",
+		//    "onclick": null,
+		//    "fadeIn": 300,
+		//    "fadeOut": 1000,
+		//    "timeOut": 5000,
+		//    "extendedTimeOut": 1000
+		//    }
+
+					 toastr.options = {
+		  "closeButton": false,
+		  "debug": false,
+		  "newestOnTop": false,
+		  "progressBar": true,
+		  "positionClass": "toast-top-right",
+		  "preventDuplicates": false,
+		  "onclick": null,
+		  "showDuration": "300",
+		  "hideDuration": "1000",
+		  "timeOut": "3000",
+		  "extendedTimeOut": "1000",
+		  "showEasing": "swing",
+		  "hideEasing": "linear",
+		  "showMethod": "fadeIn",
+		  "hideMethod": "fadeOut"
+		}
+
+	</script>
+
+
+</body>
+</html>

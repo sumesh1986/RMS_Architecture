@@ -1,0 +1,129 @@
+﻿@{
+	ViewData["Title"] = "Pole Display";
+}
+
+
+<!-- ============================================================== -->
+<!-- Start Content here -->
+<!-- ============================================================== -->
+
+
+
+<div class="page-content">
+
+	<div class="row">
+		<div class="col-lg-12">
+
+			<!--begin::Container-->
+			<div class="container-fluid">
+				<!--begin::Row-->
+				<div class="row">
+					<!--begin::Col-->
+					<div class="col-12">
+						<!--begin::Card-->
+						<div class="card">
+
+							<!--begin::Card Header-->
+							<div class="card-header">
+								<!--begin::Card Title-->
+								<div class="card-header header-background text-white text-center">
+									<h4>Pole Display</h4>
+								</div>							
+							</div>
+
+
+							<!--begin::Card Body-->
+							<div class="card-body">
+
+								<form asp-action="Create" method="post">
+									<!--begin::Row-->
+									<!-- Form -->
+
+
+
+									<div class="row g-3">
+										<!-- Station -->
+										<div class="col-md-6">
+											<label for="Station" class="form-label">Station</label>
+											<select id="Station" name="Station" class="form-select">
+												<option value="">Select Station</option>
+												<option value="1">Station 1</option>
+												<option value="2">Station 2</option>
+											</select>
+										</div>
+
+										<!-- Max Letterings -->
+										<div class="col-md-6">
+											<label for="MaxLetterings" class="form-label">Max Letterings</label>
+											<input id="MaxLetterings" name="MaxLetterings" class="form-control" type="number" placeholder="Enter Max Letterings" />
+										</div>
+
+										<!-- Port -->
+										<div class="col-md-6">
+											<label for="Port" class="form-label">Port</label>
+											<select id="Port" name="Port" class="form-select">
+												<option value="">Select Port</option>
+												<option value="COM1">COM1</option>
+												<option value="COM2">COM2</option>
+											</select>
+										</div>
+
+										<!-- Baud Rate -->
+										<div class="col-md-6">
+											<label for="BaudRate" class="form-label">Baud Rate</label>
+											<select id="BaudRate" name="BaudRate" class="form-select">
+												<option value="">Select Baud Rate</option>
+												<option value="9600">9600</option>
+												<option value="19200">19200</option>
+											</select>
+										</div>
+
+										<!-- Display Command -->
+										<div class="col-md-12">
+											<label for="DisplayCommand" class="form-label">Display CL Command</label>
+											<input id="DisplayCommand" name="DisplayCommand" class="form-control" placeholder="Enter CL Command" />
+										</div>
+
+										<!-- Action Buttons -->
+										<div class="col-md-12 text-end mt-4">
+											<button type="submit" class="btn btn-primary btn-md me-2">
+												<i class="bi bi-play-circle-fill"></i> Test
+											</button>
+											<button type="button" class="btn btn-success btn-md">
+												<i class="bi bi-pencil-square"></i> Update
+											</button>
+										</div>
+
+										<!-- Info Box -->
+										<div class="col-md-12 mt-4">
+											<div class="alert alert-warning text-center d-flex align-items-center justify-content-center" role="alert">
+												<i class="bi bi-info-circle-fill me-2"></i>
+												<div>
+													Pole display settings for the selected station.
+												</div>
+											</div>
+										</div>
+									</div>
+
+
+
+									<!--end::Row-->
+								</form>
+							</div>
+							<!--end::Card Body-->
+
+						</div>
+						<!--end::Card-->
+
+					</div>
+					<!--end::Col-->
+				</div>
+				<!--end::Row-->
+			</div>
+			<!--end::Container-->
+
+		</div>
+	</div>
+</div>
+
+

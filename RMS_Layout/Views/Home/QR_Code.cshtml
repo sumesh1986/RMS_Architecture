@@ -1,0 +1,140 @@
+﻿@{
+	ViewData["Title"] = "QR Code";
+}
+
+
+<!-- ============================================================== -->
+<!-- Start Content here -->
+<!-- ============================================================== -->
+
+
+
+<div class="page-content">
+
+	<div class="row">
+		<div class="col-lg-12">
+
+
+			<!--begin::Container-->
+			<div class="container-fluid">
+				<!--begin::Row-->
+				<div class="row">
+					<!--begin::Col-->
+					<div class="col-12">
+						<!--begin::Card-->
+						<div class="card">
+
+							<!--begin::Card Header-->
+							<div class="card-header">
+								<!--begin::Card Title-->
+								<div class="card-header header-background text-white text-center">
+									<h4>QR Code</h4>
+								</div>
+
+							</div>
+
+
+							<!--begin::Card Body-->
+							<div class="card-body">
+
+								<form asp-action="Create" method="post">
+									<!--begin::Row-->
+									<!-- Form -->
+
+									<div class="row g-3">
+										<div class="col-md-7">
+											<div class="row mb-3">
+												<div class="col-md-8">
+													<label for="header" class="form-label">Header:</label>
+													<input type="text" id="header" class="form-control" value="Welcome">
+												</div>
+												<div class="col-md-4">
+													<label for="position" class="form-label">Position:</label>
+													<select id="position" class="form-select">
+														<option value="0">--Select--</option>
+														<option value="0">Left</option>
+														<option value="1">Center</option>
+													</select>
+												</div>
+											</div>
+											<div class="row mb-3">
+												<div class="col-lg-12">
+													<label for="description" class="form-label">Description of QR Code:</label>
+													<input type="text" id="description" class="form-control">
+												</div>
+											</div>
+											<div class="row mb-3">
+												<div class="col-md-8">
+													<label for="footer" class="form-label">Footer:</label>
+													<input type="text" id="footer" class="form-control" value="Welcome">
+												</div>
+												<div class="col-md-4">
+													<label for="footer-position" class="form-label">Position:</label>
+													<select id="footer-position" class="form-select">
+														<option value="0">--Select--</option>
+														<option value="0">Left</option>
+														<option value="1">Center</option>
+													</select>
+												</div>
+											</div>
+										</div>
+
+										<div class="col-md-4">
+											<div class="row mb-3">
+												<div class="col-md-6">
+													<label for="width" class="form-label">Width:</label>
+													<input type="text" id="width" class="form-control">
+												</div>
+												<div class="col-md-6">
+													<label for="height" class="form-label">Height:</label>
+													<input type="text" id="height" class="form-control">
+												</div>
+											</div>
+											<div class="row g-3 mb-3">
+												<!-- Added g-3 for spacing between buttons -->
+												<div class="col-md-6">
+													<button type="button" class="btn btn-primary w-100">
+														<i class="bi bi-shuffle"></i> <!-- Bootstrap Icon for Generate -->
+														Generate
+													</button>
+												</div>
+												<div class="col-md-6">
+													<button type="button" class="btn btn-secondary w-100">
+														<i class="bi bi-printer"></i> <!-- Bootstrap Icon for Print -->
+														Print
+													</button>
+												</div>
+											</div>
+
+											<div class="row">
+												<div class="col-md-12">
+													<p>QR Code Preview</p>
+													<div>
+														<img id="imgQRCode" class="img-fluid" alt="QR Code Preview">
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+
+
+									<!--end::Row-->
+								</form>
+							</div>
+							<!--end::Card Body-->
+
+						</div>
+						<!--end::Card-->
+
+					</div>
+					<!--end::Col-->
+				</div>
+				<!--end::Row-->
+			</div>
+			<!--end::Container-->
+
+		</div>
+	</div>
+</div>
+
+

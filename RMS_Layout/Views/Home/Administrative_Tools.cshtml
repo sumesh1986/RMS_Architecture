@@ -1,0 +1,506 @@
+﻿@{
+	ViewData["Title"] = "Administrative Tools";
+}
+
+<style>
+	.tab-content {
+		padding: 15px;
+		background: #fff;
+		border: 1px solid #ddd;
+		border-top: none;
+		border-radius: 0 0 8px 8px;
+	}
+
+	.nav-tabs .nav-link {
+		font-size: 18px;
+		font-weight: 600;
+		padding: 12px 20px;
+		color: #333;
+	}
+
+		.nav-tabs .nav-link.active {
+			background: #4aa9c7;
+			color: white;
+			border-color: #4aa9c7;
+		}
+
+	.search-box {
+		width: 100%;
+		max-width: 300px;
+	}
+
+	.table-container {
+		max-height: 500px;
+		overflow: auto;
+	}
+
+	.table thead {
+		background: #4CAF50;
+		color: white;
+	}
+
+	/* .card-header {
+				background: #4aa9c7;
+				color: white;
+				text-align: center;
+				padding: 15px;
+				border-radius: 8px;
+				font-size: 20px;
+				font-weight: bold;
+			} */
+</style>
+
+<!-- ============================================================== -->
+<!-- Start Content here -->
+<!-- ============================================================== -->
+
+
+
+<div class="page-content">
+
+	<div class="row">
+		<div class="col-lg-12">
+
+
+	<!--begin::Container-->
+	<div class="container-fluid">
+		<!--begin::Row-->
+		<div class="row">
+			<!--begin::Col-->
+			<div class="col-12">
+				<!--begin::Card-->
+				<div class="card">
+
+					<!--begin::Card Header-->
+					<div class="card-header">
+						<!--begin::Card Title-->
+						<div class="card-header header-background text-white text-center">
+							<h4>Administrative Tools</h4>
+						</div>
+					
+					</div>
+
+
+					<!--begin::Card Body-->
+					<div class="card-body">
+
+						<form asp-action="Create" method="post">
+							<!--begin::Row-->
+							<!-- Form -->
+							<div class="row g-3">
+								<ul class="nav nav-tabs" id="settingsTabs">
+									<!-- BASIC MENU -->
+
+									<li class="nav-item dropdown">
+										<a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">Basic</a>
+										<ul class="dropdown-menu">
+											<li><a class="dropdown-item tab-link" data-bs-toggle="tab" href="#basic1">POS</a></li>
+											<li><a class="dropdown-item tab-link" data-bs-toggle="tab" href="#basic2">Technical</a></li>
+											<li><a class="dropdown-item tab-link" data-bs-toggle="tab" href="#basic3">Communications</a></li>
+											<li><a class="dropdown-item tab-link" data-bs-toggle="tab" href="#basic4">Other Settings</a></li>
+										</ul>
+									</li>
+
+									<!-- ADVANCED MENU -->
+									<li class="nav-item dropdown">
+										<a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">Advanced</a>
+										<ul class="dropdown-menu">
+											<li><a class="dropdown-item" data-bs-toggle="tab" href="#advanced1">VPN (Outlets)</a></li>
+											<li><a class="dropdown-item" data-bs-toggle="tab" href="#advanced2">Order Tracking</a></li>
+											<li><a class="dropdown-item" data-bs-toggle="tab" href="#advanced3">Control Robots</a></li>
+											<li><a class="dropdown-item" data-bs-toggle="tab" href="#advanced4">Integrate Access Machine</a></li>
+											<li><a class="dropdown-item" data-bs-toggle="tab" href="#advanced5">Cloud Setup</a></li>
+											<li><a class="dropdown-item" data-bs-toggle="tab" href="#advanced6">Self Service Kiosks</a></li>
+											<li><a class="dropdown-item" data-bs-toggle="tab" href="#advanced7">Motion Detection</a></li>
+											<li><a class="dropdown-item" data-bs-toggle="tab" href="#advanced8">Manager App</a></li>
+											<li><a class="dropdown-item" data-bs-toggle="tab" href="#advanced9">Device Manager</a></li>
+											<li><a class="dropdown-item" data-bs-toggle="tab" href="#advanced10">Query (SQL)</a></li>
+											<li><a class="dropdown-item" data-bs-toggle="tab" href="#advanced11">Automation</a></li>
+										</ul>
+									</li>
+								</ul>
+
+
+
+								<div class="tab-content">
+									<!-- POS TAB -->
+									<div id="basic1" class="tab-pane fade show active">
+										<div>
+											<div class="header-background text-white text-center">
+												<h5>POS</h5>
+											</div>
+
+											<!-- Table -->
+
+											<div class="card mt-4 shadow-sm">
+														<div class="card-header Grid-header-background text-white d-flex justify-content-between align-items-center">
+													<span class="fw-bold">List</span>
+													<div class="input-group input-group-sm w-auto ms-auto">
+														<input type="text" class="form-control" id="searchInput" placeholder="Search...">
+														<span class="input-group-text"><i class="bi bi-search"></i></span>
+													</div>
+												</div>
+
+												<div class="card-body">
+													<div class="table-responsive" style="max-height: 400px; overflow: auto;">
+														<table class="table table-striped table-hover">
+															<thead class="table-success">
+																<tr>
+																	<th>#</th>
+																	<th>Particulars</th>
+																	<th>Value</th>
+																	<th>Details</th>
+																	<th>Status</th>
+																	<th>Actions</th>
+																</tr>
+															</thead>
+															<tbody>
+																<tr>
+																	<td>1</td>
+																	<td>Example</td>
+																	<td>Data</td>
+																	<td>Details</td>
+																	<td><span class="badge bg-success">Active</span></td>
+																	<td>
+																		<button class="btn btn-outline-primary btn-sm"><i class="bi bi-pencil-square"></i></button>
+																		<button class="btn btn-outline-danger btn-sm"><i class="bi bi-trash"></i></button>
+																	</td>
+																</tr>
+																<tr>
+																	<td>2</td>
+																	<td>Example</td>
+																	<td>Data</td>
+																	<td>Details</td>
+																	<td><span class="badge bg-danger">Inactive</span></td>
+																	<td>
+																		<button class="btn btn-outline-primary btn-sm"><i class="bi bi-pencil-square"></i></button>
+																		<button class="btn btn-outline-danger btn-sm"><i class="bi bi-trash"></i></button>
+																	</td>
+																</tr>
+															</tbody>
+														</table>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+
+
+
+									<!-- Placeholder for Other Tabs -->
+									<div id="basic2" class="tab-pane fade">
+										<div>
+
+											<div class="header-background text-white text-center">
+												<h5>Technical Content</h5>
+											</div>
+
+											<!-- Table -->
+
+											<div class="card mt-4 shadow-sm">
+														<div class="card-header Grid-header-background text-white d-flex justify-content-between align-items-center">
+													<span class="fw-bold">List</span>
+													<div class="input-group input-group-sm w-auto ms-auto">
+														<input type="text" class="form-control" id="searchInput" placeholder="Search...">
+														<span class="input-group-text"><i class="bi bi-search"></i></span>
+													</div>
+												</div>
+
+												<div class="card-body">
+													<div class="table-responsive" style="max-height: 400px; overflow: auto;">
+														<table class="table table-striped table-hover">
+															<thead class="table-success">
+																<tr>
+																	<th>#</th>
+																	<th>Particulars</th>
+																	<th>Value</th>
+																	<th>Details</th>
+																	<th>Status</th>
+																	<th>Actions</th>
+																</tr>
+															</thead>
+															<tbody>
+																<tr>
+																	<td>1</td>
+																	<td>Example</td>
+																	<td>Data</td>
+																	<td>Details</td>
+																	<td><span class="badge bg-success">Active</span></td>
+																	<td>
+																		<button class="btn btn-outline-primary btn-sm"><i class="bi bi-pencil-square"></i></button>
+																		<button class="btn btn-outline-danger btn-sm"><i class="bi bi-trash"></i></button>
+																	</td>
+																</tr>
+																<tr>
+																	<td>2</td>
+																	<td>Example</td>
+																	<td>Data</td>
+																	<td>Details</td>
+																	<td><span class="badge bg-danger">Inactive</span></td>
+																	<td>
+																		<button class="btn btn-outline-primary btn-sm"><i class="bi bi-pencil-square"></i></button>
+																		<button class="btn btn-outline-danger btn-sm"><i class="bi bi-trash"></i></button>
+																	</td>
+																</tr>
+															</tbody>
+														</table>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+
+
+									<div id="basic3" class="tab-pane fade">
+										<div>
+
+
+											<div class="header-background text-white text-center">
+												<h5>Communications</h5>
+											</div>
+
+
+											<!-- Table -->
+
+											<div class="card mt-4 shadow-sm">
+												<div class="card-header header-background text-white d-flex justify-content-between align-items-center">
+													<span class="fw-bold">List</span>
+													<div class="input-group input-group-sm w-auto ms-auto">
+														<input type="text" class="form-control" id="searchInput" placeholder="Search...">
+														<span class="input-group-text"><i class="bi bi-search"></i></span>
+													</div>
+												</div>
+
+												<div class="card-body">
+													<div class="table-responsive" style="max-height: 400px; overflow: auto;">
+														<table class="table table-striped table-hover">
+															<thead class="table-success">
+																<tr>
+																	<th>#</th>
+																	<th>Particulars</th>
+																	<th>Value</th>
+																	<th>Details</th>
+																	<th>Status</th>
+																	<th>Actions</th>
+																</tr>
+															</thead>
+															<tbody>
+																<tr>
+																	<td>1</td>
+																	<td>Example</td>
+																	<td>Data</td>
+																	<td>Details</td>
+																	<td><span class="badge bg-success">Active</span></td>
+																	<td>
+																		<button class="btn btn-outline-primary btn-sm"><i class="bi bi-pencil-square"></i></button>
+																		<button class="btn btn-outline-danger btn-sm"><i class="bi bi-trash"></i></button>
+																	</td>
+																</tr>
+																<tr>
+																	<td>2</td>
+																	<td>Example</td>
+																	<td>Data</td>
+																	<td>Details</td>
+																	<td><span class="badge bg-danger">Inactive</span></td>
+																	<td>
+																		<button class="btn btn-outline-primary btn-sm"><i class="bi bi-pencil-square"></i></button>
+																		<button class="btn btn-outline-danger btn-sm"><i class="bi bi-trash"></i></button>
+																	</td>
+																</tr>
+															</tbody>
+														</table>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+
+
+									<div id="basic4" class="tab-pane fade">
+										<div>
+
+											<div class="header-background text-white text-center">
+												<h5>Other Settings</h5>
+											</div>
+
+											<!-- Table -->
+
+											<div class="card mt-4 shadow-sm">
+												<div class="card-header header-background text-white d-flex justify-content-between align-items-center">
+													<span class="fw-bold">List</span>
+													<div class="input-group input-group-sm w-auto ms-auto">
+														<input type="text" class="form-control" id="searchInput" placeholder="Search...">
+														<span class="input-group-text"><i class="bi bi-search"></i></span>
+													</div>
+												</div>
+
+												<div class="card-body">
+													<div class="table-responsive" style="max-height: 400px; overflow: auto;">
+														<table class="table table-striped table-hover">
+															<thead class="table-success">
+																<tr>
+																	<th>#</th>
+																	<th>Particulars</th>
+																	<th>Value</th>
+																	<th>Details</th>
+																	<th>Status</th>
+																	<th>Actions</th>
+																</tr>
+															</thead>
+															<tbody>
+																<tr>
+																	<td>1</td>
+																	<td>Example</td>
+																	<td>Data</td>
+																	<td>Details</td>
+																	<td><span class="badge bg-success">Active</span></td>
+																	<td>
+																		<button class="btn btn-outline-primary btn-sm"><i class="bi bi-pencil-square"></i></button>
+																		<button class="btn btn-outline-danger btn-sm"><i class="bi bi-trash"></i></button>
+																	</td>
+																</tr>
+																<tr>
+																	<td>2</td>
+																	<td>Example</td>
+																	<td>Data</td>
+																	<td>Details</td>
+																	<td><span class="badge bg-danger">Inactive</span></td>
+																	<td>
+																		<button class="btn btn-outline-primary btn-sm"><i class="bi bi-pencil-square"></i></button>
+																		<button class="btn btn-outline-danger btn-sm"><i class="bi bi-trash"></i></button>
+																	</td>
+																</tr>
+															</tbody>
+														</table>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+
+
+
+									<div id="advanced1" class="tab-pane fade">
+										VPN Content
+										<div class="row">
+											<div class="col-lg-12">
+												<img id="Image1" src="~/images/bgImg.jpg" asp-append-version="true" style="width: 100%; height: 700px;" alt="Background Image 1">
+											</div>
+										</div>
+									</div>
+
+									<div id="advanced2" class="tab-pane fade">
+										Order Tracking Content
+										<div class="row">
+											<div class="col-lg-12">
+												<img id="Image2" src="~/images/4background.jpg" asp-append-version="true" style="width: 100%; height: 700px;" alt="Background Image 2">
+											</div>
+										</div>
+									</div>
+
+
+									<div id="advanced3" class="tab-pane fade">Control Robots Content</div>
+									<div id="advanced4" class="tab-pane fade">Integrate Access Machine Content</div>
+									<div id="advanced5" class="tab-pane fade">Cloud Setup Content</div>
+									<div id="advanced6" class="tab-pane fade">Self Service Kiosks Content</div>
+									<div id="advanced7" class="tab-pane fade">Motion Detection Content</div>
+									<div id="advanced8" class="tab-pane fade">Manager App Content</div>
+									<div id="advanced9" class="tab-pane fade">Device Manager Content</div>
+									<div id="advanced10" class="tab-pane fade">Query (SQL) Content</div>
+									<div id="advanced11" class="tab-pane fade">Automation Content</div>
+
+
+
+
+
+									<!-- BUTTONS -->
+									<div class="text-center mt-4">
+										<hr>
+										<div class="d-grid gap-2 d-md-flex justify-content-md-end">
+													<button type="submit" class="btn btn-primary button-background waves-effect">
+												<i class="bi bi-save"></i> Save
+											</button>
+													<button type="button" class="btn btn-outline-secondary waves-effect" id="clearBtn">
+												<i class="bi bi-x-circle"></i> Clear
+											</button>
+										</div>
+									</div>
+
+								</div>
+
+							</div>
+
+							<!--end::Row-->
+						</form>
+					</div>
+					<!--end::Card Body-->
+
+				</div>
+				<!--end::Card-->
+
+			</div>
+			<!--end::Col-->
+		</div>
+		<!--end::Row-->
+	</div>
+	<!--end::Container-->
+
+
+		</div>
+	</div>
+</div>
+
+<script>
+
+		$(document).ready(function () {
+		// Show POS tab by default only on initial page load
+		if (window.location.hash === '') {
+			$('#basic1').addClass('show active');
+		}
+
+		// Handle tab switching inside Basic and Advanced dropdowns
+		$('.dropdown-menu .dropdown-item').on('click', function (e) {
+			e.preventDefault();
+
+			var targetTab = $(this).attr('href');
+
+			// Hide all tab panes
+			$('.tab-pane').removeClass('show active');
+
+			// Show the selected tab only
+			$(targetTab).addClass('show active');
+		});
+
+		// Prevent POS tab from showing unnecessarily after clicking other tabs
+		$('.dropdown-menu .dropdown-item').on('click', function () {
+			if ($(this).attr('href') !== '#basic1') {
+				$('#basic1').removeClass('show active');
+			}
+		});
+
+		// Ensure Clear button resets to POS tab
+		$('#clearBtn').on('click', function () {
+			// Hide all tabs and reset to POS tab
+			$('.tab-pane').removeClass('show active');
+			$('#basic1').addClass('show active');
+		});
+	});
+
+
+
+
+
+</script>
+@section Scripts {
+	<script>
+		$(document).ready(function () {
+			// Search functionality
+			$("#searchInput").on("keyup", function () {
+				var value = $(this).val().toLowerCase();
+				$("tbody tr").filter(function () {
+					$(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
+				});
+			});
+		});
+	</script>
+}

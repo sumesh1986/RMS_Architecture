@@ -1,0 +1,106 @@
+﻿using System.Text.Json.Serialization;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.OpenApi.Models;
+using RMS_BAL.Middleware;
+using RMS_BAL.Repository.Interfaces;
+using RMS_BAL.Services.Company;
+using RMS_BAL.Services.Customer;
+using RMS_BAL.Services.ExceptionHandlingService;
+using RMS_BAL.Services.Interfaces;
+using RMS_Data.Data;
+using RMS_Data.Repository.Company;
+using RMS_Data.Repository.Customer;
+using RMS_Data.Repository.ExcpetionHandling;
+using RMS_Data.Repository.Interfaces;
+using RMS_Data.Service.Interfaces;
+using Scrutor;
+
+var builder = WebApplication.CreateBuilder(args);
+
+
+var assemblies = AppDomain.CurrentDomain.GetAssemblies();
+
+//builder.Services.Scan(scan => scan
+//    .FromAssemblies(assemblies)
+//    .AddClasses(classes => classes
+//        .InNamespaces("RMS_BAL.Repository", "RMS_BAL.Services") // Add the necessary namespaces
+//        .Where(c => c.Name.EndsWith("Service"))
+//    )
+//    .AsImplementedInterfaces()
+//    .WithScopedLifetime()
+//);
+
+builder.Services.AddScoped<ICustomerGroupRepository,CustomerGroupRepository>();
+builder.Services.AddScoped<ICustomerGroupService, CustomerGroupService>();
+
+builder.Services.AddScoped<IExceptionHandlingService, ExceptionHandlingService>();
+builder.Services.AddScoped<IExcepetionHandlingRepository, ExcepetionHandlingRepository>();
+
+
+//builder.Services.AddScoped<ICompanyConceptRepository, CompanyConceptRepository>();
+//builder.Services.AddScoped<ICompanyConceptService, CompanyConceptService>();
+
+
+// Register services BEFORE calling builder.Build()
+builder.Services.AddHttpContextAccessor();
+builder.Services.AddSession();
+
+// Add other services to the container.
+builder.Services.AddControllers()
+    .AddJsonOptions(options =>
+    {
+        options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles;
+    });
+
+
+builder.Services.AddControllersWithViews();
+
+// Add API documentation
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
+
+
+
+// Add DbContext
+builder.Services.AddDbContext<ApplicationDbContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+var app = builder.Build();
+
+using (var scope = app.Services.CreateScope())
+{
+    var dbContext = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
+    dbContext.Database.Migrate();
+}
+
+// Configure the HTTP request pipeline.
+if (!app.Environment.IsDevelopment())
+{
+    app.UseExceptionHandler("/Home/Error");
+    app.UseHsts();
+}
+else
+{
+    app.UseDeveloperExceptionPage();
+    app.UseSwagger();
+    app.UseSwaggerUI();
+}
+
+app.UseHttpsRedirection();
+app.UseStaticFiles();
+
+app.UseMiddleware<ExceptionMiddleware>();
+
+app.UseRouting();
+
+app.UseSession();
+
+app.UseAuthorization();
+app.MapControllers();
+
+app.MapControllerRoute(
+    name: "default",
+       //pattern: "{controller=Home}/{action=Index}/{id?}");
+       pattern: "{controller=Home}/{action=Login}/{id?}");
+
+app.Run();

@@ -1,0 +1,127 @@
+﻿@{
+	ViewData["Title"] = "ServiceCharger";
+}
+
+
+<!-- ============================================================== -->
+<!-- Start Content here -->
+<!-- ============================================================== -->
+
+
+
+<div class="page-content">
+
+	<div class="row">
+		<div class="col-lg-12">
+
+
+			<!--begin::Container-->
+			<div class="container-fluid">
+				<!--begin::Row-->
+				<div class="row">
+					<!--begin::Col-->
+					<div class="col-12">
+						<!--begin::Card-->
+						<div class="card">
+
+							<!--begin::Card Header-->
+							<div class="card-header">
+								<!--begin::Card Title-->
+								<div class="card-header header-background text-white text-center">
+									<h4>ServiceCharger</h4>
+								</div>
+
+							</div>
+
+
+							<!--begin::Card Body-->
+							<div class="card-body">
+
+								<form asp-action="Create" method="post">
+									<!--begin::Row-->
+									<!-- Form -->
+
+									<div class="row g-3">
+										<div class="col-12">
+											<div class="mb-3">
+												<label class="form-label">Service Charge Value:</label>
+												<input id="TextBox2" type="number" class="form-control" />
+											</div>
+										</div>
+
+										<div class="col-12">
+											<div class="mb-3 form-check form-switch">
+												<input type="checkbox" class="form-check-input" id="all">
+												<label class="form-check-label" for="all">
+													Apply to All <span class="switch-icon">✔️</span>
+												</label>
+											</div>
+										</div>
+									</div>
+
+									<div class="row g-3">
+										<div class="col-12">
+											<label class="form-label">Service Types:</label>
+											<div id="CheckBoxList1" class="switch-container">
+												<div class="form-check form-switch">
+													<input class="form-check-input" type="checkbox" id="fineDine">
+													<label class="form-check-label" for="fineDine">Fine Dine-in</label>
+												</div>
+												<div class="form-check form-switch">
+													<input class="form-check-input" type="checkbox" id="takeAway">
+													<label class="form-check-label" for="takeAway">Take Away</label>
+												</div>
+												<div class="form-check form-switch">
+													<input class="form-check-input" type="checkbox" id="delivery">
+													<label class="form-check-label" for="delivery">Delivery</label>
+												</div>
+												<div class="form-check form-switch">
+													<input class="form-check-input" type="checkbox" id="driveThrough">
+													<label class="form-check-label" for="driveThrough">Drive-Through</label>
+												</div>
+												<div class="form-check form-switch">
+													<input class="form-check-input" type="checkbox" id="thirdParty">
+													<label class="form-check-label" for="thirdParty">Third Party Pickup-Service</label>
+												</div>
+											</div>
+										</div>
+									</div>
+
+
+
+
+
+									<!-- BUTTONS -->
+									<div class="text-center mt-4">
+										<hr>
+										<div class="d-grid gap-2 d-md-flex justify-content-md-end">
+											<button type="submit" class="btn btn-primary button-background waves-effect">
+												<i class="bi bi-save"></i> Save
+											</button>
+											<button type="button" class="btn btn-outline-secondary waves-effect" id="clearBtn">
+												<i class="bi bi-x-circle"></i> Clear
+											</button>
+										</div>
+									</div>
+
+
+
+									<!--end::Row-->
+								</form>
+							</div>
+							<!--end::Card Body-->
+
+						</div>
+						<!--end::Card-->
+
+					</div>
+					<!--end::Col-->
+				</div>
+				<!--end::Row-->
+			</div>
+			<!--end::Container-->
+
+		</div>
+	</div>
+
+</div>

@@ -1,0 +1,323 @@
+﻿@{
+	ViewData["Title"] = "Floor Draft";
+}
+
+<style>
+	.form-check-input:checked {
+		background-color: #198754; /* Success Green */
+		border-color: #198754;
+	}
+
+	/* Switch label spacing */
+	.form-check-label {
+		margin-left: 8px;
+		font-weight: 500;
+		color: #333;
+	}
+
+</style>
+
+<div class="page-content">
+
+	<div class="row">
+		<div class="col-lg-12">
+
+
+			<!--begin::Container-->
+			<div class="container-fluid">
+				<!--begin::Row-->
+				<div class="row">
+					<!--begin::Col-->
+					<div class="col-12">
+						<!--begin::Card-->
+						<div class="card">
+
+							<!--begin::Card Header-->
+							<div class="card-header">
+								<!--begin::Card Title-->
+								<div class="card-header header-background text-white text-center">
+									<h4>Floor Draft</h4>
+								</div>
+
+							</div>
+
+
+							<!--begin::Card Body-->
+							<div class="card-body">
+
+								<form asp-action="Create" method="post">
+									<!--begin::Row-->
+									<!-- Form -->
+
+
+									<div class="container-fluid py-3">
+										<div class="row">
+											<div class="col-md-2">
+												<label for="concept" class="form-label">Concept:</label>
+											</div>
+											<div class="col-md-2">
+												<div class="form-check form-switch">
+													<input class="form-check-input" type="checkbox" id="statusToggle" name="UserStatus" value="Active" onchange="toggleStatus(this)" />
+													<label class="form-check-label" id="statusLabel" for="statusToggle">Inactive</label>
+												</div>
+												<input type="hidden" id="hiddenStatus" name="UserStatus" value="Inactive" />
+
+											</div>
+
+										</div>
+
+										<!-- Concept Dropdown -->
+										<div class="row mt-2">
+											<div class="col-md-12">
+												<select id="conceptDropdown" class="form-select ChosenSelector">
+													<option value="0" selected>--Select--</option>
+												</select>
+											</div>
+										</div>
+
+										<!-- Branches Dropdown -->
+										<div class="row mt-2">
+											<div class="col-md-12">
+												<label for="branches" class="form-label">Branches:</label>
+												<select id="branches" class="form-select ChosenSelector">
+													<option value="0" selected>--Select--</option>
+												</select>
+											</div>
+										</div>
+
+										<!-- Floor Description -->
+										<div class="row mt-2">
+											<div class="col-md-12">
+												<label for="floorDescription" class="form-label">Floor Description:</label>
+												<input type="text" id="floorDescription" class="form-control" />
+											</div>
+										</div>
+
+										<!-- Color and Image Section -->
+										<div class="container-fluid py-3">
+											<div class="row g-3 align-items-start">
+
+												<!-- Color/Image Section -->
+												<div class="col-md-3">
+													<label class="form-label">Color/Image:</label>
+													<img id="imagePreview" src="#" alt="Preview" class="img-fluid border rounded" style="height: 150px; width: 100%;" />
+												</div>
+
+												<!-- Color Picker and Image Upload -->
+												<div class="col-md-3">
+													<div class="row">
+														<div class="col-12" style="padding-top: 32px;">
+															<button id="pickColorBtn" class="btn btn-outline-primary w-100" onclick="openColorPicker(); return false;">
+																<i class="fas fa-eye-dropper"></i> Pick Color
+															</button>
+															<input type="color" id="colorPicker" style="visibility: hidden;" />
+														</div>
+
+														<div class="col-12">
+															<button id="uploadImageBtn" class="btn btn-outline-primary w-100" onclick="openFileDialog(); return false;">
+																<i class="glyphicon glyphicon-picture"></i> Upload Picture
+															</button>
+															<input type="file" id="fileUpload" style="display: none;" />
+														</div>
+													</div>
+												</div>
+
+												<!-- Width Input -->
+												<div class="col-md-2">
+													<label class="form-label">Width (Pixels):</label>
+													<input type="number" id="width" class="form-control" placeholder="Width" />
+												</div>
+
+												<!-- Height Input -->
+												<div class="col-md-2">
+													<label class="form-label">Height (Pixels):</label>
+													<input type="number" id="height" class="form-control" placeholder="Height" />
+												</div>
+
+												<!-- Design Button -->
+												<div class="col-md-2 d-flex align-items-end" style="padding-top: 32px;">
+													<button id="designBtn" class="btn btn-outline-primary w-100" onclick="applyDesign(); return false;">
+														<i class="glyphicon glyphicon-erase"></i> Design
+													</button>
+												</div>
+
+											</div>
+										</div>
+
+
+
+
+										@* 	<!-- Size in Pixels -->
+								<div class="row mt-2">
+									<div class="col-md-4">
+										<label class="form-label">Size in Pixels - Width</label>
+									</div>
+									<div class="col-md-2">
+										<input type="number" id="width" class="form-control" />
+									</div>
+									<div class="col-md-2">
+										<label class="form-label">Height</label>
+									</div>
+									<div class="col-md-3">
+										<input type="number" id="height" class="form-control" />
+									</div>
+								</div>
+
+								<!-- Design Button -->
+								<div class="row mt-4 text-end">
+									<div class="col-md-12">
+										<button id="designBtn" class="btn btn-outline-primary" onclick="applyDesign(); return false;">
+											<i class="glyphicon glyphicon-erase"></i> Design
+										</button>
+									</div>
+								</div> *@
+									</div>
+
+
+									<!-- Table -->
+									<div class="card mt-4 shadow-sm">
+										<div class="card-header header-background text-white d-flex justify-content-between align-items-center">
+											<span class="fw-bold">List</span>
+											<div class="input-group input-group-sm w-auto ms-auto">
+												<input type="text" class="form-control" id="searchInput" placeholder="Search...">
+												<span class="input-group-text"><i class="bi bi-search"></i></span>
+											</div>
+										</div>
+
+										<div class="card-body">
+											<div class="table-responsive">
+												<table class="table table-striped table-hover align-middle">
+													<thead class="table-success">
+														<tr>
+															<th>#</th>
+															<th>Floor Description</th>
+															<th>Width</th>
+															<th>Height</th>
+															<th>Picture Location</th>
+															<th>SysId</th>
+															<th>Status</th>
+															<th>Actions</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td>1</td>
+															<td>ABC</td>
+															<td>ABC123</td>
+															<td>12345</td>
+															<td>ABC Group</td>
+															<td>12345</td>
+															<td>
+																<span class="badge bg-success">Active</span>
+															</td>
+															<td>
+																<button class="btn btn-outline-primary btn-sm"><i class="bi bi-pencil-square"></i></button>
+																<button class="btn btn-outline-danger btn-sm"><i class="bi bi-trash"></i></button>
+															</td>
+														</tr>
+
+														<tr>
+															<td>2</td>
+															<td>UFS</td>
+															<td>UFS456</td>
+															<td>54321</td>
+															<td>UFS Group</td>
+															<td>12345</td>
+															<td>
+																<span class="badge bg-danger">Inactive</span>
+															</td>
+															<td>
+																<button class="btn btn-outline-primary btn-sm"><i class="bi bi-pencil-square"></i></button>
+																<button class="btn btn-outline-danger btn-sm"><i class="bi bi-trash"></i></button>
+															</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+										</div>
+									</div>
+
+
+									<!-- BUTTONS -->
+									<div class="text-center mt-4">
+										<hr>
+										<div class="d-grid gap-2 d-md-flex justify-content-md-end">
+											<button type="submit" class="btn btn-primary button-background waves-effect">
+												<i class="bi bi-save"></i> Save
+											</button>
+											<button type="button" class="btn btn-outline-secondary waves-effect" id="clearBtn">
+												<i class="bi bi-x-circle"></i> Clear
+											</button>
+										</div>
+									</div>
+
+
+
+									<!--end::Row-->
+								</form>
+							</div>
+							<!--end::Card Body-->
+
+						</div>
+						<!--end::Card-->
+
+					</div>
+					<!--end::Col-->
+				</div>
+				<!--end::Row-->
+			</div>
+			<!--end::Container-->
+
+
+		</div>
+	</div>
+</div>
+
+<!-- JavaScript for Color and Image Upload -->
+<script>
+	function openColorPicker() {
+		document.getElementById('colorPicker').click();
+	}
+
+	function openFileDialog() {
+		document.getElementById('fileUpload').click();
+	}
+
+	document.getElementById('colorPicker').addEventListener('input', function () {
+		document.getElementById('imagePreview').style.backgroundColor = this.value;
+	});
+
+	document.getElementById('fileUpload').addEventListener('change', function (event) {
+		const reader = new FileReader();
+		reader.onload = function () {
+			document.getElementById('imagePreview').src = reader.result;
+		};
+		reader.readAsDataURL(event.target.files[0]);
+	});
+
+	function applyDesign() {
+		alert("Design Applied!");
+	}
+</script>
+
+<script>
+			function toggleStatus(element) {
+		const statusLabel = document.getElementById('statusLabel');
+		const hiddenInput = document.getElementById('hiddenStatus');
+
+		if (element.checked) {
+			statusLabel.innerText = 'Active';
+			hiddenInput.value = 'Active';
+		} else {
+			statusLabel.innerText = 'Inactive';
+			hiddenInput.value = 'Inactive';
+		}
+	}
+
+	// Set default status to Inactive on page load
+	window.onload = function () {
+		const statusToggle = document.getElementById('statusToggle');
+		statusToggle.checked = false; // Ensure it's unchecked by default
+		toggleStatus(statusToggle); // Trigger to set label and value correctly
+	};
+</script>

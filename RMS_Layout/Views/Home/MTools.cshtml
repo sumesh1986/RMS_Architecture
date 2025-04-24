@@ -1,0 +1,152 @@
+﻿@{
+	ViewData["Title"] = "MTools";
+}
+
+
+<!-- ============================================================== -->
+<!-- Start Content here -->
+<!-- ============================================================== -->
+
+
+
+<div class="page-content">
+
+	<div class="row">
+		<div class="col-lg-12">
+
+
+			<!--begin::Container-->
+			<div class="container-fluid">
+				<!--begin::Row-->
+				<div class="row">
+					<!--begin::Col-->
+					<div class="col-12">
+						<!--begin::Card-->
+						<div class="card">
+
+							<!--begin::Card Header-->
+							<div class="card-header">
+								<!--begin::Card Title-->
+								<div class="card-header header-background text-white text-center">
+									<h4>M-Tools</h4>
+								</div>
+
+							</div>
+
+
+							<!--begin::Card Body-->
+							<div class="card-body">
+								@* 	<form action="#" method="post"> *@
+								<form asp-action="Create" method="post">
+									<!--begin::Row-->
+									<!-- Form -->
+
+
+
+
+									<div class="row g-3">
+										<div class="col-lg-12">
+
+											<div class="container">
+												<div class="row g-3">
+													<div class="col-md-3">
+														<button class="btn btn-danger w-100 py-2" style="background: #dc354580;">Reset Users</button>
+													</div>
+													<div class="col-md-3">
+														<button class="btn btn-warning w-100 py-2">Reset Mode</button>
+													</div>
+													<div class="col-md-3">
+														<button class="btn btn-primary w-100 py-2">Reset All Data</button>
+													</div>
+													<div class="col-md-3">
+														<button class="btn btn-success w-100 py-2">Reset Today Sales</button>
+													</div>
+												</div>
+
+												<div class="row g-3 mt-3">
+													<div class="col-md-3">
+														<button class="btn btn-danger w-100 py-2" style="background: #dc354580;">Reset Customers</button>
+													</div>
+													<div class="col-md-3">
+														<button class="btn btn-warning w-100 py-2">Reset User Logs</button>
+													</div>
+													<div class="col-md-3">
+														<button class="btn btn-primary w-100 py-2">Reset All Sales</button>
+													</div>
+													<div class="col-md-3">
+														<button class="btn btn-success w-100 py-2">Reset Inventory</button>
+													</div>
+												</div>
+
+												<div class="row g-3 mt-3">
+													<div class="col-md-3">
+														<button class="btn btn-danger w-100 py-2" style="background: #dc354580;">Reset Suppliers</button>
+													</div>
+													<div class="col-md-3">
+														<button class="btn btn-warning w-100 py-2">Reset Zone</button>
+													</div>
+													<div class="col-md-3">
+														<button class="btn btn-primary w-100 py-2">Set All Stock to Zero</button>
+													</div>
+													<div class="col-md-3">
+														<button class="btn btn-warning w-100 py-2">Reset Cities</button>
+													</div>
+												</div>
+
+												<div class="row g-3 mt-4">
+													<div class="col-md-3"></div>
+													<div class="col-md-3"></div>
+
+													<div class="col-md-3">
+														<div class="text-center bg-info text-white py-2 rounded">
+															<label for="sysKey" class="form-label">Sys Key:</label>
+														</div>
+														<input type="text" id="sysKey" class="form-control mt-2" placeholder="Enter Sys Key">
+													</div>
+
+													<div class="col-md-3">
+														<div class="text-center bg-danger text-white py-2 rounded">
+															<label for="powerKey" class="form-label">Power Key:</label>
+														</div>
+														<input type="text" id="powerKey" class="form-control mt-2" placeholder="Enter Power Key">
+													</div>
+												</div>
+											</div>
+
+											<div class="row">
+												<div class="col-lg-12 pt-3">
+													<div class="alert alert-warning d-flex align-items-center p-3 shadow-sm">
+														<i class="fa fa-exclamation-triangle fa-2x me-3"></i>
+														<p class="mb-0 fw-semibold">
+															Backup your data before resetting anything. In case you need the old one, you may restore it.
+														</p>
+													</div>
+												</div>
+											</div>
+
+
+
+
+										</div>
+
+									</div>
+
+									<!--end::Row-->
+								</form>
+							</div>
+							<!--end::Card Body-->
+
+						</div>
+						<!--end::Card-->
+
+					</div>
+					<!--end::Col-->
+				</div>
+				<!--end::Row-->
+			</div>
+			<!--end::Container-->
+
+
+		</div>
+	</div>
+</div>
