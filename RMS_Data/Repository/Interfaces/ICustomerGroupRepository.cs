@@ -18,5 +18,7 @@ namespace RMS_Data.Service.Interfaces
         
         Task DeleteAsync(CustomerGroup group);
 
+
+
     }
 }

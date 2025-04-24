@@ -13,3 +13,19 @@ D:\Jayaram\Working projects\RMS_Layout\RMS_Data\obj\Debug\net8.0\RMS_Data.dll
 D:\Jayaram\Working projects\RMS_Layout\RMS_Data\obj\Debug\net8.0\refint\RMS_Data.dll
 D:\Jayaram\Working projects\RMS_Layout\RMS_Data\obj\Debug\net8.0\RMS_Data.pdb
 D:\Jayaram\Working projects\RMS_Layout\RMS_Data\obj\Debug\net8.0\ref\RMS_Data.dll
+D:\RMS_Layout\RMS_Architecture\RMS_Data\bin\Debug\net8.0\RMS_Data.deps.json
+D:\RMS_Layout\RMS_Architecture\RMS_Data\bin\Debug\net8.0\RMS_Data.dll
+D:\RMS_Layout\RMS_Architecture\RMS_Data\bin\Debug\net8.0\RMS_Data.pdb
+D:\RMS_Layout\RMS_Architecture\RMS_Data\bin\Debug\net8.0\RMS_Models.dll
+D:\RMS_Layout\RMS_Architecture\RMS_Data\bin\Debug\net8.0\RMS_Models.pdb
+D:\RMS_Layout\RMS_Architecture\RMS_Data\obj\Debug\net8.0\RMS_Data.csproj.AssemblyReference.cache
+D:\RMS_Layout\RMS_Architecture\RMS_Data\obj\Debug\net8.0\RMS_Data.GeneratedMSBuildEditorConfig.editorconfig
+D:\RMS_Layout\RMS_Architecture\RMS_Data\obj\Debug\net8.0\RMS_Data.AssemblyInfoInputs.cache
+D:\RMS_Layout\RMS_Architecture\RMS_Data\obj\Debug\net8.0\RMS_Data.AssemblyInfo.cs
+D:\RMS_Layout\RMS_Architecture\RMS_Data\obj\Debug\net8.0\RMS_Data.csproj.CoreCompileInputs.cache
+D:\RMS_Layout\RMS_Architecture\RMS_Data\obj\Debug\net8.0\RMS_Data.sourcelink.json
+D:\RMS_Layout\RMS_Architecture\RMS_Data\obj\Debug\net8.0\RMS_Data.csproj.Up2Date
+D:\RMS_Layout\RMS_Architecture\RMS_Data\obj\Debug\net8.0\RMS_Data.dll
+D:\RMS_Layout\RMS_Architecture\RMS_Data\obj\Debug\net8.0\refint\RMS_Data.dll
+D:\RMS_Layout\RMS_Architecture\RMS_Data\obj\Debug\net8.0\RMS_Data.pdb
+D:\RMS_Layout\RMS_Architecture\RMS_Data\obj\Debug\net8.0\ref\RMS_Data.dll

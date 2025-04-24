@@ -42,7 +42,7 @@
               "RelativeDocumentMoniker": "appsettings.json",
               "ToolTip": "D:\\Jayaram\\Git\\RMS_Architecture\\RMS_Layout\\appsettings.json",
               "RelativeToolTip": "appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAQAAACg5Qh1pWYYwAwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2025-04-24T06:33:03.418Z",
               "EditorCaption": ""
@@ -57,8 +57,7 @@
               "RelativeToolTip": "Controllers\\ProjectControllers\\Customers\\CustomerGroupsController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-24T06:07:53.178Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-24T06:07:53.178Z"
             },
             {
               "$type": "Document",
@@ -106,8 +105,7 @@
               "RelativeToolTip": "Views\\Customers\\CustomerGroups\\Index.cshtml",
               "ViewState": "AgIAANIAAAAAAAAAAAAowPcAAAA3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-23T03:46:52.589Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-23T03:46:52.589Z"
             }
           ]
         }
