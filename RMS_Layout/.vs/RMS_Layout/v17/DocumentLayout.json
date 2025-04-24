@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "D:\\Jayaram\\Git\\RMS_Architecture\\RMS_Layout\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{52493F9C-F637-41D2-9D6F-9619D7DAC3B5}|RMS_Layout.csproj|d:\\jayaram\\git\\rms_architecture\\rms_layout\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{52493F9C-F637-41D2-9D6F-9619D7DAC3B5}|RMS_Layout.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{52493F9C-F637-41D2-9D6F-9619D7DAC3B5}|RMS_Layout.csproj|d:\\jayaram\\git\\rms_architecture\\rms_layout\\controllers\\projectcontrollers\\customers\\customergroupscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{52493F9C-F637-41D2-9D6F-9619D7DAC3B5}|RMS_Layout.csproj|solutionrelative:controllers\\projectcontrollers\\customers\\customergroupscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{52493F9C-F637-41D2-9D6F-9619D7DAC3B5}|RMS_Layout.csproj|d:\\jayaram\\git\\rms_architecture\\rms_layout\\views\\customers\\customergroups\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{52493F9C-F637-41D2-9D6F-9619D7DAC3B5}|RMS_Layout.csproj|solutionrelative:views\\customers\\customergroups\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
@@ -24,11 +32,37 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\Jayaram\\Git\\RMS_Architecture\\RMS_Layout\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "D:\\Jayaram\\Git\\RMS_Architecture\\RMS_Layout\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-04-24T06:33:03.418Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CustomerGroupsController.cs",
+              "DocumentMoniker": "D:\\Jayaram\\Git\\RMS_Architecture\\RMS_Layout\\Controllers\\ProjectControllers\\Customers\\CustomerGroupsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ProjectControllers\\Customers\\CustomerGroupsController.cs",
+              "ToolTip": "D:\\Jayaram\\Git\\RMS_Architecture\\RMS_Layout\\Controllers\\ProjectControllers\\Customers\\CustomerGroupsController.cs",
+              "RelativeToolTip": "Controllers\\ProjectControllers\\Customers\\CustomerGroupsController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-24T06:07:53.178Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "CustomerGroupRepository.cs",
               "DocumentMoniker": "D:\\Jayaram\\Working projects\\RMS_Layout\\RMS_Data\\Repository\\Customer\\CustomerGroupRepository.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\Working projects\\RMS_Layout\\RMS_Data\\Repository\\Customer\\CustomerGroupRepository.cs",
@@ -40,7 +74,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "CustomerGroupService.cs",
               "DocumentMoniker": "D:\\Jayaram\\Working projects\\RMS_Layout\\RMS_BAL\\Services\\Customer\\CustomerGroupService.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\Working projects\\RMS_Layout\\RMS_BAL\\Services\\Customer\\CustomerGroupService.cs",
@@ -52,7 +86,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "CustomerGroupAPIController.cs",
               "DocumentMoniker": "D:\\Jayaram\\Git\\RMS_Architecture\\RMS_Layout\\Controllers\\ProjectAPI\\Customers\\CustomerGroupAPIController.cs",
               "RelativeDocumentMoniker": "Controllers\\ProjectAPI\\Customers\\CustomerGroupAPIController.cs",
@@ -64,7 +98,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "Index.cshtml",
               "DocumentMoniker": "D:\\Jayaram\\Git\\RMS_Architecture\\RMS_Layout\\Views\\Customers\\CustomerGroups\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\Customers\\CustomerGroups\\Index.cshtml",
