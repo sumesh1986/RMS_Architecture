@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("RMS_Layout")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d7dfae58730f81b270acbffb542655b01e5cc004")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cfa43629ae1335b2098cfc1562bbd22fe279e42e")]
 [assembly: System.Reflection.AssemblyProductAttribute("RMS_Layout")]
 [assembly: System.Reflection.AssemblyTitleAttribute("RMS_Layout")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
