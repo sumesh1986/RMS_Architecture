@@ -10,14 +10,6 @@ namespace RMS_Layout.Controllers.ProjectControllers.Customers
     [ApiExplorerSettings(IgnoreApi = true)]
     public class CustomerGroupsController : Controller
     {
-        private readonly ApplicationDbContext _db;
-
-        public CustomerGroupsController(ApplicationDbContext db)
-        {
-            _db = db;
-        }
-
-
         [HttpGet("")]
         public async Task<IActionResult> Index()
         {
