@@ -9,3 +9,15 @@ D:\Jayaram\Working projects\RMS_Layout\RMS_Models\obj\Debug\net8.0\RMS_Models.dl
 D:\Jayaram\Working projects\RMS_Layout\RMS_Models\obj\Debug\net8.0\refint\RMS_Models.dll
 D:\Jayaram\Working projects\RMS_Layout\RMS_Models\obj\Debug\net8.0\RMS_Models.pdb
 D:\Jayaram\Working projects\RMS_Layout\RMS_Models\obj\Debug\net8.0\ref\RMS_Models.dll
+D:\RMS_Layout\RMS_Architecture\RMS_Models\bin\Debug\net8.0\RMS_Models.deps.json
+D:\RMS_Layout\RMS_Architecture\RMS_Models\bin\Debug\net8.0\RMS_Models.dll
+D:\RMS_Layout\RMS_Architecture\RMS_Models\bin\Debug\net8.0\RMS_Models.pdb
+D:\RMS_Layout\RMS_Architecture\RMS_Models\obj\Debug\net8.0\RMS_Models.GeneratedMSBuildEditorConfig.editorconfig
+D:\RMS_Layout\RMS_Architecture\RMS_Models\obj\Debug\net8.0\RMS_Models.AssemblyInfoInputs.cache
+D:\RMS_Layout\RMS_Architecture\RMS_Models\obj\Debug\net8.0\RMS_Models.AssemblyInfo.cs
+D:\RMS_Layout\RMS_Architecture\RMS_Models\obj\Debug\net8.0\RMS_Models.csproj.CoreCompileInputs.cache
+D:\RMS_Layout\RMS_Architecture\RMS_Models\obj\Debug\net8.0\RMS_Models.sourcelink.json
+D:\RMS_Layout\RMS_Architecture\RMS_Models\obj\Debug\net8.0\RMS_Models.dll
+D:\RMS_Layout\RMS_Architecture\RMS_Models\obj\Debug\net8.0\refint\RMS_Models.dll
+D:\RMS_Layout\RMS_Architecture\RMS_Models\obj\Debug\net8.0\RMS_Models.pdb
+D:\RMS_Layout\RMS_Architecture\RMS_Models\obj\Debug\net8.0\ref\RMS_Models.dll
