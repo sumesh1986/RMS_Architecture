@@ -79,6 +79,28 @@ namespace RMS_Data.Migrations
                     b.ToTable("CustomerGroups");
                 });
 
+            modelBuilder.Entity("RMS_Models.Models.API_Models.Users.UserPositions", b =>
+                {
+                    b.Property<int>("SysId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("SysId"));
+
+                    b.Property<string>("Active")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("UserPosition")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)")
+                        .HasColumnName("UserPosition");
+
+                    b.HasKey("SysId");
+
+                    b.ToTable("UserPositions");
+                });
+
             modelBuilder.Entity("RMS_Models.Models.ServiceModels.ErrorLog", b =>
                 {
                     b.Property<int>("Id")

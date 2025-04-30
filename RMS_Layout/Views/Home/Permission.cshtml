@@ -433,26 +433,31 @@
 										<label class="form-label">Module</label>
 										<select class="form-select" id="moduleSelect">
 											<option value="masters">Masters</option>
-											<option value="transactions">Transactions</option>
-											<option value="reports">Reports</option>
+											<option value="pos">Point of sales systems</option>
+											
 										</select>
 									</div>
 									<div class="col-md-4">
 										<label class="form-label">Section | Form | Control</label>
 										<select class="form-select" id="sectionSelect">
 											<option value="all">&lt;All&gt;</option>
-											<option value="section1">Section 1</option>
-											<option value="section2">Section 2</option>
+											<option value="section1">Functions</option>
+											<option value="section2">Item Options</option>
+											<option value="section1">Main Window</option>
+											<option value="section2">More</option>
+											<option value="section1">POS</option>
+											<option value="section2">Second Window</option>
 										</select>
 									</div>
+
 									<div class="col-md-4">
 										<label class="form-label">Position/Roles</label>
 										<select class="form-select" id="positionSelect">
 											<option value="">Select Position</option>
-											<option value="manager">Manager</option>
-											<option value="staff">Staff</option>
+											
 										</select>
 									</div>
+
 								</div>
 
 								<!-- Search & Action Buttons -->
@@ -466,15 +471,18 @@
 										</div>
 									</div>
 									<div class="col-md-8 text-md-end text-center">
+
 										<button class="btn btn-outline-secondary btn-sm btn-expand" id="btnExpand">
 											<i class="bi bi-arrows-angle-expand"></i> Expand
 										</button>
 										<button class="btn btn-outline-primary btn-sm btn-show-all">
 											<i class="bi bi-eye"></i> Show All
 										</button>
+
 										<button class="btn btn-outline-success btn-sm btn-granted">
 											<i class="bi bi-check-circle"></i> Granted
 										</button>
+
 										<button class="btn btn-outline-danger btn-sm btn-denied">
 											<i class="bi bi-x-circle"></i> Denied
 										</button>
@@ -522,6 +530,7 @@
 
 										<!-- Child Permissions Section -->
 										<div class="item-children mt-2" id="childPermissions" style="display: none;">
+
 											<div class="tree-item">
 												<div class="item-content d-flex align-items-center">
 													<!-- Back Office as Switch -->
@@ -531,7 +540,7 @@
 													</div>
 												</div>
 											</div>
-
+											          
 											<div class="tree-item">
 												<div class="item-content d-flex align-items-center">
 													<!-- POS as Switch -->
@@ -551,6 +560,7 @@
 													</div>
 												</div>
 											</div>
+
 										</div>
 									</div>
 								</div>

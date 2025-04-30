@@ -387,6 +387,174 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "RMS_Layout.Controllers.ProjectAPI.Users.DepartmentAPIController",
+    "Method": "Get",
+    "RelativePath": "api/DepartmentAPI",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "page",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "DepartmentsName",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RMS_Layout.Controllers.ProjectAPI.Users.DepartmentAPIController",
+    "Method": "Update",
+    "RelativePath": "api/DepartmentAPI/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "model",
+        "Type": "RMS_Models.Models.DTO.Users.DepartmentsDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RMS_Layout.Controllers.ProjectAPI.Users.DepartmentAPIController",
+    "Method": "Delete",
+    "RelativePath": "api/DepartmentAPI/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RMS_Layout.Controllers.ProjectAPI.Users.DepartmentAPIController",
+    "Method": "create",
+    "RelativePath": "api/DepartmentAPI/save",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "RMS_Models.Models.DTO.Users.DepartmentsDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RMS_Layout.Controllers.ProjectAPI.Users.UserPermissionAPIController",
+    "Method": "GetUserPositions",
+    "RelativePath": "api/UserPermissionAPI/positions",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RMS_Layout.Controllers.ProjectAPI.Users.UserRoleAPIController",
+    "Method": "Get",
+    "RelativePath": "api/UserRoleAPI",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "page",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "UserpositionsName",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RMS_Layout.Controllers.ProjectAPI.Users.UserRoleAPIController",
+    "Method": "Update",
+    "RelativePath": "api/UserRoleAPI/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "model",
+        "Type": "RMS_Models.Models.DTO.Users.UserPositionsDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RMS_Layout.Controllers.ProjectAPI.Users.UserRoleAPIController",
+    "Method": "Delete",
+    "RelativePath": "api/UserRoleAPI/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RMS_Layout.Controllers.ProjectAPI.Users.UserRoleAPIController",
+    "Method": "create",
+    "RelativePath": "api/UserRoleAPI/save",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "RMS_Models.Models.DTO.Users.UserPositionsDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "RMS_Layout.Controllers.ProjectControllers.Company.CompanyBranchController",
     "Method": "Index",
     "RelativePath": "company/companybranch",

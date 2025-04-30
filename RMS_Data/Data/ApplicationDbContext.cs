@@ -6,6 +6,7 @@ using System;
 using RMS_Models.Models.ServiceModels;
 using RMS_Models.Models.API_Models.Customers;
 using RMS_Models.Models.API_Models.Company;
+using RMS_Models.Models.API_Models.Users;
 
 namespace RMS_Data.Data
 {
@@ -19,9 +20,10 @@ namespace RMS_Data.Data
 
         public DbSet<CompanyConcept> CompanyConcepts { get; set; }
 
+        public DbSet<UserPositions> UserPositions { get; set; } = null!;
+        public DbSet<UserPermission> RolePermissions { get; set; }
 
-
-
+        public DbSet<Departments> Department { get; set; } = null!;
 
         //Service Models...
         public DbSet<ErrorLog>  ErrorLogs{ get; set; }

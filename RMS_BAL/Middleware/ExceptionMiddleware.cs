@@ -29,6 +29,10 @@ namespace RMS_BAL.Middleware
                 await _next(context);
             }
             catch (Exception ex)
+            
+            
+            
+            
             {
                 var routeData = context.GetRouteData();
                 var controller = routeData.Values["controller"]?.ToString();

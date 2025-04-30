@@ -7,11 +7,13 @@ using RMS_BAL.Services.Company;
 using RMS_BAL.Services.Customer;
 using RMS_BAL.Services.ExceptionHandlingService;
 using RMS_BAL.Services.Interfaces;
+using RMS_BAL.Services.Users;
 using RMS_Data.Data;
 using RMS_Data.Repository.Company;
 using RMS_Data.Repository.Customer;
 using RMS_Data.Repository.ExcpetionHandling;
 using RMS_Data.Repository.Interfaces;
+using RMS_Data.Repository.User;
 using RMS_Data.Service.Interfaces;
 using Scrutor;
 
@@ -32,6 +34,21 @@ var assemblies = AppDomain.CurrentDomain.GetAssemblies();
 
 builder.Services.AddScoped<ICustomerGroupRepository,CustomerGroupRepository>();
 builder.Services.AddScoped<ICustomerGroupService, CustomerGroupService>();
+
+
+//Athira change
+builder.Services.AddScoped<IUserPositionsRepository, UserPositionsRepository>();
+builder.Services.AddScoped<IUserPositionsService, UserPositionsService>();
+
+builder.Services.AddScoped<IDepartmentsRepository, DepartmentsRepository>();
+builder.Services.AddScoped<IDepartmentsService, DepartmentService>();
+
+builder.Services.AddScoped<IUserPermissionRepository, UserPermissionRepository>();
+builder.Services.AddScoped<IUserPermissionService, UserPermissionService>();
+
+
+
+/////////end/-----
 
 builder.Services.AddScoped<IExceptionHandlingService, ExceptionHandlingService>();
 builder.Services.AddScoped<IExcepetionHandlingRepository, ExcepetionHandlingRepository>();
@@ -67,11 +84,11 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
 
 var app = builder.Build();
 
-using (var scope = app.Services.CreateScope())
-{
-    var dbContext = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
-    dbContext.Database.Migrate();
-}
+//using (var scope = app.Services.CreateScope())
+//{
+//    var dbContext = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
+//    dbContext.Database.Migrate();
+//}
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
@@ -81,6 +98,8 @@ if (!app.Environment.IsDevelopment())
 }
 else
 {
+    app.UseExceptionHandler("/Home/Error");
+    app.UseHsts();
     app.UseDeveloperExceptionPage();
     app.UseSwagger();
     app.UseSwaggerUI();

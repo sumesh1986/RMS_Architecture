@@ -1,0 +1,323 @@
+﻿@{
+    ViewData["Title"] = "Permission";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<style>
+    .btn-expand, .btn-show-all, .btn-granted, .btn-denied {
+        margin-top: 10px;
+    }
+
+    .tree-item {
+        margin-top: 10px;
+        padding: 10px;
+        background-color: #fff;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+    }
+
+    .item-children {
+        margin-left: 20px;
+    }
+
+    .btn i {
+        margin-right: 5px;
+    }
+
+    .permission-granted {
+        background-color: #d4edda;
+    }
+
+    .permission-denied {
+        background-color: #f8d7da;
+    }
+</style>
+
+<div class="page-content">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="container-fluid">
+                <div class="row g-3">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <div class="card-header header-background text-white text-center">
+                                    <h4>User Permission</h4>
+                                </div>
+                            </div>
+
+                            <div class="card-body">
+                                <!-- Filters Section -->
+                                <div class="row g-3">
+                                    <div class="col-md-4">
+                                        <label class="form-label">Module</label>
+                                        <select class="form-select" id="moduleSelect">
+                                            <option value="">Select Module</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label class="form-label">Section | Form | Control</label>
+                                        <select class="form-select" id="sectionSelect">
+                                            <option value="all">&lt;All&gt;</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label class="form-label">Position/Roles</label>
+                                        <select class="form-select" id="positionSelect">
+                                            <option value="">Select Position</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <!-- Search & Action Buttons -->
+                                <div class="row g-3 mt-3 align-items-center">
+                                    <div class="col-md-4">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" placeholder="Search" id="searchInput">
+                                            <span class="input-group-text">
+                                                <i class="bi bi-search"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-8 text-md-end text-center">
+                                        <button class="btn btn-outline-secondary btn-sm" id="btnExpand">
+                                            <i class="bi bi-arrows-angle-expand"></i> Expand
+                                        </button>
+                                        <button class="btn btn-outline-primary btn-sm" id="btnShowAll">
+                                            <i class="bi bi-eye"></i> Show All
+                                        </button>
+                                        <button class="btn btn-outline-success btn-sm" id="btnGranted">
+                                            <i class="bi bi-check-circle"></i> Granted
+                                        </button>
+                                        <button class="btn btn-outline-danger btn-sm" id="btnDenied">
+                                            <i class="bi bi-x-circle"></i> Denied
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <!-- Permission Tree -->
+                                <div class="mt-4" id="permissionTree">
+                                    <!-- Tree will be populated dynamically -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+
+    <script src="~/js/jquery-3.6.4.min.js"></script>
+    <script>
+        alert("vannee");
+        $(document).ready(function () {
+            let currentFilter = 'all';
+
+            // Load initial data
+            loadModules();
+            loadPositions();
+
+            // Event handlers
+            $('#moduleSelect').change(function() {
+                const selectedModule = $(this).val();
+                if (selectedModule) {
+                    loadSections(selectedModule);
+                    loadPermissionTree();
+                }
+            });
+
+            $('#sectionSelect').change(loadPermissionTree);
+            $('#positionSelect').change(loadPermissionTree);
+            $('#searchInput').on('input', debounce(loadPermissionTree, 300));
+
+            // Filter buttons
+            $('#btnShowAll').click(() => { currentFilter = 'all'; loadPermissionTree(); });
+            $('#btnGranted').click(() => { currentFilter = 'granted'; loadPermissionTree(); });
+            $('#btnDenied').click(() => { currentFilter = 'denied'; loadPermissionTree(); });
+
+            // Expand/Collapse
+            $('#btnExpand').click(function() {
+                const isExpanded = $(this).data('expanded') === true;
+                $('.item-children').slideToggle();
+                $(this).data('expanded', !isExpanded);
+                $(this).find('i').toggleClass('bi-arrows-angle-expand bi-arrows-angle-contract');
+            });
+
+            function loadModules() {
+                $.get('/api/UserPermissionAPI/modules', function(response) {
+                    if (response.success) {
+                        const moduleSelect = $('#moduleSelect');
+                        moduleSelect.empty().append('<option value="">Select Module</option>');
+                        response.data.forEach(module => {
+                            moduleSelect.append(`<option value="${module}">${module}</option>`);
+                        });
+                    }
+                });
+            }
+           
+            function loadSections(moduleName) {
+                $.get(`/api/UserPermissionAPI/sections/${moduleName}`, function(response) {
+                    if (response.success) {
+                        const sectionSelect = $('#sectionSelect');
+                        sectionSelect.empty().append('<option value="all">&lt;All&gt;</option>');
+                        response.data.forEach(section => {
+                            sectionSelect.append(`<option value="${section}">${section}</option>`);
+                        });
+                    }
+                });
+            }
+             //fetch backend userposition data
+            function loadPositions() {
+                alert("1");
+                $.get('/api/UserPermissionAPI/positions', function(response) {
+                    if (response.success) {
+                        const positionSelect = $('#positionSelect');
+                        positionSelect.empty().append('<option value="">Select Position</option>');
+                        response.data.forEach(position => {
+                            positionSelect.append(`<option value="${position.id}">${position.positionName}</option>`);
+                        });
+                    }
+                });
+            }
+
+            function loadPermissionTree() {
+                const positionId = $('#positionSelect').val();
+                if (!positionId) return;
+
+                $.get(`/api/UserPermissionAPI/byposition/${positionId}`, function(response) {
+                    if (response.success) {
+                        const filteredData = filterPermissions(response.data);
+                        renderPermissionTree(organizePermissionData(filteredData));
+                    }
+                });
+            }
+
+            function filterPermissions(permissions) {
+                const searchText = $('#searchInput').val().toLowerCase();
+                const moduleName = $('#moduleSelect').val();
+                const sectionName = $('#sectionSelect').val();
+
+                return permissions.filter(p => {
+                    const matchesModule = !moduleName || p.moduleName === moduleName;
+                    const matchesSection = !sectionName || sectionName === 'all' || p.sectionName === sectionName;
+                    const matchesSearch = !searchText ||
+                        p.particulars.toLowerCase().includes(searchText) ||
+                        p.moduleName.toLowerCase().includes(searchText) ||
+                        p.sectionName.toLowerCase().includes(searchText);
+                    const matchesFilter = currentFilter === 'all' ||
+                        (currentFilter === 'granted' && p.isGranted) ||
+                        (currentFilter === 'denied' && p.isDenied);
+
+                    return matchesModule && matchesSection && matchesSearch && matchesFilter;
+                });
+            }
+
+            function organizePermissionData(permissions) {
+                const divisions = {};
+
+                permissions.forEach(p => {
+                    if (!divisions[p.sectionName]) {
+                        divisions[p.sectionName] = {
+                            divisionName: p.sectionName,
+                            particulars: []
+                        };
+                    }
+
+                    divisions[p.sectionName].particulars.push({
+                        particularId: p.id,
+                        particulars: p.particulars,
+                        isGranted: p.isGranted,
+                        isDenied: p.isDenied
+                    });
+                });
+
+                return {
+                    divisions: Object.values(divisions)
+                };
+            }
+
+            function renderPermissionTree(data) {
+                const treeContainer = $('#permissionTree');
+                treeContainer.empty();
+
+                data.divisions.forEach(division => {
+                    const divisionNode = $(`
+                        <div class="tree-item">
+                            <div class="item-header d-flex align-items-center">
+                                <div class="form-check">
+                                    <input class="form-check-input division-checkbox" type="checkbox"
+                                        id="div_${division.divisionName}">
+                                    <label class="form-check-label" for="div_${division.divisionName}">
+                                        ${division.divisionName}
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="item-children mt-2">
+                                ${renderParticulars(division.particulars)}
+                            </div>
+                        </div>
+                    `);
+
+                    treeContainer.append(divisionNode);
+                });
+
+                // Add event handlers
+                $('.permission-checkbox').change(function() {
+                    const particularId = $(this).data('id');
+                    const isGranted = $(this).prop('checked');
+                    togglePermission(particularId, isGranted);
+                });
+
+                $('.division-checkbox').change(function() {
+                    const isChecked = $(this).prop('checked');
+                    $(this).closest('.tree-item').find('.permission-checkbox')
+                        .prop('checked', isChecked)
+                        .trigger('change');
+                });
+            }
+
+            function renderParticulars(particulars) {
+                return particulars.map(p => `
+                    <div class="tree-item ${p.isGranted ? 'permission-granted' : ''}">
+                        <div class="form-check form-switch">
+                            <input class="form-check-input permission-checkbox" type="checkbox"
+                                id="perm_${p.particularId}"
+                                data-id="${p.particularId}"
+                                ${p.isGranted ? 'checked' : ''}>
+                            <label class="form-check-label" for="perm_${p.particularId}">
+                                ${p.particulars}
+                            </label>
+                        </div>
+                    </div>
+                `).join('');
+            }
+
+            function togglePermission(particularId, isGranted) {
+                const positionId = $('#positionSelect').val();
+                if (!positionId) return;
+
+                $.post('/api/UserPermissionAPI/toggle', {
+                    positionId: positionId,
+                    particularId: particularId,
+                    isGranted: isGranted
+                });
+            }
+
+            function debounce(func, wait) {
+                let timeout;
+                return function executedFunction(...args) {
+                    const later = () => {
+                        clearTimeout(timeout);
+                        func(...args);
+                    };
+                    clearTimeout(timeout);
+                    timeout = setTimeout(later, wait);
+                };
+            }
+        });
+    </script>
+}
+
