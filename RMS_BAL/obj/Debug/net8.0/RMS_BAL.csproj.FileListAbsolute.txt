@@ -15,6 +15,24 @@ D:\Jayaram\Working projects\RMS_Layout\RMS_BAL\obj\Debug\net8.0\RMS_BAL.dll
 D:\Jayaram\Working projects\RMS_Layout\RMS_BAL\obj\Debug\net8.0\refint\RMS_BAL.dll
 D:\Jayaram\Working projects\RMS_Layout\RMS_BAL\obj\Debug\net8.0\RMS_BAL.pdb
 D:\Jayaram\Working projects\RMS_Layout\RMS_BAL\obj\Debug\net8.0\ref\RMS_BAL.dll
+D:\RMS_Architecture\RMS_BAL\bin\Debug\net8.0\RMS_BAL.deps.json
+D:\RMS_Architecture\RMS_BAL\bin\Debug\net8.0\RMS_BAL.dll
+D:\RMS_Architecture\RMS_BAL\bin\Debug\net8.0\RMS_BAL.pdb
+D:\RMS_Architecture\RMS_BAL\bin\Debug\net8.0\RMS_Data.dll
+D:\RMS_Architecture\RMS_BAL\bin\Debug\net8.0\RMS_Models.dll
+D:\RMS_Architecture\RMS_BAL\bin\Debug\net8.0\RMS_Data.pdb
+D:\RMS_Architecture\RMS_BAL\bin\Debug\net8.0\RMS_Models.pdb
+D:\RMS_Architecture\RMS_BAL\obj\Debug\net8.0\RMS_BAL.csproj.AssemblyReference.cache
+D:\RMS_Architecture\RMS_BAL\obj\Debug\net8.0\RMS_BAL.GeneratedMSBuildEditorConfig.editorconfig
+D:\RMS_Architecture\RMS_BAL\obj\Debug\net8.0\RMS_BAL.AssemblyInfoInputs.cache
+D:\RMS_Architecture\RMS_BAL\obj\Debug\net8.0\RMS_BAL.AssemblyInfo.cs
+D:\RMS_Architecture\RMS_BAL\obj\Debug\net8.0\RMS_BAL.csproj.CoreCompileInputs.cache
+D:\RMS_Architecture\RMS_BAL\obj\Debug\net8.0\RMS_BAL.sourcelink.json
+D:\RMS_Architecture\RMS_BAL\obj\Debug\net8.0\RMS_BAL.csproj.Up2Date
+D:\RMS_Architecture\RMS_BAL\obj\Debug\net8.0\RMS_BAL.dll
+D:\RMS_Architecture\RMS_BAL\obj\Debug\net8.0\refint\RMS_BAL.dll
+D:\RMS_Architecture\RMS_BAL\obj\Debug\net8.0\RMS_BAL.pdb
+D:\RMS_Architecture\RMS_BAL\obj\Debug\net8.0\ref\RMS_BAL.dll
 D:\RMS_Layout\RMS_Architecture\RMS_BAL\bin\Debug\net8.0\RMS_BAL.deps.json
 D:\RMS_Layout\RMS_Architecture\RMS_BAL\bin\Debug\net8.0\RMS_BAL.dll
 D:\RMS_Layout\RMS_Architecture\RMS_BAL\bin\Debug\net8.0\RMS_BAL.pdb

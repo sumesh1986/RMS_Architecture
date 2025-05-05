@@ -1,5 +1,6 @@
 {
   "Version": 1,
+<<<<<<< HEAD
   "WorkspaceRootPath": "D:\\RMS_Architecture\\RMS_Architecture\\RMS_Layout\\",
   "Documents": [
     {
@@ -82,6 +83,68 @@
     {
       "AbsoluteMoniker": "D:0:0:{52493F9C-F637-41D2-9D6F-9619D7DAC3B5}|RMS_Layout.csproj|d:\\rms_architecture\\rms_architecture\\rms_layout\\views\\home\\customerssetup.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{52493F9C-F637-41D2-9D6F-9619D7DAC3B5}|RMS_Layout.csproj|solutionrelative:views\\home\\customerssetup.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+=======
+  "WorkspaceRootPath": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{52493F9C-F637-41D2-9D6F-9619D7DAC3B5}|RMS_Layout.csproj|d:\\rms_layout\\rms_architecture\\rms_layout\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{52493F9C-F637-41D2-9D6F-9619D7DAC3B5}|RMS_Layout.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EC32D507-9C4A-4619-A13A-402BF7669EE2}|..\\RMS_BAL\\RMS_BAL.csproj|d:\\rms_layout\\rms_architecture\\rms_bal\\services\\productsetup\\salesitemhierarchy\\productsetupcategoryservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EC32D507-9C4A-4619-A13A-402BF7669EE2}|..\\RMS_BAL\\RMS_BAL.csproj|d:\\rms_layout\\rms_architecture\\rms_bal\\services\\result\\result.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{52493F9C-F637-41D2-9D6F-9619D7DAC3B5}|RMS_Layout.csproj|d:\\rms_layout\\rms_architecture\\rms_layout\\views\\productsetup\\salesitemhierarchy\\division\\divsionindex.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{52493F9C-F637-41D2-9D6F-9619D7DAC3B5}|RMS_Layout.csproj|solutionrelative:views\\productsetup\\salesitemhierarchy\\division\\divsionindex.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{52493F9C-F637-41D2-9D6F-9619D7DAC3B5}|RMS_Layout.csproj|d:\\rms_layout\\rms_architecture\\rms_layout\\wwwroot\\js\\common.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{52493F9C-F637-41D2-9D6F-9619D7DAC3B5}|RMS_Layout.csproj|solutionrelative:wwwroot\\js\\common.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{66B2A271-90B1-4872-B946-70CA1307D760}|..\\RMS_Data\\RMS_Data.csproj|d:\\rms_layout\\rms_architecture\\rms_data\\repository\\productsetup\\salesitemhierarchy\\productcategoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{52493F9C-F637-41D2-9D6F-9619D7DAC3B5}|RMS_Layout.csproj|d:\\rms_layout\\rms_architecture\\rms_layout\\views\\productsetup\\salesitemhierarchy\\category\\categoryindex.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{52493F9C-F637-41D2-9D6F-9619D7DAC3B5}|RMS_Layout.csproj|solutionrelative:views\\productsetup\\salesitemhierarchy\\category\\categoryindex.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{66B2A271-90B1-4872-B946-70CA1307D760}|..\\RMS_Data\\RMS_Data.csproj|d:\\rms_layout\\rms_architecture\\rms_data\\repository\\dropdown\\dropdownrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{52493F9C-F637-41D2-9D6F-9619D7DAC3B5}|RMS_Layout.csproj|d:\\rms_layout\\rms_architecture\\rms_layout\\controllers\\projectapi\\dropdown\\dropdownapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{52493F9C-F637-41D2-9D6F-9619D7DAC3B5}|RMS_Layout.csproj|solutionrelative:controllers\\projectapi\\dropdown\\dropdownapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EC32D507-9C4A-4619-A13A-402BF7669EE2}|..\\RMS_BAL\\RMS_BAL.csproj|d:\\rms_layout\\rms_architecture\\rms_bal\\services\\dropdown\\dropdownservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{66B2A271-90B1-4872-B946-70CA1307D760}|..\\RMS_Data\\RMS_Data.csproj|d:\\rms_layout\\rms_architecture\\rms_data\\repository\\productsetup\\salesitemhierarchy\\divisionproductsalesrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{52493F9C-F637-41D2-9D6F-9619D7DAC3B5}|RMS_Layout.csproj|d:\\rms_layout\\rms_architecture\\rms_layout\\views\\company\\concept\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{52493F9C-F637-41D2-9D6F-9619D7DAC3B5}|RMS_Layout.csproj|solutionrelative:views\\company\\concept\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{66B2A271-90B1-4872-B946-70CA1307D760}|..\\RMS_Data\\RMS_Data.csproj|d:\\rms_layout\\rms_architecture\\rms_data\\repository\\interfaces\\iproductsetupcategoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EC32D507-9C4A-4619-A13A-402BF7669EE2}|..\\RMS_BAL\\RMS_BAL.csproj|d:\\rms_layout\\rms_architecture\\rms_bal\\services\\interfaces\\idropdowncommonservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{52493F9C-F637-41D2-9D6F-9619D7DAC3B5}|RMS_Layout.csproj|d:\\rms_layout\\rms_architecture\\rms_layout\\controllers\\projectapi\\productsetup\\salesitemhierarchy\\productsetupdivisionapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{52493F9C-F637-41D2-9D6F-9619D7DAC3B5}|RMS_Layout.csproj|solutionrelative:controllers\\projectapi\\productsetup\\salesitemhierarchy\\productsetupdivisionapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{52493F9C-F637-41D2-9D6F-9619D7DAC3B5}|RMS_Layout.csproj|d:\\rms_layout\\rms_architecture\\rms_layout\\controllers\\projectapi\\productsetup\\salesitemhierarchy\\productsetupcategoryapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{52493F9C-F637-41D2-9D6F-9619D7DAC3B5}|RMS_Layout.csproj|solutionrelative:controllers\\projectapi\\productsetup\\salesitemhierarchy\\productsetupcategoryapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{66B2A271-90B1-4872-B946-70CA1307D760}|..\\RMS_Data\\RMS_Data.csproj|d:\\rms_layout\\rms_architecture\\rms_data\\repository\\interfaces\\idivisionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+>>>>>>> 9e3255a0571a76a2273843c46cb22262d7c52274
     }
   ],
   "DocumentGroupContainers": [
@@ -248,6 +311,7 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Program.cs",
+<<<<<<< HEAD
               "DocumentMoniker": "D:\\RMS_Architecture\\RMS_Architecture\\RMS_Layout\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "D:\\RMS_Architecture\\RMS_Architecture\\RMS_Layout\\Program.cs",
@@ -255,10 +319,20 @@
               "ViewState": "AgIAABMAAAAAAAAAAAAlwB4AAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-05T08:47:48.133Z",
+=======
+              "DocumentMoniker": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAACoAAAAAAAAAAAAqwDQAAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-05T07:17:08.421Z",
+>>>>>>> 9e3255a0571a76a2273843c46cb22262d7c52274
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 1,
               "Title": "ICategoryDropdownService.cs",
               "DocumentMoniker": "D:\\RMS_Architecture\\RMS_Architecture\\RMS_BAL\\Services\\Interfaces\\ICategoryDropdownService.cs",
@@ -268,10 +342,178 @@
               "ViewState": "AgIAAAwAAAAAAAAAAAAAACEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-05T08:52:43.665Z"
+=======
+              "DocumentIndex": 2,
+              "Title": "Result.cs",
+              "DocumentMoniker": "D:\\RMS_Layout\\RMS_Architecture\\RMS_BAL\\Services\\Result\\Result.cs",
+              "RelativeDocumentMoniker": "..\\RMS_BAL\\Services\\Result\\Result.cs",
+              "ToolTip": "D:\\RMS_Layout\\RMS_Architecture\\RMS_BAL\\Services\\Result\\Result.cs",
+              "RelativeToolTip": "..\\RMS_BAL\\Services\\Result\\Result.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-05T07:15:52.861Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "common.js",
+              "DocumentMoniker": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\js\\common.js",
+              "RelativeDocumentMoniker": "wwwroot\\js\\common.js",
+              "ToolTip": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\js\\common.js",
+              "RelativeToolTip": "wwwroot\\js\\common.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-05-05T06:02:35.195Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\Views\\Company\\Concept\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Company\\Concept\\Index.cshtml",
+              "ToolTip": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\Views\\Company\\Concept\\Index.cshtml",
+              "RelativeToolTip": "Views\\Company\\Concept\\Index.cshtml",
+              "ViewState": "AgIAAIkBAAAAAAAAAAAAAJIBAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-05T05:09:46.783Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ProductCategoryRepository.cs",
+              "DocumentMoniker": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Data\\Repository\\ProductSetup\\SalesItemHierarchy\\ProductCategoryRepository.cs",
+              "RelativeDocumentMoniker": "..\\RMS_Data\\Repository\\ProductSetup\\SalesItemHierarchy\\ProductCategoryRepository.cs",
+              "ToolTip": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Data\\Repository\\ProductSetup\\SalesItemHierarchy\\ProductCategoryRepository.cs",
+              "RelativeToolTip": "..\\RMS_Data\\Repository\\ProductSetup\\SalesItemHierarchy\\ProductCategoryRepository.cs",
+              "ViewState": "AgIAAD8AAAAAAAAAAAArwFgAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-05T03:44:57.675Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "DropdownRepository.cs",
+              "DocumentMoniker": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Data\\Repository\\Dropdown\\DropdownRepository.cs",
+              "RelativeDocumentMoniker": "..\\RMS_Data\\Repository\\Dropdown\\DropdownRepository.cs",
+              "ToolTip": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Data\\Repository\\Dropdown\\DropdownRepository.cs",
+              "RelativeToolTip": "..\\RMS_Data\\Repository\\Dropdown\\DropdownRepository.cs",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAowF0AAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-02T07:00:07.607Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "ProductSetupCategoryAPIController.cs",
+              "DocumentMoniker": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\Controllers\\ProjectAPI\\ProductSetup\\SalesItemHierarchy\\ProductSetupCategoryAPIController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ProjectAPI\\ProductSetup\\SalesItemHierarchy\\ProductSetupCategoryAPIController.cs",
+              "ToolTip": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\Controllers\\ProjectAPI\\ProductSetup\\SalesItemHierarchy\\ProductSetupCategoryAPIController.cs",
+              "RelativeToolTip": "Controllers\\ProjectAPI\\ProductSetup\\SalesItemHierarchy\\ProductSetupCategoryAPIController.cs",
+              "ViewState": "AgIAACYAAAAAAAAAAAA9wFQAAABBAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-02T08:46:08.483Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "DropdownService.cs",
+              "DocumentMoniker": "D:\\RMS_Layout\\RMS_Architecture\\RMS_BAL\\Services\\Dropdown\\DropdownService.cs",
+              "RelativeDocumentMoniker": "..\\RMS_BAL\\Services\\Dropdown\\DropdownService.cs",
+              "ToolTip": "D:\\RMS_Layout\\RMS_Architecture\\RMS_BAL\\Services\\Dropdown\\DropdownService.cs",
+              "RelativeToolTip": "..\\RMS_BAL\\Services\\Dropdown\\DropdownService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-02T06:47:25.122Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "IDropdownCommonServices.cs",
+              "DocumentMoniker": "D:\\RMS_Layout\\RMS_Architecture\\RMS_BAL\\Services\\Interfaces\\IDropdownCommonServices.cs",
+              "RelativeDocumentMoniker": "..\\RMS_BAL\\Services\\Interfaces\\IDropdownCommonServices.cs",
+              "ToolTip": "D:\\RMS_Layout\\RMS_Architecture\\RMS_BAL\\Services\\Interfaces\\IDropdownCommonServices.cs",
+              "RelativeToolTip": "..\\RMS_BAL\\Services\\Interfaces\\IDropdownCommonServices.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-02T06:46:08.28Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "DropdownApiController.cs",
+              "DocumentMoniker": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\Controllers\\ProjectAPI\\Dropdown\\DropdownApiController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ProjectAPI\\Dropdown\\DropdownApiController.cs",
+              "ToolTip": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\Controllers\\ProjectAPI\\Dropdown\\DropdownApiController.cs",
+              "RelativeToolTip": "Controllers\\ProjectAPI\\Dropdown\\DropdownApiController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-02T06:26:18.181Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "DivisionProductSalesRepository.cs",
+              "DocumentMoniker": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Data\\Repository\\ProductSetup\\SalesItemHierarchy\\DivisionProductSalesRepository.cs",
+              "RelativeDocumentMoniker": "..\\RMS_Data\\Repository\\ProductSetup\\SalesItemHierarchy\\DivisionProductSalesRepository.cs",
+              "ToolTip": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Data\\Repository\\ProductSetup\\SalesItemHierarchy\\DivisionProductSalesRepository.cs",
+              "RelativeToolTip": "..\\RMS_Data\\Repository\\ProductSetup\\SalesItemHierarchy\\DivisionProductSalesRepository.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAqwBgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-01T08:51:46.95Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "IProductSetupCategoryRepository.cs",
+              "DocumentMoniker": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Data\\Repository\\Interfaces\\IProductSetupCategoryRepository.cs",
+              "RelativeDocumentMoniker": "..\\RMS_Data\\Repository\\Interfaces\\IProductSetupCategoryRepository.cs",
+              "ToolTip": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Data\\Repository\\Interfaces\\IProductSetupCategoryRepository.cs",
+              "RelativeToolTip": "..\\RMS_Data\\Repository\\Interfaces\\IProductSetupCategoryRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwA4AAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-02T05:23:33.193Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "IDivisionRepository.cs",
+              "DocumentMoniker": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Data\\Repository\\Interfaces\\IDivisionRepository.cs",
+              "RelativeDocumentMoniker": "..\\RMS_Data\\Repository\\Interfaces\\IDivisionRepository.cs",
+              "ToolTip": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Data\\Repository\\Interfaces\\IDivisionRepository.cs",
+              "RelativeToolTip": "..\\RMS_Data\\Repository\\Interfaces\\IDivisionRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAsAAABRAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-01T10:03:22.992Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ProductSetupCategoryServices.cs",
+              "DocumentMoniker": "D:\\RMS_Layout\\RMS_Architecture\\RMS_BAL\\Services\\ProductSetup\\SalesItemHierarchy\\ProductSetupCategoryServices.cs",
+              "RelativeDocumentMoniker": "..\\RMS_BAL\\Services\\ProductSetup\\SalesItemHierarchy\\ProductSetupCategoryServices.cs",
+              "ToolTip": "D:\\RMS_Layout\\RMS_Architecture\\RMS_BAL\\Services\\ProductSetup\\SalesItemHierarchy\\ProductSetupCategoryServices.cs",
+              "RelativeToolTip": "..\\RMS_BAL\\Services\\ProductSetup\\SalesItemHierarchy\\ProductSetupCategoryServices.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-02T04:15:11.894Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "categoryIndex.cshtml",
+              "DocumentMoniker": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\Views\\ProductSetup\\SalesItemHierarchy\\Category\\categoryIndex.cshtml",
+              "RelativeDocumentMoniker": "Views\\ProductSetup\\SalesItemHierarchy\\Category\\categoryIndex.cshtml",
+              "ToolTip": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\Views\\ProductSetup\\SalesItemHierarchy\\Category\\categoryIndex.cshtml",
+              "RelativeToolTip": "Views\\ProductSetup\\SalesItemHierarchy\\Category\\categoryIndex.cshtml",
+              "ViewState": "AgIAAI8AAAAAAAAAAAArwKUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-01T07:06:55.167Z"
+>>>>>>> 9e3255a0571a76a2273843c46cb22262d7c52274
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
+<<<<<<< HEAD
               "Title": "Result.cs",
               "DocumentMoniker": "D:\\RMS_Architecture\\RMS_Architecture\\RMS_BAL\\Services\\Result\\Result.cs",
               "RelativeDocumentMoniker": "..\\RMS_BAL\\Services\\Result\\Result.cs",
@@ -412,6 +654,28 @@
               "ViewState": "AgIAAMMDAAAAAAAAAADwv+gDAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-05-02T09:59:54.431Z"
+=======
+              "Title": "divsionIndex.cshtml",
+              "DocumentMoniker": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\Views\\ProductSetup\\SalesItemHierarchy\\Division\\divsionIndex.cshtml",
+              "RelativeDocumentMoniker": "Views\\ProductSetup\\SalesItemHierarchy\\Division\\divsionIndex.cshtml",
+              "ToolTip": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\Views\\ProductSetup\\SalesItemHierarchy\\Division\\divsionIndex.cshtml",
+              "RelativeToolTip": "Views\\ProductSetup\\SalesItemHierarchy\\Division\\divsionIndex.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-01T04:44:46.501Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "ProductSetupDivisionAPIController.cs",
+              "DocumentMoniker": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\Controllers\\ProjectAPI\\ProductSetup\\SalesItemHierarchy\\ProductSetupDivisionAPIController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ProjectAPI\\ProductSetup\\SalesItemHierarchy\\ProductSetupDivisionAPIController.cs",
+              "ToolTip": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\Controllers\\ProjectAPI\\ProductSetup\\SalesItemHierarchy\\ProductSetupDivisionAPIController.cs",
+              "RelativeToolTip": "Controllers\\ProjectAPI\\ProductSetup\\SalesItemHierarchy\\ProductSetupDivisionAPIController.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-01T05:16:06.096Z"
+>>>>>>> 9e3255a0571a76a2273843c46cb22262d7c52274
             }
           ]
         }

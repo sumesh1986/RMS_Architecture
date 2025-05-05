@@ -226,7 +226,7 @@ html, body {
 }
 
 .grid-header-bg {
-    --bs-table-bg: white !important;
+    --bs-table-bg: #979da347 !important;
 }
 
 
@@ -320,3 +320,9 @@ th.sortable {
     --bs-nav-tabs-link-active-bg: #f8f9fa !important;
     --bs-nav-tabs-link-active-border-color: var(--bs-border-color) var(--bs-border-color) #c3cbe4 !important;
 }
+
+.SelectedRow-ColorChange tbody tr.selected {
+    --bs-table-accent-bg: #adb5bd;
+    font-weight: bold;
+}
+

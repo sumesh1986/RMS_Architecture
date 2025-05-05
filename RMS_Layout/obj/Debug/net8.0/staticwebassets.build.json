@@ -1,6 +1,10 @@
 {
   "Version": 1,
+<<<<<<< HEAD
   "Hash": "ZzCOpWF/CatyDDl8Cwi1NiBW5rGSU6Tjmcd6jD/5Arw=",
+=======
+  "Hash": "jQakslVNrcX1nJuqsWorIlTt+l6JvWxCVB4Kl6ukxnA=",
+>>>>>>> 9e3255a0571a76a2273843c46cb22262d7c52274
   "Source": "RMS_Layout",
   "BasePath": "_content/RMS_Layout",
   "Mode": "Default",
@@ -199,8 +203,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "kjw8mik1fo",
-      "Integrity": "wDTUL0q3P2wigLX2ptoTMRxSqCvv3ai8H6uYEsd1I+o=",
+      "Fingerprint": "4louvh2pbd",
+      "Integrity": "CGVZSfzyO8iVCHM2WjuDRiOqRnor/1PhqCGnreh8JMQ=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\site.css"
@@ -703,8 +707,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "d0xyyxqy8s",
-      "Integrity": "nYHjDHdW95g2ixTfaSRhbT55WabJgfRDxEU1LpvHCKs=",
+      "Fingerprint": "gnjzru0faj",
+      "Integrity": "xL6H6o8cLe6QwygG+cqK3KcUHC85nkOBdfA17/CWjwI=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\common.js"
@@ -878,7 +882,32 @@
       "OriginalItemSpec": "wwwroot\\js\\site-datatables.js"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\RMS_Architecture\\RMS_Architecture\\RMS_Layout\\wwwroot\\js\\waves.min.js",
+=======
+      "Identity": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\js\\sweetalert2@11.js",
+      "SourceId": "RMS_Layout",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
+      "BasePath": "_content/RMS_Layout",
+      "RelativePath": "js/sweetalert2@11#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "5q6dujqtpf",
+      "Integrity": "TU2eIihLYclo7k5+qmqLlo4q4A8/R0TC5sfcvbzDDFI=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\sweetalert2@11.js"
+    },
+    {
+      "Identity": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\js\\waves.min.js",
+>>>>>>> 9e3255a0571a76a2273843c46cb22262d7c52274
       "SourceId": "RMS_Layout",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\RMS_Architecture\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
@@ -2590,6 +2619,51 @@
       ]
     },
     {
+      "Route": "css/site.4louvh2pbd.css",
+      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\css\\site.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "6792"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"CGVZSfzyO8iVCHM2WjuDRiOqRnor/1PhqCGnreh8JMQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 02 May 2025 11:48:26 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "4louvh2pbd"
+        },
+        {
+          "Name": "label",
+          "Value": "css/site.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-CGVZSfzyO8iVCHM2WjuDRiOqRnor/1PhqCGnreh8JMQ="
+        }
+      ]
+    },
+    {
       "Route": "css/site.css",
       "AssetFile": "D:\\RMS_Architecture\\RMS_Architecture\\RMS_Layout\\wwwroot\\css\\site.css",
       "Selectors": [],
@@ -2600,7 +2674,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "6673"
+          "Value": "6792"
         },
         {
           "Name": "Content-Type",
@@ -2608,11 +2682,15 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"wDTUL0q3P2wigLX2ptoTMRxSqCvv3ai8H6uYEsd1I+o=\""
+          "Value": "\"CGVZSfzyO8iVCHM2WjuDRiOqRnor/1PhqCGnreh8JMQ=\""
         },
         {
           "Name": "Last-Modified",
+<<<<<<< HEAD
           "Value": "Mon, 05 May 2025 08:40:23 GMT"
+=======
+          "Value": "Fri, 02 May 2025 11:48:26 GMT"
+>>>>>>> 9e3255a0571a76a2273843c46cb22262d7c52274
         },
         {
           "Name": "Cache-Control",
@@ -2622,6 +2700,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
+<<<<<<< HEAD
           "Value": "sha256-wDTUL0q3P2wigLX2ptoTMRxSqCvv3ai8H6uYEsd1I+o="
         }
       ]
@@ -2668,6 +2747,9 @@
         {
           "Name": "integrity",
           "Value": "sha256-wDTUL0q3P2wigLX2ptoTMRxSqCvv3ai8H6uYEsd1I+o="
+=======
+          "Value": "sha256-CGVZSfzyO8iVCHM2WjuDRiOqRnor/1PhqCGnreh8JMQ="
+>>>>>>> 9e3255a0571a76a2273843c46cb22262d7c52274
         }
       ]
     },
@@ -4558,8 +4640,13 @@
       ]
     },
     {
+<<<<<<< HEAD
       "Route": "js/common.d0xyyxqy8s.js",
       "AssetFile": "D:\\RMS_Architecture\\RMS_Architecture\\RMS_Layout\\wwwroot\\js\\common.js",
+=======
+      "Route": "js/common.gnjzru0faj.js",
+      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\js\\common.js",
+>>>>>>> 9e3255a0571a76a2273843c46cb22262d7c52274
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4568,7 +4655,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "798"
+          "Value": "1112"
         },
         {
           "Name": "Content-Type",
@@ -4576,11 +4663,15 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"nYHjDHdW95g2ixTfaSRhbT55WabJgfRDxEU1LpvHCKs=\""
+          "Value": "\"xL6H6o8cLe6QwygG+cqK3KcUHC85nkOBdfA17/CWjwI=\""
         },
         {
           "Name": "Last-Modified",
+<<<<<<< HEAD
           "Value": "Mon, 05 May 2025 08:40:23 GMT"
+=======
+          "Value": "Mon, 05 May 2025 06:04:54 GMT"
+>>>>>>> 9e3255a0571a76a2273843c46cb22262d7c52274
         },
         {
           "Name": "Cache-Control",
@@ -4590,7 +4681,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "d0xyyxqy8s"
+          "Value": "gnjzru0faj"
         },
         {
           "Name": "label",
@@ -4598,7 +4689,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-nYHjDHdW95g2ixTfaSRhbT55WabJgfRDxEU1LpvHCKs="
+          "Value": "sha256-xL6H6o8cLe6QwygG+cqK3KcUHC85nkOBdfA17/CWjwI="
         }
       ]
     },
@@ -4613,7 +4704,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "798"
+          "Value": "1112"
         },
         {
           "Name": "Content-Type",
@@ -4621,11 +4712,15 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"nYHjDHdW95g2ixTfaSRhbT55WabJgfRDxEU1LpvHCKs=\""
+          "Value": "\"xL6H6o8cLe6QwygG+cqK3KcUHC85nkOBdfA17/CWjwI=\""
         },
         {
           "Name": "Last-Modified",
+<<<<<<< HEAD
           "Value": "Mon, 05 May 2025 08:40:23 GMT"
+=======
+          "Value": "Mon, 05 May 2025 06:04:54 GMT"
+>>>>>>> 9e3255a0571a76a2273843c46cb22262d7c52274
         },
         {
           "Name": "Cache-Control",
@@ -4635,7 +4730,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-nYHjDHdW95g2ixTfaSRhbT55WabJgfRDxEU1LpvHCKs="
+          "Value": "sha256-xL6H6o8cLe6QwygG+cqK3KcUHC85nkOBdfA17/CWjwI="
         }
       ]
     },
@@ -5292,6 +5387,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-VeEzealzmVNNMKW7sawynYUjSNmC3ZlIO6zV/VaLLVI="
+        }
+      ]
+    },
+    {
+      "Route": "js/sweetalert2@11.5q6dujqtpf.js",
+      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\js\\sweetalert2@11.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "77349"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"TU2eIihLYclo7k5+qmqLlo4q4A8/R0TC5sfcvbzDDFI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 05 May 2025 06:32:37 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "5q6dujqtpf"
+        },
+        {
+          "Name": "label",
+          "Value": "js/sweetalert2@11.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-TU2eIihLYclo7k5+qmqLlo4q4A8/R0TC5sfcvbzDDFI="
+        }
+      ]
+    },
+    {
+      "Route": "js/sweetalert2@11.js",
+      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\js\\sweetalert2@11.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "77349"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"TU2eIihLYclo7k5+qmqLlo4q4A8/R0TC5sfcvbzDDFI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 05 May 2025 06:32:37 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-TU2eIihLYclo7k5+qmqLlo4q4A8/R0TC5sfcvbzDDFI="
         }
       ]
     },
@@ -10074,7 +10251,11 @@
         },
         {
           "Name": "Last-Modified",
+<<<<<<< HEAD
           "Value": "Fri, 25 Apr 2025 10:17:37 GMT"
+=======
+          "Value": "Mon, 05 May 2025 07:18:13 GMT"
+>>>>>>> 9e3255a0571a76a2273843c46cb22262d7c52274
         },
         {
           "Name": "Cache-Control",
@@ -10119,7 +10300,11 @@
         },
         {
           "Name": "Last-Modified",
+<<<<<<< HEAD
           "Value": "Fri, 25 Apr 2025 10:17:37 GMT"
+=======
+          "Value": "Mon, 05 May 2025 07:18:13 GMT"
+>>>>>>> 9e3255a0571a76a2273843c46cb22262d7c52274
         },
         {
           "Name": "Cache-Control",
@@ -10164,7 +10349,11 @@
         },
         {
           "Name": "Last-Modified",
+<<<<<<< HEAD
           "Value": "Fri, 25 Apr 2025 10:17:37 GMT"
+=======
+          "Value": "Mon, 05 May 2025 07:18:13 GMT"
+>>>>>>> 9e3255a0571a76a2273843c46cb22262d7c52274
         },
         {
           "Name": "Cache-Control",
@@ -10201,7 +10390,11 @@
         },
         {
           "Name": "Last-Modified",
+<<<<<<< HEAD
           "Value": "Fri, 25 Apr 2025 10:17:37 GMT"
+=======
+          "Value": "Mon, 05 May 2025 07:18:13 GMT"
+>>>>>>> 9e3255a0571a76a2273843c46cb22262d7c52274
         },
         {
           "Name": "Cache-Control",

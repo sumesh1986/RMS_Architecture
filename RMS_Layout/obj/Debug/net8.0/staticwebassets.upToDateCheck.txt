@@ -37,6 +37,7 @@ wwwroot\js\plugin.js
 wwwroot\js\simplebar.min.js
 wwwroot\js\site.js
 wwwroot\js\site-datatables.js
+wwwroot\js\sweetalert2@11.js
 wwwroot\js\waves.min.js
 wwwroot\lib\bootstrap\dist\css\bootstrap.css
 wwwroot\lib\bootstrap\dist\css\bootstrap.css.map
