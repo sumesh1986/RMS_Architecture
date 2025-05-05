@@ -94,8 +94,7 @@
               "ViewState": "AgIAACcAAAAAAAAAAAAowDcAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-02T04:08:01.042Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -131,7 +130,7 @@
               "RelativeDocumentMoniker": "..\\RMS_BAL\\Services\\Interfaces\\IDropdownCommonServices.cs",
               "ToolTip": "D:\\RMS_Architecture\\RMS_Architecture\\RMS_BAL\\Services\\Interfaces\\IDropdownCommonServices.cs",
               "RelativeToolTip": "..\\RMS_BAL\\Services\\Interfaces\\IDropdownCommonServices.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAwAAABOAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-02T08:17:17.109Z",
               "IsPinned": true,
@@ -187,8 +186,7 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-02T08:20:00.983Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -214,8 +212,7 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-02T09:30:55.38Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -228,8 +225,7 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-02T09:55:46.387Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -242,8 +238,7 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAA9AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-02T10:15:55.191Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -256,8 +251,7 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-02T10:18:51.923Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Bookmark",
@@ -277,8 +271,7 @@
               "RelativeToolTip": "..\\RMS_Models\\Models\\API_Models\\Customers\\CustomerGroup.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-05T06:01:34.112Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-05T06:01:34.112Z"
             },
             {
               "$type": "Document",
@@ -290,8 +283,7 @@
               "RelativeToolTip": "..\\RMS_Models\\Models\\DTO\\Customers\\CustomerTypeDTO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-05T05:59:50.681Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-05T05:59:50.681Z"
             },
             {
               "$type": "Document",
@@ -303,8 +295,7 @@
               "RelativeToolTip": "..\\RMS_Models\\Models\\API_Models\\Customers\\CustomerType.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-05T05:59:46.935Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-05T05:59:46.935Z"
             },
             {
               "$type": "Document",
@@ -316,8 +307,7 @@
               "RelativeToolTip": "..\\RMS_Data\\Repository\\Customer\\CustomerTitleRepository.cs",
               "ViewState": "AgIAACAAAAAAAAAAAAAmwDYAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-05T05:06:27.563Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-05T05:06:27.563Z"
             },
             {
               "$type": "Document",
@@ -341,8 +331,7 @@
               "RelativeToolTip": "..\\RMS_Models\\Models\\API_Models\\Customers\\CustomerTitle.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-05T04:54:04.627Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-05T04:54:04.627Z"
             },
             {
               "$type": "Document",
@@ -354,8 +343,7 @@
               "RelativeToolTip": "..\\RMS_Models\\Models\\DTO\\Customers\\CustomerTitleDTO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-05T04:54:01.735Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-05T04:54:01.735Z"
             },
             {
               "$type": "Document",
