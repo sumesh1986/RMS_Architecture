@@ -2733,23 +2733,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Dev2\\.nuget\\packages\\": {},
+    "C:\\Users\\Hello\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\RMS_Architecture\\RMS_Data\\RMS_Data.csproj",
+      "projectUniqueName": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Data\\RMS_Data.csproj",
       "projectName": "RMS_Data",
-      "projectPath": "D:\\RMS_Architecture\\RMS_Data\\RMS_Data.csproj",
-      "packagesPath": "C:\\Users\\Dev2\\.nuget\\packages\\",
-      "outputPath": "D:\\RMS_Architecture\\RMS_Data\\obj\\",
+      "projectPath": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Data\\RMS_Data.csproj",
+      "packagesPath": "C:\\Users\\Hello\\.nuget\\packages\\",
+      "outputPath": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Data\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Dev2\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Hello\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -2765,8 +2765,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "D:\\RMS_Architecture\\RMS_Models\\RMS_Models.csproj": {
-              "projectPath": "D:\\RMS_Architecture\\RMS_Models\\RMS_Models.csproj"
+            "D:\\RMS_Layout\\RMS_Architecture\\RMS_Models\\RMS_Models.csproj": {
+              "projectPath": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Models\\RMS_Models.csproj"
             }
           }
         }

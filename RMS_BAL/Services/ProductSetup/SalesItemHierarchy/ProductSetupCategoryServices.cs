@@ -11,7 +11,6 @@ using RMS_Models.Models.DTO.Company;
 using RMS_Models.Models.DTO.ProductSetup.SalesItemHierarchy;
 using RMS_Models.Models.API_Models.CommonModels;
 using RMS_BAL.Services.Interfaces;
-using RMS_Data.Migrations;
 using Microsoft.EntityFrameworkCore;
 
 namespace RMS_BAL.Services.ProductSetup.SalesItemHierarchy

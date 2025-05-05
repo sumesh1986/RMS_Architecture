@@ -6,6 +6,8 @@ using System;
 using RMS_Models.Models.ServiceModels;
 using RMS_Models.Models.API_Models.Customers;
 using RMS_Models.Models.API_Models.Company;
+using RMS_Models.Models.API_Models.ProductSetup.SalesItemHierarchy;
+using RMS_Models.Models.API_Models.Users;
 
 namespace RMS_Data.Data
 {
@@ -21,11 +23,19 @@ namespace RMS_Data.Data
 
         public DbSet<CompanyConcept> concept { get; set; }
 
-
+        public DbSet<CategoryViewModel> Category { get; set; }
 
         public DbSet<DivisionViewModel> Division { get; set; }
 
+        public DbSet<ItemGroupViewModel> ItemGroup { get; set; }
 
+        public DbSet<UserPositions> UserPositions { get; set; } = null!;
+        public DbSet<RolePermission> RolePermissions { get; set; }
+
+        public DbSet<PositionPermitted> PositionPermitted { get; set; }
+
+
+        public DbSet<Departments> Department { get; set; } = null!;
         //Service Models...
         public DbSet<ErrorLog>  ErrorLogs{ get; set; }
 
