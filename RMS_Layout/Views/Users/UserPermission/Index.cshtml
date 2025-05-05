@@ -144,7 +144,7 @@
         $(document).ready(function () {
             let currentFilter = 'all';
             let treeExpanded = false;
-            alert("gogo");
+            //alert("gogo");
             // Initial load
             loadModules();
             loadPositions();
@@ -193,7 +193,7 @@
             });
 
             function loadModules() {
-               alert("vann");
+             //  alert("vann");
                 $.ajax({
                     url: '/api/UserPermissionAPI/modules',
                     method: 'GET',
