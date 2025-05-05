@@ -8,14 +8,12 @@ using RMS_BAL.Services.Customer;
 using RMS_BAL.Services.Dropdown;
 using RMS_BAL.Services.ExceptionHandlingService;
 using RMS_BAL.Services.Interfaces;
-using RMS_BAL.Services.ProductSetup.SalesItemHierarchy;
 using RMS_Data.Data;
 using RMS_Data.Repository.Company;
 using RMS_Data.Repository.Customer;
 using RMS_Data.Repository.Dropdown;
 using RMS_Data.Repository.ExcpetionHandling;
 using RMS_Data.Repository.Interfaces;
-using RMS_Data.Repository.ProductSetup.SalesItemHierarchy;
 using RMS_Data.Service.Interfaces;
 using Scrutor;
 
@@ -44,6 +42,21 @@ builder.Services.AddScoped<IDropdownCommonServices, DropdownService>();
 
 builder.Services.AddScoped<ICustomerGroupRepository,CustomerGroupRepository>();
 builder.Services.AddScoped<ICustomerGroupService, CustomerGroupService>();
+
+
+//Athira change
+builder.Services.AddScoped<IUserPositionsRepository, UserPositionsRepository>();
+builder.Services.AddScoped<IUserPositionsService, UserPositionsService>();
+
+builder.Services.AddScoped<IDepartmentsRepository, DepartmentsRepository>();
+builder.Services.AddScoped<IDepartmentsService, DepartmentService>();
+
+builder.Services.AddScoped<IUserPermissionRepository, UserPermissionRepository>();
+builder.Services.AddScoped<IUserPermissionService, UserPermissionService>();
+
+
+
+/////////end/-----
 
 builder.Services.AddScoped<IExceptionHandlingService, ExceptionHandlingService>();
 builder.Services.AddScoped<IExcepetionHandlingRepository, ExcepetionHandlingRepository>();

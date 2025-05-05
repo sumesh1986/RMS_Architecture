@@ -79,6 +79,7 @@ namespace RMS_Data.Migrations
                     b.ToTable("CustomerGroups");
                 });
 
+<<<<<<< HEAD
             modelBuilder.Entity("RMS_Models.Models.API_Models.ProductSetup.SalesItemHierarchy.CategoryViewModel", b =>
                 {
                     b.Property<int>("SysID")
@@ -131,6 +132,28 @@ namespace RMS_Data.Migrations
                     b.HasKey("SysID");
 
                     b.ToTable("Category");
+=======
+            modelBuilder.Entity("RMS_Models.Models.API_Models.Users.UserPositions", b =>
+                {
+                    b.Property<int>("SysId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("SysId"));
+
+                    b.Property<string>("Active")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("UserPosition")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)")
+                        .HasColumnName("UserPosition");
+
+                    b.HasKey("SysId");
+
+                    b.ToTable("UserPositions");
+>>>>>>> ece77f6ddd0113fb0d2665d56f3b3136ba3292c9
                 });
 
             modelBuilder.Entity("RMS_Models.Models.ServiceModels.ErrorLog", b =>

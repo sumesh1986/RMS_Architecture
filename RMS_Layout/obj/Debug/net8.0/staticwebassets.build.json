@@ -1,6 +1,10 @@
 {
   "Version": 1,
+<<<<<<< HEAD
   "Hash": "2OAsexQ1G7ke3oif5u0ZkkAF5aleGxFzZVnLv9RygN0=",
+=======
+  "Hash": "9GMTcK1wn0r7UwQrtFOhRFwPZT5wfnWxuwbX9dP5Yj0=",
+>>>>>>> ece77f6ddd0113fb0d2665d56f3b3136ba3292c9
   "Source": "RMS_Layout",
   "BasePath": "_content/RMS_Layout",
   "Mode": "Default",
@@ -10,17 +14,17 @@
     {
       "Name": "RMS_Layout\\wwwroot",
       "Source": "RMS_Layout",
-      "ContentRoot": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
+      "ContentRoot": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
       "BasePath": "_content/RMS_Layout",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\obj\\Debug\\net8.0\\scopedcss\\bundle\\RMS_Layout.styles.css",
+      "Identity": "D:\\RMS_Architecture\\RMS_Layout\\obj\\Debug\\net8.0\\scopedcss\\bundle\\RMS_Layout.styles.css",
       "SourceId": "RMS_Layout",
       "SourceType": "Computed",
-      "ContentRoot": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
+      "ContentRoot": "D:\\RMS_Architecture\\RMS_Layout\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
       "BasePath": "_content/RMS_Layout",
       "RelativePath": "RMS_Layout#[.{fingerprint}]?.styles.css",
       "AssetKind": "All",
@@ -35,13 +39,13 @@
       "Integrity": "koqJK0ef++fJD10mk69pL4/yIfgmjkhnwQquM/q6kto=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\obj\\Debug\\net8.0\\scopedcss\\bundle\\RMS_Layout.styles.css"
+      "OriginalItemSpec": "D:\\RMS_Architecture\\RMS_Layout\\obj\\Debug\\net8.0\\scopedcss\\bundle\\RMS_Layout.styles.css"
     },
     {
-      "Identity": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\RMS_Layout.bundle.scp.css",
+      "Identity": "D:\\RMS_Architecture\\RMS_Layout\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\RMS_Layout.bundle.scp.css",
       "SourceId": "RMS_Layout",
       "SourceType": "Computed",
-      "ContentRoot": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\",
+      "ContentRoot": "D:\\RMS_Architecture\\RMS_Layout\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\",
       "BasePath": "_content/RMS_Layout",
       "RelativePath": "RMS_Layout#[.{fingerprint}]!.bundle.scp.css",
       "AssetKind": "All",
@@ -56,13 +60,13 @@
       "Integrity": "koqJK0ef++fJD10mk69pL4/yIfgmjkhnwQquM/q6kto=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\RMS_Layout.bundle.scp.css"
+      "OriginalItemSpec": "D:\\RMS_Architecture\\RMS_Layout\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\RMS_Layout.bundle.scp.css"
     },
     {
-      "Identity": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\css\\app.min.css",
+      "Identity": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\css\\app.min.css",
       "SourceId": "RMS_Layout",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
+      "ContentRoot": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
       "BasePath": "_content/RMS_Layout",
       "RelativePath": "css/app.min#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -80,10 +84,10 @@
       "OriginalItemSpec": "wwwroot\\css\\app.min.css"
     },
     {
-      "Identity": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\css\\bootstrap.min.css",
+      "Identity": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\css\\bootstrap.min.css",
       "SourceId": "RMS_Layout",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
+      "ContentRoot": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
       "BasePath": "_content/RMS_Layout",
       "RelativePath": "css/bootstrap.min#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -101,10 +105,10 @@
       "OriginalItemSpec": "wwwroot\\css\\bootstrap.min.css"
     },
     {
-      "Identity": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\css\\bootstrap-icons.css",
+      "Identity": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\css\\bootstrap-icons.css",
       "SourceId": "RMS_Layout",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
+      "ContentRoot": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
       "BasePath": "_content/RMS_Layout",
       "RelativePath": "css/bootstrap-icons#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -122,10 +126,10 @@
       "OriginalItemSpec": "wwwroot\\css\\bootstrap-icons.css"
     },
     {
-      "Identity": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\css\\icon.css",
+      "Identity": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\css\\icon.css",
       "SourceId": "RMS_Layout",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
+      "ContentRoot": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
       "BasePath": "_content/RMS_Layout",
       "RelativePath": "css/icon#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -143,10 +147,10 @@
       "OriginalItemSpec": "wwwroot\\css\\icon.css"
     },
     {
-      "Identity": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\css\\metisMenu.min.css",
+      "Identity": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\css\\metisMenu.min.css",
       "SourceId": "RMS_Layout",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
+      "ContentRoot": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
       "BasePath": "_content/RMS_Layout",
       "RelativePath": "css/metisMenu.min#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -164,10 +168,10 @@
       "OriginalItemSpec": "wwwroot\\css\\metisMenu.min.css"
     },
     {
-      "Identity": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\css\\metismenujs.css",
+      "Identity": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\css\\metismenujs.css",
       "SourceId": "RMS_Layout",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
+      "ContentRoot": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
       "BasePath": "_content/RMS_Layout",
       "RelativePath": "css/metismenujs#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -185,10 +189,10 @@
       "OriginalItemSpec": "wwwroot\\css\\metismenujs.css"
     },
     {
-      "Identity": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\css\\site.css",
+      "Identity": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\css\\site.css",
       "SourceId": "RMS_Layout",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
+      "ContentRoot": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
       "BasePath": "_content/RMS_Layout",
       "RelativePath": "css/site#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -206,10 +210,10 @@
       "OriginalItemSpec": "wwwroot\\css\\site.css"
     },
     {
-      "Identity": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\favicon.ico",
+      "Identity": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\favicon.ico",
       "SourceId": "RMS_Layout",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
+      "ContentRoot": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
       "BasePath": "_content/RMS_Layout",
       "RelativePath": "favicon#[.{fingerprint}]?.ico",
       "AssetKind": "All",
@@ -227,10 +231,10 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
-      "Identity": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\images\\chef-restaurant-logo-png-image_6136204.png",
+      "Identity": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\images\\chef-restaurant-logo-png-image_6136204.png",
       "SourceId": "RMS_Layout",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
+      "ContentRoot": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
       "BasePath": "_content/RMS_Layout",
       "RelativePath": "images/chef-restaurant-logo-png-image_6136204#[.{fingerprint}]?.png",
       "AssetKind": "All",
@@ -248,10 +252,10 @@
       "OriginalItemSpec": "wwwroot\\images\\chef-restaurant-logo-png-image_6136204.png"
     },
     {
-      "Identity": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\images\\Flag_of_the_United_Arab_Emirates.svg.png",
+      "Identity": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\images\\Flag_of_the_United_Arab_Emirates.svg.png",
       "SourceId": "RMS_Layout",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
+      "ContentRoot": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
       "BasePath": "_content/RMS_Layout",
       "RelativePath": "images/Flag_of_the_United_Arab_Emirates.svg#[.{fingerprint}]?.png",
       "AssetKind": "All",
@@ -269,10 +273,10 @@
       "OriginalItemSpec": "wwwroot\\images\\Flag_of_the_United_Arab_Emirates.svg.png"
     },
     {
-      "Identity": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\images\\germany.jpg",
+      "Identity": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\images\\germany.jpg",
       "SourceId": "RMS_Layout",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
+      "ContentRoot": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
       "BasePath": "_content/RMS_Layout",
       "RelativePath": "images/germany#[.{fingerprint}]?.jpg",
       "AssetKind": "All",
@@ -290,10 +294,10 @@
       "OriginalItemSpec": "wwwroot\\images\\germany.jpg"
     },
     {
-      "Identity": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\images\\github.png",
+      "Identity": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\images\\github.png",
       "SourceId": "RMS_Layout",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
+      "ContentRoot": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
       "BasePath": "_content/RMS_Layout",
       "RelativePath": "images/github#[.{fingerprint}]?.png",
       "AssetKind": "All",
@@ -311,10 +315,10 @@
       "OriginalItemSpec": "wwwroot\\images\\github.png"
     },
     {
-      "Identity": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\images\\HD-wallpaper-couple-dining-out.jpg",
+      "Identity": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\images\\HD-wallpaper-couple-dining-out.jpg",
       "SourceId": "RMS_Layout",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
+      "ContentRoot": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
       "BasePath": "_content/RMS_Layout",
       "RelativePath": "images/HD-wallpaper-couple-dining-out#[.{fingerprint}]?.jpg",
       "AssetKind": "All",
@@ -332,10 +336,10 @@
       "OriginalItemSpec": "wwwroot\\images\\HD-wallpaper-couple-dining-out.jpg"
     },
     {
-      "Identity": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\images\\italy.jpg",
+      "Identity": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\images\\italy.jpg",
       "SourceId": "RMS_Layout",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
+      "ContentRoot": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
       "BasePath": "_content/RMS_Layout",
       "RelativePath": "images/italy#[.{fingerprint}]?.jpg",
       "AssetKind": "All",
@@ -353,10 +357,10 @@
       "OriginalItemSpec": "wwwroot\\images\\italy.jpg"
     },
     {
-      "Identity": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\images\\mail_chimp.png",
+      "Identity": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\images\\mail_chimp.png",
       "SourceId": "RMS_Layout",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
+      "ContentRoot": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
       "BasePath": "_content/RMS_Layout",
       "RelativePath": "images/mail_chimp#[.{fingerprint}]?.png",
       "AssetKind": "All",
@@ -374,10 +378,10 @@
       "OriginalItemSpec": "wwwroot\\images\\mail_chimp.png"
     },
     {
-      "Identity": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\images\\pexels-chanwalrus-958545.jpg",
+      "Identity": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\images\\pexels-chanwalrus-958545.jpg",
       "SourceId": "RMS_Layout",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
+      "ContentRoot": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
       "BasePath": "_content/RMS_Layout",
       "RelativePath": "images/pexels-chanwalrus-958545#[.{fingerprint}]?.jpg",
       "AssetKind": "All",
@@ -395,10 +399,10 @@
       "OriginalItemSpec": "wwwroot\\images\\pexels-chanwalrus-958545.jpg"
     },
     {
-      "Identity": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\images\\profile-img.png",
+      "Identity": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\images\\profile-img.png",
       "SourceId": "RMS_Layout",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
+      "ContentRoot": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
       "BasePath": "_content/RMS_Layout",
       "RelativePath": "images/profile-img#[.{fingerprint}]?.png",
       "AssetKind": "All",
@@ -416,10 +420,10 @@
       "OriginalItemSpec": "wwwroot\\images\\profile-img.png"
     },
     {
-      "Identity": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\images\\res1.jpg",
+      "Identity": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\images\\res1.jpg",
       "SourceId": "RMS_Layout",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
+      "ContentRoot": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
       "BasePath": "_content/RMS_Layout",
       "RelativePath": "images/res1#[.{fingerprint}]?.jpg",
       "AssetKind": "All",
@@ -437,10 +441,10 @@
       "OriginalItemSpec": "wwwroot\\images\\res1.jpg"
     },
     {
-      "Identity": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\images\\restaurant-food.jpg",
+      "Identity": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\images\\restaurant-food.jpg",
       "SourceId": "RMS_Layout",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
+      "ContentRoot": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
       "BasePath": "_content/RMS_Layout",
       "RelativePath": "images/restaurant-food#[.{fingerprint}]?.jpg",
       "AssetKind": "All",
@@ -458,10 +462,10 @@
       "OriginalItemSpec": "wwwroot\\images\\restaurant-food.jpg"
     },
     {
-      "Identity": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\images\\Restuarant_Login_Image.jpg",
+      "Identity": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\images\\Restuarant_Login_Image.jpg",
       "SourceId": "RMS_Layout",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
+      "ContentRoot": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
       "BasePath": "_content/RMS_Layout",
       "RelativePath": "images/Restuarant_Login_Image#[.{fingerprint}]?.jpg",
       "AssetKind": "All",
@@ -479,10 +483,10 @@
       "OriginalItemSpec": "wwwroot\\images\\Restuarant_Login_Image.jpg"
     },
     {
-      "Identity": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\images\\restuarantLogo1.jpg",
+      "Identity": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\images\\restuarantLogo1.jpg",
       "SourceId": "RMS_Layout",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
+      "ContentRoot": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
       "BasePath": "_content/RMS_Layout",
       "RelativePath": "images/restuarantLogo1#[.{fingerprint}]?.jpg",
       "AssetKind": "All",
@@ -500,10 +504,10 @@
       "OriginalItemSpec": "wwwroot\\images\\restuarantLogo1.jpg"
     },
     {
-      "Identity": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\images\\russia.jpg",
+      "Identity": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\images\\russia.jpg",
       "SourceId": "RMS_Layout",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
+      "ContentRoot": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
       "BasePath": "_content/RMS_Layout",
       "RelativePath": "images/russia#[.{fingerprint}]?.jpg",
       "AssetKind": "All",
@@ -521,10 +525,10 @@
       "OriginalItemSpec": "wwwroot\\images\\russia.jpg"
     },
     {
-      "Identity": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\images\\slack.png",
+      "Identity": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\images\\slack.png",
       "SourceId": "RMS_Layout",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
+      "ContentRoot": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
       "BasePath": "_content/RMS_Layout",
       "RelativePath": "images/slack#[.{fingerprint}]?.png",
       "AssetKind": "All",
@@ -542,10 +546,10 @@
       "OriginalItemSpec": "wwwroot\\images\\slack.png"
     },
     {
-      "Identity": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\images\\spain.jpg",
+      "Identity": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\images\\spain.jpg",
       "SourceId": "RMS_Layout",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
+      "ContentRoot": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
       "BasePath": "_content/RMS_Layout",
       "RelativePath": "images/spain#[.{fingerprint}]?.jpg",
       "AssetKind": "All",
@@ -563,10 +567,10 @@
       "OriginalItemSpec": "wwwroot\\images\\spain.jpg"
     },
     {
-      "Identity": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\images\\us.jpg",
+      "Identity": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\images\\us.jpg",
       "SourceId": "RMS_Layout",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
+      "ContentRoot": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
       "BasePath": "_content/RMS_Layout",
       "RelativePath": "images/us#[.{fingerprint}]?.jpg",
       "AssetKind": "All",
@@ -584,10 +588,10 @@
       "OriginalItemSpec": "wwwroot\\images\\us.jpg"
     },
     {
-      "Identity": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\images\\user.jpg",
+      "Identity": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\images\\user.jpg",
       "SourceId": "RMS_Layout",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
+      "ContentRoot": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
       "BasePath": "_content/RMS_Layout",
       "RelativePath": "images/user#[.{fingerprint}]?.jpg",
       "AssetKind": "All",
@@ -605,10 +609,10 @@
       "OriginalItemSpec": "wwwroot\\images\\user.jpg"
     },
     {
-      "Identity": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\images\\user-profile-avatar.png",
+      "Identity": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\images\\user-profile-avatar.png",
       "SourceId": "RMS_Layout",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
+      "ContentRoot": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
       "BasePath": "_content/RMS_Layout",
       "RelativePath": "images/user-profile-avatar#[.{fingerprint}]?.png",
       "AssetKind": "All",
@@ -626,10 +630,10 @@
       "OriginalItemSpec": "wwwroot\\images\\user-profile-avatar.png"
     },
     {
-      "Identity": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\js\\app.js",
+      "Identity": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\js\\app.js",
       "SourceId": "RMS_Layout",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
+      "ContentRoot": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
       "BasePath": "_content/RMS_Layout",
       "RelativePath": "js/app#[.{fingerprint}]?.js",
       "AssetKind": "All",
@@ -647,10 +651,10 @@
       "OriginalItemSpec": "wwwroot\\js\\app.js"
     },
     {
-      "Identity": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\js\\bootstrap.bundle.min.js",
+      "Identity": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\js\\bootstrap.bundle.min.js",
       "SourceId": "RMS_Layout",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
+      "ContentRoot": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
       "BasePath": "_content/RMS_Layout",
       "RelativePath": "js/bootstrap.bundle.min#[.{fingerprint}]?.js",
       "AssetKind": "All",
@@ -668,10 +672,10 @@
       "OriginalItemSpec": "wwwroot\\js\\bootstrap.bundle.min.js"
     },
     {
-      "Identity": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\js\\bootstrap.min.js",
+      "Identity": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\js\\bootstrap.min.js",
       "SourceId": "RMS_Layout",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
+      "ContentRoot": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
       "BasePath": "_content/RMS_Layout",
       "RelativePath": "js/bootstrap.min#[.{fingerprint}]?.js",
       "AssetKind": "All",
@@ -689,10 +693,10 @@
       "OriginalItemSpec": "wwwroot\\js\\bootstrap.min.js"
     },
     {
-      "Identity": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\js\\common.js",
+      "Identity": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\js\\common.js",
       "SourceId": "RMS_Layout",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
+      "ContentRoot": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
       "BasePath": "_content/RMS_Layout",
       "RelativePath": "js/common#[.{fingerprint}]?.js",
       "AssetKind": "All",
@@ -710,10 +714,10 @@
       "OriginalItemSpec": "wwwroot\\js\\common.js"
     },
     {
-      "Identity": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\js\\DashboardSales.js",
+      "Identity": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\js\\DashboardSales.js",
       "SourceId": "RMS_Layout",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
+      "ContentRoot": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
       "BasePath": "_content/RMS_Layout",
       "RelativePath": "js/DashboardSales#[.{fingerprint}]?.js",
       "AssetKind": "All",
@@ -731,10 +735,10 @@
       "OriginalItemSpec": "wwwroot\\js\\DashboardSales.js"
     },
     {
-      "Identity": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\js\\jquery-3.6.4.min.js",
+      "Identity": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\js\\jquery-3.6.4.min.js",
       "SourceId": "RMS_Layout",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
+      "ContentRoot": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
       "BasePath": "_content/RMS_Layout",
       "RelativePath": "js/jquery-3.6.4.min#[.{fingerprint}]?.js",
       "AssetKind": "All",
@@ -752,10 +756,10 @@
       "OriginalItemSpec": "wwwroot\\js\\jquery-3.6.4.min.js"
     },
     {
-      "Identity": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\js\\jquery-ui.min.js",
+      "Identity": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\js\\jquery-ui.min.js",
       "SourceId": "RMS_Layout",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
+      "ContentRoot": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
       "BasePath": "_content/RMS_Layout",
       "RelativePath": "js/jquery-ui.min#[.{fingerprint}]?.js",
       "AssetKind": "All",
@@ -773,10 +777,10 @@
       "OriginalItemSpec": "wwwroot\\js\\jquery-ui.min.js"
     },
     {
-      "Identity": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\js\\metisMenu.min.js",
+      "Identity": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\js\\metisMenu.min.js",
       "SourceId": "RMS_Layout",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
+      "ContentRoot": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
       "BasePath": "_content/RMS_Layout",
       "RelativePath": "js/metisMenu.min#[.{fingerprint}]?.js",
       "AssetKind": "All",
@@ -794,10 +798,10 @@
       "OriginalItemSpec": "wwwroot\\js\\metisMenu.min.js"
     },
     {
-      "Identity": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\js\\plugin.js",
+      "Identity": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\js\\plugin.js",
       "SourceId": "RMS_Layout",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
+      "ContentRoot": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
       "BasePath": "_content/RMS_Layout",
       "RelativePath": "js/plugin#[.{fingerprint}]?.js",
       "AssetKind": "All",
@@ -815,10 +819,10 @@
       "OriginalItemSpec": "wwwroot\\js\\plugin.js"
     },
     {
-      "Identity": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\js\\simplebar.min.js",
+      "Identity": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\js\\simplebar.min.js",
       "SourceId": "RMS_Layout",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
+      "ContentRoot": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
       "BasePath": "_content/RMS_Layout",
       "RelativePath": "js/simplebar.min#[.{fingerprint}]?.js",
       "AssetKind": "All",
@@ -836,10 +840,10 @@
       "OriginalItemSpec": "wwwroot\\js\\simplebar.min.js"
     },
     {
-      "Identity": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\js\\site.js",
+      "Identity": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\js\\site.js",
       "SourceId": "RMS_Layout",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
+      "ContentRoot": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
       "BasePath": "_content/RMS_Layout",
       "RelativePath": "js/site#[.{fingerprint}]?.js",
       "AssetKind": "All",
@@ -857,10 +861,10 @@
       "OriginalItemSpec": "wwwroot\\js\\site.js"
     },
     {
-      "Identity": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\js\\site-datatables.js",
+      "Identity": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\js\\site-datatables.js",
       "SourceId": "RMS_Layout",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
+      "ContentRoot": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
       "BasePath": "_content/RMS_Layout",
       "RelativePath": "js/site-datatables#[.{fingerprint}]?.js",
       "AssetKind": "All",
@@ -878,6 +882,7 @@
       "OriginalItemSpec": "wwwroot\\js\\site-datatables.js"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\js\\sweetalert2@11.js",
       "SourceId": "RMS_Layout",
       "SourceType": "Discovered",
@@ -900,9 +905,12 @@
     },
     {
       "Identity": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\js\\waves.min.js",
+=======
+      "Identity": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\js\\waves.min.js",
+>>>>>>> ece77f6ddd0113fb0d2665d56f3b3136ba3292c9
       "SourceId": "RMS_Layout",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
+      "ContentRoot": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
       "BasePath": "_content/RMS_Layout",
       "RelativePath": "js/waves.min#[.{fingerprint}]?.js",
       "AssetKind": "All",
@@ -920,10 +928,10 @@
       "OriginalItemSpec": "wwwroot\\js\\waves.min.js"
     },
     {
-      "Identity": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "Identity": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
       "SourceId": "RMS_Layout",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
+      "ContentRoot": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
       "BasePath": "_content/RMS_Layout",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -941,10 +949,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css"
     },
     {
-      "Identity": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "Identity": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
       "SourceId": "RMS_Layout",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
+      "ContentRoot": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
       "BasePath": "_content/RMS_Layout",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.css#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -962,10 +970,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
     },
     {
-      "Identity": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "Identity": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
       "SourceId": "RMS_Layout",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
+      "ContentRoot": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
       "BasePath": "_content/RMS_Layout",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.min#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -983,10 +991,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
     },
     {
-      "Identity": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "Identity": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
       "SourceId": "RMS_Layout",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
+      "ContentRoot": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
       "BasePath": "_content/RMS_Layout",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.min.css#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -1004,10 +1012,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
     },
     {
-      "Identity": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "Identity": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
       "SourceId": "RMS_Layout",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
+      "ContentRoot": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
       "BasePath": "_content/RMS_Layout",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -1025,10 +1033,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
     },
     {
-      "Identity": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "Identity": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
       "SourceId": "RMS_Layout",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
+      "ContentRoot": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
       "BasePath": "_content/RMS_Layout",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.css#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -1046,10 +1054,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
     },
     {
-      "Identity": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "Identity": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
       "SourceId": "RMS_Layout",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
+      "ContentRoot": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
       "BasePath": "_content/RMS_Layout",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.min#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -1067,10 +1075,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
     },
     {
-      "Identity": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "Identity": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
       "SourceId": "RMS_Layout",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
+      "ContentRoot": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
       "BasePath": "_content/RMS_Layout",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.min.css#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -1088,10 +1096,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
     },
     {
-      "Identity": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "Identity": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
       "SourceId": "RMS_Layout",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
+      "ContentRoot": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
       "BasePath": "_content/RMS_Layout",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -1109,10 +1117,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
     },
     {
-      "Identity": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "Identity": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
       "SourceId": "RMS_Layout",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
+      "ContentRoot": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
       "BasePath": "_content/RMS_Layout",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.css#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -1130,10 +1138,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
     },
     {
-      "Identity": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "Identity": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
       "SourceId": "RMS_Layout",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
+      "ContentRoot": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
       "BasePath": "_content/RMS_Layout",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.min#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -1151,10 +1159,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
     },
     {
-      "Identity": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "Identity": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
       "SourceId": "RMS_Layout",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
+      "ContentRoot": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
       "BasePath": "_content/RMS_Layout",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.min.css#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -1172,10 +1180,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
     },
     {
-      "Identity": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "Identity": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
       "SourceId": "RMS_Layout",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
+      "ContentRoot": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
       "BasePath": "_content/RMS_Layout",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -1193,10 +1201,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
     },
     {
-      "Identity": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "Identity": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
       "SourceId": "RMS_Layout",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
+      "ContentRoot": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
       "BasePath": "_content/RMS_Layout",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.css#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -1214,10 +1222,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
     },
     {
-      "Identity": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "Identity": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
       "SourceId": "RMS_Layout",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
+      "ContentRoot": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
       "BasePath": "_content/RMS_Layout",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.min#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -1235,10 +1243,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
     },
     {
-      "Identity": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "Identity": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
       "SourceId": "RMS_Layout",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
+      "ContentRoot": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
       "BasePath": "_content/RMS_Layout",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -1256,10 +1264,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
     },
     {
-      "Identity": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "Identity": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
       "SourceId": "RMS_Layout",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
+      "ContentRoot": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
       "BasePath": "_content/RMS_Layout",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -1277,10 +1285,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
     },
     {
-      "Identity": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "Identity": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
       "SourceId": "RMS_Layout",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
+      "ContentRoot": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
       "BasePath": "_content/RMS_Layout",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.css#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -1298,10 +1306,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
     },
     {
-      "Identity": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "Identity": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
       "SourceId": "RMS_Layout",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
+      "ContentRoot": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
       "BasePath": "_content/RMS_Layout",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.min#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -1319,10 +1327,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
     },
     {
-      "Identity": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "Identity": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
       "SourceId": "RMS_Layout",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
+      "ContentRoot": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
       "BasePath": "_content/RMS_Layout",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.min.css#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -1340,10 +1348,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
     },
     {
-      "Identity": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "Identity": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
       "SourceId": "RMS_Layout",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
+      "ContentRoot": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
       "BasePath": "_content/RMS_Layout",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -1361,10 +1369,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
     },
     {
-      "Identity": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "Identity": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
       "SourceId": "RMS_Layout",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
+      "ContentRoot": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
       "BasePath": "_content/RMS_Layout",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.css#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -1382,10 +1390,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
     },
     {
-      "Identity": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "Identity": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
       "SourceId": "RMS_Layout",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
+      "ContentRoot": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
       "BasePath": "_content/RMS_Layout",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.min#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -1403,10 +1411,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
     },
     {
-      "Identity": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "Identity": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
       "SourceId": "RMS_Layout",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
+      "ContentRoot": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
       "BasePath": "_content/RMS_Layout",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -1424,10 +1432,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
     },
     {
-      "Identity": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "Identity": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
       "SourceId": "RMS_Layout",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
+      "ContentRoot": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
       "BasePath": "_content/RMS_Layout",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -1445,10 +1453,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
     },
     {
-      "Identity": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "Identity": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
       "SourceId": "RMS_Layout",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
+      "ContentRoot": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
       "BasePath": "_content/RMS_Layout",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.css#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -1466,10 +1474,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
     },
     {
-      "Identity": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "Identity": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
       "SourceId": "RMS_Layout",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
+      "ContentRoot": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
       "BasePath": "_content/RMS_Layout",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.min#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -1487,10 +1495,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
     },
     {
-      "Identity": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "Identity": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
       "SourceId": "RMS_Layout",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
+      "ContentRoot": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
       "BasePath": "_content/RMS_Layout",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.min.css#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -1508,10 +1516,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
     },
     {
-      "Identity": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "Identity": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
       "SourceId": "RMS_Layout",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
+      "ContentRoot": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
       "BasePath": "_content/RMS_Layout",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -1529,10 +1537,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
     },
     {
-      "Identity": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "Identity": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
       "SourceId": "RMS_Layout",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
+      "ContentRoot": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
       "BasePath": "_content/RMS_Layout",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.css#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -1550,10 +1558,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
     },
     {
-      "Identity": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "Identity": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
       "SourceId": "RMS_Layout",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
+      "ContentRoot": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
       "BasePath": "_content/RMS_Layout",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.min#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -1571,10 +1579,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
     },
     {
-      "Identity": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "Identity": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
       "SourceId": "RMS_Layout",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
+      "ContentRoot": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
       "BasePath": "_content/RMS_Layout",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -1592,10 +1600,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
     },
     {
-      "Identity": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "Identity": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
       "SourceId": "RMS_Layout",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
+      "ContentRoot": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
       "BasePath": "_content/RMS_Layout",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle#[.{fingerprint}]?.js",
       "AssetKind": "All",
@@ -1613,10 +1621,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
     },
     {
-      "Identity": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "Identity": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
       "SourceId": "RMS_Layout",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
+      "ContentRoot": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
       "BasePath": "_content/RMS_Layout",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.js#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -1634,10 +1642,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
     },
     {
-      "Identity": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "Identity": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
       "SourceId": "RMS_Layout",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
+      "ContentRoot": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
       "BasePath": "_content/RMS_Layout",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.min#[.{fingerprint}]?.js",
       "AssetKind": "All",
@@ -1655,10 +1663,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
     },
     {
-      "Identity": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "Identity": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
       "SourceId": "RMS_Layout",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
+      "ContentRoot": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
       "BasePath": "_content/RMS_Layout",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.min.js#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -1676,10 +1684,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
     },
     {
-      "Identity": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "Identity": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
       "SourceId": "RMS_Layout",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
+      "ContentRoot": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
       "BasePath": "_content/RMS_Layout",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm#[.{fingerprint}]?.js",
       "AssetKind": "All",
@@ -1697,10 +1705,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
     },
     {
-      "Identity": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "Identity": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
       "SourceId": "RMS_Layout",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
+      "ContentRoot": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
       "BasePath": "_content/RMS_Layout",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.js#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -1718,10 +1726,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
     },
     {
-      "Identity": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "Identity": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
       "SourceId": "RMS_Layout",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
+      "ContentRoot": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
       "BasePath": "_content/RMS_Layout",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.min#[.{fingerprint}]?.js",
       "AssetKind": "All",
@@ -1739,10 +1747,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
     },
     {
-      "Identity": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "Identity": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
       "SourceId": "RMS_Layout",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
+      "ContentRoot": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
       "BasePath": "_content/RMS_Layout",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.min.js#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -1760,10 +1768,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
     },
     {
-      "Identity": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "Identity": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
       "SourceId": "RMS_Layout",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
+      "ContentRoot": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
       "BasePath": "_content/RMS_Layout",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap#[.{fingerprint}]?.js",
       "AssetKind": "All",
@@ -1781,10 +1789,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js"
     },
     {
-      "Identity": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "Identity": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
       "SourceId": "RMS_Layout",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
+      "ContentRoot": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
       "BasePath": "_content/RMS_Layout",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.js#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -1802,10 +1810,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
     },
     {
-      "Identity": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "Identity": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
       "SourceId": "RMS_Layout",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
+      "ContentRoot": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
       "BasePath": "_content/RMS_Layout",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.min#[.{fingerprint}]?.js",
       "AssetKind": "All",
@@ -1823,10 +1831,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
     },
     {
-      "Identity": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "Identity": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
       "SourceId": "RMS_Layout",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
+      "ContentRoot": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
       "BasePath": "_content/RMS_Layout",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.min.js#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -1844,10 +1852,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
     },
     {
-      "Identity": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "Identity": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\LICENSE",
       "SourceId": "RMS_Layout",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
+      "ContentRoot": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
       "BasePath": "_content/RMS_Layout",
       "RelativePath": "lib/bootstrap/LICENSE#[.{fingerprint}]?",
       "AssetKind": "All",
@@ -1865,10 +1873,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\LICENSE"
     },
     {
-      "Identity": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "Identity": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\jquery\\dist\\jquery.js",
       "SourceId": "RMS_Layout",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
+      "ContentRoot": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
       "BasePath": "_content/RMS_Layout",
       "RelativePath": "lib/jquery/dist/jquery#[.{fingerprint}]?.js",
       "AssetKind": "All",
@@ -1886,10 +1894,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.js"
     },
     {
-      "Identity": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "Identity": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
       "SourceId": "RMS_Layout",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
+      "ContentRoot": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
       "BasePath": "_content/RMS_Layout",
       "RelativePath": "lib/jquery/dist/jquery.min#[.{fingerprint}]?.js",
       "AssetKind": "All",
@@ -1907,10 +1915,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.min.js"
     },
     {
-      "Identity": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "Identity": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "SourceId": "RMS_Layout",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
+      "ContentRoot": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
       "BasePath": "_content/RMS_Layout",
       "RelativePath": "lib/jquery/dist/jquery.min#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -1928,10 +1936,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
-      "Identity": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "Identity": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\jquery\\LICENSE.txt",
       "SourceId": "RMS_Layout",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
+      "ContentRoot": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
       "BasePath": "_content/RMS_Layout",
       "RelativePath": "lib/jquery/LICENSE#[.{fingerprint}]?.txt",
       "AssetKind": "All",
@@ -1949,10 +1957,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\LICENSE.txt"
     },
     {
-      "Identity": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "Identity": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
       "SourceId": "RMS_Layout",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
+      "ContentRoot": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
       "BasePath": "_content/RMS_Layout",
       "RelativePath": "lib/jquery-validation/dist/additional-methods#[.{fingerprint}]?.js",
       "AssetKind": "All",
@@ -1970,10 +1978,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js"
     },
     {
-      "Identity": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "Identity": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
       "SourceId": "RMS_Layout",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
+      "ContentRoot": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
       "BasePath": "_content/RMS_Layout",
       "RelativePath": "lib/jquery-validation/dist/additional-methods.min#[.{fingerprint}]?.js",
       "AssetKind": "All",
@@ -1991,10 +1999,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js"
     },
     {
-      "Identity": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "Identity": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
       "SourceId": "RMS_Layout",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
+      "ContentRoot": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
       "BasePath": "_content/RMS_Layout",
       "RelativePath": "lib/jquery-validation/dist/jquery.validate#[.{fingerprint}]?.js",
       "AssetKind": "All",
@@ -2012,10 +2020,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js"
     },
     {
-      "Identity": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "Identity": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
       "SourceId": "RMS_Layout",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
+      "ContentRoot": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
       "BasePath": "_content/RMS_Layout",
       "RelativePath": "lib/jquery-validation/dist/jquery.validate.min#[.{fingerprint}]?.js",
       "AssetKind": "All",
@@ -2033,10 +2041,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
     },
     {
-      "Identity": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "Identity": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
       "SourceId": "RMS_Layout",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
+      "ContentRoot": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
       "BasePath": "_content/RMS_Layout",
       "RelativePath": "lib/jquery-validation/LICENSE#[.{fingerprint}]?.md",
       "AssetKind": "All",
@@ -2054,10 +2062,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\LICENSE.md"
     },
     {
-      "Identity": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "Identity": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
       "SourceId": "RMS_Layout",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
+      "ContentRoot": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
       "BasePath": "_content/RMS_Layout",
       "RelativePath": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive#[.{fingerprint}]?.js",
       "AssetKind": "All",
@@ -2075,10 +2083,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
     },
     {
-      "Identity": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "Identity": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
       "SourceId": "RMS_Layout",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
+      "ContentRoot": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
       "BasePath": "_content/RMS_Layout",
       "RelativePath": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min#[.{fingerprint}]?.js",
       "AssetKind": "All",
@@ -2096,10 +2104,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
     },
     {
-      "Identity": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "Identity": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
       "SourceId": "RMS_Layout",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
+      "ContentRoot": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\",
       "BasePath": "_content/RMS_Layout",
       "RelativePath": "lib/jquery-validation-unobtrusive/LICENSE#[.{fingerprint}]?.txt",
       "AssetKind": "All",
@@ -2120,7 +2128,7 @@
   "Endpoints": [
     {
       "Route": "css/app.min.24nw7w71it.css",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\css\\app.min.css",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\css\\app.min.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2141,7 +2149,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2165,7 +2173,7 @@
     },
     {
       "Route": "css/app.min.css",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\css\\app.min.css",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\css\\app.min.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2186,7 +2194,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2202,7 +2210,7 @@
     },
     {
       "Route": "css/bootstrap.min.3z68x302cl.css",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\css\\bootstrap.min.css",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\css\\bootstrap.min.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2223,7 +2231,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2247,7 +2255,7 @@
     },
     {
       "Route": "css/bootstrap.min.css",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\css\\bootstrap.min.css",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\css\\bootstrap.min.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2268,7 +2276,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2284,7 +2292,7 @@
     },
     {
       "Route": "css/bootstrap-icons.9r627ylsql.css",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\css\\bootstrap-icons.css",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\css\\bootstrap-icons.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2305,7 +2313,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2329,7 +2337,7 @@
     },
     {
       "Route": "css/bootstrap-icons.css",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\css\\bootstrap-icons.css",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\css\\bootstrap-icons.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2350,7 +2358,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2366,7 +2374,7 @@
     },
     {
       "Route": "css/icon.20k82aemdh.css",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\css\\icon.css",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\css\\icon.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2387,7 +2395,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2411,7 +2419,7 @@
     },
     {
       "Route": "css/icon.css",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\css\\icon.css",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\css\\icon.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2432,7 +2440,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2448,7 +2456,7 @@
     },
     {
       "Route": "css/metisMenu.min.2feek8xvoi.css",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\css\\metisMenu.min.css",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\css\\metisMenu.min.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2469,7 +2477,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2493,7 +2501,7 @@
     },
     {
       "Route": "css/metisMenu.min.css",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\css\\metisMenu.min.css",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\css\\metisMenu.min.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2514,7 +2522,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2530,7 +2538,7 @@
     },
     {
       "Route": "css/metismenujs.css",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\css\\metismenujs.css",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\css\\metismenujs.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2551,7 +2559,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2567,7 +2575,7 @@
     },
     {
       "Route": "css/metismenujs.lp70niuu8d.css",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\css\\metismenujs.css",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\css\\metismenujs.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2588,7 +2596,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2657,7 +2665,7 @@
     },
     {
       "Route": "css/site.css",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\css\\site.css",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\css\\site.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2678,7 +2686,11 @@
         },
         {
           "Name": "Last-Modified",
+<<<<<<< HEAD
           "Value": "Fri, 02 May 2025 11:48:26 GMT"
+=======
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
+>>>>>>> ece77f6ddd0113fb0d2665d56f3b3136ba3292c9
         },
         {
           "Name": "Cache-Control",
@@ -2688,13 +2700,62 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
+<<<<<<< HEAD
           "Value": "sha256-CGVZSfzyO8iVCHM2WjuDRiOqRnor/1PhqCGnreh8JMQ="
+=======
+          "Value": "sha256-wDTUL0q3P2wigLX2ptoTMRxSqCvv3ai8H6uYEsd1I+o="
+        }
+      ]
+    },
+    {
+      "Route": "css/site.kjw8mik1fo.css",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\css\\site.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "6673"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"wDTUL0q3P2wigLX2ptoTMRxSqCvv3ai8H6uYEsd1I+o=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "kjw8mik1fo"
+        },
+        {
+          "Name": "label",
+          "Value": "css/site.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-wDTUL0q3P2wigLX2ptoTMRxSqCvv3ai8H6uYEsd1I+o="
+>>>>>>> ece77f6ddd0113fb0d2665d56f3b3136ba3292c9
         }
       ]
     },
     {
       "Route": "favicon.61n19gt1b8.ico",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\favicon.ico",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\favicon.ico",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2715,7 +2776,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2739,7 +2800,7 @@
     },
     {
       "Route": "favicon.ico",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\favicon.ico",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\favicon.ico",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2760,7 +2821,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2776,7 +2837,7 @@
     },
     {
       "Route": "images/chef-restaurant-logo-png-image_6136204.7t90qtt90h.png",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\images\\chef-restaurant-logo-png-image_6136204.png",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\images\\chef-restaurant-logo-png-image_6136204.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2797,7 +2858,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2821,7 +2882,7 @@
     },
     {
       "Route": "images/chef-restaurant-logo-png-image_6136204.png",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\images\\chef-restaurant-logo-png-image_6136204.png",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\images\\chef-restaurant-logo-png-image_6136204.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2842,7 +2903,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2858,7 +2919,7 @@
     },
     {
       "Route": "images/Flag_of_the_United_Arab_Emirates.svg.png",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\images\\Flag_of_the_United_Arab_Emirates.svg.png",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\images\\Flag_of_the_United_Arab_Emirates.svg.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2879,7 +2940,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2895,7 +2956,7 @@
     },
     {
       "Route": "images/Flag_of_the_United_Arab_Emirates.svg.zajv9za7zb.png",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\images\\Flag_of_the_United_Arab_Emirates.svg.png",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\images\\Flag_of_the_United_Arab_Emirates.svg.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2916,7 +2977,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2940,7 +3001,7 @@
     },
     {
       "Route": "images/germany.gn9968wcc2.jpg",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\images\\germany.jpg",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\images\\germany.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2961,7 +3022,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2985,7 +3046,7 @@
     },
     {
       "Route": "images/germany.jpg",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\images\\germany.jpg",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\images\\germany.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3006,7 +3067,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3022,7 +3083,7 @@
     },
     {
       "Route": "images/github.gr7qvvzzae.png",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\images\\github.png",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\images\\github.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3043,7 +3104,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3067,7 +3128,7 @@
     },
     {
       "Route": "images/github.png",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\images\\github.png",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\images\\github.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3088,7 +3149,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3104,7 +3165,7 @@
     },
     {
       "Route": "images/HD-wallpaper-couple-dining-out.jpg",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\images\\HD-wallpaper-couple-dining-out.jpg",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\images\\HD-wallpaper-couple-dining-out.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3125,7 +3186,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3141,7 +3202,7 @@
     },
     {
       "Route": "images/HD-wallpaper-couple-dining-out.zojebq0atn.jpg",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\images\\HD-wallpaper-couple-dining-out.jpg",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\images\\HD-wallpaper-couple-dining-out.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3162,7 +3223,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3186,7 +3247,7 @@
     },
     {
       "Route": "images/italy.g4sxicc44y.jpg",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\images\\italy.jpg",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\images\\italy.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3207,7 +3268,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3231,7 +3292,7 @@
     },
     {
       "Route": "images/italy.jpg",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\images\\italy.jpg",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\images\\italy.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3252,7 +3313,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3268,7 +3329,7 @@
     },
     {
       "Route": "images/mail_chimp.hl6huxnn1c.png",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\images\\mail_chimp.png",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\images\\mail_chimp.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3289,7 +3350,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3313,7 +3374,7 @@
     },
     {
       "Route": "images/mail_chimp.png",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\images\\mail_chimp.png",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\images\\mail_chimp.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3334,7 +3395,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3350,7 +3411,7 @@
     },
     {
       "Route": "images/pexels-chanwalrus-958545.jpg",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\images\\pexels-chanwalrus-958545.jpg",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\images\\pexels-chanwalrus-958545.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3371,7 +3432,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3387,7 +3448,7 @@
     },
     {
       "Route": "images/pexels-chanwalrus-958545.ok1yb287bt.jpg",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\images\\pexels-chanwalrus-958545.jpg",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\images\\pexels-chanwalrus-958545.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3408,7 +3469,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3432,7 +3493,7 @@
     },
     {
       "Route": "images/profile-img.bhm3u4alns.png",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\images\\profile-img.png",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\images\\profile-img.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3453,7 +3514,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3477,7 +3538,7 @@
     },
     {
       "Route": "images/profile-img.png",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\images\\profile-img.png",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\images\\profile-img.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3498,7 +3559,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3514,7 +3575,7 @@
     },
     {
       "Route": "images/res1.jpg",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\images\\res1.jpg",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\images\\res1.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3535,7 +3596,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3551,7 +3612,7 @@
     },
     {
       "Route": "images/res1.xju1uh6gjy.jpg",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\images\\res1.jpg",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\images\\res1.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3572,7 +3633,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3596,7 +3657,7 @@
     },
     {
       "Route": "images/restaurant-food.jpg",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\images\\restaurant-food.jpg",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\images\\restaurant-food.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3617,7 +3678,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3633,7 +3694,7 @@
     },
     {
       "Route": "images/restaurant-food.jyclj79ppp.jpg",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\images\\restaurant-food.jpg",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\images\\restaurant-food.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3654,7 +3715,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3678,7 +3739,7 @@
     },
     {
       "Route": "images/Restuarant_Login_Image.jpg",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\images\\Restuarant_Login_Image.jpg",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\images\\Restuarant_Login_Image.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3699,7 +3760,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3715,7 +3776,7 @@
     },
     {
       "Route": "images/Restuarant_Login_Image.te3zb2ukmg.jpg",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\images\\Restuarant_Login_Image.jpg",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\images\\Restuarant_Login_Image.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3736,7 +3797,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3760,7 +3821,7 @@
     },
     {
       "Route": "images/restuarantLogo1.jpg",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\images\\restuarantLogo1.jpg",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\images\\restuarantLogo1.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3781,7 +3842,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3797,7 +3858,7 @@
     },
     {
       "Route": "images/restuarantLogo1.jsqjqaoh1l.jpg",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\images\\restuarantLogo1.jpg",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\images\\restuarantLogo1.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3818,7 +3879,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3842,7 +3903,7 @@
     },
     {
       "Route": "images/russia.6i1v4re8fl.jpg",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\images\\russia.jpg",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\images\\russia.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3863,7 +3924,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3887,7 +3948,7 @@
     },
     {
       "Route": "images/russia.jpg",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\images\\russia.jpg",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\images\\russia.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3908,7 +3969,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3924,7 +3985,7 @@
     },
     {
       "Route": "images/slack.kqk3qoqwwk.png",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\images\\slack.png",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\images\\slack.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3945,7 +4006,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3969,7 +4030,7 @@
     },
     {
       "Route": "images/slack.png",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\images\\slack.png",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\images\\slack.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3990,7 +4051,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4006,7 +4067,7 @@
     },
     {
       "Route": "images/spain.jpg",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\images\\spain.jpg",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\images\\spain.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4027,7 +4088,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4043,7 +4104,7 @@
     },
     {
       "Route": "images/spain.k1g6ymxl1w.jpg",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\images\\spain.jpg",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\images\\spain.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4064,7 +4125,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4088,7 +4149,7 @@
     },
     {
       "Route": "images/us.jpg",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\images\\us.jpg",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\images\\us.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4109,7 +4170,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4125,7 +4186,7 @@
     },
     {
       "Route": "images/us.n4qmif6wxb.jpg",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\images\\us.jpg",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\images\\us.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4146,7 +4207,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4170,7 +4231,7 @@
     },
     {
       "Route": "images/user.fnv5awk3f8.jpg",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\images\\user.jpg",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\images\\user.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4191,7 +4252,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4215,7 +4276,7 @@
     },
     {
       "Route": "images/user.jpg",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\images\\user.jpg",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\images\\user.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4236,7 +4297,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4252,7 +4313,7 @@
     },
     {
       "Route": "images/user-profile-avatar.jc26tpv6j3.png",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\images\\user-profile-avatar.png",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\images\\user-profile-avatar.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4273,7 +4334,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4297,7 +4358,7 @@
     },
     {
       "Route": "images/user-profile-avatar.png",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\images\\user-profile-avatar.png",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\images\\user-profile-avatar.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4318,7 +4379,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4334,7 +4395,7 @@
     },
     {
       "Route": "js/app.evsw8kmsfq.js",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\js\\app.js",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\js\\app.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4355,7 +4416,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4379,7 +4440,7 @@
     },
     {
       "Route": "js/app.js",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\js\\app.js",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\js\\app.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4400,7 +4461,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4416,7 +4477,7 @@
     },
     {
       "Route": "js/bootstrap.bundle.min.954svb5tw7.js",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\js\\bootstrap.bundle.min.js",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\js\\bootstrap.bundle.min.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4437,7 +4498,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4461,7 +4522,7 @@
     },
     {
       "Route": "js/bootstrap.bundle.min.js",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\js\\bootstrap.bundle.min.js",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\js\\bootstrap.bundle.min.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4482,7 +4543,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4498,7 +4559,7 @@
     },
     {
       "Route": "js/bootstrap.min.3gb210rgai.js",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\js\\bootstrap.min.js",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\js\\bootstrap.min.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4519,7 +4580,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4543,7 +4604,7 @@
     },
     {
       "Route": "js/bootstrap.min.js",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\js\\bootstrap.min.js",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\js\\bootstrap.min.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4564,7 +4625,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4579,8 +4640,13 @@
       ]
     },
     {
+<<<<<<< HEAD
       "Route": "js/common.gnjzru0faj.js",
       "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\js\\common.js",
+=======
+      "Route": "js/common.d0xyyxqy8s.js",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\js\\common.js",
+>>>>>>> ece77f6ddd0113fb0d2665d56f3b3136ba3292c9
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4601,7 +4667,11 @@
         },
         {
           "Name": "Last-Modified",
+<<<<<<< HEAD
           "Value": "Mon, 05 May 2025 06:04:54 GMT"
+=======
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
+>>>>>>> ece77f6ddd0113fb0d2665d56f3b3136ba3292c9
         },
         {
           "Name": "Cache-Control",
@@ -4625,7 +4695,7 @@
     },
     {
       "Route": "js/common.js",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\js\\common.js",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\js\\common.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4646,7 +4716,11 @@
         },
         {
           "Name": "Last-Modified",
+<<<<<<< HEAD
           "Value": "Mon, 05 May 2025 06:04:54 GMT"
+=======
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
+>>>>>>> ece77f6ddd0113fb0d2665d56f3b3136ba3292c9
         },
         {
           "Name": "Cache-Control",
@@ -4662,7 +4736,7 @@
     },
     {
       "Route": "js/DashboardSales.18w8zyut7v.js",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\js\\DashboardSales.js",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\js\\DashboardSales.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4683,7 +4757,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4707,7 +4781,7 @@
     },
     {
       "Route": "js/DashboardSales.js",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\js\\DashboardSales.js",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\js\\DashboardSales.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4728,7 +4802,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4744,7 +4818,7 @@
     },
     {
       "Route": "js/jquery-3.6.4.min.hl0hm5qh5e.js",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\js\\jquery-3.6.4.min.js",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\js\\jquery-3.6.4.min.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4765,7 +4839,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4789,7 +4863,7 @@
     },
     {
       "Route": "js/jquery-3.6.4.min.js",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\js\\jquery-3.6.4.min.js",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\js\\jquery-3.6.4.min.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4810,7 +4884,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4826,7 +4900,7 @@
     },
     {
       "Route": "js/jquery-ui.min.js",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\js\\jquery-ui.min.js",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\js\\jquery-ui.min.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4847,7 +4921,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4863,7 +4937,7 @@
     },
     {
       "Route": "js/jquery-ui.min.ouwzxow2qz.js",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\js\\jquery-ui.min.js",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\js\\jquery-ui.min.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4884,7 +4958,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4908,7 +4982,7 @@
     },
     {
       "Route": "js/metisMenu.min.h1v0rvut0e.js",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\js\\metisMenu.min.js",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\js\\metisMenu.min.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4929,7 +5003,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4953,7 +5027,7 @@
     },
     {
       "Route": "js/metisMenu.min.js",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\js\\metisMenu.min.js",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\js\\metisMenu.min.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4974,7 +5048,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4990,7 +5064,7 @@
     },
     {
       "Route": "js/plugin.hitibzgep6.js",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\js\\plugin.js",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\js\\plugin.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5011,7 +5085,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5035,7 +5109,7 @@
     },
     {
       "Route": "js/plugin.js",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\js\\plugin.js",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\js\\plugin.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5056,7 +5130,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5072,7 +5146,7 @@
     },
     {
       "Route": "js/simplebar.min.js",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\js\\simplebar.min.js",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\js\\simplebar.min.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5093,7 +5167,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5109,7 +5183,7 @@
     },
     {
       "Route": "js/simplebar.min.lshpmv51k5.js",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\js\\simplebar.min.js",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\js\\simplebar.min.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5130,7 +5204,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5154,7 +5228,7 @@
     },
     {
       "Route": "js/site.js",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\js\\site.js",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\js\\site.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5175,7 +5249,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5191,7 +5265,7 @@
     },
     {
       "Route": "js/site.xtxxf3hu2r.js",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\js\\site.js",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\js\\site.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5212,7 +5286,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5236,7 +5310,7 @@
     },
     {
       "Route": "js/site-datatables.hll0ce3jnm.js",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\js\\site-datatables.js",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\js\\site-datatables.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5257,7 +5331,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5281,7 +5355,7 @@
     },
     {
       "Route": "js/site-datatables.js",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\js\\site-datatables.js",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\js\\site-datatables.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5302,7 +5376,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5400,7 +5474,7 @@
     },
     {
       "Route": "js/waves.min.js",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\js\\waves.min.js",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\js\\waves.min.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5421,7 +5495,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5437,7 +5511,7 @@
     },
     {
       "Route": "js/waves.min.y3krk6py3w.js",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\js\\waves.min.js",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\js\\waves.min.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5458,7 +5532,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5482,7 +5556,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap.css",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5503,7 +5577,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5519,7 +5593,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap.css.73kdqttayv.map",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5540,7 +5614,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5564,7 +5638,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap.css.map",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5585,7 +5659,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5601,7 +5675,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap.min.6gzpyzhau4.css",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5622,7 +5696,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5646,7 +5720,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap.min.css",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5667,7 +5741,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5683,7 +5757,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap.min.css.8inm30yfxf.map",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5704,7 +5778,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5728,7 +5802,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap.min.css.map",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5749,7 +5823,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5765,7 +5839,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap.ozu22stjof.css",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5786,7 +5860,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5810,7 +5884,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap.rtl.css",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5831,7 +5905,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5847,7 +5921,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap.rtl.css.4gxs3k148c.map",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5868,7 +5942,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5892,7 +5966,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap.rtl.css.map",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5913,7 +5987,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5929,7 +6003,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap.rtl.gjcw7pocpk.css",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5950,7 +6024,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5974,7 +6048,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap.rtl.min.6l4ir0ityv.css",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5995,7 +6069,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6019,7 +6093,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap.rtl.min.css",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6040,7 +6114,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6056,7 +6130,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap.rtl.min.css.fctod5rc9n.map",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6077,7 +6151,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6101,7 +6175,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap.rtl.min.css.map",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6122,7 +6196,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6138,7 +6212,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-grid.css",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6159,7 +6233,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6175,7 +6249,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-grid.css.map",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6196,7 +6270,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6212,7 +6286,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-grid.css.st1cbwfwo5.map",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6233,7 +6307,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6257,7 +6331,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-grid.min.5p029spbuu.css",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6278,7 +6352,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6302,7 +6376,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-grid.min.css",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6323,7 +6397,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6339,7 +6413,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-grid.min.css.5vj65cig9w.map",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6360,7 +6434,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6384,7 +6458,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-grid.min.css.map",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6405,7 +6479,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6421,7 +6495,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-grid.nakmwdwsxp.css",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6442,7 +6516,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6466,7 +6540,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-grid.rtl.css",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6487,7 +6561,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6503,7 +6577,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-grid.rtl.css.2q4vfeazbq.map",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6524,7 +6598,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6548,7 +6622,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-grid.rtl.css.map",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6569,7 +6643,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6585,7 +6659,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-grid.rtl.e6q6xbwqzk.css",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6606,7 +6680,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6630,7 +6704,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6651,7 +6725,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6667,7 +6741,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css.map",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6688,7 +6762,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6704,7 +6778,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css.o371a8zbv2.map",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6725,7 +6799,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6749,7 +6823,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-grid.rtl.min.dy6jgresuo.css",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6770,7 +6844,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6794,7 +6868,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-reboot.css",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6815,7 +6889,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6831,7 +6905,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-reboot.css.jeal3x0ldm.map",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6852,7 +6926,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6876,7 +6950,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-reboot.css.map",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6897,7 +6971,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6913,7 +6987,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-reboot.min.css",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6934,7 +7008,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6950,7 +7024,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-reboot.min.css.map",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6971,7 +7045,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6987,7 +7061,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-reboot.min.css.okkk44j0xs.map",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -7008,7 +7082,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -7032,7 +7106,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-reboot.min.z7kmom2977.css",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -7053,7 +7127,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -7077,7 +7151,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-reboot.mk8rdyw69w.css",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -7098,7 +7172,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -7122,7 +7196,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.97yrjpyf9r.css",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -7143,7 +7217,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -7167,7 +7241,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.css",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -7188,7 +7262,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -7204,7 +7278,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.css.cwzlr5n8x4.map",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -7225,7 +7299,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -7249,7 +7323,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.css.map",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -7270,7 +7344,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -7286,7 +7360,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -7307,7 +7381,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -7323,7 +7397,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css.map",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -7344,7 +7418,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -7360,7 +7434,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css.wmug9u23qg.map",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -7381,7 +7455,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -7405,7 +7479,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.y53cy5s2zj.css",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -7426,7 +7500,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -7450,7 +7524,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-utilities.css",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -7471,7 +7545,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -7487,7 +7561,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-utilities.css.j75batdsum.map",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -7508,7 +7582,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -7532,7 +7606,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-utilities.css.map",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -7553,7 +7627,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -7569,7 +7643,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-utilities.min.2yn17lgxub.css",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -7590,7 +7664,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -7614,7 +7688,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-utilities.min.css",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -7635,7 +7709,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -7651,7 +7725,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-utilities.min.css.map",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -7672,7 +7746,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -7688,7 +7762,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-utilities.min.css.vy0bq9ydhf.map",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -7709,7 +7783,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -7733,7 +7807,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.css",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -7754,7 +7828,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -7770,7 +7844,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.css.ab1c3rmv7g.map",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -7791,7 +7865,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -7815,7 +7889,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.css.map",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -7836,7 +7910,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -7852,7 +7926,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -7873,7 +7947,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -7889,7 +7963,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css.56d2bn4wt9.map",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -7910,7 +7984,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -7934,7 +8008,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css.map",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -7955,7 +8029,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -7971,7 +8045,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.ik6i2hrs65.css",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -7992,7 +8066,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -8016,7 +8090,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.ophe14yye5.css",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -8037,7 +8111,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -8061,7 +8135,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-utilities.z9shlbduue.css",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -8082,7 +8156,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -8106,7 +8180,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.1piudyfv7h.js",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -8127,7 +8201,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -8151,7 +8225,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.bundle.f6zq8v6eb3.js",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -8172,7 +8246,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -8196,7 +8270,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.bundle.js",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -8217,7 +8291,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -8233,7 +8307,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.bundle.js.kbynt5jhd9.map",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -8254,7 +8328,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -8278,7 +8352,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.bundle.js.map",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -8299,7 +8373,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -8315,7 +8389,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.bundle.min.89qbw8ngem.js",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -8336,7 +8410,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -8360,7 +8434,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.bundle.min.js",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -8381,7 +8455,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -8397,7 +8471,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.bundle.min.js.c2nslu3uf3.map",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -8418,7 +8492,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -8442,7 +8516,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.bundle.min.js.map",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -8463,7 +8537,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -8479,7 +8553,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.esm.js",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -8500,7 +8574,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -8516,7 +8590,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.esm.js.2lgwfvgpvi.map",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -8537,7 +8611,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -8561,7 +8635,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.esm.js.map",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -8582,7 +8656,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -8598,7 +8672,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.esm.min.jqwzsa9uv6.js",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -8619,7 +8693,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -8643,7 +8717,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.esm.min.js",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -8664,7 +8738,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -8680,7 +8754,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.esm.min.js.map",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -8701,7 +8775,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -8717,7 +8791,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.esm.min.js.wsezl0heh6.map",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -8738,7 +8812,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -8762,7 +8836,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.esm.n5w6o92d9r.js",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -8783,7 +8857,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -8807,7 +8881,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.js",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -8828,7 +8902,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -8844,7 +8918,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.js.6ukhryfubh.map",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -8865,7 +8939,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -8889,7 +8963,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.js.map",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -8910,7 +8984,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -8926,7 +9000,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.min.4908xmbfjr.js",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -8947,7 +9021,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -8971,7 +9045,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.min.js",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -8992,7 +9066,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -9008,7 +9082,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.min.js.map",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -9029,7 +9103,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -9045,7 +9119,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.min.js.u33ctipx7g.map",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -9066,7 +9140,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -9090,7 +9164,7 @@
     },
     {
       "Route": "lib/bootstrap/LICENSE",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\LICENSE",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -9111,7 +9185,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -9127,7 +9201,7 @@
     },
     {
       "Route": "lib/bootstrap/LICENSE.81b7ukuj9c",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\bootstrap\\LICENSE",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -9148,7 +9222,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -9172,7 +9246,7 @@
     },
     {
       "Route": "lib/jquery/dist/jquery.7s2n0ol71w.js",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\jquery\\dist\\jquery.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -9193,7 +9267,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -9217,7 +9291,7 @@
     },
     {
       "Route": "lib/jquery/dist/jquery.js",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\jquery\\dist\\jquery.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -9238,7 +9312,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -9254,7 +9328,7 @@
     },
     {
       "Route": "lib/jquery/dist/jquery.min.5pze98is44.map",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -9275,7 +9349,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -9299,7 +9373,7 @@
     },
     {
       "Route": "lib/jquery/dist/jquery.min.ehgnz7f14e.js",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -9320,7 +9394,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -9344,7 +9418,7 @@
     },
     {
       "Route": "lib/jquery/dist/jquery.min.js",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -9365,7 +9439,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -9381,7 +9455,7 @@
     },
     {
       "Route": "lib/jquery/dist/jquery.min.map",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -9402,7 +9476,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -9418,7 +9492,7 @@
     },
     {
       "Route": "lib/jquery/LICENSE.mlv21k5csn.txt",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\jquery\\LICENSE.txt",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -9439,7 +9513,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -9463,7 +9537,7 @@
     },
     {
       "Route": "lib/jquery/LICENSE.txt",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\jquery\\LICENSE.txt",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -9484,7 +9558,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -9500,7 +9574,7 @@
     },
     {
       "Route": "lib/jquery-validation/dist/additional-methods.ay5nd8zt9x.js",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -9521,7 +9595,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -9545,7 +9619,7 @@
     },
     {
       "Route": "lib/jquery-validation/dist/additional-methods.js",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -9566,7 +9640,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -9582,7 +9656,7 @@
     },
     {
       "Route": "lib/jquery-validation/dist/additional-methods.min.9oaff4kq20.js",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -9603,7 +9677,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -9627,7 +9701,7 @@
     },
     {
       "Route": "lib/jquery-validation/dist/additional-methods.min.js",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -9648,7 +9722,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -9664,7 +9738,7 @@
     },
     {
       "Route": "lib/jquery-validation/dist/jquery.validate.6d0lkjaslc.js",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -9685,7 +9759,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -9709,7 +9783,7 @@
     },
     {
       "Route": "lib/jquery-validation/dist/jquery.validate.js",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -9730,7 +9804,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -9746,7 +9820,7 @@
     },
     {
       "Route": "lib/jquery-validation/dist/jquery.validate.min.js",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -9767,7 +9841,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -9783,7 +9857,7 @@
     },
     {
       "Route": "lib/jquery-validation/dist/jquery.validate.min.l1zq2mitth.js",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -9804,7 +9878,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -9828,7 +9902,7 @@
     },
     {
       "Route": "lib/jquery-validation/LICENSE.md",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -9849,7 +9923,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -9865,7 +9939,7 @@
     },
     {
       "Route": "lib/jquery-validation/LICENSE.x0q3zqp4vz.md",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -9886,7 +9960,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -9910,7 +9984,7 @@
     },
     {
       "Route": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.03hjc8e09r.js",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -9931,7 +10005,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -9955,7 +10029,7 @@
     },
     {
       "Route": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -9976,7 +10050,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -9992,7 +10066,7 @@
     },
     {
       "Route": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.48y08845bh.js",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -10013,7 +10087,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -10037,7 +10111,7 @@
     },
     {
       "Route": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -10058,7 +10132,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -10074,7 +10148,7 @@
     },
     {
       "Route": "lib/jquery-validation-unobtrusive/LICENSE.356vix0kms.txt",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -10095,7 +10169,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -10119,7 +10193,7 @@
     },
     {
       "Route": "lib/jquery-validation-unobtrusive/LICENSE.txt",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -10140,7 +10214,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Apr 2025 04:48:48 GMT"
+          "Value": "Thu, 24 Apr 2025 10:05:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -10156,7 +10230,7 @@
     },
     {
       "Route": "RMS_Layout.a1056oc8vd.bundle.scp.css",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\RMS_Layout.bundle.scp.css",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\RMS_Layout.bundle.scp.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -10177,7 +10251,11 @@
         },
         {
           "Name": "Last-Modified",
+<<<<<<< HEAD
           "Value": "Mon, 05 May 2025 06:34:41 GMT"
+=======
+          "Value": "Mon, 05 May 2025 05:57:30 GMT"
+>>>>>>> ece77f6ddd0113fb0d2665d56f3b3136ba3292c9
         },
         {
           "Name": "Cache-Control",
@@ -10201,7 +10279,7 @@
     },
     {
       "Route": "RMS_Layout.a1056oc8vd.styles.css",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\obj\\Debug\\net8.0\\scopedcss\\bundle\\RMS_Layout.styles.css",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\obj\\Debug\\net8.0\\scopedcss\\bundle\\RMS_Layout.styles.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -10222,7 +10300,11 @@
         },
         {
           "Name": "Last-Modified",
+<<<<<<< HEAD
           "Value": "Mon, 05 May 2025 06:34:41 GMT"
+=======
+          "Value": "Mon, 05 May 2025 05:57:30 GMT"
+>>>>>>> ece77f6ddd0113fb0d2665d56f3b3136ba3292c9
         },
         {
           "Name": "Cache-Control",
@@ -10246,7 +10328,7 @@
     },
     {
       "Route": "RMS_Layout.bundle.scp.css",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\RMS_Layout.bundle.scp.css",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\RMS_Layout.bundle.scp.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -10267,7 +10349,11 @@
         },
         {
           "Name": "Last-Modified",
+<<<<<<< HEAD
           "Value": "Mon, 05 May 2025 06:34:41 GMT"
+=======
+          "Value": "Mon, 05 May 2025 05:57:30 GMT"
+>>>>>>> ece77f6ddd0113fb0d2665d56f3b3136ba3292c9
         },
         {
           "Name": "Cache-Control",
@@ -10283,7 +10369,7 @@
     },
     {
       "Route": "RMS_Layout.styles.css",
-      "AssetFile": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\obj\\Debug\\net8.0\\scopedcss\\bundle\\RMS_Layout.styles.css",
+      "AssetFile": "D:\\RMS_Architecture\\RMS_Layout\\obj\\Debug\\net8.0\\scopedcss\\bundle\\RMS_Layout.styles.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -10304,7 +10390,11 @@
         },
         {
           "Name": "Last-Modified",
+<<<<<<< HEAD
           "Value": "Mon, 05 May 2025 06:34:41 GMT"
+=======
+          "Value": "Mon, 05 May 2025 05:57:30 GMT"
+>>>>>>> ece77f6ddd0113fb0d2665d56f3b3136ba3292c9
         },
         {
           "Name": "Cache-Control",

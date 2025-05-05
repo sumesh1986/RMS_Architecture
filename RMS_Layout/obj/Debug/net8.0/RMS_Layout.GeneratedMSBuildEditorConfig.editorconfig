@@ -44,14 +44,6 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJzXEN1c3RvbWVyR3JvdXBzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/RMS_Layout/RMS_Architecture/RMS_Layout/Views/Department/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVwYXJ0bWVudFxJbmRleC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/RMS_Layout/RMS_Architecture/RMS_Layout/Views/Department/UserRole.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVwYXJ0bWVudFxVc2VyUm9sZS5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
 [D:/RMS_Layout/RMS_Architecture/RMS_Layout/Views/Home/Administrative_Tools.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBZG1pbmlzdHJhdGl2ZV9Ub29scy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -250,6 +242,18 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/RMS_Layout/RMS_Architecture/RMS_Layout/Views/UserSetup/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclNldHVwXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/RMS_Layout/RMS_Architecture/RMS_Layout/Views/Users/Department/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcRGVwYXJ0bWVudFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/RMS_Layout/RMS_Architecture/RMS_Layout/Views/Users/UserPermission/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcVXNlclBlcm1pc3Npb25cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/RMS_Layout/RMS_Architecture/RMS_Layout/Views/Users/UserRole/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcVXNlclJvbGVcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/RMS_Layout/RMS_Architecture/RMS_Layout/Views/_ViewImports.cshtml]
