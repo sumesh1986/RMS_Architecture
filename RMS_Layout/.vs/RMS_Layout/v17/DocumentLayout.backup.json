@@ -3,6 +3,28 @@
   "WorkspaceRootPath": "D:\\RMS_Architecture\\RMS_Architecture\\RMS_Layout\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{52493F9C-F637-41D2-9D6F-9619D7DAC3B5}|RMS_Layout.csproj|d:\\rms_architecture\\rms_architecture\\rms_layout\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{52493F9C-F637-41D2-9D6F-9619D7DAC3B5}|RMS_Layout.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EC32D507-9C4A-4619-A13A-402BF7669EE2}|..\\RMS_BAL\\RMS_BAL.csproj|d:\\rms_architecture\\rms_architecture\\rms_bal\\services\\interfaces\\icategorydropdownservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EC32D507-9C4A-4619-A13A-402BF7669EE2}|..\\RMS_BAL\\RMS_BAL.csproj|d:\\rms_architecture\\rms_architecture\\rms_bal\\services\\dropdown\\dropdownservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EC32D507-9C4A-4619-A13A-402BF7669EE2}|..\\RMS_BAL\\RMS_BAL.csproj|d:\\rms_architecture\\rms_architecture\\rms_bal\\services\\result\\result.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{66B2A271-90B1-4872-B946-70CA1307D760}|..\\RMS_Data\\RMS_Data.csproj|d:\\rms_architecture\\rms_architecture\\rms_data\\repository\\dropdown\\dropdownrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{66B2A271-90B1-4872-B946-70CA1307D760}|..\\RMS_Data\\RMS_Data.csproj|d:\\rms_architecture\\rms_architecture\\rms_data\\repository\\interfaces\\idropdowncommonrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{55301413-EBC2-418C-ABB9-F54761481DDE}|..\\RMS_Models\\RMS_Models.csproj|d:\\rms_architecture\\rms_architecture\\rms_models\\models\\api_models\\commonmodels\\categorydropdownviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{EC32D507-9C4A-4619-A13A-402BF7669EE2}|..\\RMS_BAL\\RMS_BAL.csproj|d:\\rms_architecture\\rms_architecture\\rms_bal\\services\\interfaces\\idropdowncommonservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -48,18 +70,6 @@
       "RelativeMoniker": "D:0:0:{52493F9C-F637-41D2-9D6F-9619D7DAC3B5}|RMS_Layout.csproj|solutionrelative:controllers\\projectcontrollers\\customers\\customertitlescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EC32D507-9C4A-4619-A13A-402BF7669EE2}|..\\RMS_BAL\\RMS_BAL.csproj|d:\\rms_architecture\\rms_architecture\\rms_bal\\services\\dropdown\\dropdownservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{66B2A271-90B1-4872-B946-70CA1307D760}|..\\RMS_Data\\RMS_Data.csproj|d:\\rms_architecture\\rms_architecture\\rms_data\\repository\\dropdown\\dropdownrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{66B2A271-90B1-4872-B946-70CA1307D760}|..\\RMS_Data\\RMS_Data.csproj|d:\\rms_architecture\\rms_architecture\\rms_data\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{66B2A271-90B1-4872-B946-70CA1307D760}|..\\RMS_Data\\RMS_Data.csproj|d:\\rms_architecture\\rms_architecture\\rms_data\\repository\\interfaces\\idropdowncommonrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{66B2A271-90B1-4872-B946-70CA1307D760}|..\\RMS_Data\\RMS_Data.csproj|d:\\rms_architecture\\rms_architecture\\rms_data\\repository\\interfaces\\icustomerdropdownrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -81,11 +91,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 13,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 12,
               "Title": "CustomerTitleAPIController.cs",
               "DocumentMoniker": "D:\\RMS_Architecture\\RMS_Architecture\\RMS_Layout\\Controllers\\ProjectAPI\\Customers\\CustomerTitleAPIController.cs",
               "RelativeDocumentMoniker": "Controllers\\ProjectAPI\\Customers\\CustomerTitleAPIController.cs",
@@ -98,20 +108,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 2,
               "Title": "DropdownService.cs",
               "DocumentMoniker": "D:\\RMS_Architecture\\RMS_Architecture\\RMS_BAL\\Services\\Dropdown\\DropdownService.cs",
               "RelativeDocumentMoniker": "..\\RMS_BAL\\Services\\Dropdown\\DropdownService.cs",
               "ToolTip": "D:\\RMS_Architecture\\RMS_Architecture\\RMS_BAL\\Services\\Dropdown\\DropdownService.cs",
               "RelativeToolTip": "..\\RMS_BAL\\Services\\Dropdown\\DropdownService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAADAAAAAAAAAA==",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAACgAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-02T07:47:11.955Z",
               "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 22,
               "Title": "ICustomerDropdownService.cs",
               "DocumentMoniker": "D:\\RMS_Architecture\\RMS_Architecture\\RMS_BAL\\Services\\Interfaces\\ICustomerDropdownService.cs",
               "RelativeDocumentMoniker": "..\\RMS_BAL\\Services\\Interfaces\\ICustomerDropdownService.cs",
@@ -124,34 +134,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 7,
               "Title": "IDropdownCommonServices.cs",
               "DocumentMoniker": "D:\\RMS_Architecture\\RMS_Architecture\\RMS_BAL\\Services\\Interfaces\\IDropdownCommonServices.cs",
               "RelativeDocumentMoniker": "..\\RMS_BAL\\Services\\Interfaces\\IDropdownCommonServices.cs",
               "ToolTip": "D:\\RMS_Architecture\\RMS_Architecture\\RMS_BAL\\Services\\Interfaces\\IDropdownCommonServices.cs",
               "RelativeToolTip": "..\\RMS_BAL\\Services\\Interfaces\\IDropdownCommonServices.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwA8AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-02T08:17:17.109Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "DropdownRepository.cs",
-              "DocumentMoniker": "D:\\RMS_Architecture\\RMS_Architecture\\RMS_Data\\Repository\\Dropdown\\DropdownRepository.cs",
-              "RelativeDocumentMoniker": "..\\RMS_Data\\Repository\\Dropdown\\DropdownRepository.cs",
-              "ToolTip": "D:\\RMS_Architecture\\RMS_Architecture\\RMS_Data\\Repository\\Dropdown\\DropdownRepository.cs",
-              "RelativeToolTip": "..\\RMS_Data\\Repository\\Dropdown\\DropdownRepository.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAowDEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-02T08:17:35.243Z",
               "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 21,
               "Title": "ICustomerDropdownRepository.cs",
               "DocumentMoniker": "D:\\RMS_Architecture\\RMS_Architecture\\RMS_Data\\Repository\\Interfaces\\ICustomerDropdownRepository.cs",
               "RelativeDocumentMoniker": "..\\RMS_Data\\Repository\\Interfaces\\ICustomerDropdownRepository.cs",
@@ -164,20 +160,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 5,
               "Title": "IDropdownCommonRepository.cs",
               "DocumentMoniker": "D:\\RMS_Architecture\\RMS_Architecture\\RMS_Data\\Repository\\Interfaces\\IDropdownCommonRepository.cs",
               "RelativeDocumentMoniker": "..\\RMS_Data\\Repository\\Interfaces\\IDropdownCommonRepository.cs",
               "ToolTip": "D:\\RMS_Architecture\\RMS_Architecture\\RMS_Data\\Repository\\Interfaces\\IDropdownCommonRepository.cs",
               "RelativeToolTip": "..\\RMS_Data\\Repository\\Interfaces\\IDropdownCommonRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAVAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-02T08:17:57.892Z",
               "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 13,
               "Title": "CustomerDropdownViewModel.cs",
               "DocumentMoniker": "D:\\RMS_Architecture\\RMS_Architecture\\RMS_Models\\Models\\API_Models\\CommonModels\\CustomerDropdownViewModel.cs",
               "RelativeDocumentMoniker": "..\\RMS_Models\\Models\\API_Models\\CommonModels\\CustomerDropdownViewModel.cs",
@@ -190,20 +186,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "ApplicationDbContext.cs",
-              "DocumentMoniker": "D:\\RMS_Architecture\\RMS_Architecture\\RMS_Data\\Data\\ApplicationDbContext.cs",
-              "RelativeDocumentMoniker": "..\\RMS_Data\\Data\\ApplicationDbContext.cs",
-              "ToolTip": "D:\\RMS_Architecture\\RMS_Architecture\\RMS_Data\\Data\\ApplicationDbContext.cs",
-              "RelativeToolTip": "..\\RMS_Data\\Data\\ApplicationDbContext.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABoAAABGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-02T08:38:46.077Z",
-              "IsPinned": true
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 9,
               "Title": "CustomerViewModelDTO.cs",
               "DocumentMoniker": "D:\\RMS_Architecture\\RMS_Architecture\\RMS_Models\\Models\\DTO\\Customers\\CustomerViewModelDTO.cs",
               "RelativeDocumentMoniker": "..\\RMS_Models\\Models\\DTO\\Customers\\CustomerViewModelDTO.cs",
@@ -216,7 +199,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 8,
               "Title": "CustomerViewModel.cs",
               "DocumentMoniker": "D:\\RMS_Architecture\\RMS_Architecture\\RMS_Models\\Models\\API_Models\\Customers\\CustomerViewModel.cs",
               "RelativeDocumentMoniker": "..\\RMS_Models\\Models\\API_Models\\Customers\\CustomerViewModel.cs",
@@ -229,7 +212,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 10,
               "Title": "CustomerApiController.cs",
               "DocumentMoniker": "D:\\RMS_Architecture\\RMS_Architecture\\RMS_Layout\\Controllers\\ProjectAPI\\Customers\\CustomerApiController.cs",
               "RelativeDocumentMoniker": "Controllers\\ProjectAPI\\Customers\\CustomerApiController.cs",
@@ -242,7 +225,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 11,
               "Title": "ICustomerService.cs",
               "DocumentMoniker": "D:\\RMS_Architecture\\RMS_Architecture\\RMS_BAL\\Services\\Interfaces\\ICustomerService.cs",
               "RelativeDocumentMoniker": "..\\RMS_BAL\\Services\\Interfaces\\ICustomerService.cs",
@@ -263,7 +246,68 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\RMS_Architecture\\RMS_Architecture\\RMS_Layout\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "D:\\RMS_Architecture\\RMS_Architecture\\RMS_Layout\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAlwB4AAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-05T08:47:48.133Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ICategoryDropdownService.cs",
+              "DocumentMoniker": "D:\\RMS_Architecture\\RMS_Architecture\\RMS_BAL\\Services\\Interfaces\\ICategoryDropdownService.cs",
+              "RelativeDocumentMoniker": "..\\RMS_BAL\\Services\\Interfaces\\ICategoryDropdownService.cs",
+              "ToolTip": "D:\\RMS_Architecture\\RMS_Architecture\\RMS_BAL\\Services\\Interfaces\\ICategoryDropdownService.cs",
+              "RelativeToolTip": "..\\RMS_BAL\\Services\\Interfaces\\ICategoryDropdownService.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAACEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-05T08:52:43.665Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Result.cs",
+              "DocumentMoniker": "D:\\RMS_Architecture\\RMS_Architecture\\RMS_BAL\\Services\\Result\\Result.cs",
+              "RelativeDocumentMoniker": "..\\RMS_BAL\\Services\\Result\\Result.cs",
+              "ToolTip": "D:\\RMS_Architecture\\RMS_Architecture\\RMS_BAL\\Services\\Result\\Result.cs",
+              "RelativeToolTip": "..\\RMS_BAL\\Services\\Result\\Result.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAAAcwC4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-05T08:50:30.678Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "DropdownRepository.cs",
+              "DocumentMoniker": "D:\\RMS_Architecture\\RMS_Architecture\\RMS_Data\\Repository\\Dropdown\\DropdownRepository.cs",
+              "RelativeDocumentMoniker": "..\\RMS_Data\\Repository\\Dropdown\\DropdownRepository.cs",
+              "ToolTip": "D:\\RMS_Architecture\\RMS_Architecture\\RMS_Data\\Repository\\Dropdown\\DropdownRepository.cs",
+              "RelativeToolTip": "..\\RMS_Data\\Repository\\Dropdown\\DropdownRepository.cs",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAawDQAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-05T08:45:47.588Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "CategoryDropdownViewModel.cs",
+              "DocumentMoniker": "D:\\RMS_Architecture\\RMS_Architecture\\RMS_Models\\Models\\API_Models\\CommonModels\\CategoryDropdownViewModel.cs",
+              "RelativeDocumentMoniker": "..\\RMS_Models\\Models\\API_Models\\CommonModels\\CategoryDropdownViewModel.cs",
+              "ToolTip": "D:\\RMS_Architecture\\RMS_Architecture\\RMS_Models\\Models\\API_Models\\CommonModels\\CategoryDropdownViewModel.cs",
+              "RelativeToolTip": "..\\RMS_Models\\Models\\API_Models\\CommonModels\\CategoryDropdownViewModel.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAABkAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-05T08:43:08.433Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
               "Title": "CustomerGroup.cs",
               "DocumentMoniker": "D:\\RMS_Architecture\\RMS_Architecture\\RMS_Models\\Models\\API_Models\\Customers\\CustomerGroup.cs",
               "RelativeDocumentMoniker": "..\\RMS_Models\\Models\\API_Models\\Customers\\CustomerGroup.cs",
@@ -275,7 +319,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 18,
               "Title": "CustomerTypeDTO.cs",
               "DocumentMoniker": "D:\\RMS_Architecture\\RMS_Architecture\\RMS_Models\\Models\\DTO\\Customers\\CustomerTypeDTO.cs",
               "RelativeDocumentMoniker": "..\\RMS_Models\\Models\\DTO\\Customers\\CustomerTypeDTO.cs",
@@ -287,7 +331,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 19,
               "Title": "CustomerType.cs",
               "DocumentMoniker": "D:\\RMS_Architecture\\RMS_Architecture\\RMS_Models\\Models\\API_Models\\Customers\\CustomerType.cs",
               "RelativeDocumentMoniker": "..\\RMS_Models\\Models\\API_Models\\Customers\\CustomerType.cs",
@@ -299,7 +343,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 15,
               "Title": "CustomerTitleRepository.cs",
               "DocumentMoniker": "D:\\RMS_Architecture\\RMS_Architecture\\RMS_Data\\Repository\\Customer\\CustomerTitleRepository.cs",
               "RelativeDocumentMoniker": "..\\RMS_Data\\Repository\\Customer\\CustomerTitleRepository.cs",
@@ -311,7 +355,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 20,
               "Title": "CustomerTitlesController.cs",
               "DocumentMoniker": "D:\\RMS_Architecture\\RMS_Architecture\\RMS_Layout\\Controllers\\ProjectControllers\\Customers\\CustomerTitlesController.cs",
               "RelativeDocumentMoniker": "Controllers\\ProjectControllers\\Customers\\CustomerTitlesController.cs",
@@ -323,7 +367,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 16,
               "Title": "CustomerTitle.cs",
               "DocumentMoniker": "D:\\RMS_Architecture\\RMS_Architecture\\RMS_Models\\Models\\API_Models\\Customers\\CustomerTitle.cs",
               "RelativeDocumentMoniker": "..\\RMS_Models\\Models\\API_Models\\Customers\\CustomerTitle.cs",
@@ -335,7 +379,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 14,
               "Title": "CustomerTitleDTO.cs",
               "DocumentMoniker": "D:\\RMS_Architecture\\RMS_Architecture\\RMS_Models\\Models\\DTO\\Customers\\CustomerTitleDTO.cs",
               "RelativeDocumentMoniker": "..\\RMS_Models\\Models\\DTO\\Customers\\CustomerTitleDTO.cs",
@@ -347,7 +391,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 24,
               "Title": "CustomersSetup.cshtml",
               "DocumentMoniker": "D:\\RMS_Architecture\\RMS_Architecture\\RMS_Layout\\Views\\Home\\CustomersSetup.cshtml",
               "RelativeDocumentMoniker": "Views\\Home\\CustomersSetup.cshtml",
@@ -359,7 +403,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 23,
               "Title": "CustomerIndex.cshtml",
               "DocumentMoniker": "D:\\RMS_Architecture\\RMS_Architecture\\RMS_Layout\\Views\\Customers\\CustomerIndex.cshtml",
               "RelativeDocumentMoniker": "Views\\Customers\\CustomerIndex.cshtml",
