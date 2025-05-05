@@ -161,6 +161,10 @@
       "PackagePath": "staticwebassets\\js\\site.js"
     },
     {
+      "Id": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\js\\sweetalert2@11.js",
+      "PackagePath": "staticwebassets\\js\\sweetalert2@11.js"
+    },
+    {
       "Id": "D:\\RMS_Layout\\RMS_Architecture\\RMS_Layout\\wwwroot\\js\\waves.min.js",
       "PackagePath": "staticwebassets\\js\\waves.min.js"
     },

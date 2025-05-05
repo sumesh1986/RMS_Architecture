@@ -651,12 +651,12 @@
 
 									<ul class="sub-menu" aria-expanded="false">
 										<li>
-											<a href="@Url.Action("Category", "Home")">
+											<a href="@Url.Action("category", "productsetup")">
 												<i class="bi bi-tags"></i> Category
 											</a>
 										</li>
 										<li>
-											<a href="@Url.Action("Division", "Home")">
+											<a href="@Url.Action("division", "productsetup")">
 												<i class="bi bi-diagram-2"></i> Division
 											</a>
 										</li>
@@ -1010,7 +1010,6 @@
 								<i class="bi bi-people"></i>
 								<span key="t-dashboards">Company</span>
 							</a>
-
 							<ul class="sub-menu" aria-expanded="false">
 								<li>
 									<a href="@Url.Action("companyregistration", "company")" key="t-default">
@@ -1451,6 +1450,7 @@
 	<!-- jQuery UI JS (For Draggable & Resizable) -->
 	<script src="~/js/jquery-ui.min.js"></script>
 	<script src="~/js/common.js"></script>
+	<script src="~/js/sweetalert2@11.js"></script>
 
 	<!-- Bootstrap JS (Optional) -->
 	<script src="~/js/bootstrap.bundle.min.js"></script>
@@ -1461,6 +1461,33 @@
 			new MetisMenu("#side-menu");
 		});
 	</script>
+
+
+	<script>
+		document.querySelectorAll('.dropdown-submenu > a').forEach(function (element) {
+			element.addEventListener('click', function (e) {
+				e.preventDefault();
+				e.stopPropagation();
+				let submenu = this.nextElementSibling;
+				if (submenu.classList.contains('show')) {
+					submenu.classList.remove('show');
+				} else {
+					document.querySelectorAll('.dropdown-submenu .dropdown-menu').forEach(function (sub) {
+						sub.classList.remove('show');
+					});
+					submenu.classList.add('show');
+				}
+			});
+		});
+
+		// Close all submenus when parent dropdown closes
+		document.querySelector('.dropdown').addEventListener('hide.bs.dropdown', function () {
+			document.querySelectorAll('.dropdown-submenu .dropdown-menu').forEach(function (sub) {
+				sub.classList.remove('show');
+			});
+		});
+	</script>
+
 
 	<script>
 

@@ -79,6 +79,60 @@ namespace RMS_Data.Migrations
                     b.ToTable("CustomerGroups");
                 });
 
+            modelBuilder.Entity("RMS_Models.Models.API_Models.ProductSetup.SalesItemHierarchy.CategoryViewModel", b =>
+                {
+                    b.Property<int>("SysID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("SysID"));
+
+                    b.Property<string>("Category")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("RefID")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Status")
+                        .HasMaxLength(8)
+                        .HasColumnType("nvarchar(8)");
+
+                    b.Property<string>("flddeletedby")
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<DateTime?>("flddeleteddatetime")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("fldinsertedby")
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<DateTime?>("fldinserteddatetime")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("fldisactive")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("fldisdeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("fldmodifiedby")
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<DateTime?>("fldmodifieddate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int?>("fldmodifiedno")
+                        .HasColumnType("int");
+
+                    b.HasKey("SysID");
+
+                    b.ToTable("Category");
+                });
+
             modelBuilder.Entity("RMS_Models.Models.ServiceModels.ErrorLog", b =>
                 {
                     b.Property<int>("Id")

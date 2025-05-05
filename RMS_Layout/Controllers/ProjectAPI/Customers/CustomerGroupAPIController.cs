@@ -1,17 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Mvc;
 using RMS_BAL.Repository.Interfaces;
-using RMS_BAL.Services.Customer;
-using RMS_Data.Data;
-using RMS_Models.Models;
-using RMS_Models.Models.API_Models.Customers;
 using RMS_Models.Models.DTO.Customers;
-using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace RMS_Layout.Controllers.ProjectAPI
 {

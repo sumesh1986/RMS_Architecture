@@ -118,6 +118,32 @@
   },
   {
     "ContainingType": "RMS_Layout.Controllers.ProjectAPI.Company.CompanyConceptAPIController",
+    "Method": "Get",
+    "RelativePath": "api/CompanyConceptAPI",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "page",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Name",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RMS_Layout.Controllers.ProjectAPI.Company.CompanyConceptAPIController",
     "Method": "UpdateConcept",
     "RelativePath": "api/CompanyConceptAPI/{id}",
     "HttpMethod": "PUT",
@@ -131,7 +157,7 @@
       },
       {
         "Name": "model",
-        "Type": "RMS_Models.Models.API_Models.Company.CompanyConcept",
+        "Type": "RMS_Models.Models.DTO.Company.CompanyConceptDTO",
         "IsRequired": true
       }
     ],
@@ -155,36 +181,15 @@
   },
   {
     "ContainingType": "RMS_Layout.Controllers.ProjectAPI.Company.CompanyConceptAPIController",
-    "Method": "GetAll",
-    "RelativePath": "api/CompanyConceptAPI/GetAll",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "page",
-        "Type": "System.Int32",
-        "IsRequired": false
-      },
-      {
-        "Name": "pageSize",
-        "Type": "System.Int32",
-        "IsRequired": false
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "RMS_Layout.Controllers.ProjectAPI.Company.CompanyConceptAPIController",
-    "Method": "Save",
+    "Method": "create",
     "RelativePath": "api/CompanyConceptAPI/Save",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "conceptModelRequest",
-        "Type": "RMS_Models.Models.API_Models.Company.CompanyConcept",
+        "Name": "model",
+        "Type": "RMS_Models.Models.DTO.Company.CompanyConceptDTO",
         "IsRequired": true
       }
     ],
@@ -387,6 +392,175 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "RMS_Layout.Controllers.ProjectAPI.Dropdown.DropdownApiController",
+    "Method": "Get",
+    "RelativePath": "api/ProductSalesCategoryAPI",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "catId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "categoryname",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "divsionId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "divisionName",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RMS_Layout.Controllers.ProjectAPI.ProductSetup.SalesItemHierarchy.ProductSetupCategoryAPIController",
+    "Method": "Get",
+    "RelativePath": "api/ProductSetupCategoryAPI",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "category",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RMS_Layout.Controllers.ProjectAPI.ProductSetup.SalesItemHierarchy.ProductSetupCategoryAPIController",
+    "Method": "Delete",
+    "RelativePath": "api/ProductSetupCategoryAPI/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RMS_Layout.Controllers.ProjectAPI.ProductSetup.SalesItemHierarchy.ProductSetupCategoryAPIController",
+    "Method": "UpdateConcept",
+    "RelativePath": "api/ProductSetupCategoryAPI/{sysid}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "sysid",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "model",
+        "Type": "RMS_Models.Models.DTO.ProductSetup.SalesItemHierarchy.CategoryViewModelDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RMS_Layout.Controllers.ProjectAPI.ProductSetup.SalesItemHierarchy.ProductSetupCategoryAPIController",
+    "Method": "create",
+    "RelativePath": "api/ProductSetupCategoryAPI/Save",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "RMS_Models.Models.DTO.ProductSetup.SalesItemHierarchy.CategoryViewModelDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RMS_Layout.Controllers.ProjectAPI.ProductSetup.SalesItemHierarchy.ProductSetupDivisionAPIController",
+    "Method": "Get",
+    "RelativePath": "api/ProductSetupDivisionAPI",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "division",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RMS_Layout.Controllers.ProjectAPI.ProductSetup.SalesItemHierarchy.ProductSetupDivisionAPIController",
+    "Method": "Delete",
+    "RelativePath": "api/ProductSetupDivisionAPI/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RMS_Layout.Controllers.ProjectAPI.ProductSetup.SalesItemHierarchy.ProductSetupDivisionAPIController",
+    "Method": "UpdateConcept",
+    "RelativePath": "api/ProductSetupDivisionAPI/{sysid}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "sysid",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "model",
+        "Type": "RMS_Models.Models.DTO.ProductSetup.SalesItemHierarchy.DivisionViewModelDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RMS_Layout.Controllers.ProjectAPI.ProductSetup.SalesItemHierarchy.ProductSetupDivisionAPIController",
+    "Method": "create",
+    "RelativePath": "api/ProductSetupDivisionAPI/Save",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "RMS_Models.Models.DTO.ProductSetup.SalesItemHierarchy.DivisionViewModelDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "RMS_Layout.Controllers.ProjectControllers.Company.CompanyBranchController",
     "Method": "Index",
     "RelativePath": "company/companybranch",
@@ -492,15 +666,5 @@
         "StatusCode": 200
       }
     ]
-  },
-  {
-    "ContainingType": "RMS_Layout.Controllers.ProjectControllers.Company.CompanyConceptController",
-    "Method": "Index",
-    "RelativePath": "company/companyconcept",
-    "HttpMethod": "",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": []
   }
 ]

@@ -5,13 +5,17 @@ using RMS_BAL.Middleware;
 using RMS_BAL.Repository.Interfaces;
 using RMS_BAL.Services.Company;
 using RMS_BAL.Services.Customer;
+using RMS_BAL.Services.Dropdown;
 using RMS_BAL.Services.ExceptionHandlingService;
 using RMS_BAL.Services.Interfaces;
+using RMS_BAL.Services.ProductSetup.SalesItemHierarchy;
 using RMS_Data.Data;
 using RMS_Data.Repository.Company;
 using RMS_Data.Repository.Customer;
+using RMS_Data.Repository.Dropdown;
 using RMS_Data.Repository.ExcpetionHandling;
 using RMS_Data.Repository.Interfaces;
+using RMS_Data.Repository.ProductSetup.SalesItemHierarchy;
 using RMS_Data.Service.Interfaces;
 using Scrutor;
 
@@ -30,6 +34,14 @@ var assemblies = AppDomain.CurrentDomain.GetAssemblies();
 //    .WithScopedLifetime()
 //);
 
+
+builder.Services.AddScoped<IDivisionRepository, DivisionProductSalesRepository>();
+builder.Services.AddScoped<IDivisionService, DivisionService>();
+
+builder.Services.AddScoped<IDropdownCommonRepository, DropdownRepository>();
+builder.Services.AddScoped<IDropdownCommonServices, DropdownService>();
+
+
 builder.Services.AddScoped<ICustomerGroupRepository,CustomerGroupRepository>();
 builder.Services.AddScoped<ICustomerGroupService, CustomerGroupService>();
 
@@ -37,8 +49,13 @@ builder.Services.AddScoped<IExceptionHandlingService, ExceptionHandlingService>(
 builder.Services.AddScoped<IExcepetionHandlingRepository, ExcepetionHandlingRepository>();
 
 
-//builder.Services.AddScoped<ICompanyConceptRepository, CompanyConceptRepository>();
-//builder.Services.AddScoped<ICompanyConceptService, CompanyConceptService>();
+builder.Services.AddScoped<ICompanyConceptRepository, CompanyConceptRepository>();
+builder.Services.AddScoped<ICompanyConceptService, CompanyConceptService>();
+
+
+builder.Services.AddScoped<IProductSetupCategoryRepository, ProductCategoryRepository>();
+builder.Services.AddScoped<IProductSetupCategoryService, ProductSetupCategoryServices>();
+
 
 
 // Register services BEFORE calling builder.Build()
@@ -67,11 +84,11 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
 
 var app = builder.Build();
 
-using (var scope = app.Services.CreateScope())
-{
-    var dbContext = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
-    dbContext.Database.Migrate();
-}
+//using (var scope = app.Services.CreateScope())
+//{
+//    var dbContext = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
+//    dbContext.Database.Migrate();
+//}
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
@@ -81,6 +98,8 @@ if (!app.Environment.IsDevelopment())
 }
 else
 {
+    app.UseExceptionHandler("/Home/Error");
+    app.UseHsts();
     app.UseDeveloperExceptionPage();
     app.UseSwagger();
     app.UseSwaggerUI();

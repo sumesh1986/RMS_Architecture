@@ -1,0 +1,695 @@
+﻿@{
+	ViewData["Title"] = "Division";
+}
+
+<!-- ============================================================== -->
+<!-- Start Content here -->
+<!-- ============================================================== -->
+
+
+
+<div class="page-content">
+
+	<div class="row">
+		<div class="col-lg-12">
+
+			<!--begin::Container-->
+			<div class="container-fluid">
+				<!--begin::Row-->
+				<div class="row">
+					<!--begin::Col-->
+					<div class="col-12">
+						<!--begin::Card-->
+						<div class="card">
+
+							<!--begin::Card Header-->
+							<div class="card-header">
+								<!--begin::Card Title-->
+								<div class="card-header header-background text-white text-center">
+									<h4>Division</h4>
+								</div>
+							</div>
+
+
+							<!--begin::Card Body-->
+							<div class="card-body">
+
+								<form id="DivisionFormView">
+									<!--begin::Row-->
+									<!-- Form -->
+
+									<div class="row g-3">
+										
+										<div class="col-md-6">
+											<div class="form-group mb-3">
+												<label class="form-label mb-2">Choose Category:</label>
+												<select id="ddlCategory" class="form-control">
+													<option value="0">-- Select Category --</option>
+												</select>
+											</div>
+										</div>
+
+										<div class="col-md-6">
+											<div class="form-group mb-3">
+												<label class="form-label mb-2">Division Name:</label>
+												<input id="txtdivision"  type="text" name="DivisionName" class="form-control" />
+											</div>
+										</div>
+									</div>
+
+
+
+									<div class="row g-3">
+										<div class="col-md-12">
+											<div class="form-group">
+												<label class="form-label">Group Assigned to the Selected Division</label>
+												<input type="text" class="form-control" id="txtGroupSearch" placeholder="Search">
+
+												<div class="form-group mt-3">
+													<select class="form-control" id="LstItemgroupId" multiple size="8"></select>											
+												</div>
+												<div class="mt-2">
+													<label>Total Count: <span id="lblGroupRecords">0</span></label>
+												</div>
+											</div>
+										</div>
+									</div>
+
+
+								</form>
+
+
+									<!-- BUTTONS -->
+								<div class="text-center mt-4">
+									<hr>
+									<div class="d-grid gap-2 d-md-flex justify-content-md-end">
+										<button id="saveBtn" type="submit" class="btn btn-primary button-background waves-effect">
+											<i class="bi bi-save"></i> Save
+										</button>
+										<button type="button" class="btn btn-outline-secondary waves-effect" id="clearBtn">
+											<i class="bi bi-x-circle"></i> Clear
+										</button>
+									</div>
+								</div>
+
+
+								<form id="divisionTable">
+									<!-- Table -->
+									<div class="card mt-4 shadow-sm">
+										<div class="card-header bg-primary text-white d-flex justify-content-between align-items-center">
+											<span class="fw-bold">List</span>
+
+											<div class="input-group input-group-sm w-auto ms-2">
+
+												<input type="text" class="form-control" id="searchInput" placeholder="Search...">
+
+												<span class="input-group-text" id="searchIcon" style="cursor: pointer;">
+													<i class="bi bi-search"></i>
+												</span>
+
+											</div>
+
+										</div>
+
+										<div class="card-body">										
+
+											<div class="table-responsive" style="max-height: 615px; overflow-y: auto;">
+
+
+												<table id="divisionTable" class="table align-middle SelectedRow-ColorChange">
+													<thead class="table-success grid-header-bg">
+														<tr>
+															<th class="sortable" onclick="sortTable(0)">#</th>
+															<th style="display:none;">SysID</th>
+																@* <th class="sortable" onclick="sortTable(1)">SysID</th> *@
+															<th class="sortable" onclick="sortTable(1)">Division</th>
+															<th>Actions</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr><td colspan="3" class="text-center">Loading...</td></tr>
+													</tbody>
+												</table>
+
+												<div class="d-flex justify-content-between align-items-center">
+													<span id="pageInfo" class="text-muted"></span>
+													
+												</div>
+
+											</div>
+										</div>
+									</div>
+								</form>
+
+
+									<!--end::Row-->
+								
+							</div>
+							<!--end::Card Body-->
+
+						</div>
+						<!--end::Card-->
+
+					</div>
+					<!--end::Col-->
+				</div>
+				<!--end::Row-->
+			</div>
+			<!--end::Container-->
+
+		</div>
+	</div>
+</div>
+
+
+@* <script>
+	$(document).ready(function () {
+		$.ajax({
+			url: '/Category/GetCategories', // Replace with your controller endpoint
+			type: 'GET',
+			dataType: 'json',
+			success: function (data) {
+				$.each(data, function (i, item) {
+					$('#ddlCategory').append($('<option>', {
+						value: item.id,
+						text: item.name
+					}));
+				});
+			},
+			error: function () {
+				alert('Failed to retrieve categories.');
+			}
+		});
+	});
+</script> *@
+
+
+@section Scripts {
+
+
+		<!-- ============================================================== -->
+	<!-- Common for All Search (Division and Item group)  here -->
+	<!-- ============================================================== -->
+
+	<script>
+				$(document).ready(function () {
+			function setupListSearch(inputSelector, listSelector) {
+				$(inputSelector).on('keyup', function () {
+					const searchTerm = $(this).val().toLowerCase();
+					const $options = $(listSelector + ' option');
+
+					if (!searchTerm) {
+						$options.show();
+						return;
+					}
+
+					$options.each(function () {
+						const text = $(this).text().toLowerCase();
+						$(this).toggle(text.includes(searchTerm));
+					});
+				});
+			}
+
+			// Apply search for Group
+			setupListSearch('#txtGroupSearch', '#LstItemgroupId');
+		});
+
+		</script>
+
+	<!-- ============================================================== -->
+	<!-- Start Load Division here -->
+	<!-- ============================================================== -->
+
+	<script>
+			$(document).ready(function () {
+				LoadDivision();
+					});
+
+		function LoadDivision() {
+						//console.log("Fetching page:", currentPage);
+						//alert("Load divsion: ");
+							const searchValue = $('#searchInput').val()?.trim();
+							// alert("loadCategory searchValue :  "+searchValue);
+						$.ajax({
+							url: `/api/ProductSetupDivisionAPI?division=${searchValue}`,
+							method: 'GET',
+							success: function (response) {
+								//console.log("Datad Load"+response.data);					
+								renderTable(response.data);
+							},
+							error: function () {
+								toastr.error("Failed to load data.");
+							}
+						});
+					}
+
+		function renderTable(data) {
+					const tbody = $('#divisionTable tbody');
+					tbody.empty();
+
+					if (!data || data.length === 0) {
+						tbody.append('<tr><td colspan="3" class="text-center">No Data Found</td></tr>');
+						return;
+					}
+
+					data.forEach((item, index) => {
+						//console.log("Load sysID:", item.sysID);
+
+						const row = `
+							<tr data-id="${item.sysID}">
+								<td>${index + 1}</td> <!-- Serial Number -->
+								<td style="display:none;">${item.sysID}</td> <!-- Hidden SysID -->
+								<td class="divisionclass">${item.division}</td>
+									<td>
+			<button class="btn btn-outline-primary btn-sm edit-btn"><i class="bi bi-pencil"></i></button>
+			<button class="btn btn-outline-success btn-sm update-btn d-none"><i class="bi bi-check"></i></button>
+			<button class="btn btn-outline-secondary btn-sm cancel-btn d-none"><i class="bi bi-x"></i></button>
+			<button class="btn btn-outline-danger btn-sm delete-btn"><i class="bi bi-trash"></i></button>
+		</td>
+							</tr>`;
+
+						tbody.append(row);
+					});
+
+					$('#pageInfo').text(`Total records: ${data.length}`);
+				}
+
+
+	
+
+
+
+	</script>
+
+
+
+	<!-- ============================================================== -->
+	<!-- Start Gridview Change Function for Selected Row here -->
+	<!-- ============================================================== -->
+
+	<script>
+
+			$(document).on('click', '.SelectedRow-ColorChange tbody tr', function () {
+			// Remove highlight from all rows
+			$('.SelectedRow-ColorChange tbody tr').removeClass('selected');
+
+			// Highlight clicked row
+			$(this).addClass('selected');
+
+			const divisionId = $(this).data('id'); // From data-id attribute
+			const divisionName = $(this).find('.divisionclass').text().trim();
+
+			// Clear existing item groups and reset count
+			$('#LstItemgroupId').empty();
+			$('#lblGroupRecords').text('0');
+			console.log("divId : " +divisionId);
+			loadGroupsByDivision(divisionId, divisionName);
+		});
+
+		function loadGroupsByDivision(divisionId, divisionName) {
+			$.ajax({
+				url: `/api/ProductSalesCategoryAPI?catId=0&categoryname=&divsionId=${divisionId}&divisionName=${divisionName}`,
+				method: 'GET',
+				success: function (response) {
+					const itemGroups = response.data;
+					console.log("Item gruup datas:", itemGroups , "lemgth:" , itemGroups.length);
+					const $listId = $('#LstItemgroupId');
+					$listId.empty();
+
+					if (itemGroups && itemGroups.length > 0) {
+						itemGroups.forEach(group => {
+							$listId.append(`<option value="${group.id}">${group.name}</option>`);
+						});
+					} else {
+						$listId.append('<option disabled>No groups found</option>');
+					}
+
+					$('#lblGroupRecords').text(itemGroups.length);
+				},
+				error: function () {
+					toastr.error("Failed to load item groups.");
+				}
+			});
+		}
+
+
+
+	</script>
+
+	<!-- ============================================================== -->
+	<!-- Start Save ,Update and Delete here -->
+	<!-- ============================================================== -->
+	<script>
+		$('#saveBtn').click(function () {
+						console.log("Save Datas:");
+			try {
+				// Check required fields before creating the object
+				let division = $('#txtdivision').val();
+					let categoryId = $('#ddlCategory').val();
+
+					  if (categoryId === "") {
+					   alert("Please select a category.");
+							   }
+
+
+				if (!categoryId) throw new Error("❗ 'Category Name' is empty or ID not found.");
+
+
+				let divisionData = {
+					Division: division,
+					CategoryID: parseInt(categoryId),
+					 Active: "Yes"
+
+				};
+
+				//console.log("✅ Save Datas:\n" + JSON.stringify(divisionData, null, 4));
+
+				$.ajax({
+					url: '/api/ProductSetupDivisionAPI/Save',
+					type: 'POST',
+					contentType: 'application/json',
+					data: JSON.stringify(divisionData),
+
+					beforeSend: function () {
+						$('#saveBtn').prop('disabled', true).text('Saving...');
+					},
+					success: function (response) {
+						clearFormControls('#DivisionFormView');
+							LoadDivision();
+
+						Swal.fire({
+							icon: 'success',
+							title: '✅ Saved successfully!',
+							showConfirmButton: false,
+							showCloseButton: true,
+							timer: 2000,
+							timerProgressBar: true,
+						});
+					},
+					error: function (xhr) {
+						if (xhr.status === 409) {
+							toastr.warning("❗ Division already exists.");
+						} else {
+							toastr.error(xhr.message);
+						}
+						console.error("🚫 AJAX Error:", xhr.responseText);
+					},
+					complete: function () {
+						$('#saveBtn').prop('disabled', false).text('Save');
+					}
+				});
+
+			} catch (err) {
+				console.error("🚨 Validation or Runtime Error:", err.message);
+				toastr.error(err.message); // optional toast for user feedback
+			}
+		});
+
+			// Handle Update Button Click
+			$(document).on("click", ".update-btn", function (e) {
+					e.preventDefault(); // Prevent form submission or refresh
+				const row = $(this).closest("tr");
+				const sysid = row.data("id");
+				 console.log("uddate sysid : ", sysid);
+
+
+				const updateddivisionName = row.find(".divisionclass-edit").val();
+
+
+				console.log("✅ update Datas:\n" + JSON.stringify(updateddivisionName, null, 4));
+
+					 // Check if updatedName is empty
+		if (!updateddivisionName) {
+			toastr.warning("Division name should not be left empty!");
+			return;
+		}
+			 console.log("Check if updatedName is empty:");
+
+
+				var originaldivisionName = row.find(".divisionclass").attr("data-original");
+
+
+		// // 				const originalName = row.find(".name-edit").data("original")?.trim(); // or use .attr("data-original")
+		// // const originalList = row.find(".listofconcept-edit").data("original")?.trim();
+
+		// 	 		console.log(
+		// 	 `Updated Name: ${updatedName} | Updated List of Concept: ${updatedListOfConcept} | Original Name: ${originalName} | Original List: ${originalList}`
+		// );
+
+		 //  Check if user really changed anything
+			if (updateddivisionName === originaldivisionName) {
+
+						Swal.fire({
+			icon: 'info',
+			title: 'No changes detected. Update not required.',
+			showConfirmButton: false,
+			showCloseButton: true,
+			timer: 2000,
+			timerProgressBar: true,
+		});
+				return;
+			}
+
+
+
+		 console.log("data : ");
+
+
+
+				$.ajax({
+					url: `/api/ProductSetupDivisionAPI/${sysid}`,
+					type: "PUT",
+					contentType: "application/json",
+					data: JSON.stringify({
+						SysId: sysid,
+						Division: updateddivisionName
+					}),
+					success: function (response) {
+						if (response.success) {
+							LoadDivision();
+
+									Swal.fire({
+			icon: 'info',
+			title: '🔄 Updated successfully!',
+			showConfirmButton: false,
+			showCloseButton: true,
+			timer: 2000,
+			timerProgressBar: true,
+		});
+
+						} else {
+							toastr.error("Update failed! " + response.message);
+						}
+					},
+					error: function () {
+						toastr.error("Error updating data.");
+					}
+				});
+			});
+
+
+
+			$(document).on("click", ".delete-btn", function (e) {
+						e.preventDefault(); // Prevent form submission or refresh
+			var row = $(this).closest("tr");
+			var id = row.data("id");
+
+			Swal.fire({
+				title: 'Are you sure?',
+				text: "You won't be able to revert this!",
+				icon: 'warning',
+				showCancelButton: true,
+				confirmButtonColor: '#d33',
+				cancelButtonColor: '#3085d6',
+				confirmButtonText: 'Yes, delete it!',
+				cancelButtonText: 'Cancel'
+			}).then((result) => {
+				if (result.isConfirmed) {
+					$.ajax({
+						url: `/api/ProductSetupDivisionAPI/${id}`,
+						type: "DELETE",
+						success: function (response) {
+							if (response.success) {
+								Swal.fire({
+									icon: 'success',
+									title: 'Deleted!',
+									text: response.message || "Deleted successfully.",
+									timer: 2000,
+									showConfirmButton: false,
+								});
+								row.remove();
+								LoadDivision();
+							} else {
+								Swal.fire({
+									icon: 'error',
+									title: 'Delete failed!',
+									text: response.message || "Something went wrong.",
+								});
+							}
+						},
+						error: function () {
+							Swal.fire({
+								icon: 'error',
+								title: 'Error!',
+								text: 'Error deleting data.',
+							});
+						}
+					});
+				}
+			});
+		});
+		</script>
+
+	<!-- ============================================================== -->
+	<!-- Start Gridview Edit & Delete here -->
+	<!-- ============================================================== -->
+
+	<script>
+
+					// Handle Edit Button Click
+		$(document).on("click", ".edit-btn", function (e) {
+			e.preventDefault();
+			const row = $(this).closest("tr");
+
+			row.find(".edit-btn, .delete-btn").addClass("d-none");
+			row.find(".update-btn, .cancel-btn").removeClass("d-none");
+
+			const divisionname = row.find(".divisionclass").text().trim();
+			row.find(".divisionclass").attr("data-original", divisionname);
+
+
+
+			row.find(".divisionclass").html(`<input type="text" class="form-control divisionclass-edit" value="${divisionname}">`);
+		});
+
+
+			// Handle Cancel Button Click
+				$(document).on("click", ".cancel-btn", function (e) {
+			e.preventDefault();
+			var row = $(this).closest("tr");
+
+			// Restore original division name
+			var originalName = row.find(".divisionclass").attr("data-original");
+			row.find(".divisionclass").html(originalName);
+
+
+			row.find(".edit-btn, .delete-btn").removeClass("d-none");
+			row.find(".update-btn, .cancel-btn").addClass("d-none");
+		});
+
+	</script>
+
+
+
+
+
+
+	<script>
+		// $(document).on('click', '#divisionTable tbody tr', function () {
+		// 	const divisionName = $(this).find('.categoryname').text().trim();
+		// 	alert("Division: " + divisionName);
+		// });
+	</script>
+
+
+	<script>
+		$(document).ready(function () {
+
+			$.ajax({
+				url: '/api/ProductSalesCategoryAPI', // Adjust to your correct route
+				type: 'GET',
+
+				data: {
+					catId: 0,
+					categoryname: '',
+					divsionId: 0,
+					divisionName: ''
+				},
+
+				success: function (response) {
+
+					// console.log("Load Dropdownlsit Category Data:", response.data); // ✅ Console log here
+
+					if (response && response.data) {
+						var options = '<option value="0">-- Select Category --</option>';
+						$.each(response.data, function (i, item) {
+							options += `<option value="${item.id}">${item.name}</option>`;
+						});
+						$('#ddlCategory').html(options);
+					}
+				},
+				error: function () {
+					//alert('Error loading categories.');
+				}
+			});
+		});
+	</script>
+
+
+@* //Clear button functionalities... *@
+	<script>
+		// Clear Button Click...
+		$('#clearBtn').click(function () {
+			clear();
+		});
+
+		function clear()
+		{
+			clearFormControls('#DivisionFormView');
+			$('#searchInput').val('');
+		$('#lblGroupRecords').text('0');  // Reset group count label
+			//$('#ddlCategory').val('0'); // Reset the dropdown to default
+			LoadDivision();
+
+		}
+
+	</script>
+
+
+	<!-- ============================================================== -->
+	<!-- Start Gridview Search functionality here -->
+	<!-- ============================================================== -->
+
+	<script>
+			//grid search function...
+		$('#searchIcon').on('click', function () {
+			console.log("searchIcon inside");
+			searchConcepts();
+		});
+
+		$('#searchInput').on('keypress', function(event) {
+			if (event.key === 'Enter') {
+				event.preventDefault();
+				searchConcepts();
+			}
+		});
+
+		//auto loading grid when search value cleared...
+		$('#searchInput').on('input', function () {
+			const currentValue = $(this).val()?.trim();
+
+			if (!currentValue) {
+					LoadDivision();
+			}
+
+		});
+
+		function searchConcepts() {
+
+			const searchValue = $('#searchInput').val()?.trim();
+			console.log("searchValue inside : " +searchValue);
+			if(!searchValue)
+			{
+				toastr.warning("Please enter a search term to continue.");
+				return;
+			}
+				LoadDivision();
+		}
+
+	</script>
+
+	}
+
+
+
+
