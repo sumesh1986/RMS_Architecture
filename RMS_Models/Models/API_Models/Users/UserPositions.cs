@@ -19,7 +19,9 @@ namespace RMS_Models.Models.API_Models.Users
             public string Active { get; set; } = "No"; // Stored as "Yes" or "No"
 
         // Navigation to permissions
-        public virtual ICollection<UserPermission>? RolePermissions { get; set; }
+        public virtual ICollection<PositionPermitted> Permissions { get; set; } = new List<PositionPermitted>();
+
+
 
     }
     

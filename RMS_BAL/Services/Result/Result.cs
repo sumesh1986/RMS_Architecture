@@ -23,5 +23,9 @@ namespace RMS_BAL.Services.Result
         {
             return new Result<T> { Success = false, Message = message };
         }
+        public class ServiceResult<T> : ServiceResult
+        {
+            public T? Data { get; set; }
+        }
     }
 }

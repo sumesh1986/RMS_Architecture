@@ -467,12 +467,70 @@
   },
   {
     "ContainingType": "RMS_Layout.Controllers.ProjectAPI.Users.UserPermissionAPIController",
-    "Method": "GetUserPositions",
+    "Method": "GetModules",
+    "RelativePath": "api/UserPermissionAPI/modules",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RMS_Layout.Controllers.ProjectAPI.Users.UserPermissionAPIController",
+    "Method": "GetPermissionsByPosition",
+    "RelativePath": "api/UserPermissionAPI/permissions/{positionId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "positionId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RMS_Layout.Controllers.ProjectAPI.Users.UserPermissionAPIController",
+    "Method": "GetPositions",
     "RelativePath": "api/UserPermissionAPI/positions",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RMS_Layout.Controllers.ProjectAPI.Users.UserPermissionAPIController",
+    "Method": "GetSections",
+    "RelativePath": "api/UserPermissionAPI/sections/{moduleName}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "moduleName",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RMS_Layout.Controllers.ProjectAPI.Users.UserPermissionAPIController",
+    "Method": "TogglePermission",
+    "RelativePath": "api/UserPermissionAPI/toggle",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "RMS_Models.Models.DTO.Users.TogglePermissionDTO",
+        "IsRequired": true
+      }
+    ],
     "ReturnTypes": []
   },
   {

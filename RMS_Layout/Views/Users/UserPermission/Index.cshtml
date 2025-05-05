@@ -1,27 +1,36 @@
 ﻿@{
-    ViewData["Title"] = "Permission";
+    ViewData["Title"] = "User Permission";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <style>
-    .btn-expand, .btn-show-all, .btn-granted, .btn-denied {
-        margin-top: 10px;
+    .permission-node {
+        margin: 8px 0;
     }
 
+    .permission-children {
+        display: none;
+    }
+
+    .toggle-icon {
+        cursor: pointer;
+        transition: transform 0.2s;
+    }
+
+    .form-check-input:checked {
+        background-color: #198754;
+        border-color: #198754;
+    }
+
+    .permission
     .tree-item {
-        margin-top: 10px;
-        padding: 10px;
-        background-color: #fff;
-        border: 1px solid #ddd;
-        border-radius: 5px;
+        margin: 5px 0;
+        padding: 5px 10px;
     }
 
     .item-children {
         margin-left: 20px;
-    }
-
-    .btn i {
-        margin-right: 5px;
+        display: none;
     }
 
     .permission-granted {
@@ -30,6 +39,25 @@
 
     .permission-denied {
         background-color: #f8d7da;
+    }
+
+    .filter-buttons .btn {
+        margin: 0 5px;
+    }
+
+        .filter-buttons .btn.active {
+            font-weight: bold;
+        }
+
+    .tree-icon {
+        cursor: pointer;
+        margin-right: 5px;
+    }
+
+    .status-badge {
+        font-size: 0.8rem;
+        padding: 0.25rem 0.5rem;
+        margin-left: 5px;
     }
 </style>
 
@@ -108,15 +136,16 @@
     </div>
 </div>
 
-@section Scripts {
 
-    <script src="~/js/jquery-3.6.4.min.js"></script>
+<script src="~/js/jquery-3.6.4.min.js"></script>
+
+@section Scripts {
     <script>
-        alert("vannee");
         $(document).ready(function () {
             let currentFilter = 'all';
-
-            // Load initial data
+            let treeExpanded = false;
+            alert("gogo");
+            // Initial load
             loadModules();
             loadPositions();
 
@@ -129,195 +158,216 @@
                 }
             });
 
-            $('#sectionSelect').change(loadPermissionTree);
-            $('#positionSelect').change(loadPermissionTree);
-            $('#searchInput').on('input', debounce(loadPermissionTree, 300));
+            $('#sectionSelect, #positionSelect').change(loadPermissionTree);
+            $('#searchInput').on('keyup', function(e) {
+                if (e.key === 'Enter') {
+                    loadPermissionTree();
+                }
+            });
 
             // Filter buttons
-            $('#btnShowAll').click(() => { currentFilter = 'all'; loadPermissionTree(); });
-            $('#btnGranted').click(() => { currentFilter = 'granted'; loadPermissionTree(); });
-            $('#btnDenied').click(() => { currentFilter = 'denied'; loadPermissionTree(); });
+            $('#btnShowAll').click(() => {
+                currentFilter = 'all';
+                loadPermissionTree();
+            });
 
-            // Expand/Collapse
+            $('#btnGranted').click(() => {
+                currentFilter = 'granted';
+                loadPermissionTree();
+            });
+
+            $('#btnDenied').click(() => {
+                currentFilter = 'denied';
+                loadPermissionTree();
+            });
+
             $('#btnExpand').click(function() {
-                const isExpanded = $(this).data('expanded') === true;
-                $('.item-children').slideToggle();
-                $(this).data('expanded', !isExpanded);
-                $(this).find('i').toggleClass('bi-arrows-angle-expand bi-arrows-angle-contract');
+                treeExpanded = !treeExpanded;
+                if (treeExpanded) {
+                    $('.item-children').slideDown();
+                    $(this).html('<i class="bi bi-arrows-collapse"></i> Collapse');
+                } else {
+                    $('.item-children').slideUp();
+                    $(this).html('<i class="bi bi-arrows-expand"></i> Expand');
+                }
             });
 
             function loadModules() {
-                $.get('/api/UserPermissionAPI/modules', function(response) {
-                    if (response.success) {
-                        const moduleSelect = $('#moduleSelect');
-                        moduleSelect.empty().append('<option value="">Select Module</option>');
-                        response.data.forEach(module => {
-                            moduleSelect.append(`<option value="${module}">${module}</option>`);
-                        });
+               alert("vann");
+                $.ajax({
+                    url: '/api/UserPermissionAPI/modules',
+                    method: 'GET',
+                    success: function(response) {
+                        if (response.success) {
+                            const moduleSelect = $('#moduleSelect');
+                            moduleSelect.empty().append('<option value="">Select Module</option>');
+                            response.data.forEach(module => {
+                                moduleSelect.append(`<option value="${module}">${module}</option>`);
+                            });
+                        }
                     }
                 });
+                
             }
-           
+
             function loadSections(moduleName) {
-                $.get(`/api/UserPermissionAPI/sections/${moduleName}`, function(response) {
-                    if (response.success) {
-                        const sectionSelect = $('#sectionSelect');
-                        sectionSelect.empty().append('<option value="all">&lt;All&gt;</option>');
-                        response.data.forEach(section => {
-                            sectionSelect.append(`<option value="${section}">${section}</option>`);
-                        });
+                $.ajax({
+                    url: `/api/UserPermissionAPI/sections/${moduleName}`,
+                    method: 'GET',
+                    success: function(response) {
+                        if (response.success) {
+                            const sectionSelect = $('#sectionSelect');
+                            sectionSelect.empty().append('<option value="all">&lt;All&gt;</option>');
+                            response.data.forEach(section => {
+                                sectionSelect.append(`<option value="${section}">${section}</option>`);
+                            });
+                        }
+                    },
+                    error: function() {
+                        toastr.error('Failed to load sections');
                     }
                 });
             }
-             //fetch backend userposition data
+
             function loadPositions() {
-                alert("1");
-                $.get('/api/UserPermissionAPI/positions', function(response) {
-                    if (response.success) {
-                        const positionSelect = $('#positionSelect');
-                        positionSelect.empty().append('<option value="">Select Position</option>');
-                        response.data.forEach(position => {
-                            positionSelect.append(`<option value="${position.id}">${position.positionName}</option>`);
-                        });
+                $.ajax({
+                    url: '/api/UserPermissionAPI/positions',
+                    method: 'GET',
+                    success: function(response) {
+                        if (response.success) {
+                            const positionSelect = $('#positionSelect');
+                            positionSelect.empty().append('<option value="">Select Position</option>');
+                            response.data.forEach(position => {
+                                positionSelect.append(
+                                    `<option value="${position.sysId}">${position.positionName}</option>`
+                                );
+                            });
+                        }
                     }
                 });
             }
 
             function loadPermissionTree() {
                 const positionId = $('#positionSelect').val();
-                if (!positionId) return;
+                if (!positionId) {
+                    toastr.warning('Please select a position');
+                    return;
+                }
 
-                $.get(`/api/UserPermissionAPI/byposition/${positionId}`, function(response) {
-                    if (response.success) {
-                        const filteredData = filterPermissions(response.data);
-                        renderPermissionTree(organizePermissionData(filteredData));
-                    }
-                });
-            }
-
-            function filterPermissions(permissions) {
-                const searchText = $('#searchInput').val().toLowerCase();
-                const moduleName = $('#moduleSelect').val();
-                const sectionName = $('#sectionSelect').val();
-
-                return permissions.filter(p => {
-                    const matchesModule = !moduleName || p.moduleName === moduleName;
-                    const matchesSection = !sectionName || sectionName === 'all' || p.sectionName === sectionName;
-                    const matchesSearch = !searchText ||
-                        p.particulars.toLowerCase().includes(searchText) ||
-                        p.moduleName.toLowerCase().includes(searchText) ||
-                        p.sectionName.toLowerCase().includes(searchText);
-                    const matchesFilter = currentFilter === 'all' ||
-                        (currentFilter === 'granted' && p.isGranted) ||
-                        (currentFilter === 'denied' && p.isDenied);
-
-                    return matchesModule && matchesSection && matchesSearch && matchesFilter;
-                });
-            }
-
-            function organizePermissionData(permissions) {
-                const divisions = {};
-
-                permissions.forEach(p => {
-                    if (!divisions[p.sectionName]) {
-                        divisions[p.sectionName] = {
-                            divisionName: p.sectionName,
-                            particulars: []
-                        };
-                    }
-
-                    divisions[p.sectionName].particulars.push({
-                        particularId: p.id,
-                        particulars: p.particulars,
-                        isGranted: p.isGranted,
-                        isDenied: p.isDenied
-                    });
-                });
-
-                return {
-                    divisions: Object.values(divisions)
+                const params = {
+                    moduleName: $('#moduleSelect').val(),
+                    sectionName: $('#sectionSelect').val(),
+                    positionId: positionId,
+                    searchText: $('#searchInput').val(),
+                    filterType: currentFilter
                 };
+
+                $.ajax({
+                    url: '/api/UserPermissionAPI/permissions',
+                    method: 'GET',
+                    data: params,
+                    success: function(response) {
+                        if (response.success) {
+                            renderPermissionTree(response.data);
+                        }
+                    }
+                });
             }
 
-            function renderPermissionTree(data) {
+            function renderPermissionTree(nodes) {
                 const treeContainer = $('#permissionTree');
                 treeContainer.empty();
 
-                data.divisions.forEach(division => {
-                    const divisionNode = $(`
-                        <div class="tree-item">
-                            <div class="item-header d-flex align-items-center">
-                                <div class="form-check">
-                                    <input class="form-check-input division-checkbox" type="checkbox"
-                                        id="div_${division.divisionName}">
-                                    <label class="form-check-label" for="div_${division.divisionName}">
-                                        ${division.divisionName}
-                                    </label>
-                                </div>
-                            </div>
-                            <div class="item-children mt-2">
-                                ${renderParticulars(division.particulars)}
+                if (nodes.length === 0) {
+                    treeContainer.append('<div class="alert alert-info">No permissions found</div>');
+                    return;
+                }
+
+                const tree = $('<div class="tree"></div>');
+                nodes.forEach(node => {
+                    tree.append(renderNode(node));
+                });
+                treeContainer.append(tree);
+
+                if (treeExpanded) {
+                    $('.item-children').show();
+                }
+            }
+
+            function renderNode(node) {
+                const hasChildren = node.children && node.children.length > 0;
+                const nodeClass = node.isGranted ? 'permission-granted' :
+                                node.isDenied ? 'permission-denied' : '';
+
+                const nodeElement = $(`
+                    <div class="tree-item ${nodeClass}">
+                        <div class="d-flex align-items-center">
+                            ${hasChildren ?
+                                `<i class="bi bi-caret-right-fill tree-icon"></i>` :
+                                `<i class="bi bi-dash tree-icon"></i>`}
+                            <div class="form-check form-switch">
+                                <input class="form-check-input permission-checkbox" type="checkbox"
+                                    id="perm_${node.id}"
+                                    data-id="${node.id}"
+                                    ${node.isGranted ? 'checked' : ''}>
+                                <label class="form-check-label" for="perm_${node.id}">
+                                    ${node.particulars}
+                                </label>
                             </div>
                         </div>
-                    `);
+                    </div>
+                `);
 
-                    treeContainer.append(divisionNode);
-                });
+                if (hasChildren) {
+                    const childrenContainer = $('<div class="item-children"></div>');
+                    node.children.forEach(child => {
+                        childrenContainer.append(renderNode(child));
+                    });
+                    nodeElement.append(childrenContainer);
 
-                // Add event handlers
-                $('.permission-checkbox').change(function() {
+                    nodeElement.find('.tree-icon').click(function() {
+                        $(this).toggleClass('bi-caret-right-fill bi-caret-down-fill');
+                        childrenContainer.slideToggle();
+                    });
+                }
+
+                nodeElement.find('.permission-checkbox').change(function() {
                     const particularId = $(this).data('id');
                     const isGranted = $(this).prop('checked');
                     togglePermission(particularId, isGranted);
                 });
 
-                $('.division-checkbox').change(function() {
-                    const isChecked = $(this).prop('checked');
-                    $(this).closest('.tree-item').find('.permission-checkbox')
-                        .prop('checked', isChecked)
-                        .trigger('change');
-                });
-            }
-
-            function renderParticulars(particulars) {
-                return particulars.map(p => `
-                    <div class="tree-item ${p.isGranted ? 'permission-granted' : ''}">
-                        <div class="form-check form-switch">
-                            <input class="form-check-input permission-checkbox" type="checkbox"
-                                id="perm_${p.particularId}"
-                                data-id="${p.particularId}"
-                                ${p.isGranted ? 'checked' : ''}>
-                            <label class="form-check-label" for="perm_${p.particularId}">
-                                ${p.particulars}
-                            </label>
-                        </div>
-                    </div>
-                `).join('');
+                return nodeElement;
             }
 
             function togglePermission(particularId, isGranted) {
                 const positionId = $('#positionSelect').val();
-                if (!positionId) return;
+                if (!positionId) {
+                    toastr.warning('Please select a position');
+                    return;
+                }
 
-                $.post('/api/UserPermissionAPI/toggle', {
-                    positionId: positionId,
-                    particularId: particularId,
-                    isGranted: isGranted
+                $.ajax({
+                    url: '/api/UserPermissionAPI/toggle',
+                    method: 'POST',
+                    contentType: 'application/json',
+                    data: JSON.stringify({
+                        positionId: parseInt(positionId),
+                        particularId: particularId,
+                        isGranted: isGranted
+                    }),
+                    success: function(response) {
+                        if (response.success) {
+                            toastr.success('Permission updated successfully');
+                            loadPermissionTree();
+                        } else {
+                            toastr.error('Failed to update permission');
+                        }
+                    }
                 });
-            }
-
-            function debounce(func, wait) {
-                let timeout;
-                return function executedFunction(...args) {
-                    const later = () => {
-                        clearTimeout(timeout);
-                        func(...args);
-                    };
-                    clearTimeout(timeout);
-                    timeout = setTimeout(later, wait);
-                };
             }
         });
     </script>
 }
 
+       

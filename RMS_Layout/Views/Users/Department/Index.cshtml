@@ -380,9 +380,12 @@
                 : '<span class="badge bg-danger">Inactive</span>';
 
             const row = `
+                   
                 <tr data-id="${item.sysId}">
-                    <td style="text-align: center;">${index + 1}</td>
+                <td style="text-align: center;">${(currentPage - 1) * rowsPerPage + index + 1}</td>
+                   
                     <td style="text-align: center;" class="group-name-cell">
+
                         <span class="group-name-text">${item.department}</span>
                         <input type="text" class="form-control group-name-input d-none" value="${item.department}" />
                     </td>

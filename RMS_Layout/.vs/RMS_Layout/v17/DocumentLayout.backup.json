@@ -3,8 +3,21 @@
   "WorkspaceRootPath": "D:\\RMS_Architecture\\RMS_Layout\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{52493F9C-F637-41D2-9D6F-9619D7DAC3B5}|RMS_Layout.csproj|d:\\rms_architecture\\rms_layout\\views\\users\\userpermission\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{52493F9C-F637-41D2-9D6F-9619D7DAC3B5}|RMS_Layout.csproj|solutionrelative:views\\users\\userpermission\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{52493F9C-F637-41D2-9D6F-9619D7DAC3B5}|RMS_Layout.csproj|d:\\rms_architecture\\rms_layout\\controllers\\projectapi\\users\\userpermissionapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{52493F9C-F637-41D2-9D6F-9619D7DAC3B5}|RMS_Layout.csproj|solutionrelative:controllers\\projectapi\\users\\userpermissionapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EC32D507-9C4A-4619-A13A-402BF7669EE2}|..\\RMS_BAL\\RMS_BAL.csproj|d:\\rms_architecture\\rms_bal\\services\\interfaces\\iuserpermissionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{55301413-EBC2-418C-ABB9-F54761481DDE}|..\\RMS_Models\\RMS_Models.csproj|d:\\rms_architecture\\rms_models\\models\\dto\\users\\userpermissiondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{52493F9C-F637-41D2-9D6F-9619D7DAC3B5}|RMS_Layout.csproj|d:\\rms_architecture\\rms_layout\\controllers\\projectapi\\users\\departmentapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{52493F9C-F637-41D2-9D6F-9619D7DAC3B5}|RMS_Layout.csproj|solutionrelative:controllers\\projectapi\\users\\departmentapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EC32D507-9C4A-4619-A13A-402BF7669EE2}|..\\RMS_BAL\\RMS_BAL.csproj|d:\\rms_architecture\\rms_bal\\services\\users\\userpermissionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{52493F9C-F637-41D2-9D6F-9619D7DAC3B5}|RMS_Layout.csproj|d:\\rms_architecture\\rms_layout\\views\\users\\userrole\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -15,52 +28,43 @@
       "RelativeMoniker": "D:0:0:{52493F9C-F637-41D2-9D6F-9619D7DAC3B5}|RMS_Layout.csproj|solutionrelative:views\\users\\department\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EC32D507-9C4A-4619-A13A-402BF7669EE2}|..\\RMS_BAL\\RMS_BAL.csproj|d:\\rms_architecture\\rms_bal\\services\\interfaces\\iuserpermissionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{52493F9C-F637-41D2-9D6F-9619D7DAC3B5}|RMS_Layout.csproj|d:\\rms_architecture\\rms_layout\\views\\customers\\customergroups\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{52493F9C-F637-41D2-9D6F-9619D7DAC3B5}|RMS_Layout.csproj|solutionrelative:views\\customers\\customergroups\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EC32D507-9C4A-4619-A13A-402BF7669EE2}|..\\RMS_BAL\\RMS_BAL.csproj|d:\\rms_architecture\\rms_bal\\services\\users\\userpermissionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{52493F9C-F637-41D2-9D6F-9619D7DAC3B5}|RMS_Layout.csproj|d:\\rms_architecture\\rms_layout\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{52493F9C-F637-41D2-9D6F-9619D7DAC3B5}|RMS_Layout.csproj|solutionrelative:wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{66B2A271-90B1-4872-B946-70CA1307D760}|..\\RMS_Data\\RMS_Data.csproj|d:\\rms_architecture\\rms_data\\repository\\interfaces\\iuserpermissionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{55301413-EBC2-418C-ABB9-F54761481DDE}|..\\RMS_Models\\RMS_Models.csproj|d:\\rms_architecture\\rms_models\\models\\api_models\\users\\departments.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{66B2A271-90B1-4872-B946-70CA1307D760}|..\\RMS_Data\\RMS_Data.csproj|d:\\rms_architecture\\rms_data\\repository\\user\\userpermissionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{66B2A271-90B1-4872-B946-70CA1307D760}|..\\RMS_Data\\RMS_Data.csproj|d:\\rms_architecture\\rms_data\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{66B2A271-90B1-4872-B946-70CA1307D760}|..\\RMS_Data\\RMS_Data.csproj|d:\\rms_architecture\\rms_data\\repository\\user\\userpositionsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{55301413-EBC2-418C-ABB9-F54761481DDE}|..\\RMS_Models\\RMS_Models.csproj|d:\\rms_architecture\\rms_models\\models\\api_models\\users\\userpositions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{52493F9C-F637-41D2-9D6F-9619D7DAC3B5}|RMS_Layout.csproj|d:\\rms_architecture\\rms_layout\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{52493F9C-F637-41D2-9D6F-9619D7DAC3B5}|RMS_Layout.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{66B2A271-90B1-4872-B946-70CA1307D760}|..\\RMS_Data\\RMS_Data.csproj|d:\\rms_architecture\\rms_data\\repository\\user\\userpermissionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{52493F9C-F637-41D2-9D6F-9619D7DAC3B5}|RMS_Layout.csproj|d:\\rms_architecture\\rms_layout\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{52493F9C-F637-41D2-9D6F-9619D7DAC3B5}|RMS_Layout.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{55301413-EBC2-418C-ABB9-F54761481DDE}|..\\RMS_Models\\RMS_Models.csproj|d:\\rms_architecture\\rms_models\\models\\dto\\users\\userpositionsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{52493F9C-F637-41D2-9D6F-9619D7DAC3B5}|RMS_Layout.csproj|d:\\rms_architecture\\rms_layout\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{52493F9C-F637-41D2-9D6F-9619D7DAC3B5}|RMS_Layout.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{66B2A271-90B1-4872-B946-70CA1307D760}|..\\RMS_Data\\RMS_Data.csproj|d:\\rms_architecture\\rms_data\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{55301413-EBC2-418C-ABB9-F54761481DDE}|..\\RMS_Models\\RMS_Models.csproj|d:\\rms_architecture\\rms_models\\models\\api_models\\users\\userpermission.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{52493F9C-F637-41D2-9D6F-9619D7DAC3B5}|RMS_Layout.csproj|d:\\rms_architecture\\rms_layout\\views\\users\\userpermission\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{52493F9C-F637-41D2-9D6F-9619D7DAC3B5}|RMS_Layout.csproj|solutionrelative:views\\users\\userpermission\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{52493F9C-F637-41D2-9D6F-9619D7DAC3B5}|RMS_Layout.csproj|d:\\rms_architecture\\rms_layout\\controllers\\projectapi\\users\\userpermissionapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{52493F9C-F637-41D2-9D6F-9619D7DAC3B5}|RMS_Layout.csproj|solutionrelative:controllers\\projectapi\\users\\userpermissionapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{66B2A271-90B1-4872-B946-70CA1307D760}|..\\RMS_Data\\RMS_Data.csproj|d:\\rms_architecture\\rms_data\\repository\\interfaces\\iuserpermissionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{52493F9C-F637-41D2-9D6F-9619D7DAC3B5}|RMS_Layout.csproj|d:\\rms_architecture\\rms_layout\\controllers\\projectcontrollers\\users\\userpermissioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{52493F9C-F637-41D2-9D6F-9619D7DAC3B5}|RMS_Layout.csproj|solutionrelative:controllers\\projectcontrollers\\users\\userpermissioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EC32D507-9C4A-4619-A13A-402BF7669EE2}|..\\RMS_BAL\\RMS_BAL.csproj|d:\\rms_architecture\\rms_bal\\middleware\\exceptionmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{55301413-EBC2-418C-ABB9-F54761481DDE}|..\\RMS_Models\\RMS_Models.csproj|d:\\rms_architecture\\rms_models\\models\\dto\\users\\userpermissiondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{52493F9C-F637-41D2-9D6F-9619D7DAC3B5}|RMS_Layout.csproj|d:\\rms_architecture\\rms_layout\\controllers\\projectapi\\users\\userroleapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{52493F9C-F637-41D2-9D6F-9619D7DAC3B5}|RMS_Layout.csproj|solutionrelative:controllers\\projectapi\\users\\userroleapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{55301413-EBC2-418C-ABB9-F54761481DDE}|..\\RMS_Models\\RMS_Models.csproj|d:\\rms_architecture\\rms_models\\models\\api_models\\users\\rolepermission.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -70,35 +74,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 13,
+          "SelectedChildIndex": 15,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "D:\\RMS_Architecture\\RMS_Layout\\Views\\Users\\UserRole\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\Users\\UserRole\\Index.cshtml",
-              "ToolTip": "D:\\RMS_Architecture\\RMS_Layout\\Views\\Users\\UserRole\\Index.cshtml",
-              "RelativeToolTip": "Views\\Users\\UserRole\\Index.cshtml",
-              "ViewState": "AgIAAOwBAAAAAAAAAAAcwIUCAAATAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-29T06:57:39.472Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "D:\\RMS_Architecture\\RMS_Layout\\Views\\Users\\Department\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\Users\\Department\\Index.cshtml",
-              "ToolTip": "D:\\RMS_Architecture\\RMS_Layout\\Views\\Users\\Department\\Index.cshtml",
-              "RelativeToolTip": "Views\\Users\\Department\\Index.cshtml",
-              "ViewState": "AgIAAB0BAAAAAAAAAAAAACgBAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-30T11:54:27.311Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
@@ -116,60 +93,186 @@
               "Name": "ST:131:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
-            },
-            {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "D:\\RMS_Architecture\\RMS_Layout\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "D:\\RMS_Architecture\\RMS_Layout\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAMkCAAAAAAAAAAAuwOICAAAtAAAAAAAAAA==",
+              "DocumentIndex": 7,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\RMS_Architecture\\RMS_Layout\\Views\\Customers\\CustomerGroups\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Customers\\CustomerGroups\\Index.cshtml",
+              "ToolTip": "D:\\RMS_Architecture\\RMS_Layout\\Views\\Customers\\CustomerGroups\\Index.cshtml",
+              "RelativeToolTip": "Views\\Customers\\CustomerGroups\\Index.cshtml",
+              "ViewState": "AgIAAD4BAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-30T11:34:38.934Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-05T05:16:28.215Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 8,
-              "Title": "UserPositions.cs",
-              "DocumentMoniker": "D:\\RMS_Architecture\\RMS_Models\\Models\\API_Models\\Users\\UserPositions.cs",
-              "RelativeDocumentMoniker": "..\\RMS_Models\\Models\\API_Models\\Users\\UserPositions.cs",
-              "ToolTip": "D:\\RMS_Architecture\\RMS_Models\\Models\\API_Models\\Users\\UserPositions.cs",
-              "RelativeToolTip": "..\\RMS_Models\\Models\\API_Models\\Users\\UserPositions.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAA2AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-30T10:33:06.925Z",
-              "EditorCaption": ""
+              "Title": "site.css",
+              "DocumentMoniker": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\css\\site.css",
+              "RelativeDocumentMoniker": "wwwroot\\css\\site.css",
+              "ToolTip": "D:\\RMS_Architecture\\RMS_Layout\\wwwroot\\css\\site.css",
+              "RelativeToolTip": "wwwroot\\css\\site.css",
+              "ViewState": "AgIAAAUBAAAAAAAAAAAAAPYAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-05-05T05:05:35.022Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\RMS_Architecture\\RMS_Layout\\Views\\Users\\Department\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Users\\Department\\Index.cshtml",
+              "ToolTip": "D:\\RMS_Architecture\\RMS_Layout\\Views\\Users\\Department\\Index.cshtml",
+              "RelativeToolTip": "Views\\Users\\Department\\Index.cshtml",
+              "ViewState": "AgIAAG8BAAAAAAAAAADwv4EBAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-05T04:53:42.677Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Departments.cs",
+              "DocumentMoniker": "D:\\RMS_Architecture\\RMS_Models\\Models\\API_Models\\Users\\Departments.cs",
+              "RelativeDocumentMoniker": "..\\RMS_Models\\Models\\API_Models\\Users\\Departments.cs",
+              "ToolTip": "D:\\RMS_Architecture\\RMS_Models\\Models\\API_Models\\Users\\Departments.cs",
+              "RelativeToolTip": "..\\RMS_Models\\Models\\API_Models\\Users\\Departments.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-05T04:53:30.389Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\RMS_Architecture\\RMS_Layout\\Views\\Users\\UserRole\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Users\\UserRole\\Index.cshtml",
+              "ToolTip": "D:\\RMS_Architecture\\RMS_Layout\\Views\\Users\\UserRole\\Index.cshtml",
+              "RelativeToolTip": "Views\\Users\\UserRole\\Index.cshtml",
+              "ViewState": "AgIAAGgBAAAAAAAAAAAAAH4BAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-02T08:20:30.354Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "DepartmentAPIController.cs",
+              "DocumentMoniker": "D:\\RMS_Architecture\\RMS_Layout\\Controllers\\ProjectAPI\\Users\\DepartmentAPIController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ProjectAPI\\Users\\DepartmentAPIController.cs",
+              "ToolTip": "D:\\RMS_Architecture\\RMS_Layout\\Controllers\\ProjectAPI\\Users\\DepartmentAPIController.cs",
+              "RelativeToolTip": "Controllers\\ProjectAPI\\Users\\DepartmentAPIController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-02T07:04:52.08Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "ExceptionMiddleware.cs",
+              "DocumentMoniker": "D:\\RMS_Architecture\\RMS_BAL\\Middleware\\ExceptionMiddleware.cs",
+              "RelativeDocumentMoniker": "..\\RMS_BAL\\Middleware\\ExceptionMiddleware.cs",
+              "ToolTip": "D:\\RMS_Architecture\\RMS_BAL\\Middleware\\ExceptionMiddleware.cs",
+              "RelativeToolTip": "..\\RMS_BAL\\Middleware\\ExceptionMiddleware.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-02T06:27:49.368Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\RMS_Architecture\\RMS_Layout\\Views\\Users\\UserPermission\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Users\\UserPermission\\Index.cshtml",
+              "ToolTip": "D:\\RMS_Architecture\\RMS_Layout\\Views\\Users\\UserPermission\\Index.cshtml",
+              "RelativeToolTip": "Views\\Users\\UserPermission\\Index.cshtml",
+              "ViewState": "AgIAAMUAAAAAAAAAAAAAAOMAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-02T06:30:32.325Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UserPermissionDto.cs",
+              "DocumentMoniker": "D:\\RMS_Architecture\\RMS_Models\\Models\\DTO\\Users\\UserPermissionDto.cs",
+              "RelativeDocumentMoniker": "..\\RMS_Models\\Models\\DTO\\Users\\UserPermissionDto.cs",
+              "ToolTip": "D:\\RMS_Architecture\\RMS_Models\\Models\\DTO\\Users\\UserPermissionDto.cs",
+              "RelativeToolTip": "..\\RMS_Models\\Models\\DTO\\Users\\UserPermissionDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-02T05:20:37.093Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "UserPositionsDto.cs",
+              "DocumentMoniker": "D:\\RMS_Architecture\\RMS_Models\\Models\\DTO\\Users\\UserPositionsDto.cs",
+              "RelativeDocumentMoniker": "..\\RMS_Models\\Models\\DTO\\Users\\UserPositionsDto.cs",
+              "ToolTip": "D:\\RMS_Architecture\\RMS_Models\\Models\\DTO\\Users\\UserPositionsDto.cs",
+              "RelativeToolTip": "..\\RMS_Models\\Models\\DTO\\Users\\UserPositionsDto.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAxwBgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-02T05:23:04.669Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "IUserPermissionService.cs",
+              "DocumentMoniker": "D:\\RMS_Architecture\\RMS_BAL\\Services\\Interfaces\\IUserPermissionService.cs",
+              "RelativeDocumentMoniker": "..\\RMS_BAL\\Services\\Interfaces\\IUserPermissionService.cs",
+              "ToolTip": "D:\\RMS_Architecture\\RMS_BAL\\Services\\Interfaces\\IUserPermissionService.cs",
+              "RelativeToolTip": "..\\RMS_BAL\\Services\\Interfaces\\IUserPermissionService.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAYwB8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-02T05:19:33.352Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UserPermissionAPIController.cs",
+              "DocumentMoniker": "D:\\RMS_Architecture\\RMS_Layout\\Controllers\\ProjectAPI\\Users\\UserPermissionAPIController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ProjectAPI\\Users\\UserPermissionAPIController.cs",
+              "ToolTip": "D:\\RMS_Architecture\\RMS_Layout\\Controllers\\ProjectAPI\\Users\\UserPermissionAPIController.cs",
+              "RelativeToolTip": "Controllers\\ProjectAPI\\Users\\UserPermissionAPIController.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABwAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-02T05:52:47.893Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
               "Title": "UserPermissionRepository.cs",
               "DocumentMoniker": "D:\\RMS_Architecture\\RMS_Data\\Repository\\User\\UserPermissionRepository.cs",
               "RelativeDocumentMoniker": "..\\RMS_Data\\Repository\\User\\UserPermissionRepository.cs",
               "ToolTip": "D:\\RMS_Architecture\\RMS_Data\\Repository\\User\\UserPermissionRepository.cs",
               "RelativeToolTip": "..\\RMS_Data\\Repository\\User\\UserPermissionRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAAALAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABUAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-30T10:04:28.218Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-02T05:50:46.858Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "IUserPermissionRepository.cs",
-              "DocumentMoniker": "D:\\RMS_Architecture\\RMS_Data\\Repository\\Interfaces\\IUserPermissionRepository.cs",
-              "RelativeDocumentMoniker": "..\\RMS_Data\\Repository\\Interfaces\\IUserPermissionRepository.cs",
-              "ToolTip": "D:\\RMS_Architecture\\RMS_Data\\Repository\\Interfaces\\IUserPermissionRepository.cs",
-              "RelativeToolTip": "..\\RMS_Data\\Repository\\Interfaces\\IUserPermissionRepository.cs",
-              "ViewState": "AgIAAAQAAAAAAAAAAAAawBIAAAAFAAAAAAAAAA==",
+              "DocumentIndex": 11,
+              "Title": "UserPositions.cs",
+              "DocumentMoniker": "D:\\RMS_Architecture\\RMS_Models\\Models\\API_Models\\Users\\UserPositions.cs",
+              "RelativeDocumentMoniker": "..\\RMS_Models\\Models\\API_Models\\Users\\UserPositions.cs",
+              "ToolTip": "D:\\RMS_Architecture\\RMS_Models\\Models\\API_Models\\Users\\UserPositions.cs",
+              "RelativeToolTip": "..\\RMS_Models\\Models\\API_Models\\Users\\UserPositions.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-30T10:03:02.038Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-02T06:08:34.204Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "UserPositionsRepository.cs",
+              "DocumentMoniker": "D:\\RMS_Architecture\\RMS_Data\\Repository\\User\\UserPositionsRepository.cs",
+              "RelativeDocumentMoniker": "..\\RMS_Data\\Repository\\User\\UserPositionsRepository.cs",
+              "ToolTip": "D:\\RMS_Architecture\\RMS_Data\\Repository\\User\\UserPositionsRepository.cs",
+              "RelativeToolTip": "..\\RMS_Data\\Repository\\User\\UserPositionsRepository.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAC4AAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-02T06:16:44.887Z"
             },
             {
               "$type": "Document",
@@ -179,140 +282,46 @@
               "RelativeDocumentMoniker": "..\\RMS_BAL\\Services\\Users\\UserPermissionService.cs",
               "ToolTip": "D:\\RMS_Architecture\\RMS_BAL\\Services\\Users\\UserPermissionService.cs",
               "RelativeToolTip": "..\\RMS_BAL\\Services\\Users\\UserPermissionService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAA+AAAAAAAAAA==",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAEwCEAAABAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-30T08:55:49.104Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "IUserPermissionService.cs",
-              "DocumentMoniker": "D:\\RMS_Architecture\\RMS_BAL\\Services\\Interfaces\\IUserPermissionService.cs",
-              "RelativeDocumentMoniker": "..\\RMS_BAL\\Services\\Interfaces\\IUserPermissionService.cs",
-              "ToolTip": "D:\\RMS_Architecture\\RMS_BAL\\Services\\Interfaces\\IUserPermissionService.cs",
-              "RelativeToolTip": "..\\RMS_BAL\\Services\\Interfaces\\IUserPermissionService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAzAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-30T08:53:00.943Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "D:\\RMS_Architecture\\RMS_Layout\\Views\\Users\\UserPermission\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\Users\\UserPermission\\Index.cshtml",
-              "ToolTip": "D:\\RMS_Architecture\\RMS_Layout\\Views\\Users\\UserPermission\\Index.cshtml",
-              "RelativeToolTip": "Views\\Users\\UserPermission\\Index.cshtml",
-              "ViewState": "AgIAAGIAAAAAAAAAAAAowHIAAAAYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-30T07:40:53.367Z",
+              "WhenOpened": "2025-05-02T05:50:30.553Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 14,
-              "Title": "UserPermissionController.cs",
-              "DocumentMoniker": "D:\\RMS_Architecture\\RMS_Layout\\Controllers\\ProjectControllers\\Users\\UserPermissionController.cs",
-              "RelativeDocumentMoniker": "Controllers\\ProjectControllers\\Users\\UserPermissionController.cs",
-              "ToolTip": "D:\\RMS_Architecture\\RMS_Layout\\Controllers\\ProjectControllers\\Users\\UserPermissionController.cs",
-              "RelativeToolTip": "Controllers\\ProjectControllers\\Users\\UserPermissionController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-30T07:40:40.012Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "UserPermissionAPIController.cs",
-              "DocumentMoniker": "D:\\RMS_Architecture\\RMS_Layout\\Controllers\\ProjectAPI\\Users\\UserPermissionAPIController.cs",
-              "RelativeDocumentMoniker": "Controllers\\ProjectAPI\\Users\\UserPermissionAPIController.cs",
-              "ToolTip": "D:\\RMS_Architecture\\RMS_Layout\\Controllers\\ProjectAPI\\Users\\UserPermissionAPIController.cs",
-              "RelativeToolTip": "Controllers\\ProjectAPI\\Users\\UserPermissionAPIController.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAIAzwCMAAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-30T07:28:27.602Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "UserPermissionDTO.cs",
-              "DocumentMoniker": "D:\\RMS_Architecture\\RMS_Models\\Models\\DTO\\Users\\UserPermissionDTO.cs",
-              "RelativeDocumentMoniker": "..\\RMS_Models\\Models\\DTO\\Users\\UserPermissionDTO.cs",
-              "ToolTip": "D:\\RMS_Architecture\\RMS_Models\\Models\\DTO\\Users\\UserPermissionDTO.cs",
-              "RelativeToolTip": "..\\RMS_Models\\Models\\DTO\\Users\\UserPermissionDTO.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAwBMAAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-30T07:26:22.377Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "UserPermission.cs",
-              "DocumentMoniker": "D:\\RMS_Architecture\\RMS_Models\\Models\\API_Models\\Users\\UserPermission.cs",
-              "RelativeDocumentMoniker": "..\\RMS_Models\\Models\\API_Models\\Users\\UserPermission.cs",
-              "ToolTip": "D:\\RMS_Architecture\\RMS_Models\\Models\\API_Models\\Users\\UserPermission.cs",
-              "RelativeToolTip": "..\\RMS_Models\\Models\\API_Models\\Users\\UserPermission.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAQwB4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-30T07:25:06.897Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "D:\\RMS_Architecture\\RMS_Layout\\appsettings.json",
-              "RelativeDocumentMoniker": "appsettings.json",
-              "ToolTip": "D:\\RMS_Architecture\\RMS_Layout\\appsettings.json",
-              "RelativeToolTip": "appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAABOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-04-24T06:33:03.418Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\RMS_Architecture\\RMS_Layout\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "D:\\RMS_Architecture\\RMS_Layout\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAAAADIAAAAHAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-29T04:59:11.643Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
               "Title": "ApplicationDbContext.cs",
               "DocumentMoniker": "D:\\RMS_Architecture\\RMS_Data\\Data\\ApplicationDbContext.cs",
               "RelativeDocumentMoniker": "..\\RMS_Data\\Data\\ApplicationDbContext.cs",
               "ToolTip": "D:\\RMS_Architecture\\RMS_Data\\Data\\ApplicationDbContext.cs",
               "RelativeToolTip": "..\\RMS_Data\\Data\\ApplicationDbContext.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAABcAAAA0AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-24T10:51:27.737Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-02T05:57:14.142Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 16,
-              "Title": "UserRoleAPIController.cs",
-              "DocumentMoniker": "D:\\RMS_Architecture\\RMS_Layout\\Controllers\\ProjectAPI\\Users\\UserRoleAPIController.cs",
-              "RelativeDocumentMoniker": "Controllers\\ProjectAPI\\Users\\UserRoleAPIController.cs",
-              "ToolTip": "D:\\RMS_Architecture\\RMS_Layout\\Controllers\\ProjectAPI\\Users\\UserRoleAPIController.cs",
-              "RelativeToolTip": "Controllers\\ProjectAPI\\Users\\UserRoleAPIController.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAswBEAAAAuAAAAAAAAAA==",
+              "Title": "IUserPermissionRepository.cs",
+              "DocumentMoniker": "D:\\RMS_Architecture\\RMS_Data\\Repository\\Interfaces\\IUserPermissionRepository.cs",
+              "RelativeDocumentMoniker": "..\\RMS_Data\\Repository\\Interfaces\\IUserPermissionRepository.cs",
+              "ToolTip": "D:\\RMS_Architecture\\RMS_Data\\Repository\\Interfaces\\IUserPermissionRepository.cs",
+              "RelativeToolTip": "..\\RMS_Data\\Repository\\Interfaces\\IUserPermissionRepository.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAqwBgAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-24T10:23:12.657Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-02T05:50:00.749Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "RolePermission.cs",
+              "DocumentMoniker": "D:\\RMS_Architecture\\RMS_Models\\Models\\API_Models\\Users\\RolePermission.cs",
+              "RelativeDocumentMoniker": "..\\RMS_Models\\Models\\API_Models\\Users\\RolePermission.cs",
+              "ToolTip": "D:\\RMS_Architecture\\RMS_Models\\Models\\API_Models\\Users\\RolePermission.cs",
+              "RelativeToolTip": "..\\RMS_Models\\Models\\API_Models\\Users\\RolePermission.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAACoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-02T05:47:23.902Z"
             }
           ]
         }
