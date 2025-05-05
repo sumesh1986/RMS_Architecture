@@ -10,6 +10,7 @@ using RMS_BAL.Services.Interfaces;
 using RMS_Data.Data;
 using RMS_Data.Repository.Company;
 using RMS_Data.Repository.Customer;
+//using RMS_Data.Repository.Dropdown;
 using RMS_Data.Repository.ExcpetionHandling;
 using RMS_Data.Repository.Interfaces;
 using RMS_Data.Service.Interfaces;
@@ -33,8 +34,24 @@ var assemblies = AppDomain.CurrentDomain.GetAssemblies();
 builder.Services.AddScoped<ICustomerGroupRepository,CustomerGroupRepository>();
 builder.Services.AddScoped<ICustomerGroupService, CustomerGroupService>();
 
+
+builder.Services.AddScoped<ICustomerTypeRepository, CustomerTypeRepository>();
+builder.Services.AddScoped<ICustomerTypeService, CustomerTypeService>();
+
+
+
+builder.Services.AddScoped<ICustomerTitleRepository, CustomerTitleRepository>();
+builder.Services.AddScoped<ICustomerTitleService, CustomerTitleService>();
+
+
+
 builder.Services.AddScoped<IExceptionHandlingService, ExceptionHandlingService>();
 builder.Services.AddScoped<IExcepetionHandlingRepository, ExcepetionHandlingRepository>();
+
+
+//builder.Services.AddScoped<IDropdownCommonRepository, DropdownRepository>();
+//builder.Services.AddScoped<IDropdownCommonServices, DropdownService>
+
 
 
 //builder.Services.AddScoped<ICompanyConceptRepository, CompanyConceptRepository>();
@@ -67,11 +84,11 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
 
 var app = builder.Build();
 
-using (var scope = app.Services.CreateScope())
-{
-    var dbContext = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
-    dbContext.Database.Migrate();
-}
+//using (var scope = app.Services.CreateScope())
+//{
+//    var dbContext = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
+//    dbContext.Database.Migrate();
+//}
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
@@ -81,6 +98,8 @@ if (!app.Environment.IsDevelopment())
 }
 else
 {
+    app.UseExceptionHandler("/Home/Error");
+    app.UseHsts();
     app.UseDeveloperExceptionPage();
     app.UseSwagger();
     app.UseSwaggerUI();

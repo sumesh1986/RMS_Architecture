@@ -1,4 +1,6 @@
-﻿using System;
+﻿using RMS_BAL.Services.Result;
+using RMS_Models.Models.API_Models.Customers;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,5 +25,13 @@ namespace RMS_BAL.Services.Result
         {
             return new Result<T> { Success = false, Message = message };
         }
+
+        //internal static Result<CustomerTitle> SuccessResult(CustomerTitle updatedGroup)
+        //{
+        //    throw new NotImplementedException();
+        //}
     }
 }
+
+
+

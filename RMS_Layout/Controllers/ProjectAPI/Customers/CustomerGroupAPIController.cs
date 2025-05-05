@@ -51,7 +51,7 @@ namespace RMS_Layout.Controllers.ProjectAPI
             return Ok(new { message = "Customer Group created successfully." });
         }
 
-        // Update the existing group...
+        //   the existing group...
         [HttpPut("{id}")]
         public async Task<IActionResult> Update(int id, [FromBody] CustomerGroupDTO model)
         {
@@ -80,3 +80,9 @@ namespace RMS_Layout.Controllers.ProjectAPI
         }
     }
 }
+
+
+
+
+
+

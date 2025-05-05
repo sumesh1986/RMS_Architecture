@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "3ABHz6Z2gy4=",
+  "dgSpecHash": "fC2lwnUT4jw=",
   "success": true,
-  "projectFilePath": "D:\\Jayaram\\Git\\RMS_Architecture\\RMS_BAL\\RMS_BAL.csproj",
+  "projectFilePath": "D:\\RMS_Architecture\\RMS_Architecture\\RMS_BAL\\RMS_BAL.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Hello\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\Hello\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",
@@ -117,5 +117,12 @@
     "C:\\Users\\Hello\\.nuget\\packages\\system.xml.readerwriter\\4.0.11\\system.xml.readerwriter.4.0.11.nupkg.sha512",
     "C:\\Users\\Hello\\.nuget\\packages\\system.xml.xdocument\\4.0.11\\system.xml.xdocument.4.0.11.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1900",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Error occurred while getting package vulnerability data: Unable to load the service index for source https://api.nuget.org/v3/index.json."
+    }
+  ]
 }

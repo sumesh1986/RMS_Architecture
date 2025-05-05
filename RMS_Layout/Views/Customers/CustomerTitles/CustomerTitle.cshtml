@@ -1,0 +1,701 @@
+﻿@{
+	ViewData["Title"] = "Customer Titile";
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="page-content">
+
+	<div class="row">
+		<div class="col-lg-12">
+
+			<!--begin::Container-->
+
+			<div class="container-fluid">
+
+				<!--begin::Row-->
+
+				<div class="row">
+
+					<!--begin::Col-->
+
+					<div class="col-12">
+
+						<!--begin::Card-->
+
+						<div class="card">
+
+
+
+							<!--begin::Card Header-->
+
+							<div class="card-header">
+
+								<!--begin::Card Title-->
+
+								<div class="card-header header-background text-white text-center">
+
+									<h4>Customer Title</h4>
+
+								</div>
+
+								<!--end::Card Title-->
+
+
+							</div>
+
+							<!--end::Card Header-->
+							<!--begin::Card Body-->
+
+							<div class="card-body">
+
+
+								<form id="customerTitleForm">
+								@* <form asp-action="Create" method="post"> *@
+
+									<!--begin::Row-->
+									<!--  Form -->
+
+
+
+									<div class="row g-3">
+
+
+
+
+
+
+
+										@* <div class="col-md-3">
+
+											<label class="form-label">ID</label>
+
+											<input type="text" class="form-control" id="departmentName">
+
+										</div>
+
+ *@
+
+
+
+										<div class="col-md-3">
+
+											<label class="form-label">Customer Title</label>
+
+											<input type="text" class="form-control" id="nameTitle" name="NameTitle" />
+
+										</div>
+
+									@* 	<div class="col-md-3">
+											<label class="form-label">Status</label>
+											<div class="form-check form-switch" style="padding-top: 1%;">
+												<input class="form-check-input" type="checkbox" id="statusToggle" />
+												<label class="form-check-label" id="statusLabel" for="statusToggle">Inactive</label>
+											</div>
+		                                  <input type="hidden" id="hiddenStatus" value="Inactive" />
+										  <span class="invalid-feedback">Please select a status</span>
+										</div> *@
+										<div class="text-center mt-4">
+
+											<hr>
+
+											<!-- Buttons -->
+											<div class="text-center mt-4">
+												<div class="d-grid gap-2 d-md-flex justify-content-md-end">
+													<button type="submit" class="btn btn-primary">
+														<i class="bi bi-save"></i> Save
+													</button>
+													<button type="button" class="btn btn-outline-secondary" id="clearBtn">
+														<i class="bi bi-x-circle"></i> Clear
+													</button>
+												</div>
+											</div>
+
+										</div>
+
+
+
+
+
+
+
+									</div>
+
+
+
+									<div class="card mt-4 shadow-sm w-100">
+
+										<!-- Card Header -->
+
+										<div class="card-header header-background text-white d-flex justify-content-between align-items-center">
+
+											<span class="fw-bold">List</span>
+
+
+
+											<!-- Right-Aligned Content -->
+
+											<div class="d-flex gap-2 ms-auto align-items-center">
+
+												<!-- Status Button Group -->
+
+												@* <div class="btn-group btn-group-sm" role="group">
+
+                                                                  <input type="radio" class="btn-check statusFilter" name="statusFilter" id="all" value="All" checked>
+
+                                                                  <label class="btn btn-outline-light" for="all">All</label>
+
+
+
+                                                                  <input type="radio" class="btn-check statusFilter" name="statusFilter" id="active" value="Active">
+
+                                                                  <label class="btn btn-outline-light" for="active">Active</label>
+
+
+
+                                                                  <input type="radio" class="btn-check statusFilter" name="statusFilter" id="inactive" value="Inactive">
+
+                                                                  <label class="btn btn-outline-light" for="inactive">Inactive</label>
+
+                                                            </div>
+
+*@
+
+												<!-- Search Box -->
+
+												<div class="input-group input-group-sm w-auto ms-2">
+
+													<input type="text" class="form-control" id="searchInput" placeholder="Search...">
+
+													<span class="input-group-text"><i class="bi bi-search"></i></span>
+
+												</div>
+
+											</div>
+
+										</div>
+
+
+
+
+
+
+										<div class="card-body">
+
+											<div class="table-responsive">
+
+												<table id="customerTitle" class="table table-striped table-hover" style="table-layout: fixed; width: 100%;">
+													<thead class="table-success">
+														<tr>
+															<th class="sortable" onclick="sortTable(0)" style="width: 10%; text-align: center;">Id</th>
+															<th class="sortable" onclick="sortTable(1)" style="width: 40%; text-align: center;">Group</th>
+															@* <th class="sortable" onclick="sortTable(2)" style="width: 25%; text-align: center;">Status</th> *@
+															<th style="width: 25%; text-align: center;">Actions</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr><td colspan="4" class="text-center">Loading...</td></tr>
+													</tbody>
+												</table>
+
+
+												@* <table id="conceptTable" class="table table-striped table-hover align-middle">
+											<thead class="table-success grid-header-bg">
+												<tr>
+													<th class="sortable" onclick="sortTable(0)">#</th>
+													<th class="sortable" onclick="sortTable(1)">Type</th>
+													<th class="sortable" onclick="sortTable(2)">Status</th>
+													<th>Actions</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr><td colspan="4" class="text-center">Loading...</td></tr>
+											</tbody>
+										</table> *@
+												<div class="d-flex justify-content-between align-items-center">
+													<span id="pageInfo" class="text-muted"></span>
+													<div>
+														<button id="prevPage" class="btn btn-sm btn-outline-primary me-2">Previous</button>
+														<button id="nextPage" class="btn btn-sm btn-outline-primary">Next</button>
+													</div>
+												</div>
+											</div>
+
+										</div>
+
+									</div>
+
+								@* 	<div class="text-center mt-4">
+
+										<hr>
+
+										<div class="d-grid gap-2 d-md-flex justify-content-md-end">
+
+											<button type="submit" class="btn btn-primary button-background waves-effect">
+
+												<i class="bi bi-save"></i> Save
+
+											</button>
+
+											<button type="button" class="btn btn-outline-secondary waves-effect" id="clearBtn">
+
+												<i class="bi bi-x-circle"></i> Clear
+
+											</button>
+
+										</div>
+
+									</div>
+ *@
+
+
+
+
+									<!--end::Row-->
+
+								</form>
+
+							</div>
+
+							<!--end::Card Body-->
+
+
+
+						</div>
+
+						<!--end::Card-->
+
+
+
+					</div>
+
+					<!--end::Col-->
+
+				</div>
+
+				<!--end::Row-->
+
+			</div>
+
+			<!--end::Container-->
+
+		</div>
+	</div>
+</div>
+
+
+@section Scripts {
+	<script>
+		let currentPage = 1;
+		const rowsPerPage = grid_Limit();
+		let totalRecords = 0;
+
+		let currentSortColumn = null;
+		let currentSortOrder = 'asc';
+		function sortTable(columnIndex) {
+			const table = document.getElementById("customerTitle");
+			const tbody = table.querySelector("tbody");
+			const rows = Array.from(tbody.querySelectorAll("tr"));
+			const isSameColumn = columnIndex === currentSortColumn;
+			currentSortOrder = isSameColumn && currentSortOrder === 'asc' ? 'desc' : 'asc';
+			currentSortColumn = columnIndex;
+			// Sort rows
+			rows.sort((a, b) => {
+				const aText = a.children[columnIndex].innerText.trim();
+				const bText = b.children[columnIndex].innerText.trim();
+				const aVal = isNaN(aText) ? aText.toLowerCase() : parseFloat(aText);
+				const bVal = isNaN(bText) ? bText.toLowerCase() : parseFloat(bText);
+				if (aVal < bVal) return currentSortOrder === 'asc' ? -1 : 1;
+				if (aVal > bVal) return currentSortOrder === 'asc' ? 1 : -1;
+				return 0;
+			});
+			// Re-render sorted rows
+			tbody.innerHTML = '';
+			rows.forEach(row => tbody.appendChild(row));
+			// Update arrow indicators
+			document.querySelectorAll("th.sortable").forEach(th => th.classList.remove('asc', 'desc'));
+			const th = table.querySelector(`th:nth-child(${columnIndex + 1})`);
+			th.classList.add(currentSortOrder);
+		}
+
+		//load only grid...
+		function loadConcepts() {
+			const searchValue = $('#searchInput').val()?.trim();
+
+				$.ajax({
+					url: `/api/CustomerTitleAPI?page=${currentPage}&pageSize=${rowsPerPage}&customerNameTitle=${searchValue}`,
+					method: 'GET',
+					success: function (response) {
+						totalRecords = response.totalRecords;
+						renderTable(response.data);
+						updatePageInfo();
+					},
+					error: function () {
+						alert("Failed to load data.");
+					}
+				});
+			}
+
+			//bind the data into the table...
+			function renderTable(data) {
+				const tbody = $('#customerTitle tbody');
+				tbody.empty();
+
+				if (!data || data.length === 0) {
+					tbody.append('<tr><td colspan="4" class="text-center">No Data Found</td></tr>');
+					return;
+				}
+				// console.log(data);
+				data.forEach((item) => {
+					// let statusBadge = item.active === "Yes" || item.active === "No"
+					// 		? '<span class="badge bg-success">Active</span>'
+					// 		: '<span class="badge bg-danger">Inactive</span>';
+
+		const row = `
+		<tr data-id="${item.sysId}">
+			<td style="width: 10%; text-align: center;">${item.sysId}</td>
+
+			<td style="width: 40%; text-align: center;" class="group-name-cell">
+				<span class="group-name-text">${item.nameTitle}</span>
+				<input type="text" class="form-control group-name-input d-none" value="${item.nameTitle}" />
+			</td>
+
+
+
+			<td style="width: 25%; text-align: center;">
+				<button class="btn btn-outline-primary btn-sm edit-btn me-2"><i class="bi bi-pencil"></i></button>
+				<button class="btn btn-outline-danger btn-sm delete-btn"><i class="bi bi-trash"></i></button>
+				<button class="btn btn-outline-primary btn-sm update-btn d-none me-1"><i class="bi bi-check-circle"></i></button>
+				<button class="btn btn-outline-warning btn-sm cancel-btn d-none"><i class="bi bi-x-circle"></i></button>
+			</td>
+		</tr>`;
+					tbody.append(row);
+				});
+			
+			}
+
+			//page updation...
+			function updatePageInfo() {
+				const totalPages = Math.ceil(totalRecords / rowsPerPage);
+				const start = (currentPage - 1) * rowsPerPage + 1;
+				const end = Math.min(currentPage * rowsPerPage, totalRecords);
+				$('#pageInfo').text(`Showing ${start} to ${end} of ${totalRecords} entries`);
+			}
+
+
+			//Clear button functionalities...
+			function clear() {
+				const nameTitle = $('input[name="NameTitle"]').val()?.trim();
+				// const isStatusActive = $('#statusToggle').is(':checked');
+				const searchValue = $('#searchInput').val()?.trim();
+
+				const isFormAlreadyEmpty =
+					!nameTitle &&
+					// !isStatusActive &&
+					!searchValue;
+
+				if (isFormAlreadyEmpty) {
+					return;
+				}
+
+				$('input[name="NameTitle"]').val('');
+				// $('#statusToggle').prop('checked', false);
+				// $('#statusLabel').text('Inactive');
+				// $('#hiddenStatus').val('Inactive');
+				$('#searchInput').val('');
+
+				loadConcepts();
+			}
+
+
+
+		//grid search function...
+		$('#searchIcon').on('click', function () {
+			searchConcepts();
+		});
+
+		$('#searchInput').on('keypress', function(event) {
+			if (event.key === 'Enter') {
+				event.preventDefault();
+				searchConcepts();
+			}
+		});
+
+		//auto loading grid when search value cleared...
+		$('#searchInput').on('input', function () {
+			const currentValue = $(this).val()?.trim();
+
+			if (!currentValue) {
+				loadConcepts();
+			}
+
+		});
+
+		function searchConcepts() {
+
+			const searchValue = $('#searchInput').val()?.trim();
+			if(!searchValue)
+			{
+				toastr.warning("Please enter a search term to continue.");
+				return;
+			}
+			currentPage = 1;
+			loadConcepts();
+		}
+
+		// $(document).on("change", ".status-toggle", function (e) {
+		// 	e.preventDefault();
+		// 	const isChecked = $(this).is(":checked");
+		// 	const label = $(this).closest(".status-toggle-wrapper").find(".status-toggle-label");
+		// 	label.text(isChecked ? "Active" : "Inactive");
+		// });
+
+
+
+		//status radio button function...
+		//$(document).ready(function () {
+		// $('#statusToggle').change(function () {
+		// if ($(this).is(':checked')) {
+		// 	$('#statusLabel').text('Active');
+		// 	$('#hiddenStatus').val('Active');
+		// } else {
+		// 	$('#statusLabel').text('Inactive');
+		// 	$('#hiddenStatus').val('Inactive');
+		// }
+		// });
+
+		// Load Concepts and Pagination Logic...
+			$('#prevPage').off('click').on('click', function (e) {
+				e.preventDefault();
+				if (currentPage > 1) {
+					currentPage--;
+					loadConcepts();
+				}
+			});
+
+			$('#nextPage').off('click').on('click', function (e) {
+				e.preventDefault();
+				const totalPages = Math.ceil(totalRecords / rowsPerPage);
+				if (currentPage < totalPages) {
+					currentPage++;
+					loadConcepts();
+				}
+			});
+
+			loadConcepts();
+
+
+			// Edit Button
+		$(document).on("click", ".edit-btn", function (e) {
+			e.preventDefault();
+			const row = $(this).closest("tr");
+
+			// Hide action buttons, show edit buttons
+			row.find(".edit-btn, .delete-btn").addClass("d-none");
+			row.find(".update-btn, .cancel-btn").removeClass("d-none");
+
+			// Enable inline editing
+			row.find(".group-name-text").addClass("d-none");
+			row.find(".group-name-input").removeClass("d-none");
+
+			// Show status toggle
+			row.find(".status-badge").addClass("d-none");
+			row.find(".status-toggle-wrapper").removeClass("d-none");
+		});
+
+
+		$(document).on("click", ".update-btn", function (e) {
+			e.preventDefault();
+			// console.log(data);
+			const row = $(this).closest("tr");
+			const id = row.data("id");
+			const updatedNameTitle = row.find(".group-name-input").val();
+			// const isStatusChecked = row.find(".status-toggle").prop("checked");
+			// const updatedStatus = isStatusChecked ? "Yes" : "No";
+
+			const originalNameTitle = row.find(".group-name-text").text().trim();
+			// const originalStatus = row.find(".status-badge").text().trim().toLowerCase() === "active" ? "Yes" : "No";
+
+
+			if (updatedNameTitle === originalNameTitle /* && updatedStatus === originalStatus */) {
+				toastr.info("No changes detected. Update not required.");
+				return;
+			}
+
+			 if (!updatedNameTitle) {
+				toastr.warning("Group name should not be left empty!");
+				return;
+			 }
+			 
+			$.ajax({
+				url: `/api/CustomerTitleApi/${id}`,
+				type: "PUT",
+				contentType: "application/json",
+				data: JSON.stringify({
+					sysId: id,
+					nameTitle: updatedNameTitle,
+					// active: isStatusChecked
+				}),
+				success: function (response) {
+					if (response.success) {
+						loadConcepts();
+						toastr.success(response.message);
+					} else {
+						
+						toastr.error("Update failed: " + response.message);
+					}
+				},
+						error: function (xhr) {
+			let errorMessage = "Unexpected error occurred.";
+
+			if (xhr.responseJSON && xhr.responseJSON.message) {
+				errorMessage = xhr.responseJSON.message;
+			}
+
+			toastr.error(errorMessage);
+		}
+
+			});
+		});
+
+
+		$(document).on("click", ".cancel-btn", function (e) {
+			e.preventDefault();
+
+			const row = $(this).closest("tr");
+			const originalNameTitle = row.find(".group-name").attr("data-original");
+
+			// Revert the group name and status back to the original values
+				row.find(".group-name").text(originalNameTitle);
+				// row.find(".status-badge").removeClass("d-none");
+
+			// Hide the status toggle and revert to the original status badge
+				// row.find(".status-toggle-wrapper").addClass("d-none");
+
+			// Enable inline editing
+				row.find(".group-name-text").removeClass("d-none");
+				row.find(".group-name-input").addClass("d-none");
+
+			// Show the action buttons again
+				row.find(".edit-btn, .delete-btn").removeClass("d-none");
+				row.find(".update-btn, .cancel-btn").addClass("d-none");
+		});
+
+		// Delete Button
+		$(document).on("click", ".delete-btn", function (e) {
+			 e.preventDefault();
+			const row = $(this).closest("tr");
+			const id = row.data("id");
+			const nameTitle = row.find(".group-name").text().trim();
+
+			 if (confirm("Are you sure you want to delete this customer group?")) {
+					$.ajax({
+						url: `/api/CustomerTitleApi/${id}`,
+						type: "DELETE",
+						success: function (response) {
+							if (response.success) {
+								loadConcepts();
+								toastr.success("Customer group deleted successfully.");
+							} else {
+								toastr.error("Delete failed: " + response.message);
+							}
+						},
+						error: function () {
+							toastr.error("Error deleting customer group.");
+						}
+					});
+				}
+		});
+
+		
+			// POST Method: Add New Customer Group...
+			$('button[type="submit"]').click(function (e) {
+				e.preventDefault();
+				
+				const nameTitle = $('input[name="NameTitle"]').val().trim();
+				// const isActive = $('#statusToggle').is(':checked');
+				
+				if (!nameTitle) {
+					toastr.warning("Group Name is required.");
+					return;
+				}
+		
+				$.ajax({
+					url: '/api/CustomerTitleApi/save',
+					type: 'POST',
+					contentType: 'application/json',
+					data: JSON.stringify({
+						NameTitle: nameTitle,
+						// Active: isActive
+					}),
+					success: function (response) {
+						clear();
+						toastr.success(response.message);
+						loadConcepts();
+					},
+					error: function (xhr) {
+						if (xhr.status === 400) {
+							const res = JSON.parse(xhr.responseText);
+							toastr.warning(res.message);
+						} else {
+							toastr.error("Unexpected error occurred.");
+						}
+					}
+				});
+			});
+
+
+			// Clear Button Click...
+			$('#clearBtn').click(function () {
+				clear();
+			});
+
+			// Prevent Enter keypress inside grid fields...
+			$(document).on("keypress", ".group-name-input", function (e) {
+				if (e.key === "Enter") {
+					e.preventDefault();
+				}
+			});
+
+			// Search functionality only on the loaded values...
+			// $("#searchInput").on("keyup", function () {
+			// 	var value = $(this).val().toLowerCase();
+			// 	$("tbody tr").filter(function () {
+			// 		$(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
+			// 	});
+			// });
+
+			// Function to filter rows based on selected status
+			// function filterRows() {
+			// 	const selectedStatus = $("input[name='statusFilter']:checked").val();
+
+			// 	$("tbody tr").each(function () {
+			// 		const badge = $(this).find(".status-badge");
+			// 		const isActive = badge.text().trim().toLowerCase() === "active";
+
+			// 		if (selectedStatus === "All") {
+			// 			$(this).show();
+			// 		} else if (selectedStatus === "Active" && isActive) {
+			// 			$(this).show();
+			// 		} else if (selectedStatus === "Inactive" && !isActive) {
+			// 			$(this).show();
+			// 		} else {
+			// 			$(this).hide();
+			// 		}
+			// 	});
+			// }
+
+			// Trigger on radio button change...
+			// $(".statusFilter").on("change", filterRows);
+
+			// Forcefully displaying the popup after the page loading...
+			// var toastMessage = sessionStorage.getItem('toastMessage');
+			// if (toastMessage) {
+			// 	toastr.success(toastMessage);
+			// 	sessionStorage.removeItem('toastMessage');
+			// }
+
+			// Initial filter on page load
+		// 	filterRows();
+		 // });
+	</script>
+}
