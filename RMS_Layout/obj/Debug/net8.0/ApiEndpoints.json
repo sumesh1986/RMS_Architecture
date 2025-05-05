@@ -118,6 +118,7 @@
   },
   {
     "ContainingType": "RMS_Layout.Controllers.ProjectAPI.Company.CompanyConceptAPIController",
+<<<<<<< HEAD
     "Method": "Get",
     "RelativePath": "api/CompanyConceptAPI",
     "HttpMethod": "GET",
@@ -144,6 +145,8 @@
   },
   {
     "ContainingType": "RMS_Layout.Controllers.ProjectAPI.Company.CompanyConceptAPIController",
+=======
+>>>>>>> 01299a66ecdccab46948f8b35f792e2729f40294
     "Method": "UpdateConcept",
     "RelativePath": "api/CompanyConceptAPI/{id}",
     "HttpMethod": "PUT",
@@ -157,7 +160,11 @@
       },
       {
         "Name": "model",
+<<<<<<< HEAD
         "Type": "RMS_Models.Models.DTO.Company.CompanyConceptDTO",
+=======
+        "Type": "RMS_Models.Models.API_Models.Company.CompanyConcept",
+>>>>>>> 01299a66ecdccab46948f8b35f792e2729f40294
         "IsRequired": true
       }
     ],
@@ -181,15 +188,45 @@
   },
   {
     "ContainingType": "RMS_Layout.Controllers.ProjectAPI.Company.CompanyConceptAPIController",
+<<<<<<< HEAD
     "Method": "create",
+=======
+    "Method": "GetAll",
+    "RelativePath": "api/CompanyConceptAPI/GetAll",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "page",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RMS_Layout.Controllers.ProjectAPI.Company.CompanyConceptAPIController",
+    "Method": "Save",
+>>>>>>> 01299a66ecdccab46948f8b35f792e2729f40294
     "RelativePath": "api/CompanyConceptAPI/Save",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
+<<<<<<< HEAD
         "Name": "model",
         "Type": "RMS_Models.Models.DTO.Company.CompanyConceptDTO",
+=======
+        "Name": "conceptModelRequest",
+        "Type": "RMS_Models.Models.API_Models.Company.CompanyConcept",
+>>>>>>> 01299a66ecdccab46948f8b35f792e2729f40294
         "IsRequired": true
       }
     ],
@@ -392,9 +429,15 @@
     "ReturnTypes": []
   },
   {
+<<<<<<< HEAD
     "ContainingType": "RMS_Layout.Controllers.ProjectAPI.Users.DepartmentAPIController",
     "Method": "Get",
     "RelativePath": "api/DepartmentAPI",
+=======
+    "ContainingType": "RMS_Layout.Controllers.ProjectAPI.Customers.CustomerTitleAPIController",
+    "Method": "Get",
+    "RelativePath": "api/CustomerTitleAPI",
+>>>>>>> 01299a66ecdccab46948f8b35f792e2729f40294
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -410,7 +453,11 @@
         "IsRequired": false
       },
       {
+<<<<<<< HEAD
         "Name": "DepartmentsName",
+=======
+        "Name": "customerNameTitle",
+>>>>>>> 01299a66ecdccab46948f8b35f792e2729f40294
         "Type": "System.String",
         "IsRequired": false
       }
@@ -418,9 +465,15 @@
     "ReturnTypes": []
   },
   {
+<<<<<<< HEAD
     "ContainingType": "RMS_Layout.Controllers.ProjectAPI.Users.DepartmentAPIController",
     "Method": "Update",
     "RelativePath": "api/DepartmentAPI/{id}",
+=======
+    "ContainingType": "RMS_Layout.Controllers.ProjectAPI.Customers.CustomerTitleAPIController",
+    "Method": "Update",
+    "RelativePath": "api/CustomerTitleAPI/{id}",
+>>>>>>> 01299a66ecdccab46948f8b35f792e2729f40294
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
@@ -432,16 +485,26 @@
       },
       {
         "Name": "model",
+<<<<<<< HEAD
         "Type": "RMS_Models.Models.DTO.Users.DepartmentsDTO",
+=======
+        "Type": "RMS_Models.Models.DTO.Customers.CustomerTitleDTO",
+>>>>>>> 01299a66ecdccab46948f8b35f792e2729f40294
         "IsRequired": true
       }
     ],
     "ReturnTypes": []
   },
   {
+<<<<<<< HEAD
     "ContainingType": "RMS_Layout.Controllers.ProjectAPI.Users.DepartmentAPIController",
     "Method": "Delete",
     "RelativePath": "api/DepartmentAPI/{id}",
+=======
+    "ContainingType": "RMS_Layout.Controllers.ProjectAPI.Customers.CustomerTitleAPIController",
+    "Method": "Delete",
+    "RelativePath": "api/CustomerTitleAPI/{id}",
+>>>>>>> 01299a66ecdccab46948f8b35f792e2729f40294
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
@@ -455,22 +518,33 @@
     "ReturnTypes": []
   },
   {
+<<<<<<< HEAD
     "ContainingType": "RMS_Layout.Controllers.ProjectAPI.Users.DepartmentAPIController",
     "Method": "create",
     "RelativePath": "api/DepartmentAPI/save",
+=======
+    "ContainingType": "RMS_Layout.Controllers.ProjectAPI.Customers.CustomerTitleAPIController",
+    "Method": "create",
+    "RelativePath": "api/CustomerTitleAPI/save",
+>>>>>>> 01299a66ecdccab46948f8b35f792e2729f40294
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
         "Name": "model",
+<<<<<<< HEAD
         "Type": "RMS_Models.Models.DTO.Users.DepartmentsDTO",
+=======
+        "Type": "RMS_Models.Models.DTO.Customers.CustomerTitleDTO",
+>>>>>>> 01299a66ecdccab46948f8b35f792e2729f40294
         "IsRequired": true
       }
     ],
     "ReturnTypes": []
   },
   {
+<<<<<<< HEAD
     "ContainingType": "RMS_Layout.Controllers.ProjectAPI.Dropdown.DropdownApiController",
     "Method": "Get",
     "RelativePath": "api/ProductSalesCategoryAPI",
@@ -711,6 +785,11 @@
     "ContainingType": "RMS_Layout.Controllers.ProjectAPI.Users.UserRoleAPIController",
     "Method": "Get",
     "RelativePath": "api/UserRoleAPI",
+=======
+    "ContainingType": "RMS_Layout.Controllers.ProjectAPI.Customers.CustomerTypeAPIController",
+    "Method": "Get",
+    "RelativePath": "api/CustomerTypeAPI",
+>>>>>>> 01299a66ecdccab46948f8b35f792e2729f40294
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -726,7 +805,11 @@
         "IsRequired": false
       },
       {
+<<<<<<< HEAD
         "Name": "UserpositionsName",
+=======
+        "Name": "customerNameType",
+>>>>>>> 01299a66ecdccab46948f8b35f792e2729f40294
         "Type": "System.String",
         "IsRequired": false
       }
@@ -734,9 +817,15 @@
     "ReturnTypes": []
   },
   {
+<<<<<<< HEAD
     "ContainingType": "RMS_Layout.Controllers.ProjectAPI.Users.UserRoleAPIController",
     "Method": "Update",
     "RelativePath": "api/UserRoleAPI/{id}",
+=======
+    "ContainingType": "RMS_Layout.Controllers.ProjectAPI.Customers.CustomerTypeAPIController",
+    "Method": "Update",
+    "RelativePath": "api/CustomerTypeAPI/{id}",
+>>>>>>> 01299a66ecdccab46948f8b35f792e2729f40294
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
@@ -748,16 +837,26 @@
       },
       {
         "Name": "model",
+<<<<<<< HEAD
         "Type": "RMS_Models.Models.DTO.Users.UserPositionsDto",
+=======
+        "Type": "RMS_Models.Models.DTO.Customers.CustomerTypeDTO",
+>>>>>>> 01299a66ecdccab46948f8b35f792e2729f40294
         "IsRequired": true
       }
     ],
     "ReturnTypes": []
   },
   {
+<<<<<<< HEAD
     "ContainingType": "RMS_Layout.Controllers.ProjectAPI.Users.UserRoleAPIController",
     "Method": "Delete",
     "RelativePath": "api/UserRoleAPI/{id}",
+=======
+    "ContainingType": "RMS_Layout.Controllers.ProjectAPI.Customers.CustomerTypeAPIController",
+    "Method": "Delete",
+    "RelativePath": "api/CustomerTypeAPI/{id}",
+>>>>>>> 01299a66ecdccab46948f8b35f792e2729f40294
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
@@ -771,16 +870,26 @@
     "ReturnTypes": []
   },
   {
+<<<<<<< HEAD
     "ContainingType": "RMS_Layout.Controllers.ProjectAPI.Users.UserRoleAPIController",
     "Method": "create",
     "RelativePath": "api/UserRoleAPI/save",
+=======
+    "ContainingType": "RMS_Layout.Controllers.ProjectAPI.Customers.CustomerTypeAPIController",
+    "Method": "create",
+    "RelativePath": "api/CustomerTypeAPI/save",
+>>>>>>> 01299a66ecdccab46948f8b35f792e2729f40294
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
         "Name": "model",
+<<<<<<< HEAD
         "Type": "RMS_Models.Models.DTO.Users.UserPositionsDto",
+=======
+        "Type": "RMS_Models.Models.DTO.Customers.CustomerTypeDTO",
+>>>>>>> 01299a66ecdccab46948f8b35f792e2729f40294
         "IsRequired": true
       }
     ],
@@ -892,5 +1001,18 @@
         "StatusCode": 200
       }
     ]
+<<<<<<< HEAD
+=======
+  },
+  {
+    "ContainingType": "RMS_Layout.Controllers.ProjectControllers.Company.CompanyConceptController",
+    "Method": "Index",
+    "RelativePath": "company/companyconcept",
+    "HttpMethod": "",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+>>>>>>> 01299a66ecdccab46948f8b35f792e2729f40294
   }
 ]

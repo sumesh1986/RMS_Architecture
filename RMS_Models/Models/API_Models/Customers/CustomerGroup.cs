@@ -14,9 +14,14 @@ namespace RMS_Models.Models.API_Models.Customers
 
         [MaxLength(50)]
         public string GroupName { get; set; } = string.Empty;
-        public bool Active { get; set; } = false;
 
-        public DateTime InsertedTime { get; set; }
-        public DateTime? LastUpdatedTime { get; set; }
+        public string Active { get; set; } = string.Empty;
+        //public bool Active { get; set; } = false;
+
+        //public DateTime InsertedTime { get; set; }
+        //public DateTime? LastUpdatedTime { get; set; }
     }
 }
+
+
+

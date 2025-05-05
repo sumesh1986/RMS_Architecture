@@ -5,23 +5,50 @@
 
 
 
-<div class="app-content">
+<div class="page-content">
 
-	<!--begin::Container-->
+	<div class="row">
+		<div class="col-lg-12">
 
-	<div class="container-fluid">
+			<!--begin::Container-->
 
-		<!--begin::Row-->
+			<div class="container-fluid">
 
-		<div class="row">
+				<!--begin::Row-->
 
-			<!--begin::Col-->
+				<div class="row">
 
-			<div class="col-12">
+					<!--begin::Col-->
 
-				<!--begin::Card-->
+					<div class="col-12">
 
-				<div class="card">
+						<!--begin::Card-->
+
+						<div class="card">
+
+
+							<div class="page-content">
+
+								<div class="row">
+									<div class="col-lg-12">
+
+										<!--begin::Container-->
+
+										<div class="container-fluid">
+
+											<!--begin::Row-->
+
+											<div class="row">
+
+												<!--begin::Col-->
+
+												<div class="col-12">
+
+													<!--begin::Card-->
+
+													<div class="card">
+
+
 
 
 
@@ -36,6 +63,8 @@
 							<h4>Customer Group</h4>
 
 						</div>
+
+
 
 						<!--end::Card Title-->
 
@@ -235,9 +264,23 @@
 </div>
 
 
+</<div>
 
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</<div>
+	</div>
+</div>
+</div>
+</div>
 @section Scripts {
 	<script>
+		
 		let currentPage = 1;
 		const rowsPerPage = grid_Limit();
 		let totalRecords = 0;
@@ -273,7 +316,7 @@
 		//load only grid...
 		function loadConcepts() {
 			const searchValue = $('#searchInput').val()?.trim();
-
+			   
 				$.ajax({
 					url: `/api/CustomerGroupAPI?page=${currentPage}&pageSize=${rowsPerPage}&customerGroupName=${searchValue}`,
 					method: 'GET',
@@ -298,12 +341,38 @@
 					return;
 				}
 
-				data.forEach((item) => {
-					let statusBadge = item.active === "Yes" || item.active === "No"
-							? '<span class="badge bg-success">Active</span>'
-							: '<span class="badge bg-danger">Inactive</span>';
+		// 		data.forEach((item) => {
+		// 			let statusBadge = item.active === "Yes" || item.active === "No"
+		// 					? '<span class="badge bg-success">Active</span>'
+		// 					: '<span class="badge bg-danger">Inactive</span>';
 
-			const row = `
+		// 	const row = `
+		// <tr data-id="${item.sysId}">
+		// 	<td style="width: 10%; text-align: center;">${item.sysId}</td>
+
+		// 	<td style="width: 40%; text-align: center;" class="group-name-cell">
+		// 		<span class="group-name-text">${item.groupName}</span>
+		// 		<input type="text" class="form-control group-name-input d-none" value="${item.groupName}" />
+		// 	</td>
+
+		// 	<td style="width: 25%; text-align: center;" class="status">
+		// 		<span class="badge ${item.active ? "bg-success" : "bg-danger"} status-badge">
+		// 			${item.active ? "Active" : "Inactive"}
+		// 		</span>
+		// 		<div class="form-check form-switch d-none status-toggle-wrapper" style="padding-left: 44%; padding-top: 2%">
+		// 			<input class="form-check-input status-toggle" type="checkbox" ${item.active ? "checked" : ""} />
+		// 			<label class="form-check-label status-toggle-label">
+		// 				${item.active ? "Active" : "Inactive"}
+		// 			</label>
+		// 		</div>
+		// 	</td>
+
+			data.forEach((item) => {
+		let statusBadge = item.active === "Yes"
+			? '<span class="badge bg-success">Active</span>'
+			: '<span class="badge bg-danger">Inactive</span>';
+
+		const row = `
 		<tr data-id="${item.sysId}">
 			<td style="width: 10%; text-align: center;">${item.sysId}</td>
 
@@ -313,13 +382,13 @@
 			</td>
 
 			<td style="width: 25%; text-align: center;" class="status">
-				<span class="badge ${item.active ? "bg-success" : "bg-danger"} status-badge">
-					${item.active ? "Active" : "Inactive"}
+				<span class="badge ${item.active === "Yes" ? "bg-success" : "bg-danger"} status-badge">
+					${item.active === "Yes" ? "Active" : "Inactive"}
 				</span>
 				<div class="form-check form-switch d-none status-toggle-wrapper" style="padding-left: 44%; padding-top: 2%">
-					<input class="form-check-input status-toggle" type="checkbox" ${item.active ? "checked" : ""} />
+					<input class="form-check-input status-toggle" type="checkbox" ${item.active === "Yes" ? "checked" : ""} />
 					<label class="form-check-label status-toggle-label">
-						${item.active ? "Active" : "Inactive"}
+						${item.active === "Yes" ? "Active" : "Inactive"}
 					</label>
 				</div>
 			</td>
@@ -418,13 +487,14 @@
 		$(document).ready(function () {
 		$('#statusToggle').change(function () {
 		if ($(this).is(':checked')) {
-			$('#statusLabel').text('Active');
-			$('#hiddenStatus').val('Active');
-		} else {
-			$('#statusLabel').text('Inactive');
-			$('#hiddenStatus').val('Inactive');
-		}
+					$('#statusLabel').text('Active');
+					$('#hiddenStatus').val('YES'); // Set YES when checked
+				} else {
+					$('#statusLabel').text('Inactive');
+					$('#hiddenStatus').val('NO'); // Set NO when unchecked
+				}
 		});
+
 
 		// Load Concepts and Pagination Logic...
 			$('#prevPage').off('click').on('click', function (e) {
@@ -488,7 +558,7 @@
 				toastr.warning("Group name should not be left empty!");
 				return;
 			 }
-
+			 // console.log("updatedGroupName:"+ updatedGroupName + "updatedStatus:"+ updatedStatus );
 			$.ajax({
 				url: `/api/CustomerGroupApi/${id}`,
 				type: "PUT",
@@ -496,14 +566,14 @@
 				data: JSON.stringify({
 					sysId: id,
 					groupName: updatedGroupName,
-					active: isStatusChecked
+					active: updatedStatus
 				}),
 				success: function (response) {
 					if (response.success) {
 						loadConcepts();
 						toastr.success(response.message);
 					} else {
-						alert("hi");
+						// alert("hi");
 						toastr.error("Update failed: " + response.message);
 					}
 				},
@@ -573,9 +643,9 @@
 			// POST Method: Add New Customer Group...
 			$('button[type="submit"]').click(function (e) {
 				e.preventDefault();
-
+				// alert("hloo");
 				const groupName = $('input[name="GroupName"]').val().trim();
-				const isActive = $('#statusToggle').is(':checked');
+				const isActive = $('#hiddenStatus').val();
 
 				if (!groupName) {
 					toastr.warning("Group Name is required.");

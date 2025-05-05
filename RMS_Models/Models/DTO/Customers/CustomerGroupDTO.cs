@@ -12,7 +12,9 @@ namespace RMS_Models.Models.DTO.Customers
     {
         public int SysId { get; set; }
         public string GroupName { get; set; } = string.Empty;
-        public bool Active { get; set; } = false;
+        //public bool Active { get; set; } = false;
+
+        public string Active { get; set; } = string.Empty;
 
     }
 }

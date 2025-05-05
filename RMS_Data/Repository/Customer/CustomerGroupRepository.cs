@@ -22,11 +22,11 @@ namespace RMS_Data.Repository.Customer
 
             if (string.IsNullOrWhiteSpace(groupName) || groupName is null)
             {
-                query = _db.CustomerGroups.AsQueryable();
+                query = _db.CustomerGroup.AsQueryable();
             }
             else
             {
-                query = _db.CustomerGroups.Where(cg => cg.GroupName.Contains(groupName));
+                query = _db.CustomerGroup.Where(cg => cg.GroupName.Contains(groupName));
             }
 
             var totalRecords = await query.CountAsync();
@@ -51,32 +51,32 @@ namespace RMS_Data.Repository.Customer
 
         public async Task<CustomerGroup> CreateAsync(CustomerGroup model)
         {
-            _db.CustomerGroups.Add(model);
+            _db.CustomerGroup.Add(model);
             await _db.SaveChangesAsync();
             return model;
         }
 
         public async Task<CustomerGroup> UpdateAsync(CustomerGroup customerGroup)
         {
-            _db.CustomerGroups.Update(customerGroup);
+            _db.CustomerGroup.Update(customerGroup);
             await _db.SaveChangesAsync();
             return customerGroup;
         }
 
         public async Task<CustomerGroup?> GetByIdAsync(int id)
         {
-            return await _db.CustomerGroups
+            return await _db.CustomerGroup
                 .Where(cg => cg.SysId == id)
                 .FirstOrDefaultAsync();
         }
         public async Task<CustomerGroup?> GetByGroupNameAsync(string groupName)
         {
-            return await _db.CustomerGroups.FirstOrDefaultAsync(cg => cg.GroupName == groupName);
+            return await _db.CustomerGroup.Where(cg => cg.GroupName == groupName).FirstOrDefaultAsync();
         }
 
         public async Task DeleteAsync(CustomerGroup group)
         {
-            _db.CustomerGroups.Remove(group);
+            _db.CustomerGroup.Remove(group);
             await _db.SaveChangesAsync();
         }
 

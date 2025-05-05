@@ -13,7 +13,11 @@ using RMS_BAL.Services.Users;
 using RMS_Data.Data;
 using RMS_Data.Repository.Company;
 using RMS_Data.Repository.Customer;
+<<<<<<< HEAD
+//using RMS_Data.Repository.Dropdown;
+=======
 using RMS_Data.Repository.Dropdown;
+>>>>>>> 9e3255a0571a76a2273843c46cb22262d7c52274
 using RMS_Data.Repository.ExcpetionHandling;
 using RMS_Data.Repository.Interfaces;
 using RMS_Data.Repository.ProductSetup.SalesItemHierarchy;
@@ -48,6 +52,17 @@ builder.Services.AddScoped<ICustomerGroupRepository,CustomerGroupRepository>();
 builder.Services.AddScoped<ICustomerGroupService, CustomerGroupService>();
 
 
+<<<<<<< HEAD
+builder.Services.AddScoped<ICustomerTypeRepository, CustomerTypeRepository>();
+builder.Services.AddScoped<ICustomerTypeService, CustomerTypeService>();
+
+
+
+builder.Services.AddScoped<ICustomerTitleRepository, CustomerTitleRepository>();
+builder.Services.AddScoped<ICustomerTitleService, CustomerTitleService>();
+
+
+=======
 //Athira change
 builder.Services.AddScoped<IUserPositionsRepository, UserPositionsRepository>();
 builder.Services.AddScoped<IUserPositionsService, UserPositionsService>();
@@ -61,11 +76,21 @@ builder.Services.AddScoped<IUserPermissionService, UserPermissionService>();
 
 
 /////////end/-----
+>>>>>>> 9e3255a0571a76a2273843c46cb22262d7c52274
 
 builder.Services.AddScoped<IExceptionHandlingService, ExceptionHandlingService>();
 builder.Services.AddScoped<IExcepetionHandlingRepository, ExcepetionHandlingRepository>();
 
 
+<<<<<<< HEAD
+//builder.Services.AddScoped<IDropdownCommonRepository, DropdownRepository>();
+//builder.Services.AddScoped<IDropdownCommonServices, DropdownService>
+
+
+
+//builder.Services.AddScoped<ICompanyConceptRepository, CompanyConceptRepository>();
+//builder.Services.AddScoped<ICompanyConceptService, CompanyConceptService>();
+=======
 builder.Services.AddScoped<ICompanyConceptRepository, CompanyConceptRepository>();
 builder.Services.AddScoped<ICompanyConceptService, CompanyConceptService>();
 
@@ -73,6 +98,7 @@ builder.Services.AddScoped<ICompanyConceptService, CompanyConceptService>();
 builder.Services.AddScoped<IProductSetupCategoryRepository, ProductCategoryRepository>();
 builder.Services.AddScoped<IProductSetupCategoryService, ProductSetupCategoryServices>();
 
+>>>>>>> 9e3255a0571a76a2273843c46cb22262d7c52274
 
 
 // Register services BEFORE calling builder.Build()
