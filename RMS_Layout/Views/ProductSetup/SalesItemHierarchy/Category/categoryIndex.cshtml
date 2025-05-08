@@ -67,7 +67,7 @@
 											<label class="form-label">Group</label>
 											<input type="text" class="form-control" id="txtGroupSearch" placeholder="Search">
 											<div class="mt-3">
-												<select class="form-control" id="LstGroupId" size="8"></select>
+												<select class="form-control" id="LstGroupId" multiple size="8"></select>
 											</div>
 											<div class="mt-2">
 												<label>Total Count: <span id="lblGroupCount">0</span></label>
@@ -91,7 +91,7 @@
 								</div>
 
 
-								<form id="categoryTable">
+								<form>
 									<!-- Table -->
 									<div class="card mt-4 shadow-sm">
 										<div class="card-header bg-primary text-white d-flex justify-content-between align-items-center">
@@ -118,9 +118,9 @@
 													<thead class="table-success grid-header-bg">
 														<tr>
 															<th class="sortable" onclick="sortTable(0)">#</th>
-															<th style="display:none;">SysID</th>
-															<th class="sortable" onclick="sortTable(1)">Category</th>
-															@* <th class="sortable" onclick="sortTable(2)">Status</th> *@
+															<th style="display:none;" onclick="sortTable(1)">SysID</th>
+															<th class="sortable" onclick="sortTable(2)">Category</th>
+															@* <th class="sortable" onclick="sortTable(3)">Status</th> *@
 
 															<th>Actions</th>
 														</tr>
@@ -165,7 +165,47 @@
 @section Scripts {
 
 	<!-- ============================================================== -->
-	<!-- Start Load Category here -->
+	<!-- Start Category Table Sorting here -->
+	<!-- ============================================================== -->
+	<script>
+		let currentSortColumn = null;
+		let currentSortOrder = 'asc';
+
+		function sortTable(columnIndex) {
+			const table = document.getElementById("categoryTable");
+			const tbody = table.querySelector("tbody");
+			const rows = Array.from(tbody.querySelectorAll("tr"));
+
+			const isSameColumn = columnIndex === currentSortColumn;
+			currentSortOrder = isSameColumn && currentSortOrder === 'asc' ? 'desc' : 'asc';
+			currentSortColumn = columnIndex;
+
+			// Sort rows
+			rows.sort((a, b) => {
+				const aText = a.children[columnIndex].innerText.trim();
+				const bText = b.children[columnIndex].innerText.trim();
+
+				const aVal = isNaN(aText) ? aText.toLowerCase() : parseFloat(aText);
+				const bVal = isNaN(bText) ? bText.toLowerCase() : parseFloat(bText);
+
+				if (aVal < bVal) return currentSortOrder === 'asc' ? -1 : 1;
+				if (aVal > bVal) return currentSortOrder === 'asc' ? 1 : -1;
+				return 0;
+			});
+
+			// Re-render sorted rows
+			tbody.innerHTML = '';
+			rows.forEach(row => tbody.appendChild(row));
+
+			// Update arrow indicators
+			document.querySelectorAll("th.sortable").forEach(th => th.classList.remove('asc', 'desc'));
+			const th = table.querySelector(`th:nth-child(${columnIndex + 1})`);
+			th.classList.add(currentSortOrder);
+		}
+	</script>
+
+	<!-- ============================================================== -->
+	<!-- Start Load Category Table here -->
 	<!-- ============================================================== -->
 	<script>
 
@@ -197,7 +237,7 @@
 
 		function renderTable(data) {
 
-			//console.log("Raw data:", data);
+			console.log("Raw data:", data);
 
 			const tbody = $('#categoryTable tbody');
 			tbody.empty();
@@ -219,10 +259,10 @@
 			<td class="categoryname">${item.category}</td>
 
 		<td>
-			<button class="btn btn-outline-primary btn-sm edit-btn"><i class="bi bi-pencil"></i></button>
-			<button class="btn btn-outline-success btn-sm update-btn d-none"><i class="bi bi-check"></i></button>
-			<button class="btn btn-outline-secondary btn-sm cancel-btn d-none"><i class="bi bi-x"></i></button>
-			<button class="btn btn-outline-danger btn-sm delete-btn"><i class="bi bi-trash"></i></button>
+				 <button type="button" class="btn btn-outline-primary btn-sm edit-btn"><i class="bi bi-pencil"></i></button>
+		<button type="button" class="btn btn-outline-success btn-sm update-btn d-none"><i class="bi bi-check"></i></button>
+		<button type="button" class="btn btn-outline-secondary btn-sm cancel-btn d-none"><i class="bi bi-x"></i></button>
+		<button type="button" class="btn btn-outline-danger btn-sm delete-btn"><i class="bi bi-trash"></i></button>
 		</td>
 					</tr>`;
 				tbody.append(row);
@@ -312,8 +352,8 @@
 
 
 						const updatedcategoryName = row.find(".categoryname-edit").val();
-						const isStatusChecked = row.find(".status-toggle").prop("checked");
-					const updatedStatus = isStatusChecked ? "Yes" : "No";
+					// 	const isStatusChecked = row.find(".status-toggle").prop("checked");
+					// const updatedStatus = isStatusChecked ? "Yes" : "No";
 
 						//console.log("✅ update Datas:\n" + JSON.stringify(updatedStatus, null, 4));
 
@@ -326,7 +366,7 @@
 
 
 						var originalcategoryName = row.find(".categoryname").attr("data-original");
-						const originalStatus = row.find(".status-badge").text().trim().toLowerCase() === "active" ? "Yes" : "No";
+						// const originalStatus = row.find(".status-badge").text().trim().toLowerCase() === "active" ? "Yes" : "No";
 
 				// // 				const originalName = row.find(".name-edit").data("original")?.trim(); // or use .attr("data-original")
 				// // const originalList = row.find(".listofconcept-edit").data("original")?.trim();
@@ -336,7 +376,9 @@
 				// );
 
 				 //  Check if user really changed anything
-					if (updatedcategoryName === originalcategoryName && updatedStatus === originalStatus) {
+					// if (updatedcategoryName === originalcategoryName && updatedStatus === originalStatus)
+					if (updatedcategoryName === originalcategoryName)
+					{
 
 								Swal.fire({
 					icon: 'info',
@@ -361,8 +403,8 @@
 							contentType: "application/json",
 							data: JSON.stringify({
 								SysId: sysid,
-								Category: updatedcategoryName,
-								  Active: updatedStatus
+								Category: updatedcategoryName
+								  //Active: updatedStatus
 							}),
 							success: function (response) {
 								if (response.success) {
@@ -460,6 +502,7 @@
 					// Handle Edit Button Click
 		$(document).on("click", ".edit-btn", function (e) {
 			e.preventDefault();
+			e.stopPropagation(); // Prevent row selection logic
 			const row = $(this).closest("tr");
 
 			row.find(".edit-btn, .delete-btn").addClass("d-none");
@@ -484,6 +527,8 @@
 			// Handle Cancel Button Click
 				$(document).on("click", ".cancel-btn", function (e) {
 			e.preventDefault();
+			e.stopPropagation(); // Prevent row selection logic
+
 			var row = $(this).closest("tr");
 
 			// Restore original category name
@@ -531,7 +576,7 @@
 
 		function loadGroupsByDivision(categoryID, divisionId, divisionName) {
 			$.ajax({
-				url: `/api/ProductSalesCategoryAPI?catId=${categoryID}&divsionId=${divisionId}&divisionName=${divisionName}`,
+				url: `/api/Dropdown/DropdownApi?catId=${categoryID}&divsionId=${divisionId}&divisionName=${divisionName}`,
 				method: 'GET',
 				success: function (response) {
 					
@@ -590,10 +635,10 @@
 
 
 		function loadDivisionsByCategory(categoryID, categoryName, divisionId, divisionName) {
-			///console.log("divisionId : " +divisionId+ "divisionName : " +divisionName);
+			console.log("divisionId : " +divisionId+ "  divisionName : " +divisionName);
 					$.ajax({
 
-				url: `/api/ProductSalesCategoryAPI?catId=${categoryID}&categoryname=${categoryName}&divsionId=${divisionId}&divisionName=${divisionName}`,
+				url: `/api/Dropdown/DropdownApi?catId=${categoryID}&categoryname=${categoryName}&divsionId=${divisionId}&divisionName=${divisionName}`,
 					method: 'GET',
 				success: function (response) {
 						const divisions = response.data;
@@ -718,9 +763,11 @@
 					// }
 
 			clearFormControls('#CategoryFormView');
+				$('#lblDivisionRecords').text('0');  // Reset group count label
+					$('#lblGroupCount').text('0');  // Reset group count label
 			$('#rdbtnAsc').prop('checked', true); // Default check to Ascending
 			$('#searchInput').val('');
-			loadCategory();
+			//loadCategory();
 				
 				}
 

@@ -232,6 +232,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxab25lQXJlYVNldHRpbmdzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/RMS_Layout/RMS_Architecture/RMS_Layout/Views/ProductSetup/SaleItemSetup/Course/courseIndex.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFNldHVwXFNhbGVJdGVtU2V0dXBcQ291cnNlXGNvdXJzZUluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/RMS_Layout/RMS_Architecture/RMS_Layout/Views/ProductSetup/SalesItemHierarchy/Category/categoryIndex.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFNldHVwXFNhbGVzSXRlbUhpZXJhcmNoeVxDYXRlZ29yeVxjYXRlZ29yeUluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 

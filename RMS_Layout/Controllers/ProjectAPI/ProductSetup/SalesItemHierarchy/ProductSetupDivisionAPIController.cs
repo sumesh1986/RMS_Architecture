@@ -28,7 +28,7 @@ namespace RMS_Layout.Controllers.ProjectAPI.ProductSetup.SalesItemHierarchy
         }
 
 
-        // Create Category...
+        // Create Division...
         [HttpPost("Save")]
         public async Task<IActionResult> create([FromBody] DivisionViewModelDTO model)
         {

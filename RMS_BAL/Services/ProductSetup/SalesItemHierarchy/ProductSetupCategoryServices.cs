@@ -46,8 +46,8 @@ namespace RMS_BAL.Services.ProductSetup.SalesItemHierarchy
             var data = groups.Select(g => new CategoryViewModelDTO
             {
                 SysID = g.SysID,
-                Category = g.Category,
-                Active = g.Active
+                Category = g.Category
+                //Active = g.Active
             });
 
             return (data);
@@ -124,7 +124,7 @@ namespace RMS_BAL.Services.ProductSetup.SalesItemHierarchy
 
             // Update entity(main class)...
             existing.Category = model.Category;
-            existing.Active = model.Active;
+           // existing.Active = model.Active;
             //existing.UpdatedAt = DateTime.Now;
             // updating group...
             var updatedGroup = await _repository.UpdateAsync(existing);

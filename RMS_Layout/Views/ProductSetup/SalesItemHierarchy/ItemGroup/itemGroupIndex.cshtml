@@ -36,7 +36,7 @@
 							<!--begin::Card Body-->
 							<div class="card-body">
 
-								<form asp-action="Create" method="post">
+								<form id="ItemGroupFormView">
 									<!--begin::Row-->
 									<!-- Form -->
 
@@ -45,136 +45,187 @@
 									<div class="mb-3">
 										<label class="form-label">Group Name:</label>
 										<div class="d-flex align-items-center">
-											<input type="text" class="form-control me-2" placeholder="Group Name">
+											<input id="txtGroupName" type="text" class="form-control me-2" placeholder="Group Name">
 											<div class="form-check form-switch">
-												<input class="form-check-input" type="checkbox" id="activeCheck">
-												<label class="form-check-label" for="activeCheck">Active</label>
+												@* <input id="chkactiveCheck" class="form-check-input" type="checkbox" checked>
+												<label id="activeLabel" class="form-check-label" for="chkactiveCheck">Active</label> *@
+
+												<input id="chkactiveCheck" type="checkbox" class="form-check-input toggle-status" data-label-target="#activeLabel" checked>												
+												<span id="activeLabel" class="form-check-label ">Active</span>
 											</div>
+
 										</div>
 
 
 									</div>
 									<div class="mb-3">
 										<label class="form-label">Choose Division:</label>
-										<select class="form-select">
-											<option selected>--Select--</option>
+										<select id="ddlDivision" class="form-control">
+											<option value="0">-- Select Division --</option>
 										</select>
 									</div>
 									<div class="row">
 										<div class="col-md-6">
 											<h5>Tax & Service</h5>
-											<div class="form-check form-switch">
-												<input class="form-check-input" type="checkbox" id="activeCheck">
-												<label class="form-check-label ms-2" for="activeCheck">Select All</label>
+
+											<!-- Select All switch -->
+											<div class="form-check form-switch mb-3">
+												<input class="form-check-input" type="checkbox" id="selectAllTax">
+												<label class="form-check-label ms-2" for="selectAllTax">Select All</label>
 											</div>
-											<select class="form-select mt-2" multiple size="6"></select>
+
+											<!-- Horizontal checkboxes -->
+											<div class="form-check form-check-inline">
+												<input id="vatCheck" class="form-check-input tax-option" type="checkbox" value="VAT">
+												<label class="form-check-label" for="vatCheck">VAT 5%</label>
+											</div>
+											<div class="form-check form-check-inline">
+												<input id="municipalityCheck" class="form-check-input tax-option" type="checkbox" value="Municipality">
+												<label class="form-check-label" for="municipalityCheck">Municipality</label>
+											</div>
+											<div class="form-check form-check-inline">
+												<input id="gstCheck" class="form-check-input tax-option" type="checkbox" value="GST">
+												<label class="form-check-label" for="gstCheck">GST</label>
+											</div>
+											<div class="form-check form-check-inline">
+												<input id="cgstCheck" class="form-check-input tax-option" type="checkbox" value="CGST">
+												<label class="form-check-label" for="cgstCheck">CGST</label>
+											</div>
 										</div>
+
 										<div class="col-md-6">
 											<h5>Where to Print</h5>
-											<div class="form-check form-switch">
-												<input class="form-check-input" type="checkbox" id="activeCheck">
-												<label class="form-check-label ms-2" for="activeCheck">Select All</label>
+
+											<!-- Select All switch -->
+											<div class="form-check form-switch mb-3">
+												<input class="form-check-input" type="checkbox" id="selectAllPrint">
+												<label class="form-check-label ms-2" for="selectAllPrint">Select All</label>
 											</div>
-											@*    <input type="checkbox" id="selectAllPrint" class="form-check-input">
-                                    <label for="selectAllPrint" class="ms-2">Select All</label> *@
-											<select class="form-select mt-2" multiple size="6"></select>
+
+											<!-- Horizontal checkboxes -->
+											<div class="form-check form-check-inline">
+												<input id="kitchenCheck" class="form-check-input print-option" type="checkbox" value="Kitchen">
+												<label class="form-check-label" for="kitchenCheck">Kitchen</label>
+											</div>
+											<div class="form-check form-check-inline">
+												<input id="barCheck" class="form-check-input print-option" type="checkbox" value="Bar">
+												<label class="form-check-label" for="barCheck">Bar</label>
+											</div>
 										</div>
+
+
 									</div>
 									<div class="row mt-3">
 										<div class="col-md-4">
 											<label class="form-label">Revenue A/C</label>
-											<input type="text" class="form-control">
+											<input id="txtRevenue" type="text" class="form-control">
 										</div>
 										<div class="col-md-4">
 											<label class="form-label">Discount A/C</label>
-											<input type="text" class="form-control">
+											<input id="txtDiscount" type="text" class="form-control">
 										</div>
 										<div class="col-md-4">
 											<label class="form-label">Expense A/C</label>
-											<input type="text" class="form-control">
+											<input id="txtExpense" type="text" class="form-control">
 										</div>
 									</div>
 
 
+									<!--end::Row-->
+								</form>
+
+								<!-- BUTTONS -->
+								<div class="text-center mt-4">
+									<hr>
+									<div class="d-grid gap-2 d-md-flex justify-content-md-end">
+										<button id="saveBtn" type="submit" class="btn btn-primary button-background waves-effect">
+											<i class="bi bi-save"></i> Save
+										</button>
+										<button type="button" class="btn btn-outline-secondary waves-effect" id="clearBtn">
+											<i class="bi bi-x-circle"></i> Clear
+										</button>
+									</div>
+								</div>
+
+								<!-- Table -->
+								<form id="ItemGroupTableform">
 									<!-- Table -->
 									<div class="card mt-4 shadow-sm">
-										<div class="card-header header-background text-white d-flex justify-content-between align-items-center">
+										<div class="card-header bg-primary text-white d-flex flex-wrap justify-content-between align-items-center gap-2">
+
 											<span class="fw-bold">List</span>
-											<!-- Search Box -->
-											<div class="input-group input-group-sm w-auto ms-auto">
-												<input type="text" class="form-control" id="searchInput2" placeholder="Search...">
-												<span class="input-group-text"><i class="bi bi-search"></i></span>
+
+											<!-- Wrapper for status + search input -->
+											<div class="d-flex flex-wrap align-items-center justify-content-end gap-2 flex-grow-1">
+
+												<!-- Division Filetr  -->
+												<!-- Modern Division Dropdown -->
+												<div class="w-auto">
+													<select id="ddlDivisionFilter" class="form-select form-select-sm">
+														<option value="0">-- Select Division --</option>
+														<!-- Add more options dynamically -->
+													</select>
+												</div>
+
+												<!-- Status Button Group -->
+												<div class="btn-group btn-group-sm" role="group">
+													<input type="radio" class="btn-check statusFilter" name="statusFilter" id="all" value="All" checked>
+													<label class="btn btn-outline-light" for="all">All</label>
+
+													<input type="radio" class="btn-check statusFilter" name="statusFilter" id="active" value="Active">
+													<label class="btn btn-outline-light" for="active">Active</label>
+
+													<input type="radio" class="btn-check statusFilter" name="statusFilter" id="inactive" value="Inactive">
+													<label class="btn btn-outline-light" for="inactive">Inactive</label>
+												</div>
+												<!-- Search Input -->
+												<div class="input-group input-group-sm" style="min-width: 200px; max-width: 300px;">
+													<input type="text" class="form-control" id="searchInput" placeholder="Search...">
+													<span class="input-group-text" id="searchIcon" style="cursor: pointer;">
+														<i class="bi bi-search"></i>
+													</span>
+												</div>
+
+										
+
 											</div>
 										</div>
 
+
 										<div class="card-body">
-											<div class="table-responsive">
-												<table class="table table-striped table-hover align-middle">
-													<thead class="table-success">
+
+											<div class="table-responsive" style="max-height: 615px; overflow-y: auto;">
+
+
+												<table id="ItemGroupTable" class="table align-middle SelectedRow-ColorChange">
+													<thead class="table-success grid-header-bg">
 														<tr>
-															<th>#</th>
-															<th>Division</th>
-															<th>SysId</th>
-															<th>HideonPDA</th>
-															<th>Modifier</th>
-															<th>Status</th>
+															<th class="sortable" onclick="sortTable(0)">#</th>
+															<th style="display:none;" onclick="sortTable(1)">SysID</th>
+															<th class="sortable" onclick="sortTable(2)">Group Name</th>
+															<th class="sortable" onclick="sortTable(3)">Division</th>
+															<th class="sortable" onclick="sortTable(4)">Status</th>
 															<th>Actions</th>
 														</tr>
 													</thead>
 													<tbody>
-														<tr>
-															<td>1</td>
-															<td>ABC</td>
-															<td>ABC123</td>
-															<td>12345</td>
-															<td>ABC Group</td>
-
-															<td>
-																<span class="badge bg-success">Active</span>
-															</td>
-															<td>
-																<button class="btn btn-outline-primary btn-sm"><i class="bi bi-pencil-square"></i></button>
-																<button class="btn btn-outline-danger btn-sm"><i class="bi bi-trash"></i></button>
-															</td>
-														</tr>
-
-														<tr>
-															<td>2</td>
-															<td>UFS</td>
-															<td>UFS456</td>
-															<td>54321</td>
-															<td>UFS Group</td>
-
-															<td>
-																<span class="badge bg-danger">Inactive</span>
-															</td>
-															<td>
-																<button class="btn btn-outline-primary btn-sm"><i class="bi bi-pencil-square"></i></button>
-																<button class="btn btn-outline-danger btn-sm"><i class="bi bi-trash"></i></button>
-															</td>
-														</tr>
+														<tr><td colspan="5" class="text-center">Loading...</td></tr>
 													</tbody>
 												</table>
+
+												<div class="d-flex justify-content-between align-items-center">
+													<span id="pageInfo" class="text-muted"></span>
+													<div>
+														<button id="prevPage" class="btn btn-sm btn-outline-primary me-2">Previous</button>
+														<button id="nextPage" class="btn btn-sm btn-outline-primary">Next</button>
+													</div>
+												</div>
+
 											</div>
 										</div>
 									</div>
-
-									<!-- BUTTONS -->
-									<div class="text-center mt-4">
-										<hr>
-										<div class="d-grid gap-2 d-md-flex justify-content-md-end">
-											<button type="submit" class="btn btn-primary button-background waves-effect">
-												<i class="bi bi-save"></i> Save
-											</button>
-											<button type="button" class="btn btn-outline-secondary waves-effect" id="clearBtn">
-												<i class="bi bi-x-circle"></i> Clear
-											</button>
-										</div>
-									</div>
-
-
-
-									<!--end::Row-->
+									<!-- Hidden field to store sysID for update -->
+									<input id="hdnSysID" type="hidden" value="0" />
 								</form>
 							</div>
 							<!--end::Card Body-->
@@ -192,3 +243,779 @@
 		</div>
 	</div>
 </div>
+
+
+
+@section Scripts {
+	<script>
+		$(document).ready(function () {
+
+		// Division filter
+		// $('#ddlDivisionFilter').on('change', function () {
+		// 	const selectedDivisionId = $(this).val();
+		// 		console.log("selectedDivisionId : "+selectedDivisionId);
+		// 	$('#ItemGroupTable tbody tr').each(function () {
+		// 		const rowDivisionId = $(this).find('.divisionnameclass').data('divisionid');
+		// 				console.log("rowDivisionId : "+rowDivisionId);
+		// 		// Show all if 0 (no filter)
+		// 		if (selectedDivisionId === "0" || selectedDivisionId === rowDivisionId.toString()) {
+		// 			$(this).show();
+		// 		} else {
+		// 			$(this).hide();
+		// 		}
+		// 	});
+		// });
+
+				$('#ddlDivisionFilter').on('change', function () {
+			const selectedDivisionId = $(this).val();
+			console.log("selectedDivisionId: " + selectedDivisionId);
+
+			let anyVisible = false;
+				// Remove any existing "No Records Found" rows
+				$('#ItemGroupTable tbody .no-records').remove();
+
+			$('#ItemGroupTable tbody tr').each(function () {
+				const rowDivisionId = $(this).find('.divisionnameclass').data('divisionid');
+				const match = (selectedDivisionId === "0" || selectedDivisionId === rowDivisionId.toString());
+
+				$(this).toggle(match);
+
+				if (match) anyVisible = true;
+			});
+
+			
+
+			// If no rows matched, show message
+			if (!anyVisible) {
+				$('#ItemGroupTable tbody').append(`
+					<tr class="no-records">
+						<td colspan="20" class="text-center text-danger fw-bold">No Records Found</td>
+					</tr>
+				`);
+			}
+		});
+
+
+	});
+	</script>
+
+	<script>
+	
+		// 			$(document).ready(function () {
+		// 	$('.statusFilter').on('change', function () {
+		// 		const selectedStatus = $(this).val();
+
+		// 		$('#ItemGroupTable tbody tr').each(function () {
+		// 			// Get the status from the badge text inside the 17th column (index 16)
+		// 			const statusText = $(this).find('td:eq(17) .status-badge').text().trim();
+		// 			console.log("statusText:", statusText);
+		// 			console.log("selectedStatus:", selectedStatus);
+
+		// 			if (selectedStatus === 'All') {
+		// 				$(this).show();
+		// 			} else if (selectedStatus === statusText) {
+		// 				$(this).show();
+		// 			} else {
+		// 				$(this).hide();
+		// 			}
+		// 		});
+		// 	});
+		// });
+
+				$(document).ready(function () {
+			$('.statusFilter').on('change', function () {
+				const selectedStatus = $(this).val();
+				const rows = $('#ItemGroupTable tbody tr');
+				let visibleCount = 0;
+
+				// Remove previous "No Records Found" row
+				$('#ItemGroupTable tbody .no-records').remove();
+
+				rows.each(function () {
+					const statusText = $(this).find('td:eq(17) .status-badge').text().trim();
+					const match = (selectedStatus === 'All' || selectedStatus === statusText);
+
+					$(this).toggle(match);
+					if (match) visibleCount++;
+				});
+
+				if (visibleCount === 0) {
+					$('#ItemGroupTable tbody').append(`
+						<tr class="no-records">
+							<td colspan="20" class="text-center text-danger fw-bold">No Records Found</td>
+						</tr>
+					`);
+				}
+			});
+		});
+
+	</script>
+
+
+	<!-- ============================================================== -->
+	<!-- Load Division Dropdown here -->
+	<!-- ============================================================== -->
+	<script>
+		$(document).ready(function () {
+
+			$.ajax({
+				url: '/api/Dropdown/DropdownApi', // Adjust to your correct route
+				type: 'GET',
+
+				data: {
+					 catId: 1, // 👈 Must provide a valid existing category ID
+			categoryname: '',
+			divsionId: 0,
+			divisionName: ''
+				},
+
+				success: function (response) {
+
+					console.log("Load Dropdownlsit Divsion Data:", response.data); // ✅ Console log here
+
+					if (response && response.data) {
+						var options = '<option value="0">-- Select Division --</option>';
+						$.each(response.data, function (i, item) {
+							options += `<option value="${item.id}">${item.name}</option>`;
+						});
+						$('#ddlDivision').html(options);
+						$('#ddlDivisionFilter').html(options);
+						
+					}
+				},
+				error: function () {
+					//alert('Error loading categories.');
+				}
+			});
+		});
+	</script>
+
+	<!-- ============================================================== -->
+	<!-- Only enter Numeric Validation here -->
+	<!-- ============================================================== -->
+	<script>
+		$(document).ready(function () {
+			$('#txtRevenue, #txtDiscount, #txtExpense').on('input', function () {
+				let val = this.value;
+
+				// Remove all non-numeric and non-dot characters
+				val = val.replace(/[^0-9.]/g, '');
+
+				// Allow only the first dot
+				let parts = val.split('.');
+				if (parts.length > 2) {
+					val = parts[0] + '.' + parts.slice(1).join('');
+				}
+
+				this.value = val;
+			});
+		});
+	</script>
+
+
+	<!-- ============================================================== -->
+	<!-- Start Sorting here -->
+	<!-- ============================================================== -->
+	<script>
+		let currentSortColumn = null;
+		let currentSortOrder = 'asc';
+
+		function sortTable(columnIndex) {
+			const table = document.getElementById("ItemGroupTable");
+			const tbody = table.querySelector("tbody");
+			const rows = Array.from(tbody.querySelectorAll("tr"));
+
+			const isSameColumn = columnIndex === currentSortColumn;
+			currentSortOrder = isSameColumn && currentSortOrder === 'asc' ? 'desc' : 'asc';
+			currentSortColumn = columnIndex;
+
+			// Sort rows
+			rows.sort((a, b) => {
+				const aText = a.children[columnIndex].innerText.trim();
+				const bText = b.children[columnIndex].innerText.trim();
+
+				const aVal = isNaN(aText) ? aText.toLowerCase() : parseFloat(aText);
+				const bVal = isNaN(bText) ? bText.toLowerCase() : parseFloat(bText);
+
+				if (aVal < bVal) return currentSortOrder === 'asc' ? -1 : 1;
+				if (aVal > bVal) return currentSortOrder === 'asc' ? 1 : -1;
+				return 0;
+			});
+
+			// Re-render sorted rows
+			tbody.innerHTML = '';
+			rows.forEach(row => tbody.appendChild(row));
+
+			// Update arrow indicators
+			document.querySelectorAll("th.sortable").forEach(th => th.classList.remove('asc', 'desc'));
+			const th = table.querySelector(`th:nth-child(${columnIndex + 1})`);
+			th.classList.add(currentSortOrder);
+		}
+	</script>
+
+
+	<!-- ============================================================== -->
+	<!-- Start Pagination and Load ItemGroup here -->
+	<!-- ============================================================== -->
+	<script>
+		let currentPage = 1;
+		const rowsPerPage = grid_Limit();
+		let totalRecords = 0;
+
+
+		$(document).ready(function () {
+
+
+		$('#prevPage').off('click').on('click', function (e) {
+		e.preventDefault(); // prevent default form/button behavior
+			if (currentPage > 1) {
+				currentPage--;
+				LoadItemGroup();
+			}
+		});
+
+
+		$('#nextPage').off('click').on('click', function (e) {
+			e.preventDefault(); // ⛔ Stops default behavior
+			const totalPages = Math.ceil(totalRecords / rowsPerPage);
+
+			if (currentPage < totalPages) {
+				currentPage++;
+				LoadItemGroup();
+			}
+		});
+
+		///alert("loading...");
+			LoadItemGroup();
+		});
+
+
+			function LoadItemGroup() {
+						//console.log("Fetching page:", currentPage);
+						alert("Load Item Group: ");
+							const searchValue = $('#searchInput').val()?.trim();
+							 alert("Item Group searchValue :  "+searchValue);
+						$.ajax({
+							url: `/api/ItemGroupAPI?page=${currentPage}&pageSize=${rowsPerPage}&itemgroupName=${searchValue}`,
+							method: 'GET',
+							success: function (response) {
+									totalRecords = response.totalRecords;
+								console.log("Datad Load : "+response.data);
+								renderTable(response.data);
+							},
+							error: function () {
+								toastr.error("Failed to load data.");
+							}
+						});
+					}
+
+			function renderTable(data) {
+			const tbody = $('#ItemGroupTable tbody');
+			tbody.empty();
+
+			if (!data || data.length === 0) {
+				tbody.append('<tr><td colspan="20" class="text-center">No Data Found</td></tr>');
+				return;
+			}
+			console.log("ItemGroup Table datas : ", data);
+			const startIndex = (currentPage - 1) * rowsPerPage;
+
+			data.forEach((item, index) => {
+				const isActive = item.active === "Yes" || item.active === true;
+
+						const row = `
+			<tr data-id="${item.sysID}">
+				<td>${startIndex + index + 1}</td>
+				<td style="display:none;">${item.sysID}</td>
+
+				<td class="itemgroupclass">${item.groupName}</td>
+				<td class="divisionnameclass" data-divisionid="${item.divisionID}">${item.divisionName}</td>
+
+				<td class="revenueacclass" style="display:none;">${item.revenueAC || ''}</td>
+				<td class="discountacclass" style="display:none;">${item.discountAC || ''}</td>
+				<td class="expenseacclass" style="display:none;">${item.expenseAC || ''}</td>
+				<td class="hideonpdaclass" style="display:none;">${item.hideONPDA || ''}</td>
+				<td class="modifierclass" style="display:none;">${item.modifier || ''}</td>
+				<td class="choosenmodifierclass" style="display:none;">${item.choosenModifier || ''}</td>
+				<td class="tax1class" style="display:none;">${item.tax1 || ''}</td>
+				<td class="tax2class" style="display:none;">${item.tax2 || ''}</td>
+				<td class="tax3class" style="display:none;">${item.tax3 || ''}</td>
+				<td class="tax4class" style="display:none;">${item.tax4 || ''}</td>
+				<td class="municipalityclass" style="display:none;">${item.municipality || ''}</td>
+				<td class="servicechargeclass" style="display:none;">${item.serviceCharge || ''}</td>
+				<td class="logicalprintersclass" style="display:none;">${item.logicalPrinters || ''}</td>
+
+				<td class="status">
+					<span class="badge ${isActive ? "bg-success" : "bg-danger"} status-badge">
+						${isActive ? "Active" : "Inactive"}
+					</span>
+					<div class="form-check form-switch d-none status-toggle-wrapper">
+						<input class="form-check-input status-toggle" type="checkbox" ${isActive ? "checked" : ""} />
+						<label class="form-check-label status-toggle-label">
+							${isActive ? "Active" : "Inactive"}
+						</label>
+					</div>
+				</td>
+
+				<td>
+					<button class="btn btn-outline-danger btn-sm delete-btn">
+						<i class="bi bi-trash"></i>
+					</button>
+				</td>
+			</tr>
+		`;
+
+
+				tbody.append(row);
+			});
+
+			const totalPages = Math.ceil(totalRecords / rowsPerPage);
+			const start = (currentPage - 1) * rowsPerPage + 1;
+			const end = Math.min(currentPage * rowsPerPage, totalRecords);
+
+			$('#pageInfo').text(`Showing ${start} to ${end} of ${totalRecords} entries`);
+		}
+
+		
+
+	</script>
+
+
+	<!-- ============================================================== -->
+	<!-- Start Gridview Change Function for Selected Row here -->
+	<!-- ============================================================== -->
+
+	<script>
+			
+
+
+				$(document).on('click', '.SelectedRow-ColorChange tbody tr', function () {
+			// Remove highlight from all rows
+			$('.SelectedRow-ColorChange tbody tr').removeClass('selected');
+
+			// Highlight clicked row
+			$(this).addClass('selected');
+
+			// Extract data from clicked row
+			const $row = $(this);
+
+			// Example assuming cell classes are named as below:
+			const sysID = $row.data('id'); // From <tr data-id="...">
+			// $('#hdnSysID').val(rowData.SysID);
+
+			// const groupName = $row.find('.itemgroupclass').text().trim();
+			// const divisionID = $row.find('.divisionnameclass').data('divisionid');
+			// const divisionName = $row.find('.divisionnameclass').text().trim();
+			// const isActive = $row.find('.status-badge').hasClass('bg-success');
+
+			// const revenueAC = $row.find('.revenueacclass').text().trim();
+			// const discountAC = $row.find('.discountacclass').text().trim();
+			// const expenseAC = $row.find('.expenseacclass').text().trim();
+			// const municipality = $row.find('.municipalityclass').text().trim();
+			// const tax1 = $row.find('.tax1class').text().trim();
+			// const tax2 = $row.find('.tax2class').text().trim();
+			// const tax3 = $row.find('.tax3class').text().trim();
+			// const tax4 = $row.find('.tax4class').text().trim();
+			// const modifier = $row.find('.modifierclass').text().trim();
+			// const choosenModifier = $row.find('.choosenmodifierclass').text().trim();
+			// const logicalPrinters = $row.find('.logicalprintersclass').text().trim();
+			// const serviceCharge = $row.find('.servicechargeclass').text().trim();
+			// const hideONPDA = $row.find('.hideonpdaclass').text().trim();
+
+				 const groupName = $row.find('.itemgroupclass').text().trim();
+		const divisionID = $row.find('.divisionnameclass').data('divisionid');
+		const isActive = $row.find('.status-badge').hasClass('bg-success');
+
+		const revenueAC = $row.find('td:eq(4)').text().trim();       // revenueAC
+		const discountAC = $row.find('td:eq(5)').text().trim();      // discountAC
+		const expenseAC = $row.find('td:eq(6)').text().trim();       // expenseAC
+		const hideONPDA = $row.find('td:eq(7)').text().trim();       // hideONPDA
+		const modifier = $row.find('td:eq(8)').text().trim();        // modifier
+		const choosenModifier = $row.find('td:eq(9)').text().trim(); // choosenModifier
+		const tax1 = $row.find('td:eq(10)').text().trim();
+		const tax2 = $row.find('td:eq(11)').text().trim();
+		const tax3 = $row.find('td:eq(12)').text().trim();
+		const tax4 = $row.find('td:eq(13)').text().trim();
+		const municipality = $row.find('td:eq(14)').text().trim();
+		const serviceCharge = $row.find('td:eq(15)').text().trim();
+		const logicalPrinters = $row.find('td:eq(16)').text().trim();
+
+			
+			 // Populate form fields
+		$('#txtGroupName').val(groupName);
+		$('#ddlDivision').val(divisionID);
+		$('#chkactiveCheck').prop('checked', isActive);
+		$('#txtRevenue').val(revenueAC);
+		$('#txtDiscount').val(discountAC);
+		$('#txtExpense').val(expenseAC);
+
+		// $('#municipalityCheck').prop('checked', municipality?.toLowerCase() === 'yes');
+		$('#vatCheck').prop('checked', tax1?.toLowerCase() === 'yes');
+		$('#municipalityCheck').prop('checked', tax2?.toLowerCase() === 'yes');
+		$('#gstCheck').prop('checked', tax3?.toLowerCase() === 'yes');
+		$('#cgstCheck').prop('checked', tax4?.toLowerCase() === 'yes');
+		// No corresponding ID in your form, optional
+
+		// Logical printer targets
+		$('#kitchenCheck').prop('checked', logicalPrinters.includes('Kitchen'));
+		$('#barCheck').prop('checked', logicalPrinters.includes('Bar'));
+		  // $('#HideOnPDACheckbox').prop('checked', hideONPDA === 'true' || hideONPDA === '1');
+
+		$('#hdnSysID').val(sysID); // Optional hidden field if you have one for update reference
+
+			  // ✅ Change Save button to Update
+		$('#saveBtn').html('<i class="bi bi-pencil-square"></i> Update');
+
+		});
+
+
+
+
+	</script>
+
+	<!-- ============================================================== -->
+	<!-- Start Save ,Update and Delete here -->
+	<!-- ============================================================== -->
+	<script>
+
+				$('#saveBtn').click(function (e) {
+			e.preventDefault();
+
+			let buttonText = $(this).text().trim();
+			console.log("Button clicked:", buttonText);
+
+			try {
+				// Get field values
+				let groupName = $('#txtGroupName').val().trim();
+				let divisionId = $('#ddlDivision').val();
+
+				// Assume you're storing selected SysID in a hidden input
+				let sysId = $('#hdnSysID').val(); // e.g., <input type="hidden" id="hdnSysID" />
+
+				// Validation
+				if (!groupName) {
+					alert("❗ Please enter a Group Name.");
+					$('#txtGroupName').focus();
+					return;
+				}
+
+				if (!divisionId || divisionId === "0") {
+					alert("❗ Please select a valid Division.");
+					$('#ddlDivision').focus();
+					return;
+				}
+
+				// Final object
+				let groupData = {
+					SysID: parseInt(sysId || "0"), // Required for update
+					GroupName: groupName,
+					DivisionID: parseInt(divisionId),
+					Tax1: $('#vatCheck').is(':checked') ? 'Yes' : 'No',
+					Tax2: $('#municipalityCheck').is(':checked') ? 'Yes' : 'No',
+					Tax3: $('#gstCheck').is(':checked') ? 'Yes' : 'No',
+					Tax4: $('#cgstCheck').is(':checked') ? 'Yes' : 'No',
+					Active: $('#chkactiveCheck').is(':checked') ? 'Yes' : 'No',
+					RevenueAC: $('#txtRevenue').val().trim(),
+					DiscountAC: $('#txtDiscount').val().trim(),
+					ExpenseAC: $('#txtExpense').val().trim(),
+					Municipality: 'L',
+					ServiceCharge: 'Yes',
+					HideONPDA: 'No',
+					Modifier: 'No',
+					ChoosenModifier: 0,
+					DivisionName:''
+				};
+
+				console.log("Button sysId :", sysId);
+				console.log("✅ Group Data to Process:", groupData);
+
+				let apiUrl = '';
+				//let successMessage = '';
+				let httpMethod = 'POST';
+
+				if (buttonText === "Save") {
+					apiUrl = '/api/ItemGroupAPI/Save';
+					//successMessage = '✅ Saved successfully!';
+						httpMethod = 'POST';
+				} else if (buttonText === "Update") {
+					if (!groupData.SysID || groupData.SysID === 0) {
+						toastr.error("❗ Please select a row to update.");
+						return;
+					}
+					console.log("groupData JSON :", JSON.stringify(groupData));
+					apiUrl = `/api/ItemGroupAPI/${groupData.SysID}`;
+					//successMessage = '✅ Updated successfully!';
+					httpMethod = 'PUT'; // ✅ Use PUT for update
+				} else {
+					toastr.error("❗ Unknown action.");
+					return;
+				}
+
+				$.ajax({
+					url: apiUrl,
+					//type: 'POST', // You can use PUT here if your API expects it
+					type: httpMethod, // ✅ Dynamically uses POST or PUT
+					contentType: 'application/json',
+					data: JSON.stringify(groupData),
+					beforeSend: function () {
+						$('#saveBtn').prop('disabled', true).text(buttonText + 'ing...');
+					},
+					success: function (response) {
+						clearFormControls('#ItemGroupFormView');
+						LoadItemGroup();
+
+						Swal.fire({
+							icon: 'success',
+							title: response.message,  //successMessage,
+							showConfirmButton: false,
+							showCloseButton: true,
+							timer: 2000,
+							timerProgressBar: true,
+						});
+					},
+					error: function (xhr) {
+						if (xhr.status === 409) {
+					   Swal.fire({
+			icon: 'warning',
+			title: '!! Duplicate Entry',
+			text: xhr.responseJSON.message, // Get the message from server response
+			showConfirmButton: false,
+			showCloseButton: true,
+			timer: 3000,
+			timerProgressBar: true,
+		});
+						} else {
+							toastr.error(xhr.message || "! Unexpected error.");
+						}
+						console.error("🚫 AJAX Error:", xhr.responseText);
+					},
+					complete: function () {
+						$('#saveBtn').prop('disabled', false).text(buttonText);
+					}
+				});
+
+			} catch (err) {
+				console.error("🚨 Validation or Runtime Error:", err.message);
+				toastr.error(err.message);
+			}
+		});
+
+
+
+		
+		$(document).on("click", ".delete-btn", function (e) {
+								e.preventDefault(); // Prevent form submission or refresh
+					var row = $(this).closest("tr");
+					var id = row.data("id");
+					console.log("deledting Id : " +id);
+
+					Swal.fire({
+						title: 'Are you sure?',
+						text: "You won't be able to revert this!",
+						icon: 'warning',
+						showCancelButton: true,
+						confirmButtonColor: '#d33',
+						cancelButtonColor: '#3085d6',
+						confirmButtonText: 'Yes, delete it!',
+						cancelButtonText: 'Cancel'
+					}).then((result) => {
+						if (result.isConfirmed) {
+							$.ajax({
+								url: `/api/ItemGroupAPI/${id}`,
+								type: "DELETE",
+								success: function (response) {
+									if (response.success) {
+										Swal.fire({
+											icon: 'success',
+											title: response.message,
+											//text: response.message || "Deleted successfully.",
+											text: response.message,
+											timer: 2000,
+											showConfirmButton: false,
+										});
+										row.remove();
+										loadCategory();
+									} else {
+										Swal.fire({
+											//icon: 'error',
+											title: 'Delete failed!',
+											text: response.message || "Something went wrong.",
+										});
+									}
+								},
+								error: function () {
+									Swal.fire({
+										//icon: 'error',
+										title: 'Error!',
+										text: 'Error deleting data.',
+									});
+								}
+							});
+						}
+					});
+				});
+
+	</script>
+
+	<script>
+		// 	document.getElementById('chkactiveCheck').addEventListener('change', function() {
+		// 	var label = document.getElementById('activeLabel');
+		// 	if (this.checked) {
+		// 		label.textContent = 'Active';
+		// 	} else {
+		// 		label.textContent = 'Inactive';
+		// 	}
+		// });
+				document.getElementById('chkactiveCheck').addEventListener('change', function () {
+			const span = document.getElementById('activeLabel');
+			//span.textContent = this.checked ? 'Active' : 'Inactive';
+			
+				 const isActive = this.checked;
+
+		// Update text
+		span.textContent = isActive ? 'Active' : 'Inactive';
+
+		// Remove both classes first
+		span.classList.remove('text-success', 'text-danger');
+
+		// Add appropriate class
+		span.classList.add(isActive ? 'text-success' : 'text-danger');
+		});
+
+		// 		document.getElementById('chkactiveCheck').addEventListener('change', function () {
+		// 	const span = document.getElementById('activeLabel');
+		// 	if (this.checked) {
+		// 		span.textContent = 'Active';
+		// 		span.style.color = 'green';
+		// 	} else {
+		// 		span.textContent = 'Inactive';
+		// 		span.style.color = 'red';
+		// 	}
+		// });
+
+ </script>
+
+	<!-- ============================================================== -->
+	<!-- Start Gridview Edit & Delete here -->
+	<!-- ============================================================== -->
+
+
+	<script>
+			
+
+
+					$(document).ready(function () {
+			// When Select All is toggled
+			$('#selectAllTax').change(function () {
+				$('.tax-option').prop('checked', $(this).prop('checked'));
+			});
+
+			// When any individual checkbox is changed
+			$('.tax-option').change(function () {
+				const total = $('.tax-option').length;
+				const checked = $('.tax-option:checked').length;
+				$('#selectAllTax').prop('checked', total === checked);
+			});
+
+				// Select All for "Where to Print"
+			$('#selectAllPrint').change(function () {
+				$('.print-option').prop('checked', $(this).prop('checked'));
+			});
+
+			// Auto-toggle Select All if all checkboxes are checked/unchecked manually
+			$('.print-option').change(function () {
+				const total = $('.print-option').length;
+				const checked = $('.print-option:checked').length;
+				$('#selectAllPrint').prop('checked', total === checked);
+			});
+		});
+
+
+
+	</script>
+
+
+
+@* //Clear button functionalities... *@
+	<script>
+		// Clear Button Click...
+		$('#clearBtn').click(function () {
+			clear();
+		});
+
+		
+		function clear()
+		{
+			// Change Save button text back to "Save"
+			$('#saveBtn').html('<i class="bi bi-save"></i> Save');
+
+			// Reset form fields
+			//$('#ItemGroupFormView')[0].reset();
+
+			// Remove row highlight
+			$('.SelectedRow-ColorChange tbody tr').removeClass('selected');
+
+			// Clear hidden SysID
+			$('#hdnSysID').val('');
+
+			clearFormControls('#ItemGroupFormView');
+			$('#searchInput').val('');
+			//$('#ddlDivision').val('0'); // Reset the dropdown to default
+
+				// Set checkbox to checked (Active = true)
+		////$('#chkactiveCheck').prop('checked', true);
+
+		// Update text label for Active/Inactive
+		////$('#activeLabel').text('Active'); // or use .html() if using icons/spans
+
+		}
+
+	</script>
+
+
+	<!-- ============================================================== -->
+	<!-- Start Gridview Search functionality here -->
+	<!-- ============================================================== -->
+
+	<script>
+			//grid search function...
+		$('#searchIcon').on('click', function () {
+			console.log("searchIcon inside");
+			searchConcepts();
+		});
+
+		$('#searchInput').on('keypress', function(event) {
+			if (event.key === 'Enter') {
+				event.preventDefault();
+				searchConcepts();
+			}
+		});
+
+		//auto loading grid when search value cleared...
+		$('#searchInput').on('input', function () {
+			const currentValue = $(this).val()?.trim();
+
+			if (!currentValue) {
+					LoadItemGroup();
+			}
+
+		});
+
+		function searchConcepts() {
+
+			const searchValue = $('#searchInput').val()?.trim();
+			console.log("searchValue inside : " +searchValue);
+			if(!searchValue)
+			{
+				toastr.warning("Please enter a search term to continue.");
+				return;
+			}
+			LoadItemGroup();
+		}
+
+	</script>
+
+
+}
+
+

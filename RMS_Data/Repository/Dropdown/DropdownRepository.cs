@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ﻿//using System;
 //using System.Collections.Generic;
 //using System.Linq;
@@ -49,8 +48,7 @@
 
 
 
-=======
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -67,7 +65,7 @@ namespace RMS_Data.Repository.Dropdown
         private readonly ApplicationDbContext _db;
         public DropdownRepository(ApplicationDbContext db)
         {
-            _db = db; 
+            _db = db;
         }
 
         //GetProductSalesCategoryAsync model...
@@ -89,75 +87,92 @@ namespace RMS_Data.Repository.Dropdown
                 return allCategories;
             }
 
-            // Case 2: Load divisions based on category
-            else if (catId !=0 && divsionId == 0)
+            // Case 2: Load divisions 
+            //       else if (catId != 0 && divsionId == 0)
+            //       {
+            //           if (catId == 1)
+            //           {
+
+            //               // Fetch divisions based 
+
+            //               var divisions = await _db.Division
+            //     .Select(d => new CategoryDropdownViewModel
+            //     {
+            //         ID = d.SysID,
+            //         Name = d.Division
+            //     })
+            //     .ToListAsync();
+            //           }
+            //           else
+            //           {
+            //               var category = await _db.Category
+            //.FirstOrDefaultAsync(cat =>
+            //    cat.Category == categoryname &&
+            //    (cat.SysID == catId || catId == 0));
+
+            //               if (category == null)
+            //                   return new List<CategoryDropdownViewModel>();
+
+
+
+            //               var divisions = await _db.Division
+            //                  .Where(i => i.CategoryID == category.SysID)
+            //                  .Select(i => new CategoryDropdownViewModel
+            //                  {
+            //                      ID = i.SysID,
+            //                      Name = i.Division
+            //                  })
+            //                  .ToListAsync();
+            //           }
+
+
+            //           return divisions;
+            //       }
+
+            else if (catId != 0 && divsionId == 0)
             {
-                // Assuming "categoryname" is the Category name, and you're finding the category first
-                //var category = await _db.Category // correct table for categories
-                //    .FirstOrDefaultAsync(c => c.Category == categoryname && (c.SysID == catId || catId == 0));
+                List<CategoryDropdownViewModel> divisions;
 
-                //if (category == null)
-                //    return new List<CategoryDropdownViewModel>();
-
-                //var divisions = await _db.Division // now getting divisions that belong to that category
-                //    .Where(div => div.SysID == category.SysID && (div.SysID == divsionId || divsionId == 0))
-                //    .Select(d => new CategoryDropdownViewModel
-                //    {
-                //        ID = d.SysID,
-                //        Name = d.Division
-                //    })
-                //    .ToListAsync();
-
-                int categorySysId = catId;
-
-                // Try to get the category if the name is available
-                //if (!string.IsNullOrEmpty(categoryname))
-                //{
-                //    var category = await _db.Category
-                //        .FirstOrDefaultAsync(c => c.Category == categoryname && (c.SysID == catId || catId == 0));
-
-                //    if (category != null)
-                //    {
-                //        categorySysId = category.SysID;
-                //    }
-                //}
-
-                // Optional: Resolve categoryname if provided
-                if (!string.IsNullOrWhiteSpace(categoryname))
+                if (catId == 1)
+                {
+                    // Fetch all divisions
+                    divisions = await _db.Division
+                        .Select(d => new CategoryDropdownViewModel
+                        {
+                            ID = d.SysID,
+                            Name = d.Division
+                        })
+                        .ToListAsync();
+                }
+                else
                 {
                     var category = await _db.Category
-                        .FirstOrDefaultAsync(c => c.Category == categoryname && c.SysID == catId);
+                        .FirstOrDefaultAsync(cat =>
+                            cat.Category == categoryname &&
+                            (cat.SysID == catId || catId == 0));
 
-                    if (category != null)
-                    {
-                        categorySysId = category.SysID;
-                    }
+                    if (category == null)
+                        return new List<CategoryDropdownViewModel>();
+
+                    divisions = await _db.Division
+                        .Where(i => i.CategoryID == category.SysID)
+                        .Select(i => new CategoryDropdownViewModel
+                        {
+                            ID = i.SysID,
+                            Name = i.Division
+                        })
+                        .ToListAsync();
                 }
-
-
-                // Fetch divisions based on resolved categorySysId
-                var divisions = await _db.Division
-                    .Where(div => div.CategoryID == categorySysId && (div.SysID == divsionId || divsionId == 0)) // Make sure `CategoryID` is correct here
-                    .Select(d => new CategoryDropdownViewModel
-                    {
-                        ID = d.SysID,
-                        Name = d.Division
-                    })
-                    .ToListAsync();
 
                 return divisions;
             }
 
-
             // Case 3: Load based on both category and division
-            else if (divsionId != 0)                    
+            else if (divsionId != 0)
             {
-                               //var division = await _db.Division
-                //    .FirstOrDefaultAsync(div => div.Division == divisionName && div.SysID == category.SysID && (div.SysID == divsionId || divsionId == 0));
-
                 var division = await _db.Division
        .FirstOrDefaultAsync(div =>
-           div.Division == divisionName &&      
+           div.Division == divisionName &&
            (div.SysID == divsionId || divsionId == 0));
 
 
@@ -181,4 +196,3 @@ namespace RMS_Data.Repository.Dropdown
         }
     }
 }
->>>>>>> 9e3255a0571a76a2273843c46cb22262d7c52274

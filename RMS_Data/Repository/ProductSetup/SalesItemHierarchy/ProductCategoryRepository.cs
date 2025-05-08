@@ -58,15 +58,14 @@ namespace RMS_Data.Repository.ProductSetup.SalesItemHierarchy
         {
             IQueryable<CategoryViewModel> query;
 
-            if (string.IsNullOrWhiteSpace(groupName) || groupName is null)
+            if (string.IsNullOrWhiteSpace(groupName))
             {
-                query = _db.Category.AsQueryable();
-                //query = _db.Category.Where(c => c.fldisactive);
+                query = _db.Category.Where(c => c.Active == "Yes");
             }
             else
             {
-                query = _db.Category.Where(cg => cg.Category!.Contains(groupName));
-
+                query = _db.Category
+                    .Where(c => c.Active == "Yes" && c.Category != null && c.Category.Contains(groupName));
             }
 
 

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ﻿//using System;
 //using System.Collections.Generic;
 //using System.ComponentModel.DataAnnotations;
@@ -17,7 +16,7 @@
 
 //    }
 //}
-=======
+
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -36,4 +35,3 @@ namespace RMS_Models.Models.API_Models.CommonModels
       
     }
 }
->>>>>>> 9e3255a0571a76a2273843c46cb22262d7c52274

@@ -25,11 +25,32 @@ function clearFormControls(formSelector) {
     // Clear ListBox (multi-selects)
     $form.find('select[multiple]').empty();
 
+    $form.find('select').each(function () {
+        $(this).empty(); // This will clear all <option> elements inside every <select>
+    });
+
+
     // Clear validation messages
     $form.find('.field-validation-error, .text-danger').empty();
 
     // Optional: focus first visible input
     // $form.find('input:visible:enabled:first').focus();
+
+    // Update any status labels for toggles inside this form
+    $form.find('.toggle-status').each(function () {
+        const labelSelector = $(this).data('label-target');
+        if (labelSelector) {
+            const $label = $(labelSelector);
+            const type = $(this).attr('type');
+
+            if (type === 'checkbox') {
+                $label.text($(this).is(':checked') ? 'Active' : 'Inactive');
+            } else if (type === 'radio') {
+                const value = $form.find('input[name="' + $(this).attr('name') + '"]:checked').val();
+                $label.text(value || '');
+            }
+        }
+    });
 }
 
 

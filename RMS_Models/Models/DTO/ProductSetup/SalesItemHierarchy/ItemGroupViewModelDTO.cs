@@ -14,6 +14,8 @@ namespace RMS_Models.Models.DTO.ProductSetup.SalesItemHierarchy
 
         public int DivisionID { get; set; }
 
+        public string DivisionName { get; set; }
+
         [Required]
         [MaxLength(100)] // Optional: Set a length for GroupName if applicable
         public string GroupName { get; set; }

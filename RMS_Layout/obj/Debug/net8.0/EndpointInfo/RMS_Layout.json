@@ -745,6 +745,268 @@
         }
       }
     },
+    "/api/CustomerTitleAPI": {
+      "get": {
+        "tags": [
+          "CustomerTitleAPI"
+        ],
+        "parameters": [
+          {
+            "name": "page",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "pageSize",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "customerNameTitle",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/CustomerTitleAPI/save": {
+      "post": {
+        "tags": [
+          "CustomerTitleAPI"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CustomerTitleDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CustomerTitleDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CustomerTitleDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/CustomerTitleAPI/{id}": {
+      "put": {
+        "tags": [
+          "CustomerTitleAPI"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CustomerTitleDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CustomerTitleDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CustomerTitleDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "CustomerTitleAPI"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/CustomerTypeAPI": {
+      "get": {
+        "tags": [
+          "CustomerTypeAPI"
+        ],
+        "parameters": [
+          {
+            "name": "page",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "pageSize",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "customerNameType",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/CustomerTypeAPI/save": {
+      "post": {
+        "tags": [
+          "CustomerTypeAPI"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CustomerTypeDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CustomerTypeDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CustomerTypeDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/CustomerTypeAPI/{id}": {
+      "put": {
+        "tags": [
+          "CustomerTypeAPI"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CustomerTypeDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CustomerTypeDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CustomerTypeDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "CustomerTypeAPI"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/DepartmentAPI": {
       "get": {
         "tags": [
@@ -876,7 +1138,7 @@
         }
       }
     },
-    "/api/ProductSalesCategoryAPI": {
+    "/api/Dropdown/DropdownApi": {
       "get": {
         "tags": [
           "DropdownApi"
@@ -910,6 +1172,139 @@
             "in": "query",
             "schema": {
               "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/ItemGroupAPI": {
+      "get": {
+        "tags": [
+          "ItemGroupAPI"
+        ],
+        "parameters": [
+          {
+            "name": "page",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "pageSize",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "itemgroupName",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/ItemGroupAPI/Save": {
+      "post": {
+        "tags": [
+          "ItemGroupAPI"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ItemGroupViewModelDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ItemGroupViewModelDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ItemGroupViewModelDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/ItemGroupAPI/{sysid}": {
+      "put": {
+        "tags": [
+          "ItemGroupAPI"
+        ],
+        "parameters": [
+          {
+            "name": "sysid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ItemGroupViewModelDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ItemGroupViewModelDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ItemGroupViewModelDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/ItemGroupAPI/{id}": {
+      "delete": {
+        "tags": [
+          "ItemGroupAPI"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
             }
           }
         ],
@@ -1448,7 +1843,40 @@
             "nullable": true
           },
           "active": {
-            "type": "boolean"
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "CustomerTitleDTO": {
+        "type": "object",
+        "properties": {
+          "sysId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "nameTitle": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "CustomerTypeDTO": {
+        "type": "object",
+        "properties": {
+          "sysId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "nameType": {
+            "type": "string",
+            "nullable": true
+          },
+          "active": {
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false
@@ -1495,6 +1923,102 @@
           },
           "active": {
             "maxLength": 8,
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ItemGroupViewModelDTO": {
+        "required": [
+          "groupName"
+        ],
+        "type": "object",
+        "properties": {
+          "sysID": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "divisionID": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "divisionName": {
+            "type": "string",
+            "nullable": true
+          },
+          "groupName": {
+            "maxLength": 100,
+            "minLength": 1,
+            "type": "string"
+          },
+          "active": {
+            "maxLength": 3,
+            "type": "string",
+            "nullable": true
+          },
+          "revenueAC": {
+            "maxLength": 50,
+            "type": "string",
+            "nullable": true
+          },
+          "discountAC": {
+            "maxLength": 50,
+            "type": "string",
+            "nullable": true
+          },
+          "expenseAC": {
+            "maxLength": 50,
+            "type": "string",
+            "nullable": true
+          },
+          "hideONPDA": {
+            "maxLength": 3,
+            "type": "string",
+            "nullable": true
+          },
+          "modifier": {
+            "maxLength": 3,
+            "type": "string",
+            "nullable": true
+          },
+          "choosenModifier": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "tax1": {
+            "maxLength": 3,
+            "type": "string",
+            "nullable": true
+          },
+          "tax2": {
+            "maxLength": 3,
+            "type": "string",
+            "nullable": true
+          },
+          "tax3": {
+            "maxLength": 3,
+            "type": "string",
+            "nullable": true
+          },
+          "tax4": {
+            "maxLength": 3,
+            "type": "string",
+            "nullable": true
+          },
+          "municipality": {
+            "maxLength": 3,
+            "type": "string",
+            "nullable": true
+          },
+          "serviceCharge": {
+            "maxLength": 3,
+            "type": "string",
+            "nullable": true
+          },
+          "logicalPrinters": {
+            "maxLength": 350,
             "type": "string",
             "nullable": true
           }

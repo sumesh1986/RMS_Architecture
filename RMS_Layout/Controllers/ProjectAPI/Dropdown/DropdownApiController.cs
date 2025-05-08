@@ -12,7 +12,7 @@ namespace RMS_Layout.Controllers.ProjectAPI.Dropdown
             _dropdownCommonServices = dropdownCommonServices;
         }
 
-        [HttpGet("api/ProductSalesCategoryAPI")]
+        [HttpGet("api/Dropdown/DropdownApi")]
         public async Task<IActionResult> Get([FromQuery] int catId, [FromQuery] string categoryname, [FromQuery] int divsionId, [FromQuery] string divisionName)
         {
             var data = await _dropdownCommonServices.GetProductSalesCategoryAsync(catId, categoryname, divsionId, divisionName);

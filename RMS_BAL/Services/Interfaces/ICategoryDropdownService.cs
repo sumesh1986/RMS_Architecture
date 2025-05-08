@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ﻿//using System;
 //using System.Collections.Generic;
 //using System.Linq;
@@ -16,7 +15,6 @@
 //}
 
 
-=======
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -32,4 +30,3 @@ namespace RMS_BAL.Services.Interfaces
         Task<(int totalRecords, IEnumerable<CategoryDropdownViewModel> data)> GetCategoryAsync(int Id, string? categoryname);
     }
 }
->>>>>>> 9e3255a0571a76a2273843c46cb22262d7c52274
