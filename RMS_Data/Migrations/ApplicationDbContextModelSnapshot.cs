@@ -79,6 +79,57 @@ namespace RMS_Data.Migrations
                     b.ToTable("CustomerGroups");
                 });
 
+            modelBuilder.Entity("RMS_Models.Models.API_Models.Customers.CustomerTitle", b =>
+                {
+                    b.Property<int>("SysId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("SysId"));
+
+                    b.Property<DateTime>("InsertedTime")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime?>("LastUpdatedTime")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("NameTitle")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.HasKey("SysId");
+
+                    b.ToTable("CustomerTitle");
+                });
+
+            modelBuilder.Entity("RMS_Models.Models.API_Models.Customers.CustomerType", b =>
+                {
+                    b.Property<int>("SysId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("SysId"));
+
+                    b.Property<bool>("Active")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime>("InsertedTime")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime?>("LastUpdatedTime")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("NameType")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.HasKey("SysId");
+
+                    b.ToTable("CustomerTypes");
+                });
+
             modelBuilder.Entity("RMS_Models.Models.ServiceModels.ErrorLog", b =>
                 {
                     b.Property<int>("Id")

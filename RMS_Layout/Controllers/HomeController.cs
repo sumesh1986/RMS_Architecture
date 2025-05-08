@@ -210,10 +210,10 @@ namespace RMS_Layout.Controllers
         }
 
 
-        public IActionResult CustomersSetup()
-        {
-            return View();
-        }
+        //public IActionResult CustomersSetup()
+        //{
+        //    return View();
+        //}
 
 
         public IActionResult Registration()
@@ -223,14 +223,14 @@ namespace RMS_Layout.Controllers
 
         
 
-        public IActionResult customerlist()
-        {
-            return View();
-        }
-        public IActionResult customertype()
-        {
-            return View();
-        }
+        //public IActionResult customerlist()
+        //{
+        //    return View();
+        //}
+        //public IActionResult customertype()
+        //{
+        //    return View();
+        //}
         public IActionResult PolyDisplay()
         {
             return View();

@@ -58,7 +58,7 @@ namespace RMS_BAL.Services.Customer
             {
                 GroupName = model.GroupName,
                 Active = model.Active,
-                InsertedTime = DateTime.Now
+                //InsertedTime = DateTime.Now
             };
 
             // creating group...

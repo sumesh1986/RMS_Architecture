@@ -308,6 +308,56 @@
     ]
   },
   {
+    "ContainingType": "RMS_Layout.Controllers.ProjectAPI.Customers.CustomerApiController",
+    "Method": "Getdiscount",
+    "RelativePath": "api/CustomerApi/discount",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RMS_Layout.Controllers.ProjectAPI.Customers.CustomerApiController",
+    "Method": "Getgroups",
+    "RelativePath": "api/CustomerApi/groups",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RMS_Layout.Controllers.ProjectAPI.Customers.CustomerApiController",
+    "Method": "Getprice",
+    "RelativePath": "api/CustomerApi/price",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RMS_Layout.Controllers.ProjectAPI.Customers.CustomerApiController",
+    "Method": "Gettitles",
+    "RelativePath": "api/CustomerApi/titles",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RMS_Layout.Controllers.ProjectAPI.Customers.CustomerApiController",
+    "Method": "Gettypes",
+    "RelativePath": "api/CustomerApi/types",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "RMS_Layout.Controllers.ProjectAPI.CustomerGroupAPIController",
     "Method": "Get",
     "RelativePath": "api/CustomerGroupAPI",
@@ -381,6 +431,164 @@
       {
         "Name": "model",
         "Type": "RMS_Models.Models.DTO.Customers.CustomerGroupDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RMS_Layout.Controllers.ProjectAPI.Customers.CustomerTitleAPIController",
+    "Method": "Get",
+    "RelativePath": "api/CustomerTitleAPI",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "page",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "customerNameTitle",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RMS_Layout.Controllers.ProjectAPI.Customers.CustomerTitleAPIController",
+    "Method": "Update",
+    "RelativePath": "api/CustomerTitleAPI/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "model",
+        "Type": "RMS_Models.Models.DTO.Customers.CustomerTitleDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RMS_Layout.Controllers.ProjectAPI.Customers.CustomerTitleAPIController",
+    "Method": "Delete",
+    "RelativePath": "api/CustomerTitleAPI/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RMS_Layout.Controllers.ProjectAPI.Customers.CustomerTitleAPIController",
+    "Method": "create",
+    "RelativePath": "api/CustomerTitleAPI/save",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "RMS_Models.Models.DTO.Customers.CustomerTitleDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RMS_Layout.Controllers.ProjectAPI.Customers.CustomerTypeAPIController",
+    "Method": "Get",
+    "RelativePath": "api/CustomerTypeAPI",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "page",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "customerNameType",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RMS_Layout.Controllers.ProjectAPI.Customers.CustomerTypeAPIController",
+    "Method": "Update",
+    "RelativePath": "api/CustomerTypeAPI/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "model",
+        "Type": "RMS_Models.Models.DTO.Customers.CustomerTypeDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RMS_Layout.Controllers.ProjectAPI.Customers.CustomerTypeAPIController",
+    "Method": "Delete",
+    "RelativePath": "api/CustomerTypeAPI/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RMS_Layout.Controllers.ProjectAPI.Customers.CustomerTypeAPIController",
+    "Method": "create",
+    "RelativePath": "api/CustomerTypeAPI/save",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "RMS_Models.Models.DTO.Customers.CustomerTypeDTO",
         "IsRequired": true
       }
     ],

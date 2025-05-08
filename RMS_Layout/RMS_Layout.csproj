@@ -41,4 +41,11 @@
     <ProjectReference Include="..\RMS_Models\RMS_Models.csproj" />
   </ItemGroup>
 
+
+
+
+  <ItemGroup>
+    <Folder Include="NewFolder\" />
+  </ItemGroup>
+
 </Project>

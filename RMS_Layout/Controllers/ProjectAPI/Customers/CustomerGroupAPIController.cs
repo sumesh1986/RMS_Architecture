@@ -40,7 +40,7 @@ namespace RMS_Layout.Controllers.ProjectAPI
         // Create customer group...
         [HttpPost("save")]
         public async Task<IActionResult> create([FromBody] CustomerGroupDTO model)
-        {
+         {
             //throw new Exception("Thrown manually from the API Controller");
             var result = await _customergroupService.CreateAsync(model);
 
@@ -51,7 +51,7 @@ namespace RMS_Layout.Controllers.ProjectAPI
             return Ok(new { message = "Customer Group created successfully." });
         }
 
-        // Update the existing group...
+        //   the existing group...
         [HttpPut("{id}")]
         public async Task<IActionResult> Update(int id, [FromBody] CustomerGroupDTO model)
         {
@@ -80,3 +80,9 @@ namespace RMS_Layout.Controllers.ProjectAPI
         }
     }
 }
+
+
+
+
+
+

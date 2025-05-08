@@ -802,22 +802,28 @@
 								</li>
 
 								<li>
-									<a href="@Url.Action("customerlist", "Home")">
-										<i class="bi bi-person-badge me-1"></i> Customer Title
+									<a href="@Url.Action("CustomerTitles", "Customers")">
+										<i class="bi bi-people-fill me-1"></i> Customer Titile
 									</a>
 								</li>
 
 								<li>
-									<a href="@Url.Action("customertype", "Home")">
-										<i class="bi bi-person-vcard me-1"></i> Customer Type
+									<a href="@Url.Action("CustomerTypes", "Customers")">
+										<i class="bi bi-people-fill me-1"></i> Customer Type
 									</a>
 								</li>
 
 								<li>
-									<a href="@Url.Action("CustomersSetup", "Home")">
+									<a href="@Url.Action("CustomerSetup", "Customers")">
+										<i class="bi bi-people-fill me-1"></i> Customer Setup
+									</a>
+								</li>
+								
+								@* <li>
+									<a href="@Url.Action("CustomerSetup", "Customers")">
 										<i class="bi bi-person-gear me-1"></i> Customer Setup
 									</a>
-								</li>
+								</li> *@
 
 							</ul>
 						</li>
@@ -942,7 +948,7 @@
 
 
 								<!-- Financials -->
-								<li>
+								<li> 
 									<a href="javascript:void(0);" class=" waves-effect">
 										<i class="bi bi-cash-coin"></i> Financials
 									</a>
@@ -1422,7 +1428,7 @@
 	@*         <script src="assets/js/app.js"></script> *@
 
 
-
+    <script src="~/js/sweetalert2@11.js"></script>
 
 
 	@*     <div class="container">
