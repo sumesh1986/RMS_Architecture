@@ -614,6 +614,97 @@
         }
       }
     },
+    "/api/CustomerApi/titles": {
+      "get": {
+        "tags": [
+          "CustomerApi"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/CustomerApi/groups": {
+      "get": {
+        "tags": [
+          "CustomerApi"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/CustomerApi/types": {
+      "get": {
+        "tags": [
+          "CustomerApi"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/CustomerApi/price": {
+      "get": {
+        "tags": [
+          "CustomerApi"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/CustomerApi/discount": {
+      "get": {
+        "tags": [
+          "CustomerApi"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/CustomerApi/Save": {
+      "post": {
+        "tags": [
+          "CustomerApi"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CustomersMainDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CustomersMainDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CustomersMainDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/CustomerGroupAPI": {
       "get": {
         "tags": [
@@ -1877,6 +1968,24 @@
           "active": {
             "type": "string",
             "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "CustomersMainDTO": {
+        "required": [
+          "customerName"
+        ],
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "customerName": {
+            "maxLength": 100,
+            "minLength": 1,
+            "type": "string"
           }
         },
         "additionalProperties": false

@@ -25,5 +25,10 @@ namespace RMS_BAL.Services.Result
         {
             return new Result<T> { Success = false, Message = message };
         }
+
+        public static Result<T> ValidationResult(string message)
+        {
+            return new Result<T> { Success = true, Message = message };
+        }
     }
 }

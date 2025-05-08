@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using RMS_BAL.Services.Company;
 using RMS_BAL.Services.Interfaces;
-using RMS_BAL.Services.ProductSetup.SalesItemHierarchy;
-using RMS_Models.Models.DTO.Company;
+//using RMS_BAL.Services.ProductSetup.SalesItemHierarchy;
+//using RMS_Models.Models.DTO.Company;
 using RMS_Models.Models.DTO.ProductSetup.SalesItemHierarchy;
 
 namespace RMS_Layout.Controllers.ProjectAPI.ProductSetup.SalesItemHierarchy

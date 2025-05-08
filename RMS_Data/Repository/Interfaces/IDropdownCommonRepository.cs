@@ -9,6 +9,6 @@ namespace RMS_Data.Repository.Interfaces
 {
     public interface IDropdownCommonRepository
     {
-
+        Task<IEnumerable<CategoryDropdownViewModel>> GetProductSalesCategoryAsync(int catId, string? categoryname, int divsionId, string? divisionName);
     }
 }

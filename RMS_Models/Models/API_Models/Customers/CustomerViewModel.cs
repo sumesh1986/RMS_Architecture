@@ -17,6 +17,6 @@ namespace RMS_Models.Models.API_Models.Customers
         [Required]
         public string? Nametitle { get; set; } = string.Empty;
 
-        public byte[] ImageData { get; set; }
+        //public byte[] ImageData { get; set; }
     }
 }

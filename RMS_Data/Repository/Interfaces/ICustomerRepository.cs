@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using RMS_Models.Models.API_Models.Customers;
 
+
 namespace RMS_Data.Repository.Interfaces
 {
     public interface ICustomerRepository
@@ -14,7 +15,7 @@ namespace RMS_Data.Repository.Interfaces
         Task<IEnumerable<string>> GetdiscountAsync();
 
 
-
+        Task<CustomersMain> CreateAsync(CustomersMain CustomersRepomodel);
         //Task<CustomerTitle> CreateAsync(Customer model);
         //Task<CustomerTitle> CreateAsync(CustomerTitle model);
     }

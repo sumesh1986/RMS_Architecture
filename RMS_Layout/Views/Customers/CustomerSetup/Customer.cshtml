@@ -31,7 +31,7 @@
 							<!--begin::Card Body-->
 							<div class="card-body">
 
-								<form asp-action="Create" method="post">
+							
 									<!--begin::Row-->
 									<!-- Form -->
 
@@ -68,6 +68,7 @@
 
 													<div class="container-fluid">
 
+														<form id="CustomerMainForm">
 														<div class="row">
 															<!-- LEFT SIDE FORM -->
 															<div class="col-md-6">
@@ -94,7 +95,7 @@
 																<div class="row mb-3">
 																	<div class="col-md-6">
 																		<label class="form-label">Name:</label>
-																		<input type="text" id="TextBox1" class="form-control" />
+																		<input type="text" id="txtCustomerName" class="form-control" />
 																	</div>
 
 																	<div class="col-md-6">
@@ -278,31 +279,13 @@
 																	</div>
 																</div>
 
+																
+
 
 															</div>
 														</div>
 
-														<!-- Concept, Branch, Group -->
-														@* <div class="row mb-3">
-															<div class="col-md-4">
-																<label class="form-label">Concept:</label>
-																<select id="DropDownList8" class="form-select">
-																	<option selected value="0">-- Select --</option>
-																</select>
-															</div>
-															<div class="col-md-4">
-																<label class="form-label">Branches:</label>
-																<select id="DropDownList9" class="form-select">
-																	<option selected value="0">-- Select --</option>
-																</select>
-															</div>
-															<div class="col-md-4">
-																<label class="form-label">Customer Group:</label>
-																<select id="DropDownList10" class="form-select">
-																	<option selected value="0">-- Select --</option>
-																</select>
-															</div>
-														</div> *@
+														</form>
 														<!-- Table -->
 														<div class="card mt-4 shadow-sm">
 															<div class="card-header header-background text-white d-flex justify-content-between align-items-center">
@@ -322,12 +305,12 @@
 																				<th>Customer</th>
 																				<th>Phone</th>
 																				<th>Place</th>
-																				<th>Status</th>
-																				<th>Actions</th>
+																				@* <th>Status</th> *@
+																				@* <th>Actions</th> *@
 																			</tr>
 																		</thead>
 																		<tbody>
-																			<tr>
+																			@* <tr>
 																				<td>1</td>
 																				<td>ABC</td>
 																				<td>123-456-7890</td>
@@ -353,7 +336,7 @@
 																					<button class="btn btn-outline-primary btn-sm"><i class="bi bi-pencil-square"></i></button>
 																					<button class="btn btn-outline-danger btn-sm"><i class="bi bi-trash"></i></button>
 																				</td>
-																			</tr>
+																			</tr> *@
 																		</tbody>
 																	</table>
 																</div>
@@ -366,7 +349,7 @@
 															<hr>
 															<div class="d-grid gap-2 d-md-flex justify-content-md-end">
 																<!-- Save Button -->
-																<button type="submit" class="btn btn-primary button-background waves-effect">
+																<button id="savebtnCustomerMain" type="submit" class="btn btn-primary button-background waves-effect">
 																	<i class="bi bi-floppy"></i> Save
 																</button>
 
@@ -774,9 +757,10 @@
 															<hr>
 															<div class="d-grid gap-2 d-md-flex justify-content-md-end">
 																<!-- Save Button -->
-																<button type="submit" class="btn btn-primary button-background waves-effect">
+																<button id="saveBtn"  type="submit" class="btn btn-primary button-background waves-effect">
 																	<i class="bi bi-floppy"></i> Save
 																</button>
+
 
 																<!-- Clear Button -->
 																<button type="button" class="btn btn-outline-secondary" id="clearBtn">
@@ -987,7 +971,7 @@
 
 
 									<!--end::Row-->
-								</form>
+								
 							</div>
 							<!--end::Card Body-->
 
@@ -1049,8 +1033,11 @@
 			loadGroups();
 			loadTypes();
 			loadprice();
+			loadDiscount()
 
 			function loadModules() {
+
+				console.log("hiii");
 				$.ajax({
 					url: '/api/CustomerAPI/titles',
 					method: 'GET',
@@ -1145,6 +1132,73 @@
 					}
 				});
 			}
+
+
+
+
+
+					$('#saveBtn').click(function (e) {
+			e.preventDefault();
+
+			// let buttonText = $(this).text().trim();
+			console.log("Button clicked:");
+
+			try {
+				let customerName = $('#txtCustomerName').val().trim();
+				let title = $('#selecttitle').val();
+
+				if (!title) {
+					alert("❗ Please select a Title.");
+					$('#selecttitle').focus();
+					return;
+				}
+
+				if (!customerName) {
+					alert("❗ Please enter Customer Name.");
+					$('#txtCustomerName').focus();
+					return;
+				}
+
+				let customerData = {
+					Title: title,
+					CustomerName: customerName
+				};
+
+				console.log("✅ Data to save:", customerData);
+
+				$.ajax({
+					url: '/api/CustomerApi/Save', // Update this to your actual API route
+					type: 'POST',
+					contentType: 'application/json',
+					data: JSON.stringify(customerData),
+					beforeSend: function () {
+						$('#saveBtn').prop('disabled', true).text('Saving...');
+					},
+					success: function (response) {
+						Swal.fire({
+							icon: 'success',
+							title: '✅ Saved successfully!',
+							showConfirmButton: false,
+							timer: 2000
+						});
+
+						$('#txtCustomerName').val('');
+						$('#selecttitle').val('');
+					},
+					error: function (xhr) {
+						toastr.error(xhr.responseText || "! Unexpected error.");
+						console.error("🚫 AJAX Error:", xhr.responseText);
+					},
+					complete: function () {
+						$('#saveBtn').prop('disabled', false).text('Save');
+					}
+				});
+
+			} catch (err) {
+				console.error("🚨 Error:", err.message);
+				toastr.error(err.message);
+			}
+		});
 
 
 		});

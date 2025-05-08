@@ -9,7 +9,6 @@ namespace RMS_Models.Models.DTO.Customers
 {
     public class CustomerViewModelDTO
     {
-        [Key]
         public int SysID { get; set; }
         [Required]
         public string? Nametitle { get; set; }
@@ -17,7 +16,7 @@ namespace RMS_Models.Models.DTO.Customers
         //public byte[] ImageData { get; set; }
 
 
-       
+      
 
     }
 }

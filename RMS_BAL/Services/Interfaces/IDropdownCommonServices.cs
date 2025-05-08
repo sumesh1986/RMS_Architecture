@@ -10,6 +10,8 @@ namespace RMS_BAL.Services.Interfaces
 {
     public interface IDropdownCommonServices
     {
+        //Task GetProductSalesCategoryAsync(int catId, string categoryname, int divsionId, string divisionName);
 
+        Task<IEnumerable<CategoryDropdownViewModel>> GetProductSalesCategoryAsync(int catId, string categoryname, int divsionId, string divisionName);
     }
 }

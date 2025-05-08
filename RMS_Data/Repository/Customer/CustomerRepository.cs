@@ -7,6 +7,7 @@ using RMS_Data.Data;
 using RMS_Data.Repository.Interfaces;
 using RMS_Models.Models.API_Models.Customers;
 
+
 namespace RMS_Data.Repository.Customer
 {
     public class CustomerRepository : ICustomerRepository
@@ -63,6 +64,20 @@ namespace RMS_Data.Repository.Customer
                 .OrderBy(m => m)
                 .ToListAsync();
         }
+
+
+
+
+
+        public async Task<CustomersMain> CreateAsync(CustomersMain model)
+        {
+            _db.Customers.Add(model);
+            await _db.SaveChangesAsync();
+            return model;
+        }
+
+
+
 
     }
 }
