@@ -1,0 +1,373 @@
+﻿@{
+    ViewData["Title"] = "User Permission";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<style>
+    .permission-node {
+        margin: 8px 0;
+    }
+
+    .permission-children {
+        display: none;
+    }
+
+    .toggle-icon {
+        cursor: pointer;
+        transition: transform 0.2s;
+    }
+
+    .form-check-input:checked {
+        background-color: #198754;
+        border-color: #198754;
+    }
+
+    .permission
+    .tree-item {
+        margin: 5px 0;
+        padding: 5px 10px;
+    }
+
+    .item-children {
+        margin-left: 20px;
+        display: none;
+    }
+
+    .permission-granted {
+        background-color: #d4edda;
+    }
+
+    .permission-denied {
+        background-color: #f8d7da;
+    }
+
+    .filter-buttons .btn {
+        margin: 0 5px;
+    }
+
+        .filter-buttons .btn.active {
+            font-weight: bold;
+        }
+
+    .tree-icon {
+        cursor: pointer;
+        margin-right: 5px;
+    }
+
+    .status-badge {
+        font-size: 0.8rem;
+        padding: 0.25rem 0.5rem;
+        margin-left: 5px;
+    }
+</style>
+
+<div class="page-content">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="container-fluid">
+                <div class="row g-3">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <div class="card-header header-background text-white text-center">
+                                    <h4>User Permission</h4>
+                                </div>
+                            </div>
+
+                            <div class="card-body">
+                                <!-- Filters Section -->
+                                <div class="row g-3">
+                                    <div class="col-md-4">
+                                        <label class="form-label">Module</label>
+                                        <select class="form-select" id="moduleSelect">
+                                            <option value="">Select Module</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label class="form-label">Section | Form | Control</label>
+                                        <select class="form-select" id="sectionSelect">
+                                            <option value="all">&lt;All&gt;</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label class="form-label">Position/Roles</label>
+                                        <select class="form-select" id="positionSelect">
+                                            <option value="">Select Position</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <!-- Search & Action Buttons -->
+                                <div class="row g-3 mt-3 align-items-center">
+                                    <div class="col-md-4">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" placeholder="Search" id="searchInput">
+                                            <span class="input-group-text">
+                                                <i class="bi bi-search"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-8 text-md-end text-center">
+                                        <button class="btn btn-outline-secondary btn-sm" id="btnExpand">
+                                            <i class="bi bi-arrows-angle-expand"></i> Expand
+                                        </button>
+                                        <button class="btn btn-outline-primary btn-sm" id="btnShowAll">
+                                            <i class="bi bi-eye"></i> Show All
+                                        </button>
+                                        <button class="btn btn-outline-success btn-sm" id="btnGranted">
+                                            <i class="bi bi-check-circle"></i> Granted
+                                        </button>
+                                        <button class="btn btn-outline-danger btn-sm" id="btnDenied">
+                                            <i class="bi bi-x-circle"></i> Denied
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <!-- Permission Tree -->
+                                <div class="mt-4" id="permissionTree">
+                                    <!-- Tree will be populated dynamically -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="~/js/jquery-3.6.4.min.js"></script>
+
+@section Scripts {
+    <script>
+        $(document).ready(function () {
+            let currentFilter = 'all';
+            let treeExpanded = false;
+            //alert("gogo");
+            // Initial load
+            loadModules();
+            loadPositions();
+
+            // Event handlers
+            $('#moduleSelect').change(function() {
+                const selectedModule = $(this).val();
+                if (selectedModule) {
+                    loadSections(selectedModule);
+                    loadPermissionTree();
+                }
+            });
+
+            $('#sectionSelect, #positionSelect').change(loadPermissionTree);
+            $('#searchInput').on('keyup', function(e) {
+                if (e.key === 'Enter') {
+                    loadPermissionTree();
+                }
+            });
+
+            // Filter buttons
+            $('#btnShowAll').click(() => {
+                currentFilter = 'all';
+                loadPermissionTree();
+            });
+
+            $('#btnGranted').click(() => {
+                currentFilter = 'granted';
+                loadPermissionTree();
+            });
+
+            $('#btnDenied').click(() => {
+                currentFilter = 'denied';
+                loadPermissionTree();
+            });
+
+            $('#btnExpand').click(function() {
+                treeExpanded = !treeExpanded;
+                if (treeExpanded) {
+                    $('.item-children').slideDown();
+                    $(this).html('<i class="bi bi-arrows-collapse"></i> Collapse');
+                } else {
+                    $('.item-children').slideUp();
+                    $(this).html('<i class="bi bi-arrows-expand"></i> Expand');
+                }
+            });
+
+            function loadModules() {
+             //  alert("vann");
+                $.ajax({
+                    url: '/api/UserPermissionAPI/modules',
+                    method: 'GET',
+                    success: function(response) {
+                        if (response.success) {
+                            const moduleSelect = $('#moduleSelect');
+                            moduleSelect.empty().append('<option value="">Select Module</option>');
+                            response.data.forEach(module => {
+                                moduleSelect.append(`<option value="${module}">${module}</option>`);
+                            });
+                        }
+                    }
+                });
+                
+            }
+
+            function loadSections(moduleName) {
+                $.ajax({
+                    url: `/api/UserPermissionAPI/sections/${moduleName}`,
+                    method: 'GET',
+                    success: function(response) {
+                        if (response.success) {
+                            const sectionSelect = $('#sectionSelect');
+                            sectionSelect.empty().append('<option value="all">&lt;All&gt;</option>');
+                            response.data.forEach(section => {
+                                sectionSelect.append(`<option value="${section}">${section}</option>`);
+                            });
+                        }
+                    },
+                    error: function() {
+                        toastr.error('Failed to load sections');
+                    }
+                });
+            }
+
+            function loadPositions() {
+                $.ajax({
+                    url: '/api/UserPermissionAPI/positions',
+                    method: 'GET',
+                    success: function(response) {
+                        if (response.success) {
+                            const positionSelect = $('#positionSelect');
+                            positionSelect.empty().append('<option value="">Select Position</option>');
+                            response.data.forEach(position => {
+                                positionSelect.append(
+                                    `<option value="${position.sysId}">${position.positionName}</option>`
+                                );
+                            });
+                        }
+                    }
+                });
+            }
+
+            function loadPermissionTree() {
+                const positionId = $('#positionSelect').val();
+                if (!positionId) {
+                    toastr.warning('Please select a position');
+                    return;
+                }
+
+                const params = {
+                    moduleName: $('#moduleSelect').val(),
+                    sectionName: $('#sectionSelect').val(),
+                    positionId: positionId,
+                    searchText: $('#searchInput').val(),
+                    filterType: currentFilter
+                };
+
+                $.ajax({
+                    url: '/api/UserPermissionAPI/permissions',
+                    method: 'GET',
+                    data: params,
+                    success: function(response) {
+                        if (response.success) {
+                            renderPermissionTree(response.data);
+                        }
+                    }
+                });
+            }
+
+            function renderPermissionTree(nodes) {
+                const treeContainer = $('#permissionTree');
+                treeContainer.empty();
+
+                if (nodes.length === 0) {
+                    treeContainer.append('<div class="alert alert-info">No permissions found</div>');
+                    return;
+                }
+
+                const tree = $('<div class="tree"></div>');
+                nodes.forEach(node => {
+                    tree.append(renderNode(node));
+                });
+                treeContainer.append(tree);
+
+                if (treeExpanded) {
+                    $('.item-children').show();
+                }
+            }
+
+            function renderNode(node) {
+                const hasChildren = node.children && node.children.length > 0;
+                const nodeClass = node.isGranted ? 'permission-granted' :
+                                node.isDenied ? 'permission-denied' : '';
+
+                const nodeElement = $(`
+                    <div class="tree-item ${nodeClass}">
+                        <div class="d-flex align-items-center">
+                            ${hasChildren ?
+                                `<i class="bi bi-caret-right-fill tree-icon"></i>` :
+                                `<i class="bi bi-dash tree-icon"></i>`}
+                            <div class="form-check form-switch">
+                                <input class="form-check-input permission-checkbox" type="checkbox"
+                                    id="perm_${node.id}"
+                                    data-id="${node.id}"
+                                    ${node.isGranted ? 'checked' : ''}>
+                                <label class="form-check-label" for="perm_${node.id}">
+                                    ${node.particulars}
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                `);
+
+                if (hasChildren) {
+                    const childrenContainer = $('<div class="item-children"></div>');
+                    node.children.forEach(child => {
+                        childrenContainer.append(renderNode(child));
+                    });
+                    nodeElement.append(childrenContainer);
+
+                    nodeElement.find('.tree-icon').click(function() {
+                        $(this).toggleClass('bi-caret-right-fill bi-caret-down-fill');
+                        childrenContainer.slideToggle();
+                    });
+                }
+
+                nodeElement.find('.permission-checkbox').change(function() {
+                    const particularId = $(this).data('id');
+                    const isGranted = $(this).prop('checked');
+                    togglePermission(particularId, isGranted);
+                });
+
+                return nodeElement;
+            }
+
+            function togglePermission(particularId, isGranted) {
+                const positionId = $('#positionSelect').val();
+                if (!positionId) {
+                    toastr.warning('Please select a position');
+                    return;
+                }
+
+                $.ajax({
+                    url: '/api/UserPermissionAPI/toggle',
+                    method: 'POST',
+                    contentType: 'application/json',
+                    data: JSON.stringify({
+                        positionId: parseInt(positionId),
+                        particularId: particularId,
+                        isGranted: isGranted
+                    }),
+                    success: function(response) {
+                        if (response.success) {
+                            toastr.success('Permission updated successfully');
+                            loadPermissionTree();
+                        } else {
+                            toastr.error('Failed to update permission');
+                        }
+                    }
+                });
+            }
+        });
+    </script>
+}
+
+       

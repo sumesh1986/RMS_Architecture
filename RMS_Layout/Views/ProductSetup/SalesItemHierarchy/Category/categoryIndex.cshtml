@@ -1,0 +1,821 @@
+﻿@{
+	ViewData["Title"] = "Category";
+}
+
+
+
+<!-- ============================================================== -->
+<!-- Start Content here -->
+<!-- ============================================================== -->
+
+
+
+
+<div class="page-content">
+
+	<div class="row">
+		<div class="col-lg-12">
+
+
+			<!--begin::Container-->
+			<div class="container-fluid">
+				<!--begin::Row-->
+				<div class="row">
+					<!--begin::Col-->
+					<div class="col-12">
+						<!--begin::Card-->
+						<div class="card">
+
+							<!--begin::Card Header-->
+							<div class="card-header">
+								<!--begin::Card Title-->
+								<div class="card-header header-background text-white text-center">
+									<h4>Category</h4>
+								</div>
+
+							</div>
+
+
+							<!--begin::Card Body-->
+							<div class="card-body">
+
+								<form id="CategoryFormView">
+									<!--begin::Row-->
+									<!-- Form -->
+
+									<div class="row g-3">
+										<div class="col-md-4">
+											<label class="form-label">Category Name:</label>
+											<input type="text" class="form-control" id="txtCategoryName" placeholder="Enter Category Name">
+											
+										</div>
+
+										<div class="col-md-4">
+											<label class="form-label">Division</label>
+											<input type="text" class="form-control" id="txtDivisionSearch" placeholder="Search">
+											<div class="mt-3">
+												<select class="form-control" id="LstDivisionNameId" multiple size="8">
+													<!-- Options will go here dynamically or statically -->
+												</select>
+											</div>
+											<div class="mt-2">
+												<label>Total Count: <span id="lblDivisionRecords">0</span></label>
+											</div>
+										</div>
+
+										<div class="col-md-4">
+											<label class="form-label">Group</label>
+											<input type="text" class="form-control" id="txtGroupSearch" placeholder="Search">
+											<div class="mt-3">
+												<select class="form-control" id="LstGroupId" multiple size="8"></select>
+											</div>
+											<div class="mt-2">
+												<label>Total Count: <span id="lblGroupCount">0</span></label>
+											</div>
+										</div>
+									</div>
+
+								</form>
+
+								<!-- BUTTONS -->
+								<div class="text-center mt-4">
+									<hr>
+									<div class="d-grid gap-2 d-md-flex justify-content-md-end">
+										<button id="saveBtn" type="submit" class="btn btn-primary button-background waves-effect">
+											<i class="bi bi-save"></i> Save
+										</button>
+										<button type="button" class="btn btn-outline-secondary waves-effect" id="clearBtn">
+											<i class="bi bi-x-circle"></i> Clear
+										</button>
+									</div>
+								</div>
+
+
+								<form>
+									<!-- Table -->
+									<div class="card mt-4 shadow-sm">
+										<div class="card-header bg-primary text-white d-flex justify-content-between align-items-center">
+											<span class="fw-bold">List</span>
+
+											<div class="input-group input-group-sm w-auto ms-2">
+
+												<input type="text" class="form-control" id="searchInput" placeholder="Search...">
+
+												<span class="input-group-text" id="searchIcon" style="cursor: pointer;">
+													<i class="bi bi-search"></i>
+												</span>
+
+											</div>
+
+										</div>
+
+										<div class="card-body">										
+
+											<div class="table-responsive" style="max-height: 615px; overflow-y: auto;">
+											
+
+												<table id="categoryTable" class="table align-middle SelectedRow-ColorChange">
+													<thead class="table-success grid-header-bg">
+														<tr>
+															<th class="sortable" onclick="sortTable(0)">#</th>
+															<th style="display:none;" onclick="sortTable(1)">SysID</th>
+															<th class="sortable" onclick="sortTable(2)">Category</th>
+															@* <th class="sortable" onclick="sortTable(3)">Status</th> *@
+
+															<th>Actions</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr><td colspan="3" class="text-center">Loading...</td></tr>
+													</tbody>
+												</table>
+
+												<div class="d-flex justify-content-between align-items-center">
+													<span id="pageInfo" class="text-muted"></span>
+												
+												</div>
+
+
+											</div>
+										</div>
+									</div>
+								</form>
+
+									<!--end::Row-->
+								
+							</div>
+							<!--end::Card Body-->
+
+						</div>
+						<!--end::Card-->
+
+					</div>
+					<!--end::Col-->
+				</div>
+				<!--end::Row-->
+			</div>
+			<!--end::Container-->
+
+
+		</div>
+	</div>
+
+</div>
+
+@section Scripts {
+
+	<!-- ============================================================== -->
+	<!-- Start Category Table Sorting here -->
+	<!-- ============================================================== -->
+	<script>
+		let currentSortColumn = null;
+		let currentSortOrder = 'asc';
+
+		function sortTable(columnIndex) {
+			const table = document.getElementById("categoryTable");
+			const tbody = table.querySelector("tbody");
+			const rows = Array.from(tbody.querySelectorAll("tr"));
+
+			const isSameColumn = columnIndex === currentSortColumn;
+			currentSortOrder = isSameColumn && currentSortOrder === 'asc' ? 'desc' : 'asc';
+			currentSortColumn = columnIndex;
+
+			// Sort rows
+			rows.sort((a, b) => {
+				const aText = a.children[columnIndex].innerText.trim();
+				const bText = b.children[columnIndex].innerText.trim();
+
+				const aVal = isNaN(aText) ? aText.toLowerCase() : parseFloat(aText);
+				const bVal = isNaN(bText) ? bText.toLowerCase() : parseFloat(bText);
+
+				if (aVal < bVal) return currentSortOrder === 'asc' ? -1 : 1;
+				if (aVal > bVal) return currentSortOrder === 'asc' ? 1 : -1;
+				return 0;
+			});
+
+			// Re-render sorted rows
+			tbody.innerHTML = '';
+			rows.forEach(row => tbody.appendChild(row));
+
+			// Update arrow indicators
+			document.querySelectorAll("th.sortable").forEach(th => th.classList.remove('asc', 'desc'));
+			const th = table.querySelector(`th:nth-child(${columnIndex + 1})`);
+			th.classList.add(currentSortOrder);
+		}
+	</script>
+
+	<!-- ============================================================== -->
+	<!-- Start Load Category Table here -->
+	<!-- ============================================================== -->
+	<script>
+
+		$(document).ready(function () {
+			loadCategory(); // <- Add this line
+		});
+
+
+		function loadCategory() {
+			//console.log("Fetching page:", currentPage);
+			//alert("Fetching Datas: " );
+				const searchValue = $('#searchInput').val()?.trim();
+				// alert("loadCategory searchValue :  "+searchValue);
+			$.ajax({
+				url: `/api/ProductSetupCategoryAPI?category=${searchValue}`,
+				method: 'GET',
+				success: function (response) {
+					//console.log("Category Data Load : "+response.data);
+					renderTable(response.data);
+				},
+				error: function () {
+					toastr.error("Failed to load data.");
+				}
+			});
+		}
+
+
+		//bind the data into the table...
+
+		function renderTable(data) {
+
+			console.log("Raw data:", data);
+
+			const tbody = $('#categoryTable tbody');
+			tbody.empty();
+
+			if (!data || data.length === 0) {
+				tbody.append('<tr><td colspan="4" class="text-center">No Data Found</td></tr>');
+				return;
+			}
+
+			data.forEach((item, index) => {
+
+
+			// console.log("sysid : "+item.sysID);
+				const row = `
+					 <tr data-id="${item.sysID}">
+
+					<td>${index + 1}</td> <!-- Serial Number -->
+					<td style="display:none;">${item.sysID}</td> <!-- Hidden SysID -->
+			<td class="categoryname">${item.category}</td>
+
+		<td>
+				 <button type="button" class="btn btn-outline-primary btn-sm edit-btn"><i class="bi bi-pencil"></i></button>
+		<button type="button" class="btn btn-outline-success btn-sm update-btn d-none"><i class="bi bi-check"></i></button>
+		<button type="button" class="btn btn-outline-secondary btn-sm cancel-btn d-none"><i class="bi bi-x"></i></button>
+		<button type="button" class="btn btn-outline-danger btn-sm delete-btn"><i class="bi bi-trash"></i></button>
+		</td>
+					</tr>`;
+				tbody.append(row);
+			});
+
+
+
+		$('#pageInfo').text(`Total records: ${data.length}`);
+
+		}
+
+
+	</script>
+
+
+
+
+	<!-- ============================================================== -->
+	<!-- Start Save, Update & Delete here -->
+	<!-- ============================================================== -->
+	<script>
+
+		$('#saveBtn').click(function () {
+				try {
+					// Check required fields before creating the object
+					let category = $('#txtCategoryName').val();
+					let status = "Yes";
+
+					if (!category) throw new Error("❗ 'Category Name' is empty or ID not found.");
+
+
+					let categoryData = {
+						Category: category,
+						Active: status
+					};
+
+					console.log("✅ Save Datas:\n" + JSON.stringify(categoryData, null, 4));
+
+					$.ajax({
+						url: '/api/ProductSetupCategoryAPI/Save',
+						type: 'POST',
+						contentType: 'application/json',
+						data: JSON.stringify(categoryData),
+
+						beforeSend: function () {
+							$('#saveBtn').prop('disabled', true).text('Saving...');
+						},
+						success: function (response) {
+							clearFormControls('#CategoryFormView');
+							loadCategory();
+
+							Swal.fire({
+								icon: 'success',
+								title: response.message,
+								showConfirmButton: false,
+								showCloseButton: true,
+								timer: 2000,
+								timerProgressBar: true,
+							});
+						},
+						error: function (xhr) {
+							if (xhr.status === 409) {
+								toastr.warning("❗ Category already exists.");
+							} else {
+								toastr.error(xhr.message);
+							}
+							console.error("🚫 AJAX Error:", xhr.responseText);
+						},
+						complete: function () {
+							$('#saveBtn').prop('disabled', false).text('Save');
+						}
+					});
+
+				} catch (err) {
+					console.error("🚨 Validation or Runtime Error:", err.message);
+					toastr.error(err.message); // optional toast for user feedback
+				}
+			});
+
+
+		// Handle Update Button Click
+		$(document).on("click", ".update-btn", function (e) {
+							e.preventDefault(); // Prevent form submission or refresh
+						const row = $(this).closest("tr");
+						const sysid = row.data("id");
+						 //console.log("uddate sysid : ", sysid);
+
+
+						const updatedcategoryName = row.find(".categoryname-edit").val();
+					// 	const isStatusChecked = row.find(".status-toggle").prop("checked");
+					// const updatedStatus = isStatusChecked ? "Yes" : "No";
+
+						//console.log("✅ update Datas:\n" + JSON.stringify(updatedStatus, null, 4));
+
+							 // Check if updatedName is empty
+				if (!updatedcategoryName) {
+					toastr.warning("Category name should not be left empty!");
+					return;
+				}
+					// console.log("Check if updatedName is empty:");
+
+
+						var originalcategoryName = row.find(".categoryname").attr("data-original");
+						// const originalStatus = row.find(".status-badge").text().trim().toLowerCase() === "active" ? "Yes" : "No";
+
+				// // 				const originalName = row.find(".name-edit").data("original")?.trim(); // or use .attr("data-original")
+				// // const originalList = row.find(".listofconcept-edit").data("original")?.trim();
+
+				// 	 		console.log(
+				// 	 `Updated Name: ${updatedName} | Updated List of Concept: ${updatedListOfConcept} | Original Name: ${originalName} | Original List: ${originalList}`
+				// );
+
+				 //  Check if user really changed anything
+					// if (updatedcategoryName === originalcategoryName && updatedStatus === originalStatus)
+					if (updatedcategoryName === originalcategoryName)
+					{
+
+								Swal.fire({
+					icon: 'info',
+					title: 'No changes detected. Update not required.',
+					showConfirmButton: false,
+					showCloseButton: true,
+					timer: 2000,
+					timerProgressBar: true,
+				});
+						return;
+					}
+
+
+
+				 console.log("data : ");
+
+
+
+						$.ajax({
+							url: `/api/ProductSetupCategoryAPI/${sysid}`,
+							type: "PUT",
+							contentType: "application/json",
+							data: JSON.stringify({
+								SysId: sysid,
+								Category: updatedcategoryName
+								  //Active: updatedStatus
+							}),
+							success: function (response) {
+								if (response.success) {
+									loadCategory();
+
+											Swal.fire({
+					icon: 'info',
+					title: response.message,
+					showConfirmButton: false,
+					showCloseButton: true,
+					timer: 2000,
+					timerProgressBar: true,
+				});
+
+								} else {
+									toastr.error("Update failed! " + response.message);
+								}
+							},
+							error: function () {
+								toastr.error("Error updating data.");
+							}
+						});
+					});
+
+
+		// Handle delete Button Click
+		$(document).on("click", ".delete-btn", function (e) {
+								e.preventDefault(); // Prevent form submission or refresh
+					var row = $(this).closest("tr");
+					var id = row.data("id");
+
+					Swal.fire({
+						title: 'Are you sure?',
+						text: "You won't be able to revert this!",
+						icon: 'warning',
+						showCancelButton: true,
+						confirmButtonColor: '#d33',
+						cancelButtonColor: '#3085d6',
+						confirmButtonText: 'Yes, delete it!',
+						cancelButtonText: 'Cancel'
+					}).then((result) => {
+						if (result.isConfirmed) {
+							$.ajax({
+								url: `/api/ProductSetupCategoryAPI/${id}`,
+								type: "DELETE",
+								success: function (response) {
+									if (response.success) {
+										Swal.fire({
+											icon: 'success',
+											title: response.message,
+											text: response.message || "Deleted successfully.",
+											timer: 2000,
+											showConfirmButton: false,
+										});
+										row.remove();
+										loadCategory();
+									} else {
+										Swal.fire({
+											icon: 'error',
+											title: 'Delete failed!',
+											text: response.message || "Something went wrong.",
+										});
+									}
+								},
+								error: function () {
+									Swal.fire({
+										icon: 'error',
+										title: 'Error!',
+										text: 'Error deleting data.',
+									});
+								}
+							});
+						}
+					});
+				});
+
+	</script>
+
+
+	<!-- ============================================================== -->
+	<!-- Start Gridview Edit & Delete here -->
+	<!-- ============================================================== -->
+
+	<script>
+
+		  // Toggle status text when checkbox changes
+				$(document).on("change", ".status-toggle", function (e) {
+					e.preventDefault();
+					const isChecked = $(this).is(":checked");
+					const label = $(this).closest(".status-toggle-wrapper").find(".status-toggle-label");
+					label.text(isChecked ? "Yes" : "No");
+				});
+
+
+					// Handle Edit Button Click
+		$(document).on("click", ".edit-btn", function (e) {
+			e.preventDefault();
+			e.stopPropagation(); // Prevent row selection logic
+			const row = $(this).closest("tr");
+
+			row.find(".edit-btn, .delete-btn").addClass("d-none");
+			row.find(".update-btn, .cancel-btn").removeClass("d-none");
+
+			const categoryname = row.find(".categoryname").text().trim();
+			row.find(".categoryname").attr("data-original", categoryname);
+
+			// Get original status (Active if checked)
+			const originalStatus = row.find(".status-toggle").is(":checked");
+			row.find(".status-toggle").attr("data-original-status", originalStatus);
+
+			row.find(".status-badge").addClass("d-none");
+			row.find(".status-toggle-wrapper").removeClass("d-none");
+
+			row.find(".categoryname").html(`<input type="text" class="form-control categoryname-edit" value="${categoryname}">`);
+		});
+
+
+
+
+			// Handle Cancel Button Click
+				$(document).on("click", ".cancel-btn", function (e) {
+			e.preventDefault();
+			e.stopPropagation(); // Prevent row selection logic
+
+			var row = $(this).closest("tr");
+
+			// Restore original category name
+			var originalName = row.find(".categoryname").attr("data-original");
+			row.find(".categoryname").html(originalName);
+
+			// Restore original status
+			var originalStatus = row.find(".status-toggle").attr("data-original-status") === "true";
+			row.find(".status-toggle").prop("checked", originalStatus);
+
+			// Update the label text
+			var label = row.find(".status-toggle-label");
+			label.text(originalStatus ? "Active" : "Inactive");
+
+			// Toggle visibility
+			row.find(".status-badge").removeClass("d-none");
+			row.find(".status-toggle-wrapper").addClass("d-none");
+
+			row.find(".edit-btn, .delete-btn").removeClass("d-none");
+			row.find(".update-btn, .cancel-btn").addClass("d-none");
+		});
+
+
+
+
+
+
+	</script>
+
+
+	<!-- ============================================================== -->
+	<!-- Start Load Groups by Division here -->
+	<!-- ============================================================== -->
+	<script>
+				$(document).on('change', '#LstDivisionNameId', function () {
+			const divisionId = $(this).val(); // selected division ID
+			const divisionName = $(this).find('option:selected').text(); // selected division name
+			const categoryId = $('#categoryTable tbody tr.selected').data('id'); // get selected category ID if needed
+
+			//alert("Selected Division: " + divisionName + " (ID: " + divisionId + ")");
+
+			loadGroupsByDivision(categoryId, divisionId, divisionName);
+		});
+
+
+		function loadGroupsByDivision(categoryID, divisionId, divisionName) {
+			$.ajax({
+				url: `/api/Dropdown/DropdownApi?catId=${categoryID}&divsionId=${divisionId}&divisionName=${divisionName}`,
+				method: 'GET',
+				success: function (response) {
+					
+					const Itemgroups = response.data;
+					console.log("Item gruup datas:", Itemgroups , "lemgth:" , Itemgroups.length);
+					const $groupList = $('#LstGroupId');
+					$groupList.empty();
+
+					if (Itemgroups && Itemgroups.length > 0) {
+						Itemgroups.forEach(group => {
+							$groupList.append(`<option value="${group.id}">${group.name}</option>`);
+						});
+					} else {
+						$groupList.append('<option disabled>No groups found</option>');
+					}
+
+					$('#lblGroupCount').text(Itemgroups.length);
+				},
+				error: function () {
+					toastr.error("Failed to load groups.");
+				}
+			});
+		}
+
+
+		</script>
+
+	<!-- ============================================================== -->
+	<!-- Start Gridview Change Function for Selected Row here -->
+	<!-- ============================================================== -->
+
+	<script>
+
+		// 		$(document).on('click', '#categoryTable tbody tr', function () {
+		// 	const categoryID = $(this).data('id'); // SysID from data-id
+		// 	const categoryName = $(this).find('.categoryname').text().trim();
+		// 	//alert("Selected Category: " + categoryName + " (ID: " + categoryID + ")");
+
+		// 	loadDivisionsByCategory(categoryID, categoryName, 0, "");
+		// });
+			$(document).on('click', '.SelectedRow-ColorChange tbody tr', function () {
+
+
+			// Remove highlight from all rows
+			// $('#categoryTable tbody tr').removeClass('selected');
+				$('.SelectedRow-ColorChange tbody tr').removeClass('selected');
+
+			// Add highlight to the clicked row
+			$(this).addClass('selected');  // add to clicked row
+
+			const categoryID = $(this).data('id'); // SysID from data-id
+			const categoryName = $(this).find('.categoryname').text().trim();
+
+			loadDivisionsByCategory(categoryID, categoryName, 0, "");
+		});
+
+
+		function loadDivisionsByCategory(categoryID, categoryName, divisionId, divisionName) {
+			console.log("divisionId : " +divisionId+ "  divisionName : " +divisionName);
+					$.ajax({
+
+				url: `/api/Dropdown/DropdownApi?catId=${categoryID}&categoryname=${categoryName}&divsionId=${divisionId}&divisionName=${divisionName}`,
+					method: 'GET',
+				success: function (response) {
+						const divisions = response.data;
+
+					// console.log("divisions datas : " +divisions);
+					//console.log("divisions datas:", divisions , "lemgth:" , divisions.length);
+					const $listId = $('#LstDivisionNameId');
+					$listId.empty();
+
+					if (divisions && divisions.length > 0) {
+						divisions.forEach(div => {
+							// console.log("div item:", div); // Inspect each division object
+							  $listId.append(`<option value="${div.id}">${div.name}</option>`);
+						});
+					} else {
+						$listId.append('<option disabled>No divisions found</option>');
+					}
+					$('#LstGroupId').html('');
+					$('#lblGroupCount').text('0');         // Reset the label text to 0
+					$('#lblDivisionRecords').text(divisions.length);
+				},
+				error: function () {
+					toastr.error("Failed to load divisions.");
+				}
+			});
+		}
+
+	</script>
+
+
+	
+
+
+
+
+	<!-- ============================================================== -->
+	<!-- Common for All Search (Division and Item group)  here -->
+	<!-- ============================================================== -->
+
+	<script>
+				$(document).ready(function () {
+			function setupListSearch(inputSelector, listSelector) {
+				$(inputSelector).on('keyup', function () {
+					const searchTerm = $(this).val().toLowerCase();
+					const $options = $(listSelector + ' option');
+
+					if (!searchTerm) {
+						$options.show();
+						return;
+					}
+
+					$options.each(function () {
+						const text = $(this).text().toLowerCase();
+						$(this).toggle(text.includes(searchTerm));
+					});
+				});
+			}
+
+			// Apply search for Division and Group
+			setupListSearch('#txtDivisionSearch', '#LstDivisionNameId');
+			setupListSearch('#txtGroupSearch', '#LstGroupId');
+		});
+
+
+
+		// 		$(document).ready(function () {
+
+		// 	// Division Search
+		// 	$('#txtDivisionSearch').on('keyup', function () {
+		// 		const searchTerm = $(this).val().toLowerCase();
+
+		// 		// Show all options if search box is empty
+		// 		if (searchTerm === '') {
+		// 			$('#LstDivisionNameId option').show();
+		// 			return;
+		// 		}
+
+		// 		// Filter options based on search term
+		// 		$('#LstDivisionNameId option').each(function () {
+		// 			const text = $(this).text().toLowerCase();
+		// 			$(this).toggle(text.includes(searchTerm));
+		// 		});
+		// 	});
+
+		// 			// Group Search
+		// $('#txtGroupSearch').on('keyup', function () {
+		// 	const searchTerm = $(this).val().toLowerCase();
+
+		// 	if (searchTerm === '') {
+		// 		$('#LstGroupId option').show();
+		// 		return;
+		// 	}
+
+		// 	$('#LstGroupId option').each(function () {
+		// 		const text = $(this).text().toLowerCase();
+		// 		$(this).toggle(text.includes(searchTerm));
+		// 	});
+		// });
+		// });
+
+		</script>
+
+@* //Clear button functionalities... *@
+	<script>
+		// Clear Button Click...
+		$('#clearBtn').click(function () {
+			clear();
+		});
+
+		function clear() {
+					// const groupName = $('input[name="GroupName"]').val()?.trim();
+					// const isStatusActive = $('#statusToggle').is(':checked');
+					// const searchValue = $('#searchInput').val()?.trim();
+
+					// const isFormAlreadyEmpty =
+					// 	!groupName &&
+					// 	!isStatusActive &&
+					// 	!searchValue;
+
+					// if (isFormAlreadyEmpty) {
+					// 	return;
+					// }
+
+			clearFormControls('#CategoryFormView');
+				$('#lblDivisionRecords').text('0');  // Reset group count label
+					$('#lblGroupCount').text('0');  // Reset group count label
+			$('#rdbtnAsc').prop('checked', true); // Default check to Ascending
+			$('#searchInput').val('');
+			//loadCategory();
+				
+				}
+
+	</script>
+
+
+	<!-- ============================================================== -->
+	<!-- Start Gridview Search functionality here -->
+	<!-- ============================================================== -->
+
+	<script>
+			//grid search function...
+		$('#searchIcon').on('click', function () {
+			console.log("searchIcon inside");
+			searchConcepts();
+		});
+
+		$('#searchInput').on('keypress', function(event) {
+			if (event.key === 'Enter') {
+				event.preventDefault();
+				searchConcepts();
+			}
+		});
+
+		//auto loading grid when search value cleared...
+		$('#searchInput').on('input', function () {
+			const currentValue = $(this).val()?.trim();
+
+			if (!currentValue) {
+				loadCategory();
+			}
+
+		});
+
+		function searchConcepts() {
+
+			const searchValue = $('#searchInput').val()?.trim();
+			console.log("searchValue inside : " +searchValue);
+			if(!searchValue)
+			{
+				toastr.warning("Please enter a search term to continue.");
+				return;
+			}
+			currentPage = 1;
+			loadCategory();
+		}
+
+	</script>
+
+
+}

@@ -176,23 +176,23 @@
 										</div>
 
 										<div class="col-lg-6 pt-5 d-flex align-items-center gap-3">
-											@* <div class="form-check form-switch">
-												<input class="form-check-input" type="radio" name="sortOrder" id="RadioButton1" value="Ascending" checked>
-												<label class="form-check-label" for="RadioButton1">Ascending</label>
+											<div class="form-check form-switch">
+												<input class="form-check-input" type="radio" name="sortOrder" id="rdbtnAsc" value="Ascending" checked>
+												<label class="form-check-label" for="rdbtnAsc">Ascending</label>
 
 											</div>
 											<div class="form-check form-switch">
-												<input class="form-check-input" type="radio" name="sortOrder" id="RadioButton2" value="Descending">
-												<label class="form-check-label" for="RadioButton2">Descending</label>												
-											</div> *@
+												<input class="form-check-input" type="radio" name="sortOrder" id="rdbtnDesc" value="Descending">
+												<label class="form-check-label" for="rdbtnDesc">Descending</label>
+											</div>
 
 
-											<label class="form-label">Status</label>
+									@* 		<label class="form-label">Status</label>
 											<div class="form-check form-switch">
 												<input class="form-check-input" type="checkbox" id="statusToggle" />
 												<label class="form-check-label" id="statusLabel" for="statusToggle">Active</label>
 											</div>
-											<span class="invalid-feedback">Please select a status</span>
+											<span class="invalid-feedback">Please select a status</span> *@
 
 										</div>
 
@@ -208,7 +208,7 @@
 										<button id="saveBtn" type="submit" class="btn btn-primary button-background waves-effect">
 											<i class="bi bi-save"></i> Save
 										</button>
-										<button type="button" onclick="clearControls();" class="btn btn-outline-secondary waves-effect" id="clearBtn">
+										<button type="button" class="btn btn-outline-secondary waves-effect" id="clearBtn">
 											<i class="bi bi-x-circle"></i> Clear
 										</button>
 									</div>
@@ -219,10 +219,23 @@
 									<div class="card mt-4 shadow-sm">
 										<div class="card-header bg-primary text-white d-flex justify-content-between align-items-center">
 											<span class="fw-bold">List</span>
-											<div class="input-group input-group-sm w-auto ms-auto">
+
+										@* 	<div class="input-group input-group-sm w-auto ms-auto">
 												<input type="text" class="form-control" id="searchInput" placeholder="Search...">
 												<span class="input-group-text"><i class="bi bi-search"></i></span>
+											</div> *@
+
+
+											<div class="input-group input-group-sm w-auto ms-2">
+
+												<input type="text" class="form-control" id="searchInput" placeholder="Search...">
+
+												<span class="input-group-text" id="searchIcon" style="cursor: pointer;">
+													<i class="bi bi-search"></i>
+												</span>
+
 											</div>
+
 										</div>
 
 										<div class="card-body">
@@ -252,16 +265,14 @@
 														<tr>
 															<th class="sortable" onclick="sortTable(0)">#</th>
 															@* <th class="sortable" onclick="sortTable(1)">SysID</th> *@
-															<th class="sortable" onclick="sortTable(2)">Name</th>
-															<th class="sortable" onclick="sortTable(3)">List of concept</th>
-															<th class="sortable" onclick="sortTable(4)">Created At</th>
-															<th class="sortable" onclick="sortTable(5)">Status</th>
+															<th class="sortable" onclick="sortTable(1)">Name</th>
+															<th class="sortable" onclick="sortTable(2)">List of concept</th>
 
 															<th>Actions</th>
 														</tr>
 													</thead>
 													<tbody>
-														<tr><td colspan="6" class="text-center">Loading...</td></tr>
+														<tr><td colspan="4" class="text-center">Loading...</td></tr>
 													</tbody>
 												</table>
 
@@ -307,7 +318,7 @@
 
 
 @section Scripts {
-@* <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> *@
+
 
 
 	<!-- ============================================================== -->
@@ -389,8 +400,10 @@
 		function loadConcepts() {
 			//console.log("Fetching page:", currentPage);
 			//alert("currentPage: " + currentPage);
+				const searchValue = $('#searchInput').val()?.trim();
+
 			$.ajax({
-				url: `/api/CompanyConceptAPI/GetAll?page=${currentPage}&pageSize=${rowsPerPage}`,
+				url: `/api/CompanyConceptAPI?page=${currentPage}&pageSize=${rowsPerPage}&Name=${searchValue}`,
 				method: 'GET',
 				success: function (response) {
 					totalRecords = response.totalRecords;
@@ -407,28 +420,23 @@
 			tbody.empty();
 
 			if (!data || data.length === 0) {
-				tbody.append('<tr><td colspan="6" class="text-center">No Data Found</td></tr>');
+				tbody.append('<tr><td colspan="4" class="text-center">No Data Found</td></tr>');
 				return;
 			}
-
 			data.forEach((item, index) => {
 					// "Active" or "Inactive" badge
-						let statusBadge = item.Status === "Active"
+						let statusBadge = item.status === "Active"
 		? '<span class="badge bg-success">Active</span>'
 		: '<span class="badge bg-danger">Inactive</span>';
 
-
+			// <td>${statusBadge}</td>
 				const row = `
-					<tr data-id="${item.Id}">
+					<tr data-id="${item.id}">
 						<td>${(currentPage - 1) * rowsPerPage + index + 1}</td>
-					<td style="display:none;">${item.Id}</td>
-			<td class="name">${item.Name}</td>
-			<td class="listofconcept">${item.ListofConcept}</td>
-						<td>${new Date(item.CreatedAt).toLocaleDateString()}</td>
-
-
-						<td>${statusBadge}</td>
-
+					<td style="display:none;">${item.id}</td>
+			<td class="name">${item.name}</td>
+			<td class="listofconcept">${item.listofConcept}</td>
+						
 						<td>
 			<button class="btn btn-outline-primary btn-sm edit-btn"><i class="bi bi-pencil"></i></button>
 			<button class="btn btn-outline-success btn-sm update-btn d-none"><i class="bi bi-check"></i></button>
@@ -458,66 +466,150 @@
 
 
 		$(document).ready(function () {
-			$('#saveBtn').click(function () {
-				// alert("code inside");
-				// let conceptData = {
-				// 	ConceptList: [
-				// 		{
-				// 			Name: $('#txtName').val(),
-				// 			ListofConcept: $('#txtListofConcept').val(),
-				// 			Status: $('input[name="sortOrder"]:checked').val() // Gets Ascending or Descending
 
-				// 		}
-				// 	]
-				// };
+					$('#saveBtn').click(function () {
+			try {
+				// Check required fields before creating the object
+				let name = $('#txtName').val();
+				let conceptList = $('#txtListofConcept').val();
+				let status = $('input[name="sortOrder"]:checked').val();
 
-				 let conceptData = {
-				Name: $('#txtName').val(),
-				ListofConcept: $('#txtListofConcept').val(),
-				// Status: $('input[name="sortOrder"]:checked').val()
-				Status: $('#statusToggle').is(':checked') ? "Active" : "InActive"
+				if (!name) throw new Error("❗ 'Name' is empty or ID not found.");
+				if (!conceptList) throw new Error("❗ 'ListofConcept' is empty or ID not found.");
+				if (!status) throw new Error("❗ No radio button selected for 'sortOrder' or missing input group.");
 
-			};
-				//alert("Save Datas" + JSON.stringify(conceptData));
+				let conceptData = {
+					Name: name,
+					ListofConcept: conceptList,
+					Status: status
+				};
 
-					$.ajax({
-			url: '/api/CompanyConceptAPI/Save',
-			type: 'POST',
-			contentType: 'application/json',
-				data: JSON.stringify(conceptData),
-			// data: JSON.stringify({
-			// 	NewConcept: [{
-			// 		Name: $("#txtName").val().trim(),
-			// 		ListofConcept: $("#txtListofConcept").val().trim()
-			// 	}]
-			// }),
-			beforeSend: function () {
-				$('#saveBtn').prop('disabled', true).text('Saving...');
-			},
-			success: function (response) {
-				// alert(response.message || "Concept saved successfully!");
-				toastr.success(response.message || "✅ Saved successfully!");
-				clearFormControls('#ConceptFormView');
-				loadConcepts();
-				// setTimeout(() => location.reload(), 800);
+				console.log("✅ Save Datas:\n" + JSON.stringify(conceptData, null, 4));
 
-			},
-			error: function (xhr) {
-				if (xhr.status === 409) {
-					toastr.warning("❗ Concept already exists.");
-				} else {
-					toastr.error("🚨 An error occurred while saving the concept.");
-				}
-				//console.log(xhr.responseText);
-			},
-			complete: function () {
-				$('#saveBtn').prop('disabled', false).text('Save');
+				$.ajax({
+					url: '/api/CompanyConceptAPI/Save',
+					type: 'POST',
+					contentType: 'application/json',
+					data: JSON.stringify(conceptData),
+
+					beforeSend: function () {
+						$('#saveBtn').prop('disabled', true).text('Saving...');
+					},
+					success: function (response) {
+						clearFormControls('#ConceptFormView');
+						loadConcepts();
+						$('#rdbtnAsc').prop('checked', true); // Default check to Ascending
+
+						Swal.fire({
+							icon: 'success',
+							title: '✅ Saved successfully!',
+							showConfirmButton: false,
+							showCloseButton: true,
+							timer: 2000,
+							timerProgressBar: true,
+						});
+					},
+					error: function (xhr) {
+						if (xhr.status === 409) {
+							toastr.warning("❗ Concept already exists.");
+						} else {
+							toastr.error("🚨 An error occurred while saving the concept.");
+						}
+						console.error("🚫 AJAX Error:", xhr.responseText);
+					},
+					complete: function () {
+						$('#saveBtn').prop('disabled', false).text('Save');
+					}
+				});
+
+			} catch (err) {
+				console.error("🚨 Validation or Runtime Error:", err.message);
+				toastr.error(err.message); // optional toast for user feedback
 			}
 		});
 
 
 
-			});
+
+
+		// 	$('#saveBtn').click(function () {
+		// 		// alert("code inside");
+		// 		// let conceptData = {
+		// 		// 	ConceptList: [
+		// 		// 		{
+		// 		// 			Name: $('#txtName').val(),
+		// 		// 			ListofConcept: $('#txtListofConcept').val(),
+		// 		// 			Status: $('input[name="sortOrder"]:checked').val() // Gets Ascending or Descending
+
+		// 		// 		}
+		// 		// 	]
+		// 		// };
+
+		// 		 let conceptData = {
+		// 		Name: $('#txtName').val(),
+		// 		ListofConcept: $('#txtListofConcept').val(),
+		// 		Status: $('input[name="sortOrder"]:checked').val()
+		// 		// Status: $('#statusToggle').is(':checked') ? "Active" : "InActive"
+
+		// 	};
+		// 	console.log("Save Datas:\n" + JSON.stringify(conceptData, null, 4));
+
+		// 		// alert("Save Datas:\n" + JSON.stringify(conceptData, null, 4));
+
+		// 			$.ajax({
+		// 	url: '/api/CompanyConceptAPI/Save',
+		// 	type: 'POST',
+		// 	contentType: 'application/json',
+		// 		data: JSON.stringify(conceptData),
+		// 	// data: JSON.stringify({
+		// 	// 	NewConcept: [{
+		// 	// 		Name: $("#txtName").val().trim(),
+		// 	// 		ListofConcept: $("#txtListofConcept").val().trim()
+		// 	// 	}]
+		// 	// }),
+		// 	beforeSend: function () {
+		// 		$('#saveBtn').prop('disabled', true).text('Saving...');
+		// 	},
+		// 	success: function (response) {
+		// 		// alert(response.message || "Concept saved successfully!");
+		// 		// toastr.success(response.message || "✅ Saved successfully!");
+			
+		// 		// setTimeout(() => location.reload(), 800);
+
+		// 			clearFormControls('#ConceptFormView');
+		// 			loadConcepts();
+		// 		// document.getElementById("rdbtnAsc").checked = true;
+		// 	$('#rdbtnAsc').prop('checked', true); // Default check to Ascending
+
+				
+		// 		// setTimeout(() => location.reload(), 800);
+
+		// 				Swal.fire({
+		// 		 icon: 'success',
+		// 			title: '✅ Saved successfully!',
+		//   showConfirmButton: false,  // Hide the OK button
+		//   showCloseButton: true,    // Show the close button in the top right
+		//   timer: 2000,             // Automatically close after 2 seconds
+		//   timerProgressBar: true,  // Optional: shows a progress bar
+		// });
+
+		// 	},
+		// 	error: function (xhr) {
+		// 		if (xhr.status === 409) {
+		// 			toastr.warning("❗ Concept already exists.");
+		// 		} else {
+		// 			toastr.error("🚨 An error occurred while saving the concept.");
+		// 		}
+		// 		//console.log(xhr.responseText);
+		// 	},
+		// 	complete: function () {
+		// 		$('#saveBtn').prop('disabled', false).text('Save');
+		// 	}
+		// });
+
+
+
+		// 	});
 		});
 	</script>
 
@@ -552,7 +644,7 @@
 		});
 
 			// Handle Cancel Button Click
-			$(document).on("click", ".cancel-btn", function () {
+			$(document).on("click", ".cancel-btn", function (e) {
 				e.preventDefault(); // Prevent form submission or refresh
 				var row = $(this).closest("tr");
 
@@ -567,13 +659,52 @@
 			});
 
 			// Handle Update Button Click
-			$(document).on("click", ".update-btn", function () {
-				var row = $(this).closest("tr");
-				var id = row.data("id");
-				console.log("Updating ID:", id);
+			$(document).on("click", ".update-btn", function (e) {
+					e.preventDefault(); // Prevent form submission or refresh
+				const row = $(this).closest("tr");
+				const id = row.data("id");
+				// console.log("Updated ID:", id);
 
-				var updatedName = row.find(".name-edit").val();
-				var updatedListOfConcept = row.find(".listofconcept-edit").val();
+
+				const updatedName = row.find(".name-edit").val();
+				const updatedListOfConcept = row.find(".listofconcept-edit").val();
+					
+					 // Check if updatedName is empty
+		if (!updatedName) {
+			toastr.warning("Concept name should not be left empty!");
+			return;
+		}
+			// console.log("Check if updatedName is empty:");
+
+			// const originalName =  row.find(".name-edit").val();
+			// const originalList = row.find(".listofconcept-edit").val();
+				var originalName = row.find(".name").attr("data-original");
+				var originalList = row.find(".listofconcept").attr("data-original");
+		// // 				const originalName = row.find(".name-edit").data("original")?.trim(); // or use .attr("data-original")
+		// // const originalList = row.find(".listofconcept-edit").data("original")?.trim();
+
+		// 	 		console.log(
+		// 	 `Updated Name: ${updatedName} | Updated List of Concept: ${updatedListOfConcept} | Original Name: ${originalName} | Original List: ${originalList}`
+		// );
+
+			if (updatedName === originalName && updatedListOfConcept === originalList) {
+				// toastr.info("No changes detected. Update not required.");
+						Swal.fire({
+			icon: 'info',
+			title: 'No changes detected. Update not required.',
+			showConfirmButton: false,
+			showCloseButton: true,
+			timer: 2000,
+			timerProgressBar: true,
+		});
+				return;
+			}
+
+
+
+			// console.log("No changes detected:");
+			 			
+				
 
 				$.ajax({
 					url: `/api/CompanyConceptAPI/${id}`,
@@ -590,8 +721,17 @@
 							row.find(".listofconcept").text(updatedListOfConcept);
 							row.find(".edit-btn, .delete-btn").removeClass("d-none");
 							row.find(".update-btn, .cancel-btn").addClass("d-none");
-							toastr.success(response.message);
+							// toastr.success(response.message);
 							loadConcepts();
+
+									Swal.fire({
+			icon: 'info',
+			title: '🔄 Updated successfully!',
+			showConfirmButton: false,
+			showCloseButton: true,
+			timer: 2000,
+			timerProgressBar: true,
+		});
 
 						} else {
 							toastr.error("Update failed! " + response.message);
@@ -604,41 +744,160 @@
 			});
 
 			// Handle Delete Button Click
-			$(document).on("click", ".delete-btn", function () {
-				var row = $(this).closest("tr");
-				var id = row.data("id");
+			// $(document).on("click", ".delete-btn", function () {
+			// 	var row = $(this).closest("tr");
+			// 	var id = row.data("id");
 
-				if (confirm("Are you sure you want to delete this record?")) {
+			// 	if (confirm("Are you sure you want to delete this record?")) {
+			// 		$.ajax({
+			// 			url: `/api/CompanyConceptAPI/${id}`,
+			// 			type: "DELETE",
+			// 			success: function (response) {
+			// 				console.log(response); // 🔍 See full response in browser console
+
+			// 				if (response.success) {
+			// 					toastr.success("Deleted successfully");
+			// 					row.remove();
+			// 					toastr.success(response.message);
+			// 					loadConcepts();
+			// 				} else {
+			// 					toastr.error("Delete failed! " + response.message);
+			// 				}
+			// 			},
+			// 			error: function () {
+			// 				toastr.error("Error deleting data.");
+			// 			}
+			// 		});
+			// 	}
+			// });
+
+					$(document).on("click", ".delete-btn", function (e) {
+						e.preventDefault(); // Prevent form submission or refresh
+			var row = $(this).closest("tr");
+			var id = row.data("id");
+
+			Swal.fire({
+				title: 'Are you sure?',
+				text: "You won't be able to revert this!",
+				icon: 'warning',
+				showCancelButton: true,
+				confirmButtonColor: '#d33',
+				cancelButtonColor: '#3085d6',
+				confirmButtonText: 'Yes, delete it!',
+				cancelButtonText: 'Cancel'
+			}).then((result) => {
+				if (result.isConfirmed) {
 					$.ajax({
 						url: `/api/CompanyConceptAPI/${id}`,
 						type: "DELETE",
 						success: function (response) {
-							console.log(response); // 🔍 See full response in browser console
-
 							if (response.success) {
-								toastr.success("Deleted successfully");
+								Swal.fire({
+									icon: 'success',
+									title: 'Deleted!',
+									text: response.message || "Deleted successfully.",
+									timer: 2000,
+									showConfirmButton: false,
+								});
 								row.remove();
-								toastr.success(response.message);
 								loadConcepts();
 							} else {
-								toastr.error("Delete failed! " + response.message);
+								Swal.fire({
+									icon: 'error',
+									title: 'Delete failed!',
+									text: response.message || "Something went wrong.",
+								});
 							}
 						},
 						error: function () {
-							toastr.error("Error deleting data.");
+							Swal.fire({
+								icon: 'error',
+								title: 'Error!',
+								text: 'Error deleting data.',
+							});
 						}
 					});
 				}
 			});
 		});
 
+		});
+
 
 	</script>
 
+
+
+		@* //Clear button functionalities... *@
+	<script>
+		// Clear Button Click...
+		$('#clearBtn').click(function () {
+			clear();
+		});
+				function clear() {
+					// const groupName = $('input[name="GroupName"]').val()?.trim();
+					// const isStatusActive = $('#statusToggle').is(':checked');
+					// const searchValue = $('#searchInput').val()?.trim();
+
+					// const isFormAlreadyEmpty =
+					// 	!groupName &&
+					// 	!isStatusActive &&
+					// 	!searchValue;
+
+					// if (isFormAlreadyEmpty) {
+					// 	return;
+					// }
+
+			clearFormControls('#ConceptFormView');
+				$('#rdbtnAsc').prop('checked', true); // Default check to Ascending
+						$('#searchInput').val('');
+					loadConcepts();
+				}
+
+	</script>
 	<!-- ============================================================== -->
 	<!-- Start Gridview Search functionality here -->
 	<!-- ============================================================== -->
+
 	<script>
+			//grid search function...
+		$('#searchIcon').on('click', function () {
+			console.log("searchIcon inside");
+			searchConcepts();
+		});
+
+		$('#searchInput').on('keypress', function(event) {
+			if (event.key === 'Enter') {
+				event.preventDefault();
+				searchConcepts();
+			}
+		});
+
+		//auto loading grid when search value cleared...
+		$('#searchInput').on('input', function () {
+			const currentValue = $(this).val()?.trim();
+
+			if (!currentValue) {
+				loadConcepts();
+			}
+
+		});
+
+		function searchConcepts() {
+
+			const searchValue = $('#searchInput').val()?.trim();
+			if(!searchValue)
+			{
+				toastr.warning("Please enter a search term to continue.");
+				return;
+			}
+			currentPage = 1;
+			loadConcepts();
+		}
+
+	</script>
+
+	@* <script>
 			$(document).ready(function () {
 			// Search functionality
 			$("#searchInput").on("keyup", function () {
@@ -648,6 +907,6 @@
 				});
 			});
 		});
-	</script>
+	</script> *@
 }
 

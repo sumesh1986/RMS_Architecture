@@ -10,6 +10,5 @@ namespace RMS_Data.Repository.Interfaces
     public interface IDropdownCommonRepository
     {
 
-        Task<IEnumerable<CustomerDropdownViewModel>> GetCustomerAsync(int sysId, string? nametitle);
     }
 }

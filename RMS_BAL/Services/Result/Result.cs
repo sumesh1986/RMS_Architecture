@@ -25,13 +25,5 @@ namespace RMS_BAL.Services.Result
         {
             return new Result<T> { Success = false, Message = message };
         }
-
-        //internal static Result<CustomerTitle> SuccessResult(CustomerTitle updatedGroup)
-        //{
-        //    throw new NotImplementedException();
-        //}
     }
 }
-
-
-

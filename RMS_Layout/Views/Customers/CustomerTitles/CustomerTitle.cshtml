@@ -1,4 +1,4 @@
-﻿@{
+
 	ViewData["Title"] = "Customer Titile";
 	Layout = "~/Views/Shared/_Layout.cshtml";
 }
@@ -685,5 +685,50 @@
 					e.preventDefault();
 				}
 			});
+<<<<<<< HEAD
+=======
+
+			// Search functionality only on the loaded values...
+			// $("#searchInput").on("keyup", function () {
+			// 	var value = $(this).val().toLowerCase();
+			// 	$("tbody tr").filter(function () {
+			// 		$(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
+			// 	});
+			// });
+
+			// Function to filter rows based on selected status
+			// function filterRows() {
+			// 	const selectedStatus = $("input[name='statusFilter']:checked").val();
+
+			// 	$("tbody tr").each(function () {
+			// 		const badge = $(this).find(".status-badge");
+			// 		const isActive = badge.text().trim().toLowerCase() === "active";
+
+			// 		if (selectedStatus === "All") {
+			// 			$(this).show();
+			// 		} else if (selectedStatus === "Active" && isActive) {
+			// 			$(this).show();
+			// 		} else if (selectedStatus === "Inactive" && !isActive) {
+			// 			$(this).show();
+			// 		} else {
+			// 			$(this).hide();
+			// 		}
+			// 	});
+			// }
+
+			// Trigger on radio button change...
+			// $(".statusFilter").on("change", filterRows);
+
+			// Forcefully displaying the popup after the page loading...
+			// var toastMessage = sessionStorage.getItem('toastMessage');
+			// if (toastMessage) {
+			// 	toastr.success(toastMessage);
+			// 	sessionStorage.removeItem('toastMessage');
+			// }
+
+			// Initial filter on page load
+		// 	filterRows();
+		 // });
+>>>>>>> 678474f7484682727aa68a1f1655ec240400c6c7
 	</script>
 }

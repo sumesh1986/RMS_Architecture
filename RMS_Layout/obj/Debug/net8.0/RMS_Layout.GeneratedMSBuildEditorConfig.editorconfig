@@ -1,11 +1,19 @@
 is_global = true
 build_property.TargetFramework = net8.0
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
 build_property.TargetPlatformMinVersion = 
 build_property.UsingMicrosoftNETSdkWeb = true
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
 build_property.ProjectTypeGuids = 
 build_property.InvariantGlobalization = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
 build_property.PlatformNeutralAssembly = 
 build_property.EnforceExtendedAnalyzerRules = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = RMS_Layout
 build_property.RootNamespace = RMS_Layout
@@ -50,14 +58,6 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/RMS_Architecture/RMS_Layout/Views/Customers/CustomerTypes/Customertype.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJzXEN1c3RvbWVyVHlwZXNcQ3VzdG9tZXJ0eXBlLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/RMS_Architecture/RMS_Layout/Views/Department/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVwYXJ0bWVudFxJbmRleC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/RMS_Architecture/RMS_Layout/Views/Department/UserRole.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVwYXJ0bWVudFxVc2VyUm9sZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/RMS_Architecture/RMS_Layout/Views/Home/Administrative_Tools.cshtml]
@@ -236,6 +236,18 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxab25lQXJlYVNldHRpbmdzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/RMS_Architecture/RMS_Layout/Views/ProductSetup/SaleItemSetup/Course/courseIndex.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFNldHVwXFNhbGVJdGVtU2V0dXBcQ291cnNlXGNvdXJzZUluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/RMS_Architecture/RMS_Layout/Views/ProductSetup/SalesItemHierarchy/Category/categoryIndex.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFNldHVwXFNhbGVzSXRlbUhpZXJhcmNoeVxDYXRlZ29yeVxjYXRlZ29yeUluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/RMS_Architecture/RMS_Layout/Views/ProductSetup/SalesItemHierarchy/ItemGroup/itemGroupIndex.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFNldHVwXFNhbGVzSXRlbUhpZXJhcmNoeVxJdGVtR3JvdXBcaXRlbUdyb3VwSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/RMS_Architecture/RMS_Layout/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -244,8 +256,20 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/RMS_Architecture/RMS_Layout/Views/UserSetup/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclNldHVwXEluZGV4LmNzaHRtbA==
+[C:/RMS_Architecture/RMS_Layout/Views/Users/Department/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcRGVwYXJ0bWVudFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/RMS_Architecture/RMS_Layout/Views/Users/UserPermission/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcVXNlclBlcm1pc3Npb25cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/RMS_Architecture/RMS_Layout/Views/Users/UserRole/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcVXNlclJvbGVcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/RMS_Architecture/RMS_Layout/Views/Users/UserSetup/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcVXNlclNldHVwXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/RMS_Architecture/RMS_Layout/Views/_ViewImports.cshtml]

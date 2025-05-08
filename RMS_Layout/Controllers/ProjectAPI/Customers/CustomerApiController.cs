@@ -1,11 +1,14 @@
+
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using RMS_BAL.Services.Company;
+
 using RMS_BAL.Services.Customer;
 using RMS_BAL.Services.Interfaces;
+
 using RMS_Models.Models.API_Models.Customers;
 using RMS_Models.Models.DTO.Customers;
+
 
 namespace RMS_Layout.Controllers.ProjectAPI.Customers
 {
@@ -102,20 +105,29 @@ namespace RMS_Layout.Controllers.ProjectAPI.Customers
 
         }
 
-        //[HttpPost("save")]
-        //public async Task<IActionResult> create([FromBody] CustomerViewModelDTO model)
-        //{
-        //    //throw new Exception("Thrown manually from the API Controller");
-        //    var result = await _service.CreateAsync(model);
 
-        //    if (!result.Success)
-        //    {
-        //        return BadRequest(new { message = result.Message });
-        //    }
-        //    return Ok(new { message = "Customer Titile created successfully." });
+
+
+        //[HttpGet]
+        //public async Task<IActionResult> Get([FromQuery] int page, [FromQuery] int pageSize, [FromQuery] string? itemgroupName)
+        //{
+        //    var (totalRecords/*, data*/) = await _service.GetALLAsyncService(page, pageSize, itemgroupName);
+        //    return Ok(new { totalRecords/*, data*/ });
         //}
 
 
+        [HttpPost("Save")]
+        public async Task<IActionResult> create([FromBody] CustomersMainDTO model)
+        {
+            //throw new Exception("Thrown manually from the API Controller");
+            var result = await _service.CreateAsync(model);
+
+            if (!result.Success)
+            {
+                return Conflict(new { message = result.Message });
+            }
+            return Ok(new { message = "customer  saved successfully." });
+        }
 
 
 
@@ -132,6 +144,7 @@ namespace RMS_Layout.Controllers.ProjectAPI.Customers
 
 
 }
+
 
 
 

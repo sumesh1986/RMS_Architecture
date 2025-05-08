@@ -16,7 +16,7 @@ namespace RMS_Data.Repository.Customer
             _db = db;
         }
 
-        public async Task<(int totalRecords, IEnumerable<CustomerGroup>)> GetAsync(int page, int pageSize, string? groupName = null)
+        public async Task<(int totalRecords, IEnumerable<CustomerGroup>)> GetAsync(int page, int pageSize, string? groupName)
         {
             IQueryable<CustomerGroup> query;
 

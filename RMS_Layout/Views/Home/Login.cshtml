@@ -426,8 +426,8 @@
             if (input) input.value = input.value.slice(0, -1);
         }
     </script> *@
-
-	<script>
+@* 	============ *@
+@* 	<script>
 		function appendNumber(num) {
 		  const input = document.getElementById("txtusername");
 		  input.value += num;
@@ -442,6 +442,40 @@
 		  const input = document.getElementById("txtusername");
 		  input.value = input.value.slice(0, -1);
 		  input.focus();
+		}
+	</script> *@
+
+@* 	================= *@
+
+	<script>
+		let focusedInput = null;
+
+		// Store the last focused input field
+		document.addEventListener('focusin', function (event) {
+			if (event.target.tagName === 'INPUT' && event.target.type === 'text' || event.target.type === 'password') {
+				focusedInput = event.target;
+			}
+		});
+
+		function appendNumber(num) {
+			if (focusedInput) {
+				focusedInput.value += num;
+				focusedInput.focus();
+			}
+		}
+
+		function clearRegister() {
+			if (focusedInput) {
+				focusedInput.value = '';
+				focusedInput.focus();
+			}
+		}
+
+		function backspace() {
+			if (focusedInput) {
+				focusedInput.value = focusedInput.value.slice(0, -1);
+				focusedInput.focus();
+			}
 		}
 	</script>
 

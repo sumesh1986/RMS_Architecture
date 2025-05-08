@@ -10,6 +10,7 @@ using RMS_Data.Repository.Customer;
 using RMS_Data.Service.Interfaces;
 using RMS_Models.Models;
 using RMS_Models.Models.API_Models.Customers;
+using RMS_Models.Models.DTO.Company;
 using RMS_Models.Models.DTO.Customers;
 
 
@@ -24,7 +25,7 @@ namespace RMS_BAL.Services.Customer
             _repository = repository;
         }
 
-        public async Task<(int totalRecords, IEnumerable<CustomerGroupDTO> data)> GetAsync(int page, int pageSize, string? groupName = null)
+        public async Task<(int totalRecords, IEnumerable<CustomerGroupDTO> data)> GetAsync(int page, int pageSize, string? groupName)
         {
             var (totalRecords, groups) = await _repository.GetAsync(page, pageSize, groupName);
 
@@ -37,6 +38,8 @@ namespace RMS_BAL.Services.Customer
 
             return (totalRecords, data);
         }
+
+     
 
         public async Task<Result<CustomerGroup>> CreateAsync(CustomerGroupDTO model)
         {
