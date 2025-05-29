@@ -1,5 +1,84 @@
 ﻿################################################################################
-# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+# Ignore Visual Studio temporary files, build results, and OS generated files #
 ################################################################################
 
-/RMS_Layout/Views/ProductSetup/SalesItemHierarchy/Division/divsionIndex.cshtml
+# User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Build results
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+build/
+bld/
+[Bb]in/
+[Oo]bj/
+
+# Uncomment if using Azure DevOps
+# .tf/
+
+# Visual Studio cache files
+.vs/
+.vscode/
+*.VC.db
+*.VC.opendb
+
+# Rider project files
+.idea/
+
+# NUGET packages
+*.nupkg
+packages/
+# Uncomment if using packages folder
+# !**/packages/build/
+
+# Backup & log files
+*.log
+*.bak
+*.tmp
+
+# Windows files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# IIS / ASP.NET
+*.publishsettings
+*.dbmdl
+*.sql
+*.pdb
+
+# Others
+*.vsidx
+*.sdf
+*.cache
+*.orig
+
+# DotNet Tool Restore
+.project.lock.json
+project.lock.json
+artifacts/
+
+# Test Results
+TestResults/
+*.trx
+
+# Resharper
+_ReSharper*/
+*.[Rr]e[Ss]harper
+
+# Code analysis
+*.ruleset
+*.codeAnalysisLog.xml
+
+# Entity Framework
+Migrations/
+
+# Global ignore (optional for system-wide config)
+# *.DS_Store

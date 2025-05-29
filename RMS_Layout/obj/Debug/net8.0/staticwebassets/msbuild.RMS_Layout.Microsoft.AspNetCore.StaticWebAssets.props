@@ -714,8 +714,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>5q6dujqtpf</Fingerprint>
-      <Integrity>TU2eIihLYclo7k5+qmqLlo4q4A8/R0TC5sfcvbzDDFI=</Integrity>
+      <Fingerprint>kfqf670vj7</Fingerprint>
+      <Integrity>cMo3KBcEs9maoT2Ni8bi+qCFz+CppGEYsy4RzP3T2Os=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\sweetalert2@11.js'))</OriginalItemSpec>

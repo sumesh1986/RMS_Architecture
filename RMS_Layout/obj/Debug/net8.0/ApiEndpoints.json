@@ -726,6 +726,22 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "RMS_Layout.Controllers.ProjectAPI.Login.LoginAPIController",
+    "Method": "encrypt",
+    "RelativePath": "api/encrypt",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "plainText",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "RMS_Layout.Controllers.ProjectAPI.ProductSetup.SalesItemHierarchy.ItemGroupAPIController",
     "Method": "Get",
     "RelativePath": "api/ItemGroupAPI",
@@ -802,6 +818,53 @@
         "IsRequired": true
       }
     ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RMS_Layout.Controllers.ProjectAPI.Login.LoginAPIController",
+    "Method": "Log",
+    "RelativePath": "api/Log",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "metadata",
+        "Type": "RMS_Models.Models.ServiceModels.UserMetadataDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RMS_Layout.Controllers.ProjectAPI.Login.LoginAPIController",
+    "Method": "Login",
+    "RelativePath": "api/login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "username",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "password",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RMS_Layout.Controllers.ProjectAPI.Login.LoginAPIController",
+    "Method": "Logout",
+    "RelativePath": "api/Logout",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
     "ReturnTypes": []
   },
   {
@@ -938,6 +1001,27 @@
         "Name": "model",
         "Type": "RMS_Models.Models.DTO.ProductSetup.SalesItemHierarchy.DivisionViewModelDTO",
         "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RMS_Layout.Controllers.ProjectAPI.Login.LoginAPIController",
+    "Method": "release",
+    "RelativePath": "api/release",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "SessionId",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "SecretKey",
+        "Type": "System.String",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": []
@@ -1085,6 +1169,27 @@
         "Name": "model",
         "Type": "RMS_Models.Models.DTO.Users.UserPositionsDto",
         "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RMS_Layout.Controllers.ProjectAPI.Login.LoginAPIController",
+    "Method": "Verify",
+    "RelativePath": "api/verifyotp",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "otp",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "sessionId",
+        "Type": "System.String",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": []

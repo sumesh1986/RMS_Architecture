@@ -12,19 +12,15 @@ using RMS_Models.Models.API_Models.ProductSetup.SalesItemHierarchy;
 using RMS_Models.Models.API_Models.Users;
 using RMS_Models.Models.API_Models.SaleItemSetup.Course;
 using RMS_Models.Models.DTO.Customers;
+using RMS_Data.Repository.Interfaces;
 
 
 namespace RMS_Data.Data
 {
     public class ApplicationDbContext:DbContext
     {
+        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options) { }
 
-        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
-            : base(options)  {
-        }
-
-        //Application Models...
-        //public DbSet<CustomerGroup> CustomerGroups { get; set; }
 
         public DbSet<CustomerGroup> CustomerGroup { get; set; }
         public DbSet<CustomerType> CustomerType { get; set; }
@@ -67,6 +63,7 @@ namespace RMS_Data.Data
         //Service Models...
         //public DbSet<ErrorLog>  ErrorLogs{ get; set; }
         //public IEnumerable<object> CustomerTypes { get; internal set; }
+        //public DbSet<DBMapper> DBMapper { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

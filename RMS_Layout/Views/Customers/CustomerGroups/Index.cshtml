@@ -539,35 +539,40 @@
 				return;
 			 }
 			 // console.log("updatedGroupName:"+ updatedGroupName + "updatedStatus:"+ updatedStatus );
-			$.ajax({
-				url: `/api/CustomerGroupApi/${id}`,
-				type: "PUT",
-				contentType: "application/json",
-				data: JSON.stringify({
-					sysId: id,
-					groupName: updatedGroupName,
-					active: updatedStatus
-				}),
-				success: function (response) {
-					if (response.success) {
-						loadConcepts();
-						toastr.success(response.message);
-					} else {
-						// alert("hi");
-						toastr.error("Update failed: " + response.message);
+		$.ajax({
+			url: `/api/CustomerGroupApi/${id}`,
+			type: "PUT",
+			contentType: "application/json",
+			data: JSON.stringify({
+				sysId: id,
+				groupName: updatedGroupName,
+				active: updatedStatus
+			}),
+			success: function (response) {
+				if (response.success) {
+					loadConcepts();
+					toastr.success(response.message);
+				} else {
+					toastr.error("Update failed: " + response.message);
+				}
+			},
+			error: function (xhr) {
+				console.log(xhr);
+				if (xhr.status === 401) {
+					toastr.error("Your session has expired due to inactivity. Please log in again.");
+					setTimeout(function () {
+						window.location.href = "/Home/Login"; // Adjust this URL if your login path differs
+					}, 5000); // 5000ms = 5 seconds delay
+				} else {
+					let errorMessage = "Unexpected error occurred.";
+					if (xhr.responseJSON && xhr.responseJSON.message) {
+						errorMessage = xhr.responseJSON.message;
 					}
-				},
-						error: function (xhr) {
-			let errorMessage = "Unexpected error occurred.";
-
-			if (xhr.responseJSON && xhr.responseJSON.message) {
-				errorMessage = xhr.responseJSON.message;
+					toastr.error(errorMessage);
+				}
 			}
+		});
 
-			toastr.error(errorMessage);
-		}
-
-			});
 		});
 
 
@@ -626,10 +631,35 @@
 								Swal.fire('Error!', 'Delete failed: ' + response.message, 'error');
 							}
 						},
-						error: function () {
-							Swal.fire('Error!', 'Error deleting customer group.', 'error');
+						error: function (xhr) {
+							let errorMessage = (xhr.responseJSON && xhr.responseJSON.message)
+								? xhr.responseJSON.message
+								: 'An unexpected error occurred.';
+
+							if (xhr.status === 401) {
+								Swal.fire({
+									icon: 'info',
+									title: 'Session Expired',
+									text: errorMessage,
+									confirmButtonText: 'Go to Login'
+								}).then(() => {
+									sessionStorage.clear();
+									localStorage.clear();
+
+									history.pushState(null, '', '/Home/Login');
+									window.onpopstate = function () {
+										history.go(1);
+									};
+
+									window.location.replace('/Home/Login');
+								});
+							} else {
+								Swal.fire('Error!', errorMessage, 'error');
+							}
 						}
+
 					});
+
 				}
 			});
 		});

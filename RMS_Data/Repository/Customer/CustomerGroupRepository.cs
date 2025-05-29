@@ -4,6 +4,7 @@ using RMS_Models.Models;
 using Microsoft.EntityFrameworkCore;
 using RMS_Models.Models.API_Models.Customers;
 using Azure;
+using RMS_Data.Repository.Interfaces;
 
 namespace RMS_Data.Repository.Customer
 {

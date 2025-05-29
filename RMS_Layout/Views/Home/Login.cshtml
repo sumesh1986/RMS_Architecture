@@ -3,46 +3,20 @@
 }
 
 
-@{
-	ViewBag.Title = "Login";
-}
-
-
-
-
-@* <h2>Login</h2> *@
-
-@if (ViewBag.ErrorMessage != null)
-{
-	<div class="alert alert-danger">@ViewBag.ErrorMessage</div>
-}
-
-
 <!doctype html>
 <html lang="en">
 
 <head>
 
 	<meta charset="utf-8" />
-	<title>Login 2 | - Admin & Dashboard</title>
+	<title>BackOffice</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 	<!-- App favicon -->
 	<link rel="shortcut icon" href="assets/images/favicon.ico">
-
 	<link href="~/css/app.min.css" rel="stylesheet" />
-
-	<!-- Bootstrap Css -->
 	<link href="~/css/bootstrap.min.css" rel="stylesheet" />
-	<!-- Icons Css -->
-	@*     <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" /> *@
-	<!-- App Css-->
-	@*     <link href="~/css/app.min.css" id="app-style" rel="stylesheet" /> *@
-	<!-- App js -->
-	@* <script src="~/js/plugin.js"></script> *@
 	<link href="~/css/site.css" rel="stylesheet" />
-
-	<!-- Bootstrap Icons -->
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
 
 	<style>
@@ -50,156 +24,16 @@
 			min-height: 120px;
 			transition: transform 0.6s ease-in-out;
 		}
+
+		.hidden {
+			display: none !important;
+		}
+
+		.visible {
+			display: block !important;
+		}
+
 	</style>
-
-	<style>
-		/*    body, html {
-							overflow-x: hidden;
-						}
-		 */
-		/*     body {
-							background: #f0f4ff;
-							display: flex;
-							align-items: center;
-							justify-content: center;
-							min-height: 100vh;
-							font-family: 'Segoe UI', sans-serif;
-						}
-
-						.login-card {
-							background: white;
-							border-radius: 15px;
-							padding: 30px;
-							max-width: 400px;
-							width: 100%;
-							box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-						} */
-
-		/*   .keypad {
-							display: grid;
-							grid-template-columns: repeat(3, 1fr);
-							gap: 10px;
-							margin-top: 20px;
-						}
-				 */
-		/*   .keypad button {
-								height: 60px;
-								font-size: 22px;
-								border-radius: 12px;
-								background-color: #007bff;
-								color: white;
-								border: none;
-								transition: background 0.3s ease;
-							}
-
-								.keypad button:hover {
-									background-color: #0056b3;
-								}
-
-						.clear-btn {
-							background-color: #dc3545;
-						}
-
-							.clear-btn:hover {
-								background-color: #a71d2a;
-							}
-
-						input[readonly] {
-							background-color: #e9ecef !important;
-							cursor: not-allowed;
-						} */
-
-
-		/*
-						.keypad {
-							display: grid;
-							grid-template-columns: repeat(3, 1fr);
-							gap: 15px;
-							margin: 20px 0;
-						}
-
-							.keypad button {
-								height: 60px;
-								font-size: 22px;
-								font-weight: bold;
-								border-radius: 15px;
-								background: #007bff;
-								color: #fff;
-								border: none;
-								box-shadow: 0 4px 10px rgba(0, 123, 255, 0.2);
-								transition: transform 0.15s ease, box-shadow 0.15s ease;
-							}
-
-								.keypad button:hover {
-									transform: scale(1.05);
-									box-shadow: 0 6px 14px rgba(0, 123, 255, 0.3);
-								}
-
-								.keypad button:active {
-									transform: scale(0.97);
-								}
-
-						.btn-clear {
-							background-color: #dc3545;
-						}
-
-						.btn-back {
-							background-color: #6c757d;
-						}
-
-						input[readonly] {
-							background-color: #e9ecef !important;
-							cursor: not-allowed;
-						}
-
-						.form-label {
-							font-weight: 600;
-						} */
-	</style>
-
-	@*     <style>
-        .keypad {
-            display: grid;
-            grid-template-columns: repeat(3, 70px);
-            gap: 15px;
-            justify-content: left;
-        }
-
-            .keypad button {
-                background-color: #0d6efd;
-                color: #fff;
-                border: none;
-                border-radius: 12px;
-                font-size: 1.5rem;
-                padding: 15px 0;
-                transition: all 0.2s ease-in-out;
-                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-            }
-
-                .keypad button:hover {
-                    background-color: #0b5ed7;
-                    transform: scale(1.05);
-                }
-
-            .keypad .btn-clear {
-                background-color: #ffc107;
-                color: #000;
-            }
-
-                .keypad .btn-clear:hover {
-                    background-color: #e0a800;
-                }
-
-            .keypad .btn-back {
-                background-color: #dc3545;
-                color: #fff;
-            }
-
-                .keypad .btn-back:hover {
-                    background-color: #bb2d3b;
-                }
-    </style> *@
-
 
 	<style>
 		.keypad-wrapper {
@@ -208,8 +42,6 @@
 			/*  height: 100%; */
 			padding-top: 5vh;
 		}
-
-
 
 			.keypad-wrapper button {
 				font-size: 1.25rem;
@@ -256,8 +88,8 @@
 			/* Clear Button */
 			.keypad .btn-clear {
 				/*                 background: rgba(255, 193, 7, 0.15);
-								color: #ffc107;
-								border: 1px solid rgba(255, 193, 7, 0.4); */
+																						color: #ffc107;
+																						border: 1px solid rgba(255, 193, 7, 0.4); */
 				/* background: rgb(33 150 243 / 88%); */
 				color: #03A9F4;
 				/*  border: 1px solid rgb(0 188 212 / 29%); */
@@ -290,47 +122,47 @@
 <body class="auth-body-bg">
 
 	<div>
-		<form asp-controller="Login" asp-action="Login" method="post">
-			<div class="container-fluid p-0">
-				<div class="row g-0 min-vh-100">
-					<!-- Carousel (XL screens only) -->
-					<div class="col-xl-6 d-none d-xl-block auth-full-bg position-relative">
-						<div class="bg-overlay">
-							@* <img src="~/images/restaurant-food.jpg" class="w-100 h-100 object-fit-cover" /> *@
-						</div>
-						<div class="d-flex h-100 flex-column justify-content-end">
-							<div class="text-center text-white p-4">
-								<h4 style="color:#2196F3;"><i class="bi bi-quote h1 me-2"></i>5k+ Satisfied Clients</h4>
-								<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-									<div class="carousel-indicators">
-										<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"></button>
-										<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></button>
+		<div class="container-fluid p-0">
+			<div class="row g-0 min-vh-100">
+				<!-- Carousel (XL screens only) -->
+				<div class="col-xl-6 d-none d-xl-block auth-full-bg position-relative">
+					<div class="bg-overlay">
+						@* <img src="~/images/restaurant-food.jpg" class="w-100 h-100 object-fit-cover" /> *@
+					</div>
+					<div class="d-flex h-100 flex-column justify-content-end">
+						<div class="text-center text-white p-4">
+							<h4 style="color:#2196F3;"><i class="bi bi-quote h1 me-2"></i>5k+ Satisfied Clients</h4>
+							<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+								<div class="carousel-indicators">
+									<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"></button>
+									<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></button>
+								</div>
+								<div class="carousel-inner text-white">
+									<div class="carousel-item active">
+										<blockquote class="blockquote">
+											<p>"Restaurant."</p>
+											<footer class="blockquote-footer text-white">Customer - User</footer>
+										</blockquote>
 									</div>
-									<div class="carousel-inner text-white">
-										<div class="carousel-item active">
-											<blockquote class="blockquote">
-												<p>"Restaurant."</p>
-												<footer class="blockquote-footer text-white">Customer - User</footer>
-											</blockquote>
-										</div>
-										<div class="carousel-item">
-											<blockquote class="blockquote">
-												<p>"Development is a nice experience. You guys are wonderful!"</p>
-												<footer class="blockquote-footer text-white">Customer - User</footer>
-											</blockquote>
-										</div>
+									<div class="carousel-item">
+										<blockquote class="blockquote">
+											<p>"Development is a nice experience. You guys are wonderful!"</p>
+											<footer class="blockquote-footer text-white">Customer - User</footer>
+										</blockquote>
 									</div>
 								</div>
 							</div>
 						</div>
 					</div>
+				</div>
 
-					<!-- Login + Keypad Section -->
-					<div class="col-xl-6 col-12 d-flex flex-column justify-content-center align-items-center">
-						<div class="row w-100 justify-content-center px-2" style="padding: 80px !important; ">
-							<div class="col-lg-6 col-md-10 bg-white d-flex align-items-center remove-border-sm" style="border-top: 2px solid #80808038; border-left: 2px solid #80808038; border-bottom: 2px solid #80808038;border-radius: 0.25rem;
-							 border-right: none;">
-								<div class="p-4 w-100">
+				<!-- Login + Keypad Section -->
+				<div id="loginSec" class="col-xl-6 col-12 d-flex flex-column justify-content-center align-items-center">
+					<div class="row w-100 justify-content-center g-0 px-2 py-5">
+						<!-- Login Form Column -->
+						<div id="loginSection" class="col-lg-5 col-md-10 bg-white shadow-sm d-flex align-items-center rounded-start">
+							<form id="loginForm" class="w-100">
+								<div class="p-4 remove-border-sm" style="border-top: 1px solid lightgrey; border-bottom: 1px solid lightgrey; border-left: 1px solid lightgrey; border-right: none;">
 									<div class="text-center mb-4">
 										<a href="#" class="d-block mb-2">
 											<img src="~/images/chef-restaurant-logo-png-image_6136204.png" width="60" height="60" alt="Logo" />
@@ -338,116 +170,258 @@
 										<h5 class="text-primary">Welcome Back!</h5>
 										<p class="text-muted">Sign in to continue to Restaurant.</p>
 									</div>
+
 									<div class="mb-3">
-										<label class="form-label">User Name</label>
-										<input id="txtusername" name="username" type="text" class="form-control" placeholder="Enter User Name" required>
+										<label class="form-label" for="txtusername">User Name</label>
+										<input id="txtusername" name="username" type="text" class="form-control" placeholder="Enter User Name" required />
 									</div>
+
 									<div class="mb-3">
-										<label class="form-label">Password</label>
+										<label class="form-label" for="txtpassword">Password</label>
 										<div class="input-group">
-											<input id="txtpassword" type="password" name="password" class="form-control" placeholder="Enter Password" required>
-											<button id="togglePassword" class="btn btn-outline-secondary" type="button">
+											<input id="txtpassword" type="password" name="password" class="form-control" placeholder="Enter Password" required />
+											<button id="togglePassword" class="btn btn-outline-secondary" type="button" onclick="togglePasswordVisibility()">
 												<i id="eyeIcon" class="bi bi-eye-slash"></i>
 											</button>
 										</div>
 									</div>
-									<div class="form-check mb-3">
-										<input type="checkbox" class="form-check-input" id="remember">
-										<label class="form-check-label" for="remember">Remember me</label>
-									</div>
-									<div class="d-grid">
-										<button class="btn btn-primary waves-effect" type="submit">Log In</button>
-									</div>
-								</div>
-							</div>
 
-							<div class="col-lg-6 col-md-10 bg-white d-flex align-items-center justify-content-center mt-4 mt-lg-0  remove-border-sm" style="border-top: 2px solid #80808038; border-right: 2px solid #80808038; border-bottom: 2px solid #80808038;border-radius: 0.25rem;
-							 border-left: none;">
-								<div class="keypad-wrapper text-center p-4 w-100">
-									<div class="keypad d-grid gap-2" style="grid-template-columns: repeat(3, 1fr);">
-										<button type="button" class="waves-effect btn btn-light" onclick="appendNumber('1')">1</button>
-										<button type="button" class="waves-effect btn btn-light" onclick="appendNumber('2')">2</button>
-										<button type="button" class="waves-effect btn btn-light" onclick="appendNumber('3')">3</button>
-										<button type="button" class="waves-effect btn btn-light" onclick="appendNumber('4')">4</button>
-										<button type="button" class="waves-effect btn btn-light" onclick="appendNumber('5')">5</button>
-										<button type="button" class="waves-effect btn btn-light" onclick="appendNumber('6')">6</button>
-										<button type="button" class="waves-effect btn btn-light" onclick="appendNumber('7')">7</button>
-										<button type="button" class="waves-effect btn btn-light" onclick="appendNumber('8')">8</button>
-										<button type="button" class="waves-effect btn btn-light" onclick="appendNumber('9')">9</button>
-										<button type="button" class="btn-clear btn btn-warning" onclick="clearRegister()">-</button>
-										<button type="button" class="waves-effect btn btn-light" onclick="appendNumber('0')">0</button>
-										<button type="button" class="btn-back btn btn-danger" onclick="backspace()">⌫</button>
+									@* 									<div class="form-check mb-3">
+										<input type="checkbox" class="form-check-input" id="remember" />
+										<label class="form-check-label" for="remember">Remember me</label>
+									</div> *@
+
+									<div class="d-flex justify-content-center" style="margin-top: 30px;">
+										<button id="loginButton" type="submit" class="btn btn-primary px-4">
+											<span id="loginText">Log In</span>
+											<span id="loadingSpinner" class="spinner-border spinner-border-sm d-none" role="status" aria-hidden="true"></span>
+										</button>
 									</div>
+									<script>
+											document.getElementById("loginButton").addEventListener("click", function (e) {
+												const btn = this;
+												const spinner = document.getElementById("loadingSpinner");
+												const loginText = document.getElementById("loginText");
+
+												// Prevent multiple clicks
+												btn.disabled = true;
+
+												// Show spinner, hide text
+												spinner.classList.remove("d-none");
+												loginText.textContent = "Logging in...";
+											});
+										</script>
+
+								</div>
+							</form>
+						</div>
+
+						<!-- Keypad Column -->
+						<div id="keypadboard" class="col-lg-6 col-md-10 bg-white d-flex align-items-center justify-content-center mt-4 mt-lg-0  remove-border-sm" style="border-top: 2px solid #80808038; border-right: 2px solid #80808038; border-bottom: 2px solid #80808038;border-radius: 0.25rem;
+							 border-left: none;">
+							<div class="keypad-wrapper text-center p-4 w-100">
+								<div class="keypad d-grid gap-2" style="grid-template-columns: repeat(3, 1fr);">
+									<button type="button" class="waves-effect btn btn-light" onclick="appendNumber('1')">1</button>
+									<button type="button" class="waves-effect btn btn-light" onclick="appendNumber('2')">2</button>
+									<button type="button" class="waves-effect btn btn-light" onclick="appendNumber('3')">3</button>
+									<button type="button" class="waves-effect btn btn-light" onclick="appendNumber('4')">4</button>
+									<button type="button" class="waves-effect btn btn-light" onclick="appendNumber('5')">5</button>
+									<button type="button" class="waves-effect btn btn-light" onclick="appendNumber('6')">6</button>
+									<button type="button" class="waves-effect btn btn-light" onclick="appendNumber('7')">7</button>
+									<button type="button" class="waves-effect btn btn-light" onclick="appendNumber('8')">8</button>
+									<button type="button" class="waves-effect btn btn-light" onclick="appendNumber('9')">9</button>
+									<button type="button" class="btn-clear btn btn-warning" onclick="clearRegister()">-</button>
+									<button type="button" class="waves-effect btn btn-light" onclick="appendNumber('0')">0</button>
+									<button type="button" class="btn-back btn btn-danger" onclick="backspace()">⌫</button>
 								</div>
 							</div>
 						</div>
 
-						<!-- Footer -->
-						<footer class="footer text-muted py-3 w-100">
-
-							<div class="container d-flex justify-content-center align-items-center">
-								<div>
-									<strong>
-										&copy; @DateTime.Now.Year -	<a href="#" class="text-decoration-none">Restaurant Management System</a>.
-									</strong>
-									All rights reserved.
-								</div>
+						<div id="otpSection" class="w-100 p-4" style="display: none; border: 1px solid lightgrey; width: 50% !important;">
+							<h5 class="text-primary text-center mb-3">Enter OTP</h5>
+							<div class="mb-3">
+								<label class="form-label" for="otpInput">OTP</label>
+								<input id="otpInput" type="text" class="form-control" placeholder="Enter the OTP" maxlength="6" pattern="\d{6}" inputmode="numeric" />
 							</div>
-						</footer>
+								<div class="d-flex justify-content-center">
+									<button id="verifyOtpButton" type="button" class="btn btn-primary px-4">
+										<span id="otpButtonText">Verify OTP</span>
+										<span id="otpLoadingSpinner" class="spinner-border spinner-border-sm d-none" role="status" aria-hidden="true"></span>
+									</button>
+								</div>
+								<script>
+									document.getElementById("verifyOtpButton").addEventListener("click", function () {
+										const btn = this;
+										const spinner = document.getElementById("otpLoadingSpinner");
+										const text = document.getElementById("otpButtonText");
+
+										// Disable to prevent double clicks
+										btn.disabled = true;
+
+										// Update UI to loading state
+										text.textContent = "Verifying...";
+										spinner.classList.remove("d-none");
+
+										// Optional: Submit form or trigger AJAX call here
+										// Example: setTimeout(() => { btn.form.submit(); }, 1000);
+									});
+								</script>
+
+						</div>
 					</div>
+
+					<!-- Footer -->
+					<footer class="footer text-muted py-3 w-100">
+						<div class="container d-flex justify-content-center align-items-center">
+							<div>
+								<strong>
+									&copy; @DateTime.Now.Year - <a href="#" class="text-decoration-none">Restaurant Management System</a>.
+								</strong>
+								All rights reserved.
+							</div>
+						</div>
+					</footer>
 				</div>
 			</div>
-		</form>
+		</div>
+
 
 		<!-- end container-fluid -->
 	</div>
+
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+
 
 
 
 	<script src="~/js/jquery-3.6.4.min.js" asp-append-version="true"></script>
 	<script src="~/js/bootstrap.bundle.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/&#64;fingerprintjs/fingerprintjs@3/dist/fp.min.js"></script>
+	<script>
+			  document.addEventListener("DOMContentLoaded", function () {
+				  const loginBtn = document.getElementById("loginButton");
 
-	@*     <script src="~/js/bootstrap.bundle.min.js"></script> *@
+				  if (loginBtn) {
+					  loginBtn.addEventListener("click", async function (event) {
+						  event.preventDefault();
+		
+						  const username = $('#txtusername').val().trim();
+						  const password = $('#txtpassword').val().trim();
 
+							if (!username || !password) {
+								Swal.fire({
+									icon: 'warning',
+									title: 'Validation Error',
+									text: 'Username and password are required.',
+									allowOutsideClick: false,
+									backdrop: true,          
+									confirmButtonText: 'OK'  
+								});
+								return;
+							}
 
-	@*    <script>
-        function appendNumber(num) {
-            const input = document.getElementById("registerNumber");
-            if (input) input.value += num;
-        }
+						  $.ajax({
+							  type: "POST",
+							  url: "/api/login",
+							  data: {
+								  username: username,
+								  password: password
+							  },
+							  success: function (response) {
+								  if (response.token) {
+										sessionStorage.setItem("tenantid", response.token);
+										if(response.redirectURL)
+										{
+											let cleanUrl = response.redirectURL.split('?')[0];
+											if (response.details) {
+												  sessionStorage.setItem("companyName", response.details.name);
+												  sessionStorage.setItem("regId", response.details.regno);
+												  sessionStorage.setItem("expiryDate", response.details.expiry);
+												  sessionStorage.setItem("email", response.details.mail);
+												  sessionStorage.setItem("place", response.details.place);
+												  sessionStorage.setItem("country", response.details.country);
+											  }
+											window.location.href = cleanUrl;
 
-        function clearRegister() {
-            const input = document.getElementById("registerNumber");
-            if (input) input.value = "";
-        }
+											// window.location.href = response.redirectURL;
+											return;
+										}
+										document.getElementById('loginSection').classList.add('hidden');
+										document.getElementById('keypadboard').classList.add('hidden');
+										document.getElementById('otpSection').classList.add('visible');
+								  } else {
+									  resetLoginButton();
+									  Swal.fire({
+										  icon: 'info',
+										  title: response.redirectUrl,
+										  text: response.message,
+										  allowOutsideClick: false,
+									      backdrop: true,
+									  });
+								  }
+							  },
+								error: function (xhr) {
+									resetLoginButton();
 
-        function backspace() {
-            const input = document.getElementById("registerNumber");
-            if (input) input.value = input.value.slice(0, -1);
-        }
-    </script> *@
-@* 	============ *@
-@* 	<script>
-		function appendNumber(num) {
-		  const input = document.getElementById("txtusername");
-		  input.value += num;
-		  input.focus();
-		}
+									if (xhr.status === 409) {
+										let errorMessage = "Account is locked.";
 
-		function clearRegister() {
-		  document.getElementById("txtusername").value = '';
-		}
+										try {
+											const response = JSON.parse(xhr.responseText);
+											errorMessage = response.message || errorMessage;
+										} catch (e) {
+											console.error("Failed to parse error response", e);
+										}
 
-		function backspace() {
-		  const input = document.getElementById("txtusername");
-		  input.value = input.value.slice(0, -1);
-		  input.focus();
-		}
-	</script> *@
+										Swal.fire({
+											icon: 'info',
+											title: 'Login Failed',
+											text: errorMessage,
+											allowOutsideClick: false,
+											backdrop: true,
+										});
+									} else {
+										Swal.fire({
+											icon: 'info',
+											title: 'Server Error',
+											text: 'Please try again later.',
+											allowOutsideClick: false,
+											backdrop: true,
+										});
+									}
+								}
 
-@* 	================= *@
+						  });
+					  });
+				  }
+			  });
+	</script>
 
 	<script>
+		function resetLoginButton() {
+			const loginButton = document.getElementById("loginButton");
+			const spinner = document.getElementById("loadingSpinner");
+			const loginText = document.getElementById("loginText");
+
+			loginButton.disabled = false;
+			loginText.textContent = "Log In";
+			spinner.classList.add("d-none");
+		}
+
+		function resetVerifyOtpButton() {
+			const otpButton = document.getElementById("verifyOtpButton");
+			const spinner = document.getElementById("otpLoadingSpinner");
+			const text = document.getElementById("otpButtonText");
+
+			otpButton.disabled = false;
+			text.textContent = "Verify OTP";
+			spinner.classList.add("d-none");
+		}
+
+
 		let focusedInput = null;
 
 		// Store the last focused input field
@@ -479,24 +453,6 @@
 		}
 	</script>
 
-
-	@* 	<script>
-		function togglePasswordVisibility() {
-			const passwordInput = document.getElementById('txtpassword');
-			const eyeIcon = document.getElementById('eyeIcon');
-
-			if (passwordInput.type === 'password') {
-				passwordInput.type = 'text';
-				eyeIcon.classList.remove('bi-eye-slash');
-				eyeIcon.classList.add('bi-eye');
-			} else {
-				passwordInput.type = 'password';
-				eyeIcon.classList.remove('bi-eye');
-				eyeIcon.classList.add('bi-eye-slash');
-			}
-		}
-	</script> *@
-
 	<script>
 		$(document).ready(function () {
 			$('#togglePassword').on('click', function () {
@@ -507,8 +463,266 @@
 				icon.toggleClass('bi-eye-slash bi-eye');
 			});
 		});
-	</script>
 
+		$('#otpInput').on('keypress', function (e) {
+			if (e.which === 13) {
+				$('#verifyOtpButton').click();
+			}
+		});
+
+		function isValidOtp(otp) {
+		  return /^\d{6}$/.test(otp);
+		}
+
+		document.getElementById('verifyOtpButton').addEventListener('click', async () => {
+			const otpInput = document.getElementById('otpInput');
+			const otp = otpInput.value;
+
+			const sessionId = sessionStorage.getItem("tenantid");
+
+			if (!sessionId) {
+				resetLoginButton();
+				resetVerifyOtpButton();
+				Swal.fire({
+					icon: 'info',
+					title: 'Session Interrupted',
+					text: 'We noticed something unusual. Please log in again to continue.',
+					confirmButtonText: 'OK'
+				}).then(() => {
+					window.location.href = '/home';
+				});
+				return;
+			}
+
+			// Validate OTP input
+			if (!/^\d{6}$/.test(otp)) {
+				resetVerifyOtpButton();
+				Swal.fire({
+					icon: 'info',
+					title: 'Invalid OTP',
+					text: 'Please enter a valid 6-digit numeric OTP.',
+					allowOutsideClick: false,
+					backdrop: true,
+				});
+				//otpInput.focus();
+				return;
+			}
+
+
+
+		$.ajax({
+			type: "POST",
+			url: "/api/verifyotp",
+			data: {
+				otp: otp,
+				sessionId: sessionId
+			},
+			success: async function (response) {
+				if (response.token && response.redirectUrl) {
+					sessionStorage.setItem("redirectURL", response.redirectUrl);
+					if (response.details) {
+						sessionStorage.setItem("companyName", response.details.name);
+						sessionStorage.setItem("regId", response.details.regno);
+						sessionStorage.setItem("expiryDate", response.details.expiry);
+						sessionStorage.setItem("email", response.details.mail);
+						sessionStorage.setItem("place", response.details.place);
+						sessionStorage.setItem("country", response.details.country);
+					}
+		try {
+			let ipData = {};
+			let location = {};
+			let deviceInfo = {};
+
+			// Fetch IP-based geolocation
+			try {
+				const ipResponse = await fetch('https://ipapi.co/json/');
+				ipData = await ipResponse.json();
+			} catch (geoError) {
+				const ipRes = await fetch('https://ipinfo.io/json?token=72730f231e601c'); // Replace with actual token
+				ipData = await ipRes.json();
+				const [lat, lon] = ipData.loc.split(',');
+				ipData.latitude = parseFloat(lat);
+				ipData.longitude = parseFloat(lon);
+			}
+
+			location = {
+				latitude: ipData.latitude,
+				longitude: ipData.longitude,
+				source: "IP"
+			};
+
+			// Detect browser name
+			const getBrowserName = async () => {
+				const ua = navigator.userAgent;
+				if (navigator.brave && typeof navigator.brave.isBrave === 'function' && await navigator.brave.isBrave()) return "Brave";
+				if (ua.includes("Edg")) return "Edge";
+				if (ua.includes("OPR") || ua.includes("Opera")) return "Opera";
+				if (ua.includes("Chrome")) return "Chrome";
+				if (ua.includes("Firefox")) return "Firefox";
+				if (ua.includes("Safari")) return "Safari";
+				if (ua.includes("Trident") || ua.includes("MSIE")) return "Internet Explorer";
+				return "Unknown";
+			};
+
+			const getDeviceType = () => {
+				const ua = navigator.userAgent;
+				const width = window.innerWidth;
+				if (/Mobi|Android/i.test(ua)) return "Phone";
+				if (/Tablet|iPad/i.test(ua) || (width >= 768 && width <= 1024)) return "Tablet";
+				if (width >= 1025 && width <= 1366) return "Laptop";
+				return "Desktop";
+			};
+
+			const browserName = await getBrowserName();
+			const deviceType = getDeviceType();
+
+			deviceInfo = {
+				platform: navigator.platform,
+				userAgent: navigator.userAgent,
+				language: navigator.language,
+				browser: browserName
+			};
+
+			// Load fingerprint
+			const fp = await FingerprintJS.load();
+			const result = await fp.get();
+
+			// Compose metadata object
+			const metadata = {
+				ip: ipData.ip,
+				city: ipData.city,
+				region: ipData.region,
+				country_name: ipData.country_name || 'Not found',
+				latitude: ipData.latitude,
+				longitude: ipData.longitude,
+				timezone: ipData.timezone,
+				platform: deviceInfo.platform,
+				userAgent: deviceInfo.userAgent,
+				language: deviceInfo.language,
+				browser: deviceInfo.browser,
+				visitorId: result.visitorId,
+				vendor: navigator.vendor,
+				renderer: (navigator.gpu || {}).adapter || "Unavailable",
+				screenResolution: `${screen.width}x${screen.height}`,
+				localstorage: !!window.localStorage,
+				sessionStorage: !!window.sessionStorage,
+				cookie: navigator.cookieEnabled,
+				deviceType: deviceType
+			};
+		$.ajax({
+			type: "POST",
+			url: "/api/log",
+			data: JSON.stringify(metadata),
+			contentType: "application/json",
+			success: function (res) {
+				window.location.href = response.redirectUrl;
+			},
+			error: function (xhr, status, error) {
+				resetVerifyOtpButton();
+				Swal.fire({
+					icon: 'warning',
+					title: 'Oops!',
+					text: 'Something went wrong. Please try again.'
+				});
+			}
+		});
+
+		} catch (err) {
+			resetVerifyOtpButton();
+			Swal.fire({
+				icon: 'warning',
+				title: 'Oops!',
+				text: 'Something went wrong. Please try again.'
+			});
+		}
+
+				} else {
+					// Clear OTP input field and show error
+					$('#otpInput').val('');
+					resetVerifyOtpButton();
+					const response = JSON.parse(err.responseText);
+					errorMessage = response.message || errorMessage;
+					Swal.fire({
+						icon: 'info',
+						title: 'Authentication Error',
+						text: 'Invalid OTP. Please try again.'
+					});
+				}
+			},
+		error: function (xhr, status, error) {
+			// Clear OTP input field
+			$('#otpInput').val('');
+
+			let icon = 'error';
+			let title = 'Authentication Error';
+			let message = 'Something went wrong. Please try again later.';
+
+			try {
+				const responseJson = JSON.parse(xhr.responseText);
+
+				if (xhr.status === 409) {
+					icon = 'info';
+					title = 'Invalid OTP';
+					message = responseJson.message || 'Invalid OTP. Please try again.';
+				} else if (xhr.status === 429) {
+					icon = 'info';
+					title = 'Account Locked';
+					message = responseJson.message || 'Too many failed attempts. Please contact administrator.';
+				}
+			} catch (e) {
+				// Fallback message if parsing fails
+				if (xhr.status === 409) {
+					icon = 'info';
+					title = 'Invalid OTP';
+					message = 'Invalid OTP. Please try again.';
+				} else if (xhr.status === 429) {
+					icon = 'info';
+					title = 'Account Locked';
+					message = 'Too many failed attempts. Please contact administrator.';
+				}
+			}
+
+			resetVerifyOtpButton();
+
+			Swal.fire({
+				icon: icon,
+				title: title,
+				text: message,
+				allowOutsideClick: false,
+				backdrop: true
+			});
+		}
+
+
+		});
+
+
+
+		});
+	</script>
+	<script>
+		$(document).ready(function() {
+			const urlParams = new URLSearchParams(window.location.search);
+			if (urlParams.get('sessionExpired') === 'true') {
+				resetLoginButton();
+				Swal.fire({
+					icon: 'info',
+					title: 'Session Expired',
+					text: 'Please log in again to continue working.',
+					confirmButtonText: 'Log In'
+				});
+			}
+			if (urlParams.get('lockedOut') === 'true') {
+				resetLoginButton();
+			Swal.fire({
+				icon: 'error',
+				title: 'Account Locked',
+				text: 'Too many failed login attempts. Please contact administrator to unblock your account.',
+				confirmButtonText: 'OK'
+			});
+		}
+		});
+	</script>
 
 	<!-- JAVASCRIPT -->
 	<script src="~/js/waves.min.js"></script>
