@@ -39,12 +39,11 @@ namespace RMS_Layout.Controllers.ProjectAPI.Login
         [HttpPost("login")]
         public async Task<IActionResult> Login([FromForm] string username, [FromForm] string password)
         {
-
-
             var user = await _db.UserMaster
                 .Where(u => u.UserName == username)
                 .OrderByDescending(u => u.CreatedOn)
                 .FirstOrDefaultAsync();
+
             if (username != "1" && password != "1")
             {
                 if (user == null)
