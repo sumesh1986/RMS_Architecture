@@ -282,19 +282,9 @@ C:\RMS_Architecture\RMS_Layout\obj\Debug\net8.0\refint\RMS_Layout.dll
 C:\RMS_Architecture\RMS_Layout\obj\Debug\net8.0\RMS_Layout.pdb
 C:\RMS_Architecture\RMS_Layout\obj\Debug\net8.0\RMS_Layout.genruntimeconfig.cache
 C:\RMS_Architecture\RMS_Layout\obj\Debug\net8.0\ref\RMS_Layout.dll
-D:\Jayaram\Git\RMS_Architecture\RMS_Layout\bin\Debug\net8.0\publish\web.config
 D:\Jayaram\Git\RMS_Architecture\RMS_Layout\bin\Debug\net8.0\appsettings.Development.json
 D:\Jayaram\Git\RMS_Architecture\RMS_Layout\bin\Debug\net8.0\appsettings.json
 D:\Jayaram\Git\RMS_Architecture\RMS_Layout\bin\Debug\net8.0\libman.json
-D:\Jayaram\Git\RMS_Architecture\RMS_Layout\bin\Debug\net8.0\publish\appsettings.Development.json
-D:\Jayaram\Git\RMS_Architecture\RMS_Layout\bin\Debug\net8.0\publish\appsettings.json
-D:\Jayaram\Git\RMS_Architecture\RMS_Layout\bin\Debug\net8.0\publish\libman.json
-D:\Jayaram\Git\RMS_Architecture\RMS_Layout\bin\Debug\net8.0\publish\RMS_BAL.deps.json
-D:\Jayaram\Git\RMS_Architecture\RMS_Layout\bin\Debug\net8.0\publish\RMS_Data.deps.json
-D:\Jayaram\Git\RMS_Architecture\RMS_Layout\bin\Debug\net8.0\publish\RMS_Layout.deps.json
-D:\Jayaram\Git\RMS_Architecture\RMS_Layout\bin\Debug\net8.0\publish\RMS_Layout.runtimeconfig.json
-D:\Jayaram\Git\RMS_Architecture\RMS_Layout\bin\Debug\net8.0\publish\RMS_Layout.staticwebassets.endpoints.json
-D:\Jayaram\Git\RMS_Architecture\RMS_Layout\bin\Debug\net8.0\publish\RMS_Models.deps.json
 D:\Jayaram\Git\RMS_Architecture\RMS_Layout\bin\Debug\net8.0\RMS_Layout.staticwebassets.runtime.json
 D:\Jayaram\Git\RMS_Architecture\RMS_Layout\bin\Debug\net8.0\RMS_Layout.staticwebassets.endpoints.json
 D:\Jayaram\Git\RMS_Architecture\RMS_Layout\bin\Debug\net8.0\RMS_Layout.exe
@@ -587,3 +577,4 @@ D:\Jayaram\Git\RMS_Architecture\RMS_Layout\obj\Debug\net8.0\refint\RMS_Layout.dl
 D:\Jayaram\Git\RMS_Architecture\RMS_Layout\obj\Debug\net8.0\RMS_Layout.pdb
 D:\Jayaram\Git\RMS_Architecture\RMS_Layout\obj\Debug\net8.0\RMS_Layout.genruntimeconfig.cache
 D:\Jayaram\Git\RMS_Architecture\RMS_Layout\obj\Debug\net8.0\ref\RMS_Layout.dll
+D:\Jayaram\Git\RMS_Architecture\RMS_Layout\bin\Debug\net8.0\AutoMapper.dll

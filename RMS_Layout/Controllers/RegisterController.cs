@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Admin_Lte.Models;
 using RMS_Models.Models;
+using RMS_Models.Models.ServiceModels;
 
 namespace Admin_Lte.Controllers
 {
@@ -22,10 +23,7 @@ namespace Admin_Lte.Controllers
             Email = "test@example.com",
             Phone = "123456789012",
             ProductId = GenerateProductId(),
-            RegistrationNumber = GenerateRegistrationNumber(),
-            FileCreatedOn = DateTime.Now,
-            FileCreatedAt = DateTime.Now.ToString("HH:mm:ss:ff"),
-            IsHeadOffice = false
+            RegistrationNumber = GenerateRegistrationNumber()
         }
     };
 

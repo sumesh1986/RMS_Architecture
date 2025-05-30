@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Options;
 using RMS_Data.Data;
+using RMS_Models.Models.ServiceModels;
 
 namespace RMS_Data.Repository.Interfaces
 {
@@ -19,11 +21,17 @@ namespace RMS_Data.Repository.Interfaces
     public class TenantService : ITenantService
     {
         private readonly IHttpContextAccessor _httpContextAccessor;
+        private readonly string _server;
+        private readonly string _user;
+        private readonly string _pswd;
         private readonly OtherService _os;
 
-        public TenantService(IHttpContextAccessor httpContextAccessor, OtherService os)
+        public TenantService(IHttpContextAccessor httpContextAccessor, IOptions<UserDBSettings> settings, OtherService os)
         {
             _httpContextAccessor = httpContextAccessor;
+            _server = settings.Value.server;
+            _user = settings.Value.user;
+            _pswd = settings.Value.password;
             _os = os;
         }
 
@@ -56,11 +64,7 @@ namespace RMS_Data.Repository.Interfaces
 
             string dbName = "DB_" + tenant.RegNo;
 
-            string server = "192.168.1.120,1433";
-            string user = "BackOffice";
-            string password = "admin123";
-
-            return $"Server={server};Database={dbName};User Id={user};Password={password};TrustServerCertificate=True;MultipleActiveResultSets=true;";
+            return $"Server={_server};Database={dbName};User Id={_user};Password={_pswd};TrustServerCertificate=True;MultipleActiveResultSets=true;";
 
         }
     }

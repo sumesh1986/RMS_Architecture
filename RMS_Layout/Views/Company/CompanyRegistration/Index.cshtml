@@ -1,6 +1,4 @@
-﻿@model IEnumerable<RMS_Models.Models.Registration>
-
-@{
+﻿@{
 	ViewData["Title"] = "Index";
 	Layout = "~/Views/Shared/_Layout.cshtml";
 }
@@ -9,50 +7,27 @@
 <!-- Start Content here -->
 <!-- ============================================================== -->
 
-
-
 <div class="page-content">
 
 	<div class="row">
 		<div class="col-lg-12">
-
-
-			<!--begin::Container-->
 			<div class="container-fluid">
-				<!--begin::row g-2-->
 				<div class="row g-2">
-					<!--begin::Col-->
 					<div class="col-12">
-						<!--begin::Card-->
 						<div class="card">
-
-							<!--begin::Card Header-->
 							<div class="card-header">
-								<!--begin::Card Title-->
 								<div class="card-header header-background text-white text-center">
 									<h4>M-POS SOLUTION (VER-1.0.0.1)</h4>
 								</div>
-								<!--end::Card Title-->
-
-
 							</div>
-							<!--end::Card Header-->
-							<!--begin::Card Body-->
 							<div class="card-body">
 
-								<form asp-action="Register" method="post" class="registration-form">
-									<!--begin::row g-2-->
-									<!-- Branch Setup Form -->
-
+								<form id="registration" class="registration-form">
 									<div class="row g-2 g-2">
-
-
-										<div class="text-danger" asp-validation-summary="ModelOnly"></div>
-
 										<div class="row g-2">
 											<label class="col-md-1 col-form-label">Company Name</label>
 											<div class="col-md-4">
-												<input type="text" name="CompanyName" class="form-control" />
+												<input type="text" name="CompanyName" class="form-control" style="background-color:#d3d3d37d;" readonly />
 												<span class="text-danger"></span>
 											</div>
 											<label class="col-md-1 col-form-label">Owner Name</label>
@@ -62,8 +37,6 @@
 											</div>
 										</div>
 
-
-
 										<div class="row g-2">
 											<label class="col-md-1 col-form-label">Family Name</label>
 											<div class="col-md-4">
@@ -72,32 +45,29 @@
 											</div>
 											<label class="col-md-1 col-form-label">Country</label>
 											<div class="col-md-4">
-												<input type="text" name="Country" class="form-control" />
+												<input type="text" name="Country" class="form-control" style="background-color:#d3d3d37d;" readonly />
 												<span class="text-danger"></span>
 											</div>
 										</div>
-
-
 
 										<div class="row g-2">
 											<label class="col-md-1 col-form-label">Place</label>
 											<div class="col-md-4">
-												<input type="text" name="Place" class="form-control" />
+												<input type="text" name="Place" class="form-control" style="background-color:#d3d3d37d;" readonly />
 												<span class="text-danger"></span>
 											</div>
 											<label class="col-md-1 col-form-label">Address</label>
 											<div class="col-md-4">
-												<input type="text" name="Address" class="form-control" />
+												<textarea name="Address" class="form-control" rows="3"></textarea>
 												<span class="text-danger"></span>
 											</div>
+
 										</div>
-
-
 
 										<div class="row g-2">
 											<label class="col-md-1 col-form-label">Email</label>
 											<div class="col-md-4">
-												<input type="email" name="Email" class="form-control" />
+												<input type="email" name="Email" class="form-control" style="background-color:#d3d3d37d;" readonly />
 												<span class="text-danger"></span>
 											</div>
 											<label class="col-md-1 col-form-label">Phone</label>
@@ -107,55 +77,30 @@
 											</div>
 										</div>
 
-
-
 										<div class="row g-2">
 											<label class="col-md-1 col-form-label">Product ID</label>
 											<div class="col-md-4">
-												<input type="text" name="ProductId" class="form-control" readonly />
+												<input type="text" name="ProductId" class="form-control" style="background-color:#d3d3d37d;" readonly />
 											</div>
 											<label class="col-md-1 col-form-label">Registration Number</label>
 											<div class="col-md-4">
-												<input type="text" name="RegistrationNumber" class="form-control" readonly />
+												<input type="text" name="RegistrationNumber" class="form-control" style="background-color:#d3d3d37d;" readonly />
 											</div>
 										</div>
 
-
-
-										@*   <div class="row g-2">
-    <label class="col-md-1 col-form-label">Head Office</label>
-    <div class="col-md-4">
-        <div class="form-check">
-            <input type="radio" name="IsHeadOffice" class="form-check-input" value="true" />
-            <label class="form-check-label">Yes</label>
-        </div>
-        <div class="form-check">
-            <input type="radio" name="IsHeadOffice" class="form-check-input" value="false" />
-            <label class="form-check-label">No</label>
-        </div>
-    </div>
-</div>
-
- *@
-
-										<div class="row g-2">
+										<div class="row g-2 align-items-center">
 											<label class="col-md-1 col-form-label">Head Office</label>
-											<div class="col-md-4">
-												<div class="form-check form-switch">
-													<input type="checkbox" name="IsHeadOffice" class="form-check-input" />
-													<label class="form-check-label" name="IsHeadOffice">Yes</label>
+@* 											<div class="col-md-4">
+												<div class="form-check form-switch d-flex align-items-center">
+													<input type="checkbox" name="IsHeadOffice" class="form-check-input me-2" />
+													<label class="form-check-label mb-0" for="IsHeadOffice">Yes</label>
 												</div>
+											</div> *@
+											<div class="col-md-4">
+												<input type="text" name="headOffice" class="form-control" />
 											</div>
 										</div>
 
-										@*  <div class="row g-2 mt-4">
-            <div class="col-md-12 text-right">
-                <button type="submit" class="btn btn-primary">
-                    <i class="bi bi-check-circle"></i> Update
-                </button>
-            </div>
-        </div>
- *@
 
 										<div class="row g-2 mt-4">
 											<div class="col-md-12 d-flex justify-content-end">
@@ -169,36 +114,17 @@
 										<div class="registration-info mt-4 p-4 bg-light border rounded-3 shadow-sm">
 											<p class="text-dark mb-0 fw-semibold">
 												<i class="bi bi-info-circle-fill text-primary me-2"></i>
-												To register, you must provide your company name, country, place, and email address.<br />
-												<span class="text-danger">Note:</span> The company name, country, place, and email address <strong>cannot be changed</strong> later.
+											@* 	To register, you must provide your company name, country, place, and email address.<br /> *@
+												<span class="text-danger">Note:</span> The Company name, Country, Place, Email, Product ID, Registration Number cannot be changed later.
 											</p>
 										</div>
-
-
-										@*  @foreach (var item in Model)
-        {
-            <div>
-                <label>@item.CompanyName</label>
-            </div>
-        } *@
 									</div>
 								</form>
 							</div>
-
-							<!--end::row g-2-->
-
 						</div>
-						<!--end::Card Body-->
-
 					</div>
-					<!--end::Card-->
-
 				</div>
-				<!--end::Col-->
 			</div>
-			<!--end::row g-2-->
-
-
 		</div>
 	</div>
 </div>
@@ -234,11 +160,14 @@
 		}
 
 			.col-form-label {
-				background: #024fc3;
-				color: white;
+				background: #ffffff;
+				color: #495057;
 				padding: 0.5rem 1rem;
 				border-radius: 4px;
 				/*  text-align: right; */
+				width: 16%;
+				margin-top: 10px;
+				margin-bottom: 10px;
 			}
 
 			.form-control {
@@ -267,14 +196,216 @@
 			}
 
 			.text-danger {
-				font-size: 0.8rem;
+				font-size: 1rem;
 				margin-top: 0.25rem;
 			}
 	</style>
 }
 
-@section Scripts {
-	@{
-		await Html.RenderPartialAsync("_ValidationScriptsPartial");
-	}
-}
+<script>
+	document.addEventListener("DOMContentLoaded", function () {
+		const token = sessionStorage.getItem("tenantid");
+
+		if (!token) {
+			Swal.fire({
+				icon: 'error',
+				title: 'Session Expired',
+				text: 'User session expired or invalid. Please login again.'
+			});
+			return;
+		}
+
+		fetch(`/api/CompanyRegistrationAPI/get?id=${encodeURIComponent(token)}`, {
+			method: "GET",
+			headers: { "Accept": "application/json" }
+		})
+		.then(res => {
+			if (res.status === 401) {
+				toastr.error("Your session has expired due to inactivity. Please log in again.");
+				setTimeout(() => {
+					window.location.href = "/Home/Login";
+				}, 5000);
+				throw new Error("Unauthorized access.");
+			}
+
+			if (!res.ok) {
+				return res.json().then(err => {
+					let errorMessage = err.message || "Unexpected error occurred.";
+					toastr.error(errorMessage);
+					throw new Error(errorMessage);
+				});
+			}
+
+			return res.json();
+		})
+		.then(data => {
+			if (!data.success || !data.data) {
+				throw new Error("Failed to retrieve company data.");
+			}
+
+			const companyData = data.data;
+			const form = document.querySelector("#registration");
+			if (!form) {
+				throw new Error("Form with id 'registration' not found.");
+			}
+
+			const setInputValue = (name, value, isCheckbox = false) => {
+				const input = form.querySelector(`[name="${name}"]`);
+				if (!input) {
+					console.warn(`Input with name="${name}" not found.`);
+					return;
+				}
+				if (isCheckbox) {
+					input.checked = Boolean(value);
+				} else {
+					input.value = value ?? "";
+				}
+			};
+
+			setInputValue("CompanyName", companyData.data.companyName || 'Not mentioned');
+			setInputValue("OwnerName", companyData.data.ownerName || 'Not mentioned');
+			setInputValue("FamilyName", companyData.data.familyName || 'Not mentioned');
+			setInputValue("Country", companyData.data.country || 'Not mentioned');
+			setInputValue("Place", companyData.data.place || 'Not mentioned');
+			setInputValue("Address", companyData.data.address || 'Not mentioned');
+			setInputValue("Email", companyData.data.email || 'Not mentioned');
+			setInputValue("Phone", companyData.data.phone || 'Not mentioned');
+			setInputValue("ProductId", companyData.data.productId || 'Not mentioned');
+			setInputValue("RegistrationNumber", companyData.data.registrationNumber || 'Not mentioned');
+			setInputValue("headOffice", companyData.data.headOffice || 'Not mentioned');
+		})
+		.catch(error => {
+			if (error.message !== "Unauthorized access.") {
+				Swal.fire({
+					icon: 'error',
+					title: 'API Error',
+					text: error.message || "An error occurred while fetching company details."
+				});
+			}
+		});
+	});
+</script>
+<script>
+	document.addEventListener("DOMContentLoaded", function () {
+		const form = document.querySelector("#registration");
+		let originalData = {};
+
+		// Step 1: Capture all initial form field values
+		function initializeOriginalData() {
+			const elements = form.elements;
+			for (let i = 0; i < elements.length; i++) {
+				const el = elements[i];
+				if (!el.name) continue;
+
+				if (el.type === "checkbox" || el.type === "radio") {
+					originalData[el.name] = el.checked;
+				} else {
+					originalData[el.name] = el.value.trim();
+				}
+			}
+		}
+
+		initializeOriginalData();
+
+		form.addEventListener("submit", function (e) {
+			e.preventDefault();
+
+			const formData = new FormData(form);
+			const currentData = {};
+
+			formData.forEach((value, key) => {
+				const el = form.querySelector(`[name="${key}"]`);
+				if (el.type === "checkbox" || el.type === "radio") {
+					currentData[key] = el.checked;
+				} else {
+					currentData[key] = value.trim();
+				}
+			});
+
+			const normalize = (val) => (val ?? "").toString().trim().toLowerCase();
+
+			const isChanged = Object.keys(currentData).some(key =>
+				normalize(currentData[key]) !== normalize(originalData[key])
+			);
+
+			if (!isChanged) {
+				Swal.fire({
+					icon: 'warning',
+					title: 'No Changes Detected',
+					text: 'No action required as no changes were made to the form.',
+					confirmButtonText: 'OK'
+				});
+				return;
+			}
+
+			const tenantId = sessionStorage.getItem("tenantid");
+			if (!tenantId) {
+				Swal.fire({
+					icon: 'info',
+					title: 'Suspicious Activity',
+					text: 'We found a suspicious activity. Please login again.',
+					confirmButtonText: 'OK'
+				}).then(() => {
+					window.location.href = "/Home/Login";
+				});
+				return;
+			}
+
+			currentData.tenantid = tenantId;
+
+			fetch("/api/CompanyRegistrationAPI/update", {
+				method: "PUT",
+				headers: {
+					"Content-Type": "application/json",
+					"Accept": "application/json"
+				},
+				body: JSON.stringify(currentData)
+			})
+			.then(async res => {
+				if (res.status === 401) {
+					Swal.fire({
+						icon: 'info',
+						title: 'Session Expired',
+						text: 'Your session has expired. Please login again.',
+						confirmButtonText: 'Go to Login'
+					}).then(() => {
+						sessionStorage.clear();
+						localStorage.clear();
+						window.location.replace('/Home/Login');
+					});
+					throw new Error("Unauthorized");
+				}
+
+				if (!res.ok) {
+					const errorJson = await res.json().catch(() => null);
+					let errorMessage = "Unexpected error occurred.";
+					if (errorJson?.message) {
+						errorMessage = errorJson.message;
+					}
+					Swal.fire({
+						icon: 'info',
+						title: 'Unexpected error occurred',
+						text: errorMessage
+					});
+					throw new Error(errorMessage);
+				}
+
+				return res.json();
+			})
+			.then(data => {
+				Swal.fire({
+					icon: 'success',
+					title: 'Done',
+					text: data.message || "Update successful.",
+					confirmButtonText: 'OK'
+				});
+			})
+			.catch(error => {
+				if (error.message !== "Unauthorized") {
+					console.error("Unhandled error:", error);
+				}
+			});
+		});
+	});
+</script>
+

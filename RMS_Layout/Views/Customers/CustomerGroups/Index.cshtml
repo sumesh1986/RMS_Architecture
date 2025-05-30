@@ -561,8 +561,8 @@
 				if (xhr.status === 401) {
 					toastr.error("Your session has expired due to inactivity. Please log in again.");
 					setTimeout(function () {
-						window.location.href = "/Home/Login"; // Adjust this URL if your login path differs
-					}, 5000); // 5000ms = 5 seconds delay
+						window.location.href = "/Home/Login";
+					}, 5000);
 				} else {
 					let errorMessage = "Unexpected error occurred.";
 					if (xhr.responseJSON && xhr.responseJSON.message) {

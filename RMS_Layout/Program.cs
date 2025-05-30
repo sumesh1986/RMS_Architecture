@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
 using RMS_BAL.Middleware;
 using RMS_BAL.Repository.Interfaces;
+using RMS_BAL.Services.Company;
 using RMS_BAL.Services.Customer;
 using RMS_BAL.Services.Dropdown;
 using RMS_BAL.Services.ExceptionHandlingService;
@@ -17,6 +18,7 @@ using RMS_Data.Repository.ExcpetionHandling;
 using RMS_Data.Repository.Interfaces;
 using RMS_Data.Repository.ProductSetup.SalesItemHierarchy;
 using RMS_Data.Repository.User;
+using RMS_Data.Service.Company;
 using RMS_Data.Service.Interfaces;
 using RMS_Models.Models.ServiceModels;
 
@@ -24,6 +26,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 // ====== Configuration Bindings ======
 builder.Services.Configure<EncryptionSettings>(builder.Configuration.GetSection("EncryptionSettings"));
+builder.Services.Configure<UserDBSettings>(builder.Configuration.GetSection("UserDBSettings"));
 
 // ====== HTTP Context ======
 builder.Services.AddHttpContextAccessor();
@@ -56,6 +59,11 @@ builder.Services.AddDbContext<ApplicationDbContext>((serviceProvider, options) =
 });
 
 // ====== Repository and Service Registrations ======
+//Company
+builder.Services.AddScoped<ICompanyRegistrationRepository, CompanyRegistrationRepository>();
+builder.Services.AddScoped<ICompanyRegistrationService, CompanyRegistrationService>();
+
+
 // Product
 builder.Services.AddScoped<I_ItemGroupRepository, ItemGroupRepository>();
 builder.Services.AddScoped<I_ItemGroupService, ItemGroupService>();

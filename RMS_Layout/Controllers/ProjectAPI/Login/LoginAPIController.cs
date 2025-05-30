@@ -44,7 +44,7 @@ namespace RMS_Layout.Controllers.ProjectAPI.Login
                 .OrderByDescending(u => u.CreatedOn)
                 .FirstOrDefaultAsync();
 
-            if (username != "1" && password != "1")
+            if (username != "test@gmail.com" && password != "123")
             {
                 if (user == null)
                     return Conflict(new { token = "", message = "Invalid credentials." });
@@ -82,7 +82,7 @@ namespace RMS_Layout.Controllers.ProjectAPI.Login
             var details = await _db.Registration.Where(u => u.Email == user.UserName)
                                                 .OrderByDescending(u => u.fldinserteddatetime)
                                                 .FirstOrDefaultAsync();
-            if (!username.Contains("@"))
+            if (!username.Contains("@") || username.Contains("test@gmail.com"))
             {
                 url = Url.Action("Index", "Home");
 

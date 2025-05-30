@@ -397,6 +397,7 @@
 								<span key="t-dashboards">Dashboards</span>
 							</a>
 						</li>
+
 						<li>
 							<a href="javascript:void(0);" class=" waves-effect">
 								<i class="bi bi-box-seam"></i>
@@ -421,11 +422,12 @@
 												<i class="bi bi-diagram-2"></i> Division
 											</a>
 										</li>
-										<li>
-											<a href="@Url.Action("itemGroup", "productsetup")">
+										<li class="@(ViewContext.RouteData.Values["controller"]?.ToString().ToLower() == "itemgroup" ? "mm-active" : "")">
+											<a href="@Url.Action("Index", "ItemGroup", new { area = "productsetup" })">
 												<i class="bi bi-layers"></i> Item Group
 											</a>
 										</li>
+
 									</ul>
 								</li>
 
@@ -437,22 +439,25 @@
 
 									<ul class="sub-menu" aria-expanded="false">
 										<li>
-											<a href="@Url.Action("ItemMaster", "Home")">
+											<a href="@Url.Action("itemmaster", "salesitemsetup")">
 												<i class="bi bi-box"></i> Item Master
 											</a>
 										</li>
-										<li>
-											<a href="@Url.Action("course", "productsetup")">										
+
+										<li class="@(ViewContext.RouteData.Values["controller"]?.ToString().ToLower() == "course" ? "mm-active" : "")">
+											<a href="@Url.Action("Index", "Course", new { area = "productsetup" })">
 												<i class="bi bi-journal-code"></i> Course
 											</a>
 										</li>
+
+
 										<li>
 											<a href="@Url.Action("Modifiers", "Home")">
 												<i class="bi bi-sliders"></i> Modifiers
 											</a>
 										</li>
 										<li>
-											<a href="@Url.Action("Combo", "Home")">
+											<a href="@Url.Action("comboitems", "productsetup")">
 												<i class="bi bi-grid-3x3-gap"></i> Combo
 											</a>
 										</li>
@@ -461,7 +466,7 @@
 
 								<!-- Options -->
 								<li>
-									<a href="@Url.Action("ItemCount", "Home")">
+									<a href="@Url.Action("itemcount", "productsetup")">
 										<i class="bi bi-123"></i> Item Count
 									</a>
 								</li>
@@ -503,6 +508,7 @@
 								</li>
 
 								<li>
+
 									<a href="@Url.Action("UserPermission", "Users")">
 										<i class="bi bi-diagram-2 me-1"></i> Authority Matrix
 									</a>
@@ -537,14 +543,6 @@
 										<i class="bi bi-layers me-1"></i> POS SubGroup
 									</a>
 								</li>
-
-								@* 	<li>
-									<a href="@Url.Action("Preview", "Home")">
-										<i class="bi bi-columns-gap me-1"></i> POS Design
-									</a>
-								</li> *@
-
-
 							</ul>
 						</li>
 
@@ -564,40 +562,21 @@
 
 								<li>
 									<a href="@Url.Action("CustomerTitles", "Customers")">
-										<i class="bi bi-people-fill me-1"></i> Customer Titile
-									</a>
-								</li>
-
-
-								@* <li>
-									<a href="@Url.Action("customerlist", "Home")">
 										<i class="bi bi-person-badge me-1"></i> Customer Title
 									</a>
-								</li> *@
-@* 
-								<li>
-									<a href="@Url.Action("CustomerTypes", "Customers")">
-										<i class="bi bi-people-fill me-1"></i> Customer Type
-									</a>
-								</li> *@
+								</li>
 
 								<li>
 									<a href="@Url.Action("CustomerTypes", "Customers")">
-										<i class="bi bi-people-fill me-1"></i> Customer Type
+										<i class="bi bi-person-vcard me-1"></i> Customer Type
 									</a>
 								</li>
 
 								<li>
-									<a href="@Url.Action("CustomerSetup", "Customers")">
-										<i class="bi bi-people-fill me-1"></i> Customer Setup
-									</a>
-								</li>
-								
-								@* <li>
-									<a href="@Url.Action("CustomerSetup", "Customers")">
+									<a href="@Url.Action("CustomersSetup", "Home")">
 										<i class="bi bi-person-gear me-1"></i> Customer Setup
 									</a>
-								</li> *@
+								</li>
 
 							</ul>
 						</li>
@@ -608,12 +587,6 @@
 								<span key="t-dashboards">Reports</span>
 							</a>
 						</li>
-
-
-						@* 	<li class="menu-title" key="t-menu">  <i class="nav-icon bi bi-house-door"></i> Menu</li> *@
-
-
-
 
 						<!-- SYSTEM SETUP SECTION -->
 						<li class="menu-highlight-top">
@@ -722,7 +695,7 @@
 
 
 								<!-- Financials -->
-								<li> 
+								<li>
 									<a href="javascript:void(0);" class=" waves-effect">
 										<i class="bi bi-cash-coin"></i> Financials
 									</a>
@@ -797,8 +770,13 @@
 									</a>
 								</li>
 								<li>
+									<a href="@Url.Action("index", "home")">
+										<i class="bi bi-buildings"></i> Company Setup
+									</a>
+								</li>
+								<li>
 									<a href="@Url.Action("companybranch", "company")">
-										<i class="bi bi-diagram-3"></i> Branch
+										<i class="bi bi-diagram-3"></i> Branch Setup
 									</a>
 								</li>
 								<li>
@@ -817,7 +795,6 @@
 							</a>
 
 							<ul class="sub-menu" aria-expanded="false">
-								@* 	<li><a href="index.html" key="t-default"><i class="bi bi-person-badge"></i> Registration</a></li> *@
 								<li>
 									<a href="@Url.Action("Performeod", "Home")">
 										<i class="bi bi-clock-history"></i> Perform EOD
@@ -868,76 +845,7 @@
 								<span key="t-dashboards">Help</span>
 							</a>
 						</li>
-
-
-						@* 	<li>
-							<a href="javascript:void(0);" class="arrow-auto waves-effect toggle-menu">
-								<i class="bi bi-people"></i>
-								<span key="t-dashboards">Company</span>
-								<i class="bi bi-chevron-down ms-auto toggle-arrow"></i> <!-- Arrow icon -->
-							</a>
-
-							<ul class="sub-menu" aria-expanded="false">
-								<li><a href="index.html" key="t-default"><i class="bi bi-person-badge"></i> Registration</a></li>
-								<li>
-									<a href="@Url.Action("BranchSetup", "Home")">
-										<i class="bi bi-diagram-3"></i> Branch
-									</a>
-								</li>
-								<li>
-									<a href="@Url.Action("BranchSetup", "Home")"> <i class="bi bi-lightbulb"></i> Concept</a>
-								</li>
-
-							</ul>
-						</li>
-
-						<li class="menu-title" key="t-menu">APPS</li>
-						<li>
-							<a href="javascript:void(0);" class="arrow-auto waves-effect">
-								<i class="bi bi-house-door"></i>
-								<span key="t-dashboards">Layouts</span>
-								<i class="bi bi-chevron-down ms-auto"></i> <!-- Add Bootstrap down arrow -->
-							</a>
-							<ul class="sub-menu" aria-expanded="false">
-								<li><a href="index.html" key="t-default">Default</a></li>
-								<li><a href="dashboard-saas.html" key="t-saas">Saas</a></li>
-								<li>
-									<a href="@Url.Action("BranchSetup", "Home")">Branch</a>
-								</li>
-
-								<li>
-									<a href="javascript:void(0);" class="arrow-auto waves-effect">
-										<i class="bi bi-house-door"></i>
-										<span key="t-dashboards">Dashboards 2</span>
-										<i class="bi bi-chevron-down ms-auto"></i> <!-- Add Bootstrap down arrow -->
-									</a>
-									<ul class="sub-menu" aria-expanded="false">
-										<li><a href="index.html" key="t-default">Default</a></li>
-										<li><a href="dashboard-saas.html" key="t-saas">Saas</a></li>
-										<li>
-											<a href="index.html">Category</a>
-										</li>
-
-
-										<li><a href="index.html">Concept</a></li>
-										<li><a href="index.html">Combo</a></li>
-									</ul>
-								</li>
-								<li><a href="index.html">Concept</a></li>
-								<li><a href="@Url.Action("Combo", "Home")">Combo</a></li>
-							</ul>
-						</li>
-					 *@
-
-
-
-
-
-
-
-
 					</ul>
-
 				</div>
 				<div class="sidebar-footer text-muted p-3 border-top small" id="sidebarFooter">
 					<div>Reg ID: </div>

@@ -1,6 +1,12 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using System.Runtime.ConstrainedExecution;
+using Microsoft.AspNetCore.Mvc;
+using RMS_BAL.Services.Interfaces;
+using RMS_Models.Models;
+using RMS_Models.Models.API_Models.Company;
+using RMS_Models.Models.DTO.Company;
+using RMS_Models.Models.DTO.Customers;
+using RMS_Models.Models.ServiceModels;
 
-// For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace RMS_Layout.Controllers.ProjectAPI.Company
 {
@@ -8,36 +14,27 @@ namespace RMS_Layout.Controllers.ProjectAPI.Company
     [ApiController]
     public class CompanyRegistrationAPIController : ControllerBase
     {
-        // GET: api/<CompanyRegistrationController>
-        [HttpGet]
-        public IEnumerable<string> Get()
+
+        private readonly ICompanyRegistrationService _ser;
+        public CompanyRegistrationAPIController(ICompanyRegistrationService customerService)
         {
-            return new string[] { "value1", "value2" };
+            _ser = customerService;
         }
 
-        // GET api/<CompanyRegistrationController>/5
-        [HttpGet("{id}")]
-        public string Get(int id)
+
+        [HttpGet("get")]
+        public async Task<IActionResult> Get([FromQuery] string id)
         {
-            return "value";
+            var groups = await _ser.GetAsync(id);
+            return Ok(new { success = true, data = groups });
         }
 
-        // POST api/<CompanyRegistrationController>
-        [HttpPost]
-        public void Post([FromBody] string value)
-        {
-        }
 
-        // PUT api/<CompanyRegistrationController>/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
+        [HttpPut("update")]
+        public async Task<IActionResult> update(RegistrationDTO reg)
         {
-        }
-
-        // DELETE api/<CompanyRegistrationController>/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
-        {
+            var result = _ser.UpdateAsync(reg);
+            return StatusCode(200, new { message = "Company registration updated successfully.", data = result });
         }
     }
 }

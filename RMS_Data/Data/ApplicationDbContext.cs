@@ -24,6 +24,8 @@ namespace RMS_Data.Data
 
         public DbSet<CustomerGroup> CustomerGroup { get; set; }
         public DbSet<CustomerType> CustomerType { get; set; }
+
+        public DbSet<Registration> Registration {  get; set; }
         public DbSet<CompanyConcept> CompanyConcepts { get; set; }
 
         public DbSet<CustomerTitle> CustomerTitles { get; set; }
